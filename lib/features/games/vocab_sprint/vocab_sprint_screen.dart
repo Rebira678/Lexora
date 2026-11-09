@@ -10,17 +10,30 @@ import '../../../core/streak/streak_logic.dart';
 import '../../../app/providers.dart';
 import '../widgets/what_you_learned_screen.dart';
 
+enum SprintQuestionMode {
+  meaningToWord,
+  wordToMeaning,
+  sentenceGap,
+  synonym,
+}
+
 class SprintQuestion {
   final Word targetWord;
+  final SprintQuestionMode mode;
+  final String promptType;
+  final String questionText;
   final List<String> options;
   final String correctOption;
-  final String questionText;
+  final String exampleSentence;
 
   SprintQuestion({
     required this.targetWord,
+    required this.mode,
+    required this.promptType,
+    required this.questionText,
     required this.options,
     required this.correctOption,
-    required this.questionText,
+    this.exampleSentence = '',
   });
 }
 
@@ -39,6 +52,7 @@ class VocabSprintScreen extends ConsumerStatefulWidget {
 class _VocabSprintScreenState extends ConsumerState<VocabSprintScreen> {
   int _secondsRemaining = 60;
   Timer? _timer;
+  int _lives = 3;
   int _score = 0;
   int _xpEarned = 0;
   int _combo = 0;
@@ -85,22 +99,98 @@ class _VocabSprintScreenState extends ConsumerState<VocabSprintScreen> {
       if (!selected.contains(w)) {
         selected.add(w);
       }
-      if (selected.length >= 25) break;
+      if (selected.length >= 30) break;
     }
 
     final questions = <SprintQuestion>[];
-    for (final target in selected) {
-      final distractors = (List.of(allWords)..remove(target)..shuffle()).take(3).map((w) => w.lemma).toList();
-      final options = (distractors..add(target.lemma))..shuffle();
+    final modes = [
+      SprintQuestionMode.meaningToWord,
+      SprintQuestionMode.wordToMeaning,
+      SprintQuestionMode.sentenceGap,
+      SprintQuestionMode.synonym,
+    ];
 
-      questions.add(
-        SprintQuestion(
-          targetWord: target,
-          options: options,
-          correctOption: target.lemma,
-          questionText: target.definitionEn ?? 'Identify the word',
-        ),
-      );
+    for (int i = 0; i < selected.length; i++) {
+      final target = selected[i];
+      final mode = modes[i % modes.length];
+
+      switch (mode) {
+        case SprintQuestionMode.wordToMeaning:
+          final otherDefinitions = (List.of(allWords)
+                ..remove(target)
+                ..shuffle())
+              .take(3)
+              .map((w) => w.definitionEn ?? w.lemma)
+              .toList();
+          final correctDef = target.definitionEn ?? 'Definition of ${target.lemma}';
+          final options = (otherDefinitions..add(correctDef))..shuffle();
+
+          questions.add(
+            SprintQuestion(
+              targetWord: target,
+              mode: mode,
+              promptType: '📖 Word ➔ Meaning',
+              questionText: target.lemma.toUpperCase(),
+              options: options,
+              correctOption: correctDef,
+            ),
+          );
+          break;
+
+        case SprintQuestionMode.sentenceGap:
+          final examples = await wordDao.getExamplesForWord(target.id);
+          String sentence = '';
+          if (examples.isNotEmpty) {
+            sentence = examples.first.sentence;
+          }
+          if (sentence.isNotEmpty) {
+            final masked = sentence.replaceAll(
+                RegExp('\\b${RegExp.escape(target.lemma)}\\b', caseSensitive: false), '_____');
+            final distractors = (List.of(allWords)..remove(target)..shuffle())
+                .take(3)
+                .map((w) => w.lemma)
+                .toList();
+            final options = (distractors..add(target.lemma))..shuffle();
+
+            questions.add(
+              SprintQuestion(
+                targetWord: target,
+                mode: mode,
+                promptType: '🧩 Sentence Gap',
+                questionText: masked,
+                options: options,
+                correctOption: target.lemma,
+                exampleSentence: sentence,
+              ),
+            );
+            break;
+          }
+          // Fall through to meaningToWord if no example sentence
+          continue meaningFallback;
+
+        meaningFallback:
+        case SprintQuestionMode.synonym:
+        case SprintQuestionMode.meaningToWord:
+          final distractors = (List.of(allWords)..remove(target)..shuffle())
+              .take(3)
+              .map((w) => w.lemma)
+              .toList();
+          final options = (distractors..add(target.lemma))..shuffle();
+
+          questions.add(
+            SprintQuestion(
+              targetWord: target,
+              mode: mode,
+              promptType: mode == SprintQuestionMode.synonym
+                  ? '🎯 Synonym / Target'
+                  : '⚡ Meaning ➔ Word',
+              questionText: target.definitionEn ?? 'Identify the word',
+              options: options,
+              correctOption: target.lemma,
+            ),
+          );
+          break;
+      }
     }
 
     setState(() {
@@ -139,10 +229,11 @@ class _VocabSprintScreenState extends ConsumerState<VocabSprintScreen> {
     if (isCorrect) {
       _correctCount++;
       _combo++;
-      final pts = (100 * (elapsedSeconds < 3 ? 1.5 : (elapsedSeconds <= 6 ? 1.2 : 1.0)) * (1.0 + 0.1 * _combo.clamp(0, 10))).round();
+      final speedMultiplier = elapsedSeconds < 3.0 ? 1.5 : (elapsedSeconds <= 6.0 ? 1.2 : 1.0);
+      final pts = (100 * speedMultiplier * (1.0 + 0.1 * _combo.clamp(0, 10))).round();
       final xp = ref.read(xpServiceProvider).calculateXp(
             basePoints: 15,
-            speedMultiplier: elapsedSeconds < 3 ? 1.5 : (elapsedSeconds <= 6 ? 1.2 : 1.0),
+            speedMultiplier: speedMultiplier,
             combo: _combo,
           );
 
@@ -171,12 +262,13 @@ class _VocabSprintScreenState extends ConsumerState<VocabSprintScreen> {
           term: current.targetWord.lemma,
           ipa: current.targetWord.ipa,
           definition: current.targetWord.definitionEn ?? '',
-          example: '',
+          example: current.exampleSentence,
           wasMistake: false,
         ),
       );
     } else {
       _combo = 0;
+      _lives--;
       ref.read(audioServiceProvider).playSfx(SfxType.wrong);
 
       ref.read(srsDaoProvider).logReview(
@@ -192,10 +284,16 @@ class _VocabSprintScreenState extends ConsumerState<VocabSprintScreen> {
           term: current.targetWord.lemma,
           ipa: current.targetWord.ipa,
           definition: current.targetWord.definitionEn ?? '',
-          example: '',
+          example: current.exampleSentence.isNotEmpty ? current.exampleSentence : 'Correct: ${current.correctOption}',
           wasMistake: true,
         ),
       );
+
+      if (_lives <= 0) {
+        _timer?.cancel();
+        _endGame();
+        return;
+      }
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -307,14 +405,29 @@ class _VocabSprintScreenState extends ConsumerState<VocabSprintScreen> {
     }
 
     final question = _questions[_currentIndex];
+    final theme = Theme.of(context);
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('Vocabulary Sprint'),
         actions: [
+          Row(
+            children: List.generate(
+              3,
+              (index) => Padding(
+                padding: const EdgeInsets.only(right: 4),
+                child: Icon(
+                  index < _lives ? Icons.favorite : Icons.favorite_border,
+                  color: AppColors.wrong,
+                  size: 22,
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(width: 8),
           Container(
-            margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+            margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
             decoration: BoxDecoration(
               color: _secondsRemaining <= 10 ? AppColors.wrong : AppColors.accent,
               borderRadius: BorderRadius.circular(16),
@@ -346,12 +459,40 @@ class _VocabSprintScreenState extends ConsumerState<VocabSprintScreen> {
                   if (_combo > 1)
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                      decoration: BoxDecoration(color: AppColors.combo, borderRadius: BorderRadius.circular(12)),
-                      child: Text('Combo x$_combo', style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+                      decoration: BoxDecoration(
+                        color: AppColors.combo,
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Text(
+                        'Combo x$_combo (${_combo >= 5 ? "1.5x XP" : "1.2x XP"})',
+                        style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                      ),
                     ),
                 ],
               ),
-              const SizedBox(height: 24),
+              const SizedBox(height: 16),
+
+              // Question Mode Pill
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                  decoration: BoxDecoration(
+                    color: AppColors.accent.withAlpha(30),
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(color: AppColors.accent.withAlpha(100)),
+                  ),
+                  child: Text(
+                    question.promptType,
+                    style: const TextStyle(
+                      color: AppColors.accent,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 13,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 12),
 
               // Question Card
               Expanded(
@@ -362,39 +503,89 @@ class _VocabSprintScreenState extends ConsumerState<VocabSprintScreen> {
                   child: Padding(
                     padding: const EdgeInsets.all(24),
                     child: Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Icon(Icons.psychology_rounded, size: 48, color: AppColors.accent),
-                          const SizedBox(height: 16),
-                          Text(
-                            question.questionText,
-                            textAlign: TextAlign.center,
-                            style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                                  fontWeight: FontWeight.w600,
+                      child: SingleChildScrollView(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              question.questionText,
+                              textAlign: TextAlign.center,
+                              style: theme.textTheme.headlineSmall?.copyWith(
+                                fontWeight: FontWeight.bold,
+                                height: 1.3,
+                              ),
+                            ),
+                            if (question.targetWord.ipa != null &&
+                                question.mode == SprintQuestionMode.wordToMeaning) ...[
+                              const SizedBox(height: 8),
+                              Text(
+                                question.targetWord.ipa!,
+                                style: TextStyle(
+                                  color: theme.colorScheme.onSurfaceVariant,
+                                  fontStyle: FontStyle.italic,
+                                  fontSize: 16,
                                 ),
-                          ),
-                        ],
+                              ),
+                            ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ),
               ),
-              const SizedBox(height: 24),
+              const SizedBox(height: 20),
 
-              // 4 Multiple Choice Options
-              ...question.options.map((opt) {
+              // 4 Choice Options
+              ...question.options.asMap().entries.map((entry) {
+                final idx = entry.key;
+                final opt = entry.value;
+                final letter = String.fromCharCode(65 + idx);
+
                 return Padding(
-                  padding: const EdgeInsets.only(bottom: 12),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(vertical: 18),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                    ),
-                    onPressed: () => _handleAnswer(opt),
-                    child: Text(
-                      opt,
-                      style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  padding: const EdgeInsets.only(bottom: 10),
+                  child: SizedBox(
+                    height: 58,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                        backgroundColor: theme.colorScheme.surface,
+                        foregroundColor: theme.colorScheme.onSurface,
+                        side: BorderSide(color: theme.colorScheme.outlineVariant.withAlpha(100)),
+                        alignment: Alignment.centerLeft,
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                      ),
+                      onPressed: () => _handleAnswer(opt),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 32,
+                            height: 32,
+                            decoration: BoxDecoration(
+                              color: AppColors.accent.withAlpha(30),
+                              shape: BoxShape.circle,
+                            ),
+                            child: Center(
+                              child: Text(
+                                letter,
+                                style: const TextStyle(
+                                  color: AppColors.accent,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 14),
+                          Expanded(
+                            child: Text(
+                              opt,
+                              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 );
