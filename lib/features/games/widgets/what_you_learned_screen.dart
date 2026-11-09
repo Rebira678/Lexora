@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:drift/drift.dart' as drift;
 import '../../../app/theme.dart';
 import '../../../app/providers.dart';
+import '../../../core/db/database.dart';
 
 class LearnedItem {
   final String term;
@@ -24,10 +26,11 @@ class LearnedItem {
 ///
 /// Displays:
 /// - Round score and XP earned
+/// - Mastered vs Breached count badges
 /// - List of words/sentences encountered with definitions and examples
 /// - Tap-to-hear audio for every item
-/// - Visual indicator of mastered vs missed items
-class WhatYouLearnedScreen extends ConsumerWidget {
+/// - ⭐ "Save to Mistake Notebook" toggle
+class WhatYouLearnedScreen extends ConsumerStatefulWidget {
   final String gameTitle;
   final int score;
   final int xpEarned;
@@ -46,9 +49,53 @@ class WhatYouLearnedScreen extends ConsumerWidget {
   });
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<WhatYouLearnedScreen> createState() => _WhatYouLearnedScreenState();
+}
+
+class _WhatYouLearnedScreenState extends ConsumerState<WhatYouLearnedScreen> {
+  final Set<String> _savedToNotebook = {};
+
+  Future<void> _toggleSaveToNotebook(LearnedItem item) async {
+    final term = item.term;
+    final db = ref.read(databaseProvider);
+
+    if (_savedToNotebook.contains(term)) {
+      setState(() => _savedToNotebook.remove(term));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Removed "$term" from Mistake Notebook.'),
+          duration: const Duration(seconds: 1),
+        ),
+      );
+    } else {
+      setState(() => _savedToNotebook.add(term));
+      await db.into(db.wildItems).insert(
+            WildItemsCompanion.insert(
+              sentence: item.example.isNotEmpty ? item.example : item.term,
+              source: drift.Value('Mistake: ${item.term} — ${item.definition}'),
+              savedAt: DateTime.now().millisecondsSinceEpoch,
+            ),
+          );
+
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('⭐ Saved "$term" to Mistake Notebook!'),
+            backgroundColor: AppColors.correct,
+            duration: const Duration(seconds: 1),
+          ),
+        );
+      }
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final audio = ref.watch(audioServiceProvider);
     final theme = Theme.of(context);
+
+    final defeatedCount = widget.items.where((i) => !i.wasMistake).length;
+    final mistakeCount = widget.items.where((i) => i.wasMistake).length;
 
     return Scaffold(
       appBar: AppBar(
@@ -66,13 +113,13 @@ class WhatYouLearnedScreen extends ConsumerWidget {
           children: [
             // Score Banner
             Container(
-              margin: const EdgeInsets.all(16),
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 24),
+              margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 20),
               decoration: BoxDecoration(
-                gradient: LinearGradient(
+                gradient: const LinearGradient(
                   colors: [
-                    AppColors.accent.withAlpha(200),
-                    AppColors.accentDark,
+                    Color(0xFF00BFA5),
+                    Color(0xFF00897B),
                   ],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
@@ -89,12 +136,74 @@ class WhatYouLearnedScreen extends ConsumerWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  _StatColumn(label: 'Score', value: '$score', icon: Icons.stars_rounded),
-                  _StatColumn(label: 'XP', value: '+$xpEarned', icon: Icons.bolt_rounded),
+                  _StatColumn(label: 'Score', value: '${widget.score}', icon: Icons.stars_rounded),
+                  _StatColumn(label: 'XP', value: '+${widget.xpEarned}', icon: Icons.bolt_rounded),
                   _StatColumn(
                     label: 'Accuracy',
-                    value: '${(accuracy * 100).round()}%',
+                    value: '${(widget.accuracy * 100).round()}%',
                     icon: Icons.check_circle_rounded,
+                  ),
+                ],
+              ),
+            ),
+
+            // Defeated vs Breached/Mistakes Breakdown Badges
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                      decoration: BoxDecoration(
+                        color: AppColors.correct.withAlpha(25),
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: AppColors.correct.withAlpha(80)),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Icon(Icons.check_circle_outline_rounded,
+                              size: 18, color: AppColors.correct),
+                          const SizedBox(width: 6),
+                          Text(
+                            'Defeated: $defeatedCount',
+                            style: const TextStyle(
+                              color: AppColors.correct,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                      decoration: BoxDecoration(
+                        color: AppColors.wrong.withAlpha(25),
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: AppColors.wrong.withAlpha(80)),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Icon(Icons.shield_outlined,
+                              size: 18, color: AppColors.wrong),
+                          const SizedBox(width: 6),
+                          Text(
+                            'Mistakes: $mistakeCount',
+                            style: const TextStyle(
+                              color: AppColors.wrong,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -105,7 +214,7 @@ class WhatYouLearnedScreen extends ConsumerWidget {
               child: Row(
                 children: [
                   Text(
-                    'Vocabulary & Phrases (${items.length})',
+                    'Vocabulary & Phrases (${widget.items.length})',
                     style: theme.textTheme.titleMedium?.copyWith(
                       fontWeight: FontWeight.bold,
                     ),
@@ -118,10 +227,12 @@ class WhatYouLearnedScreen extends ConsumerWidget {
             Expanded(
               child: ListView.separated(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                itemCount: items.length,
+                itemCount: widget.items.length,
                 separatorBuilder: (_, __) => const SizedBox(height: 12),
                 itemBuilder: (context, index) {
-                  final item = items[index];
+                  final item = widget.items[index];
+                  final isSaved = _savedToNotebook.contains(item.term) || item.wasMistake;
+
                   return Card(
                     margin: EdgeInsets.zero,
                     shape: RoundedRectangleBorder(
@@ -163,11 +274,22 @@ class WhatYouLearnedScreen extends ConsumerWidget {
                                   ],
                                 ),
                               ),
+                              // Audio button
                               IconButton(
                                 icon: const Icon(Icons.volume_up_rounded, color: AppColors.accent),
+                                tooltip: 'Listen',
                                 onPressed: () {
                                   audio.speakOrPlay(item.term);
                                 },
+                              ),
+                              // ⭐ Save to Mistake Notebook toggle
+                              IconButton(
+                                icon: Icon(
+                                  isSaved ? Icons.star_rounded : Icons.star_border_rounded,
+                                  color: isSaved ? AppColors.combo : Colors.grey,
+                                ),
+                                tooltip: 'Save to Mistake Notebook',
+                                onPressed: () => _toggleSaveToNotebook(item),
                               ),
                             ],
                           ),
@@ -218,23 +340,33 @@ class WhatYouLearnedScreen extends ConsumerWidget {
               ),
             ),
 
-            // Bottom Actions
+            // Action Buttons
             Padding(
               padding: const EdgeInsets.all(16),
               child: Row(
                 children: [
                   Expanded(
-                    child: OutlinedButton(
+                    child: OutlinedButton.icon(
+                      icon: const Icon(Icons.home_rounded),
+                      label: const Text('Home'),
+                      style: OutlinedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(vertical: 14),
+                      ),
                       onPressed: () => context.go('/'),
-                      child: const Text('Home'),
                     ),
                   ),
-                  if (onPlayAgain != null) ...[
+                  if (widget.onPlayAgain != null) ...[
                     const SizedBox(width: 12),
                     Expanded(
-                      child: ElevatedButton(
-                        onPressed: onPlayAgain,
-                        child: const Text('Play Again'),
+                      child: ElevatedButton.icon(
+                        icon: const Icon(Icons.replay_rounded),
+                        label: const Text('Play Again'),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: AppColors.accent,
+                          foregroundColor: Colors.white,
+                          padding: const EdgeInsets.symmetric(vertical: 14),
+                        ),
+                        onPressed: widget.onPlayAgain,
                       ),
                     ),
                   ],
@@ -277,8 +409,7 @@ class _StatColumn extends StatelessWidget {
           label,
           style: TextStyle(
             color: Colors.white.withAlpha(200),
-            fontSize: 13,
-            fontWeight: FontWeight.w500,
+            fontSize: 12,
           ),
         ),
       ],
