@@ -276,50 +276,43 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         titleSpacing: 20,
-        title: Center(
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 500),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Text(
-                      'LEXORA',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w800,
-                        letterSpacing: 2.0,
-                        color: theme.colorScheme.onSurface,
-                      ),
-                    ),
-                    const SizedBox(width: 8),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                      decoration: BoxDecoration(
-                        color: theme.colorScheme.primary.withAlpha(25),
-                        borderRadius: BorderRadius.circular(6),
-                      ),
-                      child: Text(
-                        'B2',
-                        style: TextStyle(
-                          fontSize: 11,
-                          fontWeight: FontWeight.w700,
-                          color: theme.colorScheme.primary,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                IconButton(
-                  icon: const Icon(Icons.schedule_rounded, size: 20),
-                  tooltip: 'Daily Reminder',
-                  onPressed: () => _showReminderSettingsDialog(context),
-                ),
-              ],
+        title: Row(
+          children: [
+            Text(
+              'LEXORA',
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w800,
+                letterSpacing: 2.0,
+                color: theme.colorScheme.onSurface,
+              ),
             ),
-          ),
+            const SizedBox(width: 8),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+              decoration: BoxDecoration(
+                color: theme.colorScheme.primary.withAlpha(25),
+                borderRadius: BorderRadius.circular(6),
+              ),
+              child: Text(
+                'B2',
+                style: TextStyle(
+                  fontSize: 11,
+                  fontWeight: FontWeight.w700,
+                  color: theme.colorScheme.primary,
+                ),
+              ),
+            ),
+          ],
         ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.schedule_rounded, size: 20),
+            tooltip: 'Daily Reminder',
+            onPressed: () => _showReminderSettingsDialog(context),
+          ),
+          const SizedBox(width: 8),
+        ],
       ),
       body: SafeArea(
         child: Center(
@@ -680,48 +673,37 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           ),
         ),
       ),
-      bottomNavigationBar: Container(
-        color: theme.colorScheme.surface,
-        child: SafeArea(
-          top: false,
-          child: Center(
-            child: ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: 500),
-              child: NavigationBar(
-                selectedIndex: 0,
-                height: 64,
-                onDestinationSelected: (index) {
-                  if (index == 1) {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const MistakesScreen()));
-                  } else if (index == 2) {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const StatsScreen()));
-                  } else if (index == 3) {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SettingsScreen()));
-                  }
-                },
-                destinations: const [
-                  NavigationDestination(
-                    icon: Icon(Icons.grid_view_rounded, size: 22),
-                    label: 'Arena',
-                  ),
-                  NavigationDestination(
-                    icon: Icon(Icons.bookmark_outline_rounded, size: 22),
-                    selectedIcon: Icon(Icons.bookmark_rounded, size: 22),
-                    label: 'My Words',
-                  ),
-                  NavigationDestination(
-                    icon: Icon(Icons.insights_rounded, size: 22),
-                    label: 'Stats',
-                  ),
-                  NavigationDestination(
-                    icon: Icon(Icons.tune_rounded, size: 22),
-                    label: 'Settings',
-                  ),
-                ],
-              ),
-            ),
+      bottomNavigationBar: NavigationBar(
+        selectedIndex: 0,
+        height: 64,
+        onDestinationSelected: (index) {
+          if (index == 1) {
+            Navigator.of(context).push(MaterialPageRoute(builder: (_) => const MistakesScreen()));
+          } else if (index == 2) {
+            Navigator.of(context).push(MaterialPageRoute(builder: (_) => const StatsScreen()));
+          } else if (index == 3) {
+            Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SettingsScreen()));
+          }
+        },
+        destinations: const [
+          NavigationDestination(
+            icon: Icon(Icons.grid_view_rounded, size: 22),
+            label: 'Arena',
           ),
-        ),
+          NavigationDestination(
+            icon: Icon(Icons.bookmark_outline_rounded, size: 22),
+            selectedIcon: Icon(Icons.bookmark_rounded, size: 22),
+            label: 'My Words',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.insights_rounded, size: 22),
+            label: 'Stats',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.tune_rounded, size: 22),
+            label: 'Settings',
+          ),
+        ],
       ),
     );
   }
