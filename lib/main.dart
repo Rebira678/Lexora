@@ -14,6 +14,9 @@ void main() async {
     // Initialize audio & TTS services
     await container.read(audioServiceProvider).init();
 
+    // Initialize notification service
+    await container.read(notificationServiceProvider).init();
+
     // Import content JSONs into SQLite if not already done
     final importer = container.read(contentImporterProvider);
     await importer.importIfNeeded();

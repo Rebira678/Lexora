@@ -36,6 +36,13 @@ class TtsService {
     } catch (_) {}
   }
 
+  /// Sets the default speech rate.
+  Future<void> setSpeechRate(double rate) async {
+    try {
+      await _flutterTts.setSpeechRate(rate);
+    } catch (_) {}
+  }
+
   /// Stops any currently playing speech.
   Future<void> stop() async {
     try {
