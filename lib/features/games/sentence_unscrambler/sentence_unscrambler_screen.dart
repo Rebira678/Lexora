@@ -96,6 +96,14 @@ class _SentenceUnscramblerScreenState extends ConsumerState<SentenceUnscramblerS
     });
   }
 
+  void _resetAssembledWords() {
+    if (_hasChecked || _assembledWords.isEmpty) return;
+    setState(() {
+      _bankWords.addAll(_assembledWords);
+      _assembledWords.clear();
+    });
+  }
+
   void _checkSentence() {
     if (_assembledWords.isEmpty) return;
     final current = _sentences[_currentIndex];
@@ -316,9 +324,20 @@ class _SentenceUnscramblerScreenState extends ConsumerState<SentenceUnscramblerS
 
               // Bottom Actions
               if (!_hasChecked)
-                ElevatedButton(
-                  onPressed: _assembledWords.isNotEmpty ? _checkSentence : null,
-                  child: const Text('Check Sentence'),
+                Row(
+                  children: [
+                    OutlinedButton(
+                      onPressed: _assembledWords.isNotEmpty ? _resetAssembledWords : null,
+                      child: const Text('Reset'),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: _assembledWords.isNotEmpty ? _checkSentence : null,
+                        child: const Text('Check Sentence'),
+                      ),
+                    ),
+                  ],
                 )
               else
                 Column(
@@ -332,9 +351,47 @@ class _SentenceUnscramblerScreenState extends ConsumerState<SentenceUnscramblerS
                           style: const TextStyle(color: AppColors.wrong, fontWeight: FontWeight.bold),
                         ),
                       ),
-                    ElevatedButton(
-                      onPressed: _nextSentence,
-                      child: Text(_currentIndex + 1 < 5 ? 'Next Sentence' : 'Finish Round'),
+                    Row(
+                      children: [
+                        OutlinedButton.icon(
+                          icon: const Icon(Icons.help_outline_rounded, size: 18),
+                          label: const Text('Why?'),
+                          onPressed: () {
+                            showDialog(
+                              context: context,
+                              builder: (ctx) => AlertDialog(
+                                title: const Text('Grammar Structure'),
+                                content: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Rule: ${current.simpleMeaning ?? "Standard English sentence pattern."}',
+                                        style: const TextStyle(fontWeight: FontWeight.w600)),
+                                    const SizedBox(height: 10),
+                                    Text('• Subject: ${current.subjectSpan ?? "Main Subject"}'),
+                                    Text('• Verb: ${current.verbSpan ?? "Main Verb"}'),
+                                    if (current.connectorsJson != null && current.connectorsJson!.isNotEmpty)
+                                      Text('• Connectors: ${current.connectorsJson}'),
+                                  ],
+                                ),
+                                actions: [
+                                  TextButton(
+                                    onPressed: () => Navigator.pop(ctx),
+                                    child: const Text('Got It'),
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: ElevatedButton(
+                            onPressed: _nextSentence,
+                            child: Text(_currentIndex + 1 < 5 ? 'Next Sentence' : 'Finish Round'),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
