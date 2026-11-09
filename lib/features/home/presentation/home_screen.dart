@@ -14,6 +14,7 @@ import '../../reading/reading_screen.dart';
 import '../../mistakes/presentation/mistakes_screen.dart';
 import '../../stats/presentation/stats_screen.dart';
 import '../../settings/presentation/settings_screen.dart';
+import 'widgets/game_art_painters.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -257,6 +258,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final todayStatsAsync = ref.watch(todayStatsProvider);
     final dueCardsAsync = ref.watch(dueCardCountProvider);
     final masteredWordsAsync = ref.watch(masteredCountProvider);
+
     final streak = streakStateAsync.value?.current ?? 0;
     final freezes = streakStateAsync.value?.freezes ?? 0;
     final totalXp = todayStatsAsync.value?.xp ?? 0;
@@ -274,433 +276,466 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         titleSpacing: 20,
-        title: Row(
-          children: [
-            Text(
-              'LEXORA',
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w800,
-                letterSpacing: 2.0,
-                color: theme.colorScheme.onSurface,
-              ),
-            ),
-            const SizedBox(width: 8),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-              decoration: BoxDecoration(
-                color: theme.colorScheme.primary.withAlpha(25),
-                borderRadius: BorderRadius.circular(6),
-              ),
-              child: Text(
-                'B2',
-                style: TextStyle(
-                  fontSize: 11,
-                  fontWeight: FontWeight.w700,
-                  color: theme.colorScheme.primary,
-                ),
-              ),
-            ),
-          ],
-        ),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.schedule_rounded, size: 20),
-            tooltip: 'Reminder',
-            onPressed: () => _showReminderSettingsDialog(context),
-          ),
-          const SizedBox(width: 8),
-        ],
-      ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              // Top Metrics Card: Streak & Mastery
-              Container(
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: theme.colorScheme.surface,
-                  borderRadius: BorderRadius.circular(14),
-                  border: Border.all(color: theme.colorScheme.outline),
-                ),
-                child: Column(
+        title: Center(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 500),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        InkWell(
-                          onTap: () => _showStreakInfoDialog(context, streak, freezes),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                '$streak',
-                                style: theme.textTheme.displayMedium?.copyWith(
-                                  fontWeight: FontWeight.w800,
-                                  height: 1.0,
-                                ),
-                              ),
-                              const SizedBox(height: 4),
-                              Row(
-                                children: [
-                                  Text(
-                                    'DAY STREAK',
-                                    style: theme.textTheme.labelSmall,
-                                  ),
-                                  if (freezes > 0) ...[
-                                    const SizedBox(width: 6),
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1),
-                                      decoration: BoxDecoration(
-                                        color: theme.colorScheme.primary.withAlpha(20),
-                                        borderRadius: BorderRadius.circular(4),
-                                      ),
-                                      child: Text(
-                                        '$freezes Freezes',
-                                        style: TextStyle(
-                                          fontSize: 10,
-                                          fontWeight: FontWeight.w600,
-                                          color: theme.colorScheme.primary,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Text(
-                              '$masteredWords',
-                              style: theme.textTheme.displayMedium?.copyWith(
-                                fontWeight: FontWeight.w800,
-                                height: 1.0,
-                              ),
-                            ),
-                            const SizedBox(height: 4),
-                            Text(
-                              'WORDS MASTERED',
-                              style: theme.textTheme.labelSmall,
-                            ),
-                          ],
-                        ),
-                      ],
+                    Text(
+                      'LEXORA',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: 2.0,
+                        color: theme.colorScheme.onSurface,
+                      ),
                     ),
-                    const SizedBox(height: 16),
-                    // Level progress
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Level $level • $rank',
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w600,
-                            color: theme.colorScheme.onSurface,
-                          ),
+                    const SizedBox(width: 8),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                      decoration: BoxDecoration(
+                        color: theme.colorScheme.primary.withAlpha(25),
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      child: Text(
+                        'B2',
+                        style: TextStyle(
+                          fontSize: 11,
+                          fontWeight: FontWeight.w700,
+                          color: theme.colorScheme.primary,
                         ),
-                        Text(
-                          '$totalXp / $nextLevelXp XP',
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: theme.colorScheme.onSurfaceVariant,
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 8),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(4),
-                      child: LinearProgressIndicator(
-                        value: xpProgress,
-                        minHeight: 5,
-                        backgroundColor: theme.colorScheme.surfaceContainerHighest,
-                        valueColor: AlwaysStoppedAnimation<Color>(theme.colorScheme.primary),
                       ),
                     ),
                   ],
                 ),
-              ),
-              const SizedBox(height: 12),
-
-              // Implementation Intention Anchor (Minimalist Quote Card)
-              InkWell(
-                borderRadius: BorderRadius.circular(12),
-                onTap: _editImplementationIntention,
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-                  decoration: BoxDecoration(
-                    color: theme.colorScheme.surface,
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(color: theme.colorScheme.outline),
-                  ),
-                  child: Row(
-                    children: [
-                      Container(
-                        width: 3,
-                        height: 28,
-                        decoration: BoxDecoration(
-                          color: theme.colorScheme.primary,
-                          borderRadius: BorderRadius.circular(2),
+                IconButton(
+                  icon: const Icon(Icons.schedule_rounded, size: 20),
+                  tooltip: 'Daily Reminder',
+                  onPressed: () => _showReminderSettingsDialog(context),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+      body: SafeArea(
+        child: Center(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 500),
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  // Top Metrics Card: Streak & Mastery
+                  Container(
+                    padding: const EdgeInsets.all(18),
+                    decoration: BoxDecoration(
+                      color: theme.colorScheme.surface,
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(color: theme.colorScheme.outline),
+                    ),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            InkWell(
+                              onTap: () => _showStreakInfoDialog(context, streak, freezes),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    '$streak',
+                                    style: theme.textTheme.displayMedium?.copyWith(
+                                      fontWeight: FontWeight.w800,
+                                      height: 1.0,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 4),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        'DAY STREAK',
+                                        style: theme.textTheme.labelSmall,
+                                      ),
+                                      if (freezes > 0) ...[
+                                        const SizedBox(width: 6),
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1),
+                                          decoration: BoxDecoration(
+                                            color: theme.colorScheme.primary.withAlpha(20),
+                                            borderRadius: BorderRadius.circular(4),
+                                          ),
+                                          child: Text(
+                                            '$freezes Freezes',
+                                            style: TextStyle(
+                                              fontSize: 10,
+                                              fontWeight: FontWeight.w600,
+                                              color: theme.colorScheme.primary,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Text(
+                                  '$masteredWords',
+                                  style: theme.textTheme.displayMedium?.copyWith(
+                                    fontWeight: FontWeight.w800,
+                                    height: 1.0,
+                                  ),
+                                ),
+                                const SizedBox(height: 4),
+                                Text(
+                                  'WORDS MASTERED',
+                                  style: theme.textTheme.labelSmall,
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
-                      ),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: Text(
-                          _implementationIntention,
-                          style: theme.textTheme.bodyMedium?.copyWith(
-                            fontStyle: FontStyle.italic,
-                            fontWeight: FontWeight.w400,
+                        const SizedBox(height: 16),
+                        // Level progress
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Level $level • $rank',
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w600,
+                                color: theme.colorScheme.onSurface,
+                              ),
+                            ),
+                            Text(
+                              '$totalXp / $nextLevelXp XP',
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: theme.colorScheme.onSurfaceVariant,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 8),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(4),
+                          child: LinearProgressIndicator(
+                            value: xpProgress,
+                            minHeight: 5,
+                            backgroundColor: theme.colorScheme.surfaceContainerHighest,
+                            valueColor: AlwaysStoppedAnimation<Color>(theme.colorScheme.primary),
                           ),
                         ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+
+                  // Implementation Intention Anchor (Minimalist Quote Card)
+                  InkWell(
+                    borderRadius: BorderRadius.circular(12),
+                    onTap: _editImplementationIntention,
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+                      decoration: BoxDecoration(
+                        color: theme.colorScheme.surface,
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: theme.colorScheme.outline),
                       ),
-                      const SizedBox(width: 8),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 3,
+                            height: 28,
+                            decoration: BoxDecoration(
+                              color: theme.colorScheme.primary,
+                              borderRadius: BorderRadius.circular(2),
+                            ),
+                          ),
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: Text(
+                              _implementationIntention,
+                              style: theme.textTheme.bodyMedium?.copyWith(
+                                fontStyle: FontStyle.italic,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          Text(
+                            'Edit',
+                            style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                              color: theme.colorScheme.primary,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+
+                  // Primary Mission Card
+                  Container(
+                    padding: const EdgeInsets.all(18),
+                    decoration: BoxDecoration(
+                      color: theme.colorScheme.surface,
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(
+                        color: theme.colorScheme.primary.withAlpha(120),
+                        width: 1.5,
+                      ),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              "TODAY'S MISSION",
+                              style: TextStyle(
+                                fontSize: 11,
+                                fontWeight: FontWeight.w700,
+                                letterSpacing: 0.8,
+                                color: theme.colorScheme.primary,
+                              ),
+                            ),
+                            Text(
+                              dueCards > 0 ? '$dueCards Reviews Due' : 'Reviews Completed',
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                color: theme.colorScheme.onSurfaceVariant,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 10),
+                        Text(
+                          'Spaced Review & Sentence Expansion',
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            fontWeight: FontWeight.w700,
+                            letterSpacing: -0.2,
+                          ),
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          'Complete 5 structured steps to reinforce long-term memory.',
+                          style: theme.textTheme.bodySmall,
+                        ),
+                        const SizedBox(height: 16),
+                        ElevatedButton(
+                          onPressed: () => _launchNextMissionStep(ref),
+                          child: const Text('Start Session'),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+
+                  // Game Arena Section Header
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
                       Text(
-                        'Edit',
+                        'Game Arena',
+                        style: theme.textTheme.titleMedium?.copyWith(
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: -0.2,
+                        ),
+                      ),
+                      Text(
+                        'Phase 1 Core',
                         style: TextStyle(
                           fontSize: 12,
-                          fontWeight: FontWeight.w600,
-                          color: theme.colorScheme.primary,
+                          color: theme.colorScheme.onSurfaceVariant,
                         ),
                       ),
                     ],
                   ),
-                ),
-              ),
-              const SizedBox(height: 16),
+                  const SizedBox(height: 12),
 
-              // Primary Mission Card
-              Container(
-                padding: const EdgeInsets.all(18),
-                decoration: BoxDecoration(
-                  color: theme.colorScheme.surface,
-                  borderRadius: BorderRadius.circular(14),
-                  border: Border.all(
-                    color: theme.colorScheme.primary.withAlpha(120),
-                    width: 1.5,
-                  ),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "TODAY'S MISSION",
-                          style: TextStyle(
-                            fontSize: 11,
-                            fontWeight: FontWeight.w700,
-                            letterSpacing: 0.8,
-                            color: theme.colorScheme.primary,
-                          ),
+                  // 2-Column Game Grid with Custom Vector Illustrations
+                  GridView.count(
+                    crossAxisCount: 2,
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    mainAxisSpacing: 14,
+                    crossAxisSpacing: 14,
+                    childAspectRatio: 0.82,
+                    children: [
+                      _IllustratedGameCard(
+                        type: GameArtType.wordSiege,
+                        category: 'ACTION',
+                        title: 'Word Siege',
+                        description: '3-lane gate defense with typing and tap mode',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const WordSiegeScreen(level: 3)),
                         ),
-                        Text(
-                          dueCards > 0 ? '$dueCards Reviews Due' : 'Reviews Completed',
-                          style: TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500,
-                            color: theme.colorScheme.onSurfaceVariant,
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 10),
-                    Text(
-                      'Spaced Review & Sentence Expansion',
-                      style: theme.textTheme.titleMedium?.copyWith(
-                        fontWeight: FontWeight.w700,
-                        letterSpacing: -0.2,
                       ),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      'Complete 5 structured steps to reinforce long-term memory.',
-                      style: theme.textTheme.bodySmall,
-                    ),
-                    const SizedBox(height: 16),
-                    ElevatedButton(
-                      onPressed: () => _launchNextMissionStep(ref),
-                      child: const Text('Start Session'),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 24),
+                      _IllustratedGameCard(
+                        type: GameArtType.vocabSprint,
+                        category: 'SPEED',
+                        title: 'Vocab Sprint',
+                        description: 'Rapid-fire SRS review across 5 game modes',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const VocabSprintScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.unscrambler,
+                        category: 'SYNTAX',
+                        title: 'Unscrambler',
+                        description: 'Reconstruct clauses with audio pronunciation',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const SentenceUnscramblerScreen(level: 1)),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.anagramWheel,
+                        category: 'SPELLING',
+                        title: 'Anagram Wheel',
+                        description: 'Swipe letter trail to unlock words and roots',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const AnagramWheelScreen()),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 28),
 
-              // Game Arena Section Header
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                  // Additional Modules Header
                   Text(
-                    'Game Arena',
+                    'Sentence & Text Modules',
                     style: theme.textTheme.titleMedium?.copyWith(
                       fontWeight: FontWeight.w700,
                       letterSpacing: -0.2,
                     ),
                   ),
-                  Text(
-                    'Phase 1 Core',
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: theme.colorScheme.onSurfaceVariant,
-                    ),
+                  const SizedBox(height: 12),
+
+                  GridView.count(
+                    crossAxisCount: 2,
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    mainAxisSpacing: 14,
+                    crossAxisSpacing: 14,
+                    childAspectRatio: 0.82,
+                    children: [
+                      _IllustratedGameCard(
+                        type: GameArtType.paragraphArchitect,
+                        category: 'COHESION',
+                        title: 'Paragraph Arch.',
+                        description: 'Cohesion map & sentence connectors',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const ParagraphArchitectScreen(level: 2)),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.chunkEcho,
+                        category: 'LISTENING',
+                        title: 'Chunk Echo',
+                        description: 'Acoustic waveform & chunk assembly',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const ChunkEchoScreen(level: 2)),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.sentenceXray,
+                        category: 'GRAMMAR',
+                        title: 'Sentence X-Ray',
+                        description: 'Isolate main subject, verb, and clause',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const SentenceXRayScreen(level: 2)),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.gradedReader,
+                        category: 'READING',
+                        title: 'Graded Reader',
+                        description: 'Tap-to-define passages with wild word save',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const ReadingScreen()),
+                        ),
+                      ),
+                    ],
                   ),
+                  const SizedBox(height: 24),
                 ],
               ),
-              const SizedBox(height: 12),
-
-              // Clean 2-Column Minimalist Game Grid (No emojis, no rainbow)
-              GridView.count(
-                crossAxisCount: 2,
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                mainAxisSpacing: 10,
-                crossAxisSpacing: 10,
-                childAspectRatio: 1.25,
-                children: [
-                  _CleanGameCard(
-                    category: 'ACTION',
-                    title: 'Word Siege',
-                    description: '3-lane gate defense with typing and tap mode',
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => const WordSiegeScreen(level: 3)),
-                    ),
-                  ),
-                  _CleanGameCard(
-                    category: 'SPEED',
-                    title: 'Vocab Sprint',
-                    description: 'Rapid-fire SRS review across 5 game modes',
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => const VocabSprintScreen()),
-                    ),
-                  ),
-                  _CleanGameCard(
-                    category: 'SYNTAX',
-                    title: 'Unscrambler',
-                    description: 'Reconstruct clauses with audio pronunciation',
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => const SentenceUnscramblerScreen(level: 1)),
-                    ),
-                  ),
-                  _CleanGameCard(
-                    category: 'SPELLING',
-                    title: 'Anagram Wheel',
-                    description: 'Swipe letter trail to unlock words and roots',
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => const AnagramWheelScreen()),
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 24),
-
-              // Additional Advanced Modules Header
-              Text(
-                'Sentence & Text Modules',
-                style: theme.textTheme.titleMedium?.copyWith(
-                  fontWeight: FontWeight.w700,
-                  letterSpacing: -0.2,
-                ),
-              ),
-              const SizedBox(height: 12),
-
-              GridView.count(
-                crossAxisCount: 2,
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                mainAxisSpacing: 10,
-                crossAxisSpacing: 10,
-                childAspectRatio: 1.25,
-                children: [
-                  _CleanGameCard(
-                    category: 'COHESION',
-                    title: 'Paragraph Arch.',
-                    description: 'Cohesion map & sentence connectors',
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => const ParagraphArchitectScreen(level: 2)),
-                    ),
-                  ),
-                  _CleanGameCard(
-                    category: 'LISTENING',
-                    title: 'Chunk Echo',
-                    description: 'Acoustic waveform & chunk assembly',
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => const ChunkEchoScreen(level: 2)),
-                    ),
-                  ),
-                  _CleanGameCard(
-                    category: 'GRAMMAR',
-                    title: 'Sentence X-Ray',
-                    description: 'Isolate main subject, verb, and clause',
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => const SentenceXRayScreen(level: 2)),
-                    ),
-                  ),
-                  _CleanGameCard(
-                    category: 'READING',
-                    title: 'Graded Reader',
-                    description: 'Tap-to-define passages with wild word save',
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => const ReadingScreen()),
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 20),
-            ],
+            ),
           ),
         ),
       ),
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: 0,
-        height: 64,
-        onDestinationSelected: (index) {
-          if (index == 1) {
-            Navigator.of(context).push(MaterialPageRoute(builder: (_) => const MistakesScreen()));
-          } else if (index == 2) {
-            Navigator.of(context).push(MaterialPageRoute(builder: (_) => const StatsScreen()));
-          } else if (index == 3) {
-            Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SettingsScreen()));
-          }
-        },
-        destinations: const [
-          NavigationDestination(
-            icon: Icon(Icons.grid_view_rounded, size: 22),
-            label: 'Arena',
+      bottomNavigationBar: Container(
+        color: theme.colorScheme.surface,
+        child: SafeArea(
+          top: false,
+          child: Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 500),
+              child: NavigationBar(
+                selectedIndex: 0,
+                height: 64,
+                onDestinationSelected: (index) {
+                  if (index == 1) {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const MistakesScreen()));
+                  } else if (index == 2) {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const StatsScreen()));
+                  } else if (index == 3) {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SettingsScreen()));
+                  }
+                },
+                destinations: const [
+                  NavigationDestination(
+                    icon: Icon(Icons.grid_view_rounded, size: 22),
+                    label: 'Arena',
+                  ),
+                  NavigationDestination(
+                    icon: Icon(Icons.bookmark_outline_rounded, size: 22),
+                    selectedIcon: Icon(Icons.bookmark_rounded, size: 22),
+                    label: 'My Words',
+                  ),
+                  NavigationDestination(
+                    icon: Icon(Icons.insights_rounded, size: 22),
+                    label: 'Stats',
+                  ),
+                  NavigationDestination(
+                    icon: Icon(Icons.tune_rounded, size: 22),
+                    label: 'Settings',
+                  ),
+                ],
+              ),
+            ),
           ),
-          NavigationDestination(
-            icon: Icon(Icons.bookmark_outline_rounded, size: 22),
-            selectedIcon: Icon(Icons.bookmark_rounded, size: 22),
-            label: 'My Words',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.insights_rounded, size: 22),
-            label: 'Stats',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.tune_rounded, size: 22),
-            label: 'Settings',
-          ),
-        ],
+        ),
       ),
     );
   }
 }
 
-class _CleanGameCard extends StatelessWidget {
+class _IllustratedGameCard extends StatelessWidget {
+  final GameArtType type;
   final String category;
   final String title;
   final String description;
   final VoidCallback onTap;
 
-  const _CleanGameCard({
+  const _IllustratedGameCard({
+    required this.type,
     required this.category,
     required this.title,
     required this.description,
@@ -714,74 +749,89 @@ class _CleanGameCard extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: theme.colorScheme.surface,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(14),
         border: Border.all(color: theme.colorScheme.outline),
       ),
       child: Material(
         color: Colors.transparent,
         child: InkWell(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(14),
           onTap: onTap,
-          child: Padding(
-            padding: const EdgeInsets.all(12),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                      decoration: BoxDecoration(
-                        color: theme.colorScheme.primary.withAlpha(20),
-                        borderRadius: BorderRadius.circular(4),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              // Rich vector art illustration header
+              GameArtWidget(
+                type: type,
+                primaryColor: theme.colorScheme.primary,
+                height: 95,
+              ),
+
+              // Content Area
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                            decoration: BoxDecoration(
+                              color: theme.colorScheme.primary.withAlpha(20),
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            child: Text(
+                              category,
+                              style: TextStyle(
+                                fontSize: 9,
+                                fontWeight: FontWeight.w700,
+                                letterSpacing: 0.5,
+                                color: theme.colorScheme.primary,
+                              ),
+                            ),
+                          ),
+                          Icon(
+                            Icons.arrow_forward_rounded,
+                            size: 13,
+                            color: theme.colorScheme.onSurfaceVariant.withAlpha(160),
+                          ),
+                        ],
                       ),
-                      child: Text(
-                        category,
-                        style: TextStyle(
-                          fontSize: 10,
-                          fontWeight: FontWeight.w700,
-                          letterSpacing: 0.5,
-                          color: theme.colorScheme.primary,
-                        ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            title,
+                            style: const TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w700,
+                              letterSpacing: -0.2,
+                            ),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                          const SizedBox(height: 2),
+                          Text(
+                            description,
+                            style: TextStyle(
+                              fontSize: 11,
+                              color: theme.colorScheme.onSurfaceVariant,
+                              height: 1.25,
+                            ),
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ],
                       ),
-                    ),
-                    Icon(
-                      Icons.arrow_forward_rounded,
-                      size: 14,
-                      color: theme.colorScheme.onSurfaceVariant.withAlpha(150),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      title,
-                      style: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                        letterSpacing: -0.2,
-                      ),
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                    const SizedBox(height: 3),
-                    Text(
-                      description,
-                      style: TextStyle(
-                        fontSize: 11,
-                        color: theme.colorScheme.onSurfaceVariant,
-                        height: 1.3,
-                      ),
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ],
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
