@@ -30,6 +30,7 @@ class WordSiegeEnemy {
   final String definition;
   final int lane; // 0, 1, 2
   final bool isBoss;
+  final List<String> acceptedVariants;
   double y = 0.0; // 0.0 (top) to 1.0 (gate)
   bool isDefeated = false;
   List<String> tapOptions = const [];
@@ -43,6 +44,7 @@ class WordSiegeEnemy {
     required this.definition,
     required this.lane,
     this.isBoss = false,
+    this.acceptedVariants = const [],
     this.tapOptions = const [],
   });
 }
@@ -177,7 +179,7 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
         }
         word = _wordPool.removeLast();
       }
-      final isBoss = (_wave == 3 && i == count - 1);
+      final isBoss = (_wave == 3 || widget.level >= 5) && i == count - 1;
 
       String clue = word.definitionEn ?? 'Identify the word';
       String answer = word.lemma;
@@ -414,6 +416,7 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
       text,
       target.answer,
       tolerance: widget.level <= 3 ? 1 : 0,
+      acceptedVariants: target.acceptedVariants,
     );
     _totalCount++;
 
@@ -494,6 +497,7 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
   }
 
   void _triggerEcho() {
+    if (widget.level >= 5) return; // Level 5-6: no Echo allowed (app.md 24.1)
     final target = _getTargetEnemy();
     if (target != null) {
       _usedEcho = true;
@@ -504,9 +508,25 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
   void _triggerBomb() {
     if (_activeEnemies.isNotEmpty) {
       ref.read(audioServiceProvider).playSfx(SfxType.bomb);
+      final target = _getTargetEnemy();
+      final targetLane = target?.lane ??
+          (_activeEnemies.any((e) => !e.isDefeated)
+              ? _activeEnemies.firstWhere((e) => !e.isDefeated).lane
+              : 0);
+      final laneEnemies = _activeEnemies
+          .where((e) => !e.isDefeated && e.lane == targetLane)
+          .toList();
+
       setState(() {
-        for (final e in _activeEnemies) {
+        for (final e in laneEnemies) {
           e.isDefeated = true;
+          // Re-queue in wave 3 per app.md 24.1
+          if (_wave < 3) {
+            final matches = _allWords.where((w) => w.id == e.wordId).toList();
+            if (matches.isNotEmpty) {
+              _requeuedBreachesForWave3.add(matches.first);
+            }
+          }
           ref.read(srsDaoProvider).logReview(
                 cardId: e.wordId,
                 game: 'word_siege',
@@ -515,6 +535,7 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
                 quality: 1,
               );
         }
+        _combo = (_combo - 12).clamp(0, 999);
       });
     }
   }
@@ -681,7 +702,7 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
                           tooltip: 'Freeze',
                           onPressed: _triggerFreeze,
                         ),
-                      if (_combo >= 8)
+                      if (_combo >= 8 && widget.level < 5)
                         IconButton(
                           icon: const Icon(Icons.volume_up, color: AppColors.accent),
                           tooltip: 'Echo Hint',
