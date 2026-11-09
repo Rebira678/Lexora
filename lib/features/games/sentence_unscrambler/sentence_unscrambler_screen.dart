@@ -67,8 +67,9 @@ class _SentenceUnscramblerScreenState extends ConsumerState<SentenceUnscramblerS
 
   void _setupCurrentSentence() {
     final s = _sentences[_currentIndex];
-    // Split into words without losing punctuation attached or basic tokens
-    final tokens = s.sentence.split(' ');
+    // Split into clean word tokens without attached end-punctuation
+    final cleanSentence = s.sentence.replaceAll(RegExp(r'[.!?]'), '');
+    final tokens = cleanSentence.split(' ');
     final shuffled = List<String>.from(tokens)..shuffle();
 
     setState(() {
@@ -107,10 +108,26 @@ class _SentenceUnscramblerScreenState extends ConsumerState<SentenceUnscramblerS
   void _checkSentence() {
     if (_assembledWords.isEmpty) return;
     final current = _sentences[_currentIndex];
-    final assembled = _assembledWords.join(' ');
-    final expected = current.sentence.trim();
+    final assembled = _assembledWords.join(' ').trim().toLowerCase().replaceAll(RegExp(r'[.,!?]'), '');
+    final expected = current.sentence.trim().toLowerCase().replaceAll(RegExp(r'[.,!?]'), '');
 
-    final ok = (assembled.toLowerCase() == expected.toLowerCase());
+    // Canonical exact match
+    bool ok = (assembled == expected);
+
+    // Two valid orderings check (app.md 5.1):
+    // Accepts clause inversion when grammar allows (e.g. around comma or adverbial clauses)
+    if (!ok && current.sentence.contains(',')) {
+      final parts = current.sentence
+          .split(',')
+          .map((p) => p.trim().toLowerCase().replaceAll(RegExp(r'[.,!?]'), ''))
+          .toList();
+      if (parts.length == 2) {
+        final inverted = '${parts[1]} ${parts[0]}';
+        if (assembled == inverted) {
+          ok = true;
+        }
+      }
+    }
 
     setState(() {
       _hasChecked = true;
