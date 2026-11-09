@@ -1,0 +1,180 @@
+[
+  {
+    "id": 1,
+    "title": "The Benefits of Walking",
+    "body": "Walking is one of the simplest and most effective forms of exercise. You do not need any special equipment or a gym membership — just a comfortable pair of shoes. Studies show that walking for thirty minutes a day can improve heart health, lower blood pressure, and help with weight management. It is also great for mental health. Many people find that a short walk helps them feel less stressed and more relaxed. Walking outdoors, especially in nature, can boost your mood and improve your sleep. Doctors recommend walking as a safe activity for people of all ages. Whether you walk to work, around your neighbourhood, or in a park, the benefits are clear. Even a short daily walk can make a big difference to your overall well-being.",
+    "cefr": "B1",
+    "word_count": 133,
+    "questions": [
+      {
+        "type": "multiple_choice",
+        "prompt": "What is the main idea of the passage?",
+        "options": ["Walking is boring", "Walking is good for your health", "Walking is dangerous for older people", "Walking requires expensive equipment"],
+        "answer": "Walking is good for your health",
+        "explanation": "The passage describes several physical and mental health benefits of walking."
+      },
+      {
+        "type": "true_false",
+        "prompt": "According to the passage, you need special equipment to start walking for exercise.",
+        "options": ["True", "False"],
+        "answer": "False",
+        "explanation": "The passage states that you do not need special equipment — just comfortable shoes."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "How long does the passage suggest walking each day?",
+        "options": ["Ten minutes", "Twenty minutes", "Thirty minutes", "One hour"],
+        "answer": "Thirty minutes",
+        "explanation": "The passage says 'walking for thirty minutes a day' can improve health."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "How to Save Money on Groceries",
+    "body": "Buying food is one of the biggest monthly expenses for most families. However, there are several simple strategies that can help you spend less at the supermarket. First, always make a shopping list before you go. This helps you avoid buying things you do not need. Second, try to buy seasonal fruits and vegetables. They are usually fresher and cheaper than out-of-season produce. Third, compare prices between different brands. Store-brand products are often just as good as famous brands but cost much less. Another useful tip is to plan your meals for the week. When you know what you are going to cook, you buy only what you need, which reduces food waste. Finally, try not to shop when you are hungry. Studies show that hungry shoppers tend to buy more snacks and processed food. With a little planning, you can eat well and still save money every month.",
+    "cefr": "B1",
+    "word_count": 160,
+    "questions": [
+      {
+        "type": "multiple_choice",
+        "prompt": "What is the first tip the passage gives for saving money?",
+        "options": ["Buy famous brands", "Make a shopping list", "Shop when you are hungry", "Buy out-of-season produce"],
+        "answer": "Make a shopping list",
+        "explanation": "The passage says 'First, always make a shopping list before you go.'"
+      },
+      {
+        "type": "true_false",
+        "prompt": "Store-brand products are usually worse quality than famous brands.",
+        "options": ["True", "False"],
+        "answer": "False",
+        "explanation": "The passage says store-brand products are 'often just as good as famous brands.'"
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Why does the passage suggest not shopping when hungry?",
+        "options": ["Because shops are more crowded", "Because you will forget your list", "Because you tend to buy more snacks and processed food", "Because food looks less fresh when you are hungry"],
+        "answer": "Because you tend to buy more snacks and processed food",
+        "explanation": "The passage states that 'hungry shoppers tend to buy more snacks and processed food.'"
+      },
+      {
+        "type": "true_false",
+        "prompt": "Planning meals for the week can help reduce food waste.",
+        "options": ["True", "False"],
+        "answer": "True",
+        "explanation": "The passage says that knowing what you will cook means 'you buy only what you need, which reduces food waste.'"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "The Rise of Remote Work",
+    "body": "The COVID-19 pandemic dramatically changed the way millions of people work. Before 2020, remote work was available mainly to freelancers and workers in the technology sector. However, when lockdowns forced offices to close, companies around the world had to adapt quickly. Employees set up home offices, learned to use video conferencing tools, and discovered that many tasks could be completed just as effectively outside a traditional office.\n\nNow, several years later, remote and hybrid work models have become a permanent feature of the modern workplace. Surveys consistently show that a majority of workers prefer having the option to work from home at least part of the time. They cite benefits such as avoiding long commutes, having a more flexible schedule, and achieving a better work-life balance. Employers, too, have found advantages, including reduced office costs and access to a wider talent pool.\n\nNevertheless, remote work is not without challenges. Some employees report feeling isolated or struggling to separate their personal and professional lives. Managers sometimes find it harder to build team culture and monitor productivity. As organisations continue to refine their approach, the key challenge is creating a system that balances flexibility with collaboration and accountability.",
+    "cefr": "B2",
+    "word_count": 198,
+    "questions": [
+      {
+        "type": "multiple_choice",
+        "prompt": "What caused the rapid shift to remote work?",
+        "options": ["A new law requiring it", "The COVID-19 pandemic", "A drop in internet prices", "Workers went on strike"],
+        "answer": "The COVID-19 pandemic",
+        "explanation": "The passage says 'The COVID-19 pandemic dramatically changed the way millions of people work.'"
+      },
+      {
+        "type": "true_false",
+        "prompt": "Before 2020, remote work was common in most industries.",
+        "options": ["True", "False"],
+        "answer": "False",
+        "explanation": "The passage states that remote work was previously 'available mainly to freelancers and workers in the technology sector.'"
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which of the following is NOT mentioned as a benefit of remote work for employees?",
+        "options": ["Avoiding long commutes", "Higher salary", "More flexible schedule", "Better work-life balance"],
+        "answer": "Higher salary",
+        "explanation": "The passage mentions commutes, flexibility, and work-life balance as benefits, but does not mention higher salary."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "What challenge of remote work is mentioned for managers?",
+        "options": ["Higher office costs", "Difficulty building team culture", "Too many job applications", "Lack of technology"],
+        "answer": "Difficulty building team culture",
+        "explanation": "The passage says 'Managers sometimes find it harder to build team culture and monitor productivity.'"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "The Ocean's Plastic Problem",
+    "body": "Every year, approximately eight million tonnes of plastic waste enter the world's oceans. This staggering figure has led scientists to warn that, by 2050, there could be more plastic in the sea than fish by weight. The problem is not limited to large, visible items such as bottles and bags. Microplastics — tiny fragments less than five millimetres in size — have been found in the deepest ocean trenches, in Arctic ice, and even in the food we eat.\n\nThe consequences for marine ecosystems are severe. Sea turtles mistake plastic bags for jellyfish, while seabirds often feed plastic fragments to their young. Fish that ingest microplastics can pass harmful chemicals up the food chain, ultimately reaching human plates. Coral reefs, already threatened by rising water temperatures, suffer additional damage when plastic debris smothers them and blocks sunlight.\n\nAddressing this crisis requires action on multiple fronts. Governments can implement bans on single-use plastics and invest in waste management infrastructure. Companies should redesign products and packaging to be recyclable or compostable. Individuals, meanwhile, can reduce their plastic consumption by choosing reusable alternatives. International cooperation is also essential, as ocean currents carry plastic pollution across borders. Without coordinated effort, the health of our oceans — and our own health — will continue to decline.",
+    "cefr": "B2",
+    "word_count": 210,
+    "questions": [
+      {
+        "type": "multiple_choice",
+        "prompt": "According to the passage, what could happen by 2050?",
+        "options": ["All fish will disappear", "There could be more plastic than fish by weight in the ocean", "The oceans will dry up", "Plastic will dissolve naturally"],
+        "answer": "There could be more plastic than fish by weight in the ocean",
+        "explanation": "The passage states scientists warn 'by 2050, there could be more plastic in the sea than fish by weight.'"
+      },
+      {
+        "type": "true_false",
+        "prompt": "Microplastics have only been found near coastal areas.",
+        "options": ["True", "False"],
+        "answer": "False",
+        "explanation": "The passage says microplastics have been found 'in the deepest ocean trenches, in Arctic ice, and even in the food we eat.'"
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "How do microplastics affect the food chain?",
+        "options": ["They make fish grow larger", "Fish that eat them pass harmful chemicals up the food chain", "They improve water quality", "They only affect plants"],
+        "answer": "Fish that eat them pass harmful chemicals up the food chain",
+        "explanation": "The passage explains that 'fish that ingest microplastics can pass harmful chemicals up the food chain, ultimately reaching human plates.'"
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Why is international cooperation important in solving this problem?",
+        "options": ["Because plastic is expensive to produce", "Because ocean currents carry plastic pollution across borders", "Because only one country produces plastic", "Because fish migrate to other countries"],
+        "answer": "Because ocean currents carry plastic pollution across borders",
+        "explanation": "The passage states 'ocean currents carry plastic pollution across borders,' making international cooperation essential."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Artificial Intelligence in Education",
+    "body": "Artificial intelligence is rapidly transforming the field of education, offering both remarkable opportunities and significant challenges. AI-powered tools are now capable of personalising the learning experience in ways that were previously unimaginable. Adaptive learning platforms analyse a student's strengths and weaknesses in real time, adjusting the difficulty of exercises and recommending resources tailored to individual needs. Language learning applications use speech recognition to provide instant feedback on pronunciation, while AI tutors can answer questions and explain concepts around the clock.\n\nThe potential benefits are considerable. Students in under-resourced schools, who might otherwise lack access to qualified teachers in every subject, can use AI tools to supplement their education. Teachers, freed from repetitive tasks such as grading multiple-choice tests, can devote more time to mentoring students and designing creative lessons. Furthermore, data collected by AI systems can help educators identify students who are falling behind before they reach a crisis point.\n\nHowever, the integration of AI into education raises important ethical questions. There are legitimate concerns about data privacy, particularly when platforms collect detailed information about children's learning habits and behaviours. Critics also worry that an over-reliance on technology could diminish the human connection between teachers and students, which many researchers regard as fundamental to effective learning. The risk of algorithmic bias is another pressing issue; if the data used to train AI systems reflects existing inequalities, the technology may inadvertently reinforce rather than reduce educational disparities.\n\nAs schools and universities continue to experiment with AI, it is essential that policymakers establish clear guidelines to ensure that these powerful tools are used responsibly. The goal should not be to replace teachers but to empower them, creating a learning environment that combines the efficiency of technology with the empathy and insight that only a human educator can provide.",
+    "cefr": "B2+",
+    "word_count": 290,
+    "questions": [
+      {
+        "type": "multiple_choice",
+        "prompt": "What is the main purpose of adaptive learning platforms?",
+        "options": ["To replace teachers entirely", "To personalise learning based on individual student needs", "To make all students learn at the same pace", "To reduce the number of subjects taught"],
+        "answer": "To personalise learning based on individual student needs",
+        "explanation": "The passage says adaptive platforms 'analyse a student's strengths and weaknesses in real time, adjusting the difficulty of exercises and recommending resources tailored to individual needs.'"
+      },
+      {
+        "type": "true_false",
+        "prompt": "The passage suggests that AI should completely replace human teachers.",
+        "options": ["True", "False"],
+        "answer": "False",
+        "explanation": "The passage clearly states 'The goal should not be to replace teachers but to empower them.'"
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "What concern does the passage raise about algorithmic bias?",
+        "options": ["AI systems are too expensive", "AI might reinforce existing educational inequalities", "Students prefer biased AI systems", "Algorithmic bias only affects university students"],
+        "answer": "AI might reinforce existing educational inequalities",
+        "explanation": "The passage warns that 'if the data used to train AI systems reflects existing inequalities, the technology may inadvertently reinforce rather than reduce educational disparities.'"
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "How can AI help teachers according to the passage?",
+        "options": ["By replacing them in the classroom", "By freeing them from repetitive tasks like grading", "By monitoring their performance", "By reducing their salaries"],
+        "answer": "By freeing them from repetitive tasks like grading",
+        "explanation": "The passage states that teachers 'freed from repetitive tasks such as grading multiple-choice tests, can devote more time to mentoring students.'"
+      }
+    ]
+  }
+]
