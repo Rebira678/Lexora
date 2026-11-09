@@ -13,6 +13,14 @@ import '../../../core/planner/difficulty_tuner.dart';
 import '../../../app/providers.dart';
 import '../widgets/what_you_learned_screen.dart';
 
+enum SiegeGameMode {
+  meaningToWord,
+  sentenceGap,
+  synonymStrike,
+  collocation,
+  wordFamily,
+}
+
 class WordSiegeEnemy {
   final int wordId;
   final String clue;
@@ -24,6 +32,7 @@ class WordSiegeEnemy {
   final bool isBoss;
   double y = 0.0; // 0.0 (top) to 1.0 (gate)
   bool isDefeated = false;
+  List<String> tapOptions = const [];
 
   WordSiegeEnemy({
     required this.wordId,
@@ -34,24 +43,28 @@ class WordSiegeEnemy {
     required this.definition,
     required this.lane,
     this.isBoss = false,
+    this.tapOptions = const [],
   });
 }
 
 class WordSiegeScreen extends ConsumerStatefulWidget {
   final int level;
   final bool tapMode;
+  final SiegeGameMode mode;
 
   const WordSiegeScreen({
     super.key,
     this.level = 3,
     this.tapMode = false,
+    this.mode = SiegeGameMode.meaningToWord,
   });
 
   @override
   ConsumerState<WordSiegeScreen> createState() => _WordSiegeScreenState();
 }
 
-class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTickerProviderStateMixin {
+class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
+    with SingleTickerProviderStateMixin {
   int _hp = 3;
   int _wave = 1;
   int _score = 0;
@@ -61,9 +74,12 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTi
   int _correctCount = 0;
   int _totalCount = 0;
   int _gateBreaches = 0;
+  int _waveBreaches = 0;
 
   bool _isFrozen = false;
   bool _usedEcho = false;
+  late bool _isTapMode;
+  bool _isPaused = false;
   Timer? _freezeTimer;
   Timer? _gameLoopTimer;
   DateTime? _targetSpawnTime;
@@ -74,12 +90,14 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTi
   final FocusNode _focusNode = FocusNode();
 
   List<Word> _wordPool = [];
+  List<Word> _allWords = [];
   bool _isLoading = true;
   int _roundStartTime = 0;
 
   @override
   void initState() {
     super.initState();
+    _isTapMode = widget.tapMode;
     _roundStartTime = DateTime.now().millisecondsSinceEpoch;
     _loadWordsAndStart();
   }
@@ -90,15 +108,17 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTi
     if (!mounted) return;
 
     setState(() {
+      _allWords = allWords;
       _wordPool = List.of(allWords)..shuffle();
       _isLoading = false;
     });
 
-    _startWave();
+    await _startWave();
     _startGameLoop();
   }
 
   void _startGameLoop() {
+    _gameLoopTimer?.cancel();
     _gameLoopTimer = Timer.periodic(const Duration(milliseconds: 50), (timer) {
       if (!mounted) return;
       if (_hp <= 0) {
@@ -107,7 +127,7 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTi
         return;
       }
 
-      if (_isFrozen) return;
+      if (_isFrozen || _isPaused) return;
 
       final acc = _totalCount == 0 ? 0.8 : _correctCount / _totalCount;
       final speed = enemySpeed(acc, widget.level) * 0.005; // per 50ms tick
@@ -117,7 +137,6 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTi
           if (!enemy.isDefeated) {
             enemy.y += speed;
             if (enemy.y >= 1.0) {
-              // Reached gate!
               _handleGateBreach(enemy);
             }
           }
@@ -130,6 +149,7 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTi
         if (_wave < 3) {
           setState(() {
             _wave++;
+            _waveBreaches = 0;
           });
           _startWave();
         } else {
@@ -140,40 +160,105 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTi
     });
   }
 
-  void _startWave() {
+  Future<void> _startWave() async {
     final rand = Random();
     final count = _wave == 3 ? 6 : 4;
     _activeEnemies.clear();
+    final wordDao = ref.read(wordDaoProvider);
 
     for (int i = 0; i < count; i++) {
-      if (_wordPool.isEmpty) break;
+      if (_wordPool.isEmpty) {
+        _wordPool = List.of(_allWords)..shuffle();
+      }
       final word = _wordPool.removeLast();
       final isBoss = (_wave == 3 && i == count - 1);
+
+      String clue = word.definitionEn ?? 'Identify the word';
+      String answer = word.lemma;
+      String example = '';
+
+      if (isBoss) {
+        final examples = await wordDao.getExamplesForWord(word.id);
+        if (examples.isNotEmpty) {
+          final ex = examples.first.sentence;
+          final masked = ex.replaceAll(
+              RegExp('\\b${RegExp.escape(word.lemma)}\\b', caseSensitive: false), '_____');
+          clue = '👑 BOSS GAP: $masked';
+          example = ex;
+        } else {
+          clue = '👑 BOSS: ${word.definitionEn ?? word.lemma}';
+        }
+      } else {
+        switch (widget.mode) {
+          case SiegeGameMode.sentenceGap:
+            final examples = await wordDao.getExamplesForWord(word.id);
+            if (examples.isNotEmpty) {
+              final ex = examples.first.sentence;
+              clue = ex.replaceAll(
+                  RegExp('\\b${RegExp.escape(word.lemma)}\\b', caseSensitive: false), '_____');
+              example = ex;
+            } else {
+              clue = word.definitionEn ?? word.lemma;
+            }
+            break;
+          case SiegeGameMode.collocation:
+            final collocations = await wordDao.getCollocationsForWord(word.id);
+            if (collocations.isNotEmpty) {
+              final col = collocations.first.phrase;
+              clue = col.replaceAll(
+                  RegExp('\\b${RegExp.escape(word.lemma)}\\b', caseSensitive: false), '_____');
+              example = col;
+            } else {
+              clue = 'Collocation: _____ (${word.definitionEn})';
+            }
+            break;
+          case SiegeGameMode.wordFamily:
+            final fam = await wordDao.getWordFamily(word.id);
+            if (fam.isNotEmpty) {
+              clue = '${fam.first.root} ➔ (${fam.first.formType ?? "form"}) _____';
+            } else {
+              clue = 'Family: ${word.lemma} (${word.pos ?? "word"})';
+            }
+            break;
+          case SiegeGameMode.synonymStrike:
+          case SiegeGameMode.meaningToWord:
+            clue = word.definitionEn ?? word.lemma;
+            break;
+        }
+      }
+
+      // Generate distractors for tap mode
+      final distractors = (_allWords.where((w) => w.id != word.id).toList()..shuffle())
+          .take(3)
+          .map((w) => w.lemma)
+          .toList();
+      final tapOptions = (distractors..add(answer))..shuffle();
 
       _activeEnemies.add(
         WordSiegeEnemy(
           wordId: word.id,
-          clue: isBoss
-              ? 'BOSS: ${word.definitionEn ?? word.lemma}'
-              : (word.definitionEn ?? 'Type the word: ${word.lemma}'),
-          answer: word.lemma,
-          example: '',
+          clue: clue,
+          answer: answer,
+          example: example,
           ipa: word.ipa,
           definition: word.definitionEn ?? '',
           lane: rand.nextInt(3),
           isBoss: isBoss,
+          tapOptions: tapOptions,
         )..y = -(i * 0.25),
       );
     }
     _targetSpawnTime = DateTime.now();
+    if (mounted) setState(() {});
   }
 
   void _handleGateBreach(WordSiegeEnemy enemy) {
     enemy.isDefeated = true;
     _hp--;
     _combo = 0;
-    _gateBreaches++;
     _totalCount++;
+    _gateBreaches++;
+    _waveBreaches++;
 
     ref.read(audioServiceProvider).playSfx(SfxType.gateBreach);
 
@@ -187,7 +272,6 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTi
       ),
     );
 
-    // SM-2 Quality 1 for gate breach
     ref.read(srsDaoProvider).logReview(
           cardId: enemy.wordId,
           game: 'word_siege',
@@ -196,11 +280,82 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTi
           quality: 1,
         );
 
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text('Gate breached! Correct word: ${enemy.answer}'),
-        backgroundColor: AppColors.wrong,
-        duration: const Duration(seconds: 2),
+    // Anti-frustration rule (app.md 24.1):
+    // "at most 2 enemies can reach the gate in one wave before the game pauses with 'Take a breath' and offers Tap mode"
+    if (_waveBreaches >= 2 && !_isTapMode && _hp > 0) {
+      _triggerTakeABreath();
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Gate breached! Correct word: ${enemy.answer}'),
+          backgroundColor: AppColors.wrong,
+          duration: const Duration(seconds: 2),
+        ),
+      );
+    }
+  }
+
+  void _triggerTakeABreath() {
+    _isPaused = true;
+    showModalBottomSheet(
+      context: context,
+      isDismissible: false,
+      enableDrag: false,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+      ),
+      builder: (ctx) => Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(Icons.spa_rounded, color: AppColors.accent, size: 48),
+            const SizedBox(height: 12),
+            const Text(
+              'Take a breath 🌿',
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            const Text(
+              'That wave was fast! Would you like to switch to Tap Mode for multiple-choice answers?',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 15, height: 1.4),
+            ),
+            const SizedBox(height: 20),
+            Row(
+              children: [
+                Expanded(
+                  child: OutlinedButton(
+                    onPressed: () {
+                      Navigator.pop(ctx);
+                      _waveBreaches = 0;
+                      setState(() => _isPaused = false);
+                    },
+                    child: const Text('Keep Typing'),
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColors.accent,
+                      foregroundColor: Colors.white,
+                    ),
+                    onPressed: () {
+                      Navigator.pop(ctx);
+                      _waveBreaches = 0;
+                      setState(() {
+                        _isTapMode = true;
+                        _isPaused = false;
+                      });
+                    },
+                    child: const Text('Use Tap Mode'),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -226,7 +381,11 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTi
         ? 3.0
         : DateTime.now().difference(_targetSpawnTime!).inMilliseconds / 1000.0;
 
-    final isCorrect = isAnswerOk(text, target.answer);
+    final isCorrect = isAnswerOk(
+      text,
+      target.answer,
+      tolerance: widget.level <= 3 ? 1 : 0,
+    );
     _totalCount++;
 
     if (isCorrect) {
@@ -255,7 +414,6 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTi
       ref.read(audioServiceProvider).playSfx(SfxType.correct);
       ref.read(audioServiceProvider).speakOrPlay(target.answer);
 
-      // Check power-up unlocks
       if (_combo == 5) {
         _triggerFreeze();
       }
@@ -264,7 +422,7 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTi
         correct: true,
         responseTimeSeconds: elapsedSeconds,
         hintUsed: _usedEcho,
-        tapMode: widget.tapMode,
+        tapMode: _isTapMode,
       );
 
       ref.read(srsDaoProvider).logReview(
@@ -320,7 +478,6 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTi
       setState(() {
         for (final e in _activeEnemies) {
           e.isDefeated = true;
-          // SM-2 Quality 1 for bombed items per spec
           ref.read(srsDaoProvider).logReview(
                 cardId: e.wordId,
                 game: 'word_siege',
@@ -341,11 +498,10 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTi
     final durationMs = now - _roundStartTime;
     final accuracy = _totalCount == 0 ? 0.0 : _correctCount / _totalCount;
 
-    // Save game session to Drift
     await ref.read(gameDaoProvider).recordSession(
           GameSessionsCompanion.insert(
             game: 'word_siege',
-            mode: drift.Value(widget.tapMode ? 'tap' : 'type'),
+            mode: drift.Value(widget.mode.name),
             level: drift.Value(widget.level),
             startedAt: _roundStartTime,
             durationMs: durationMs,
@@ -356,7 +512,6 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTi
           ),
         );
 
-    // Update streak and daily stats
     final today = DateTime.now();
     final todayKey =
         '${today.year.toString().padLeft(4, '0')}-${today.month.toString().padLeft(2, '0')}-${today.day.toString().padLeft(2, '0')}';
@@ -406,7 +561,8 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTi
               MaterialPageRoute(
                 builder: (_) => WordSiegeScreen(
                   level: widget.level,
-                  tapMode: widget.tapMode,
+                  tapMode: _isTapMode,
+                  mode: widget.mode,
                 ),
               ),
             );
@@ -439,16 +595,24 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTi
       appBar: AppBar(
         title: Text('Word Siege — Wave $_wave/3'),
         actions: [
+          // Tap / Typing Mode Toggle
+          IconButton(
+            icon: Icon(_isTapMode ? Icons.touch_app_rounded : Icons.keyboard_rounded),
+            tooltip: _isTapMode ? 'Switch to Typing Mode' : 'Switch to Tap Mode',
+            onPressed: () => setState(() => _isTapMode = !_isTapMode),
+          ),
+          // HP Hearts
           Row(
             children: List.generate(
               3,
               (index) => Icon(
                 index < _hp ? Icons.favorite : Icons.favorite_border,
                 color: AppColors.wrong,
+                size: 20,
               ),
             ),
           ),
-          const SizedBox(width: 16),
+          const SizedBox(width: 12),
         ],
       ),
       body: SafeArea(
@@ -506,11 +670,23 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTi
               ),
             ),
 
+            // Freeze Banner
+            if (_isFrozen)
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.symmetric(vertical: 4),
+                color: Colors.cyan.withAlpha(160),
+                child: const Text(
+                  '❄️ FROZEN — 4 SECONDS ❄️',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 12),
+                ),
+              ),
+
             // 3-Lane Battlefield
             Expanded(
               child: Stack(
                 children: [
-                  // Lane Dividers
                   Row(
                     children: [
                       Expanded(child: Container(decoration: BoxDecoration(border: Border(right: BorderSide(color: Colors.white.withAlpha(20)))))),
@@ -528,7 +704,7 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTi
                     return Positioned(
                       left: leftPos + 4,
                       width: laneWidth - 8,
-                      top: enemy.y * (MediaQuery.of(context).size.height * 0.45),
+                      top: enemy.y * (MediaQuery.of(context).size.height * 0.40),
                       child: AnimatedContainer(
                         duration: const Duration(milliseconds: 50),
                         padding: const EdgeInsets.all(8),
@@ -563,18 +739,18 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTi
                     );
                   }),
 
-                  // Gate at the bottom
+                  // Gate
                   Positioned(
                     bottom: 0,
                     left: 0,
                     right: 0,
                     child: Container(
-                      height: 16,
-                      color: AppColors.wrong.withAlpha(150),
+                      height: 18,
+                      color: AppColors.wrong.withAlpha(160),
                       child: const Center(
                         child: Text(
                           '⚡ DEFEND THE GATE ⚡',
-                          style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold),
+                          style: TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold),
                         ),
                       ),
                     ),
@@ -583,7 +759,7 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTi
               ),
             ),
 
-            // Target Clue Display & Input Area
+            // Target Input Area (Typing Mode vs Tap Mode)
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
@@ -600,31 +776,54 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen> with SingleTi
                     Text(
                       target.clue,
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold),
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold),
                     ),
-                    const SizedBox(height: 12),
+                    const SizedBox(height: 10),
                   ],
-                  Row(
-                    children: [
-                      Expanded(
-                        child: TextField(
-                          controller: _inputController,
-                          focusNode: _focusNode,
-                          autofocus: true,
-                          autocorrect: false,
-                          textInputAction: TextInputAction.send,
-                          decoration: InputDecoration(
-                            hintText: 'Type answer here...',
-                            suffixIcon: IconButton(
-                              icon: const Icon(Icons.send_rounded, color: AppColors.accent),
-                              onPressed: () => _submitAnswer(_inputController.text),
-                            ),
+
+                  if (_isTapMode && target != null) ...[
+                    // Tap Mode: 4 option buttons for rapid response
+                    Wrap(
+                      spacing: 8,
+                      runSpacing: 8,
+                      alignment: WrapAlignment.center,
+                      children: target.tapOptions.map((opt) {
+                        return ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Theme.of(context).colorScheme.surfaceContainerHighest,
+                            foregroundColor: Theme.of(context).colorScheme.onSurface,
+                            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
                           ),
-                          onSubmitted: _submitAnswer,
+                          onPressed: () => _submitAnswer(opt),
+                          child: Text(opt, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                        );
+                      }).toList(),
+                    ),
+                  ] else ...[
+                    // Typing Mode: Text field
+                    Row(
+                      children: [
+                        Expanded(
+                          child: TextField(
+                            controller: _inputController,
+                            focusNode: _focusNode,
+                            autofocus: true,
+                            autocorrect: false,
+                            textInputAction: TextInputAction.send,
+                            decoration: InputDecoration(
+                              hintText: 'Type front enemy word...',
+                              suffixIcon: IconButton(
+                                icon: const Icon(Icons.send_rounded, color: AppColors.accent),
+                                onPressed: () => _submitAnswer(_inputController.text),
+                              ),
+                            ),
+                            onSubmitted: _submitAnswer,
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
+                      ],
+                    ),
+                  ],
                 ],
               ),
             ),
