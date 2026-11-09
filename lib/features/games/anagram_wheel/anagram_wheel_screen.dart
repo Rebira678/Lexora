@@ -201,9 +201,10 @@ class _AnagramWheelScreenState extends ConsumerState<AnagramWheelScreen>
     if (candidate == target) {
       // Correct!
       _combo++;
+      final isMegaWord = candidate.length >= 6 || _selectedIndices.length == _letters.length;
       final comboMult = _combo >= 3 ? 2.0 : (1.0 + 0.2 * _combo);
-      final pts = (200 * comboMult).round();
-      final xp = (25 * comboMult).round();
+      final pts = (200 * comboMult).round() + (isMegaWord ? 100 : 0);
+      final xp = (25 * comboMult).round() + (isMegaWord ? 15 : 0);
 
       _score += pts;
       _xpEarned += xp;
@@ -223,12 +224,14 @@ class _AnagramWheelScreenState extends ConsumerState<AnagramWheelScreen>
         ),
       );
 
+      final msg = isMegaWord
+          ? '🌟 MEGA WORD! ${_currentWord!.lemma}! +$pts pts'
+          : '🎉 Found: ${_currentWord!.lemma}! +$pts pts${_combo >= 3 ? " (x2 COMBO!)" : ""}';
+
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(
-            '🎉 Found: ${_currentWord!.lemma}! +$pts pts${_combo >= 3 ? " (x2 COMBO!)" : ""}',
-          ),
-          backgroundColor: AppColors.correct,
+          content: Text(msg),
+          backgroundColor: isMegaWord ? Colors.deepPurpleAccent : AppColors.correct,
           duration: const Duration(milliseconds: 1400),
         ),
       );
@@ -264,6 +267,22 @@ class _AnagramWheelScreenState extends ConsumerState<AnagramWheelScreen>
           wasMistake: true,
         ),
       );
+    }
+
+    // Add any remaining puzzle words that were not solved, with their meanings (app.md 5.1)
+    for (final word in _availableWords) {
+      if (!_foundInRound.contains(word.lemma.toLowerCase()) &&
+          !_learnedItems.any((item) => item.term.toLowerCase() == word.lemma.toLowerCase())) {
+        _learnedItems.add(
+          LearnedItem(
+            term: word.lemma,
+            ipa: word.ipa,
+            definition: word.definitionEn ?? 'Target word',
+            example: '',
+            wasMistake: true,
+          ),
+        );
+      }
     }
 
     await ref.read(gameDaoProvider).recordSession(
