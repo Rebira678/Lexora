@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../app/theme.dart';
 import '../../../app/providers.dart';
 import '../../games/word_siege/word_siege_screen.dart';
@@ -10,6 +11,9 @@ import '../../games/paragraph_architect/paragraph_architect_screen.dart';
 import '../../games/chunk_echo/chunk_echo_screen.dart';
 import '../../games/sentence_xray/sentence_xray_screen.dart';
 import '../../reading/reading_screen.dart';
+import '../../mistakes/presentation/mistakes_screen.dart';
+import '../../stats/presentation/stats_screen.dart';
+import '../../settings/presentation/settings_screen.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -20,6 +24,31 @@ class HomeScreen extends ConsumerStatefulWidget {
 
 class _HomeScreenState extends ConsumerState<HomeScreen> {
   String _implementationIntention = '"When I finish breakfast, I will play 10 minutes."';
+
+  @override
+  void initState() {
+    super.initState();
+    _loadHabitIntention();
+  }
+
+  Future<void> _loadHabitIntention() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final saved = prefs.getString('habit_intention');
+      if (saved != null && saved.isNotEmpty && mounted) {
+        setState(() {
+          _implementationIntention = saved;
+        });
+      }
+    } catch (_) {}
+  }
+
+  Future<void> _saveHabitIntention(String text) async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString('habit_intention', text);
+    } catch (_) {}
+  }
 
   void _showStreakInfoDialog(BuildContext context, int streak, int freezes) {
     showDialog(
@@ -147,9 +176,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             onPressed: () {
               final text = controller.text.trim();
               if (text.isNotEmpty) {
+                final formatted = '"$text"';
                 setState(() {
-                  _implementationIntention = '"$text"';
+                  _implementationIntention = formatted;
                 });
+                _saveHabitIntention(formatted);
               }
               Navigator.pop(ctx);
             },
@@ -623,6 +654,24 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: NavigationBar(
+        selectedIndex: 0,
+        onDestinationSelected: (index) {
+          if (index == 1) {
+            Navigator.of(context).push(MaterialPageRoute(builder: (_) => const MistakesScreen()));
+          } else if (index == 2) {
+            Navigator.of(context).push(MaterialPageRoute(builder: (_) => const StatsScreen()));
+          } else if (index == 3) {
+            Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SettingsScreen()));
+          }
+        },
+        destinations: const [
+          NavigationDestination(icon: Icon(Icons.sports_esports_rounded), label: 'Arena'),
+          NavigationDestination(icon: Icon(Icons.bookmark_rounded), label: 'My Words'),
+          NavigationDestination(icon: Icon(Icons.bar_chart_rounded), label: 'Stats'),
+          NavigationDestination(icon: Icon(Icons.settings_rounded), label: 'Settings'),
+        ],
       ),
     );
   }
