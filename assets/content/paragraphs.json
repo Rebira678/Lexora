@@ -1,0 +1,204 @@
+[
+  {
+    "id": 1,
+    "level": 1,
+    "topic": "daily routine",
+    "sentences": [
+      {"id": 1, "text": "Maria wakes up at 6:30 every morning."},
+      {"id": 2, "text": "First, she takes a quick shower."},
+      {"id": 3, "text": "Then, she has breakfast with her family."},
+      {"id": 4, "text": "Finally, she drives to work."}
+    ],
+    "valid_orders": [[1,2,3,4]],
+    "links": [
+      {"from": 1, "to": 2, "cue": "First", "type": "sequence"},
+      {"from": 2, "to": 3, "cue": "Then", "type": "sequence"},
+      {"from": 3, "to": 4, "cue": "Finally", "type": "sequence"}
+    ]
+  },
+  {
+    "id": 2,
+    "level": 1,
+    "topic": "making a sandwich",
+    "sentences": [
+      {"id": 1, "text": "Tom decided to make a sandwich for lunch."},
+      {"id": 2, "text": "First, he took two slices of bread."},
+      {"id": 3, "text": "Next, he added cheese and some lettuce."},
+      {"id": 4, "text": "After that, he cut the sandwich in half and ate it."}
+    ],
+    "valid_orders": [[1,2,3,4]],
+    "links": [
+      {"from": 1, "to": 2, "cue": "First", "type": "sequence"},
+      {"from": 2, "to": 3, "cue": "Next", "type": "sequence"},
+      {"from": 3, "to": 4, "cue": "After that", "type": "sequence"}
+    ]
+  },
+  {
+    "id": 3,
+    "level": 2,
+    "topic": "a weekend trip",
+    "sentences": [
+      {"id": 1, "text": "Last weekend, Sarah and her friends went to the countryside."},
+      {"id": 2, "text": "They left early in the morning to avoid traffic."},
+      {"id": 3, "text": "When they arrived, they set up a tent near the lake."},
+      {"id": 4, "text": "They spent the afternoon swimming and playing games."},
+      {"id": 5, "text": "It was one of the best weekends they had ever had."}
+    ],
+    "valid_orders": [[1,2,3,4,5]],
+    "links": [
+      {"from": 1, "to": 2, "cue": "They (refers to Sarah and friends)", "type": "pronoun_chain"},
+      {"from": 2, "to": 3, "cue": "When they arrived", "type": "time_sequence"},
+      {"from": 3, "to": 4, "cue": "They (continuing narrative)", "type": "pronoun_chain"},
+      {"from": 4, "to": 5, "cue": "It (refers to the weekend)", "type": "pronoun_chain"}
+    ]
+  },
+  {
+    "id": 4,
+    "level": 2,
+    "topic": "adopting a pet",
+    "sentences": [
+      {"id": 1, "text": "James had always wanted to adopt a dog."},
+      {"id": 2, "text": "He visited the local animal shelter one Saturday morning."},
+      {"id": 3, "text": "There, he saw a small brown puppy looking up at him."},
+      {"id": 4, "text": "He knew immediately that she was the right one."},
+      {"id": 5, "text": "He filled out the forms and took her home that same day."}
+    ],
+    "valid_orders": [[1,2,3,4,5]],
+    "links": [
+      {"from": 1, "to": 2, "cue": "He (refers to James)", "type": "pronoun_chain"},
+      {"from": 2, "to": 3, "cue": "There (refers to the shelter)", "type": "reference"},
+      {"from": 3, "to": 4, "cue": "she (refers to the puppy)", "type": "pronoun_chain"},
+      {"from": 4, "to": 5, "cue": "He/her (continuing reference)", "type": "pronoun_chain"}
+    ]
+  },
+  {
+    "id": 5,
+    "level": 3,
+    "topic": "the benefits of reading",
+    "sentences": [
+      {"id": 1, "text": "Reading is one of the most valuable habits a person can develop."},
+      {"id": 2, "text": "It helps improve vocabulary and general knowledge."},
+      {"id": 3, "text": "Moreover, reading regularly can reduce stress and improve concentration."},
+      {"id": 4, "text": "However, many people say they do not have enough time to read."},
+      {"id": 5, "text": "Therefore, experts suggest reading for just fifteen minutes before bed."},
+      {"id": 6, "text": "Even this small amount can make a big difference over time."}
+    ],
+    "valid_orders": [[1,2,3,4,5,6]],
+    "links": [
+      {"from": 1, "to": 2, "cue": "It (refers to reading)", "type": "pronoun_chain"},
+      {"from": 2, "to": 3, "cue": "Moreover", "type": "addition"},
+      {"from": 3, "to": 4, "cue": "However", "type": "contrast"},
+      {"from": 4, "to": 5, "cue": "Therefore", "type": "result"},
+      {"from": 5, "to": 6, "cue": "Even this small amount", "type": "reference"}
+    ]
+  },
+  {
+    "id": 6,
+    "level": 3,
+    "topic": "working from home",
+    "sentences": [
+      {"id": 1, "text": "Working from home has become increasingly common in recent years."},
+      {"id": 2, "text": "Many employees enjoy the flexibility it offers."},
+      {"id": 3, "text": "For example, they can save time by not commuting to an office."},
+      {"id": 4, "text": "On the other hand, some workers find it difficult to stay focused."},
+      {"id": 5, "text": "As a result, companies are now experimenting with hybrid schedules."}
+    ],
+    "valid_orders": [[1,2,3,4,5]],
+    "links": [
+      {"from": 1, "to": 2, "cue": "it (refers to working from home)", "type": "pronoun_chain"},
+      {"from": 2, "to": 3, "cue": "For example", "type": "exemplification"},
+      {"from": 3, "to": 4, "cue": "On the other hand", "type": "contrast"},
+      {"from": 4, "to": 5, "cue": "As a result", "type": "result"}
+    ]
+  },
+  {
+    "id": 7,
+    "level": 4,
+    "topic": "plastic pollution",
+    "sentences": [
+      {"id": 1, "text": "Plastic pollution has become one of the biggest environmental challenges of our time."},
+      {"id": 2, "text": "Every year, millions of tonnes of plastic end up in the ocean."},
+      {"id": 3, "text": "This waste harms marine life and damages entire ecosystems."},
+      {"id": 4, "text": "Such damage is often irreversible, taking centuries to repair naturally."},
+      {"id": 5, "text": "Several governments have introduced bans on single-use plastics to address the problem."},
+      {"id": 6, "text": "These measures, while positive, are not enough on their own to solve the crisis."}
+    ],
+    "valid_orders": [[1,2,3,4,5,6]],
+    "links": [
+      {"from": 1, "to": 2, "cue": "ocean (elaborates on 'environmental challenges')", "type": "elaboration"},
+      {"from": 2, "to": 3, "cue": "This waste (refers to plastic in the ocean)", "type": "demonstrative_reference"},
+      {"from": 3, "to": 4, "cue": "Such damage (refers to harm to marine life)", "type": "demonstrative_reference"},
+      {"from": 4, "to": 5, "cue": "the problem (refers to pollution described above)", "type": "lexical_reference"},
+      {"from": 5, "to": 6, "cue": "These measures (refers to bans)", "type": "demonstrative_reference"}
+    ]
+  },
+  {
+    "id": 8,
+    "level": 4,
+    "topic": "learning a second language",
+    "sentences": [
+      {"id": 1, "text": "Learning a second language offers numerous cognitive and social benefits."},
+      {"id": 2, "text": "Research shows that bilingual individuals tend to have better problem-solving skills."},
+      {"id": 3, "text": "This advantage is believed to come from constantly switching between two language systems."},
+      {"id": 4, "text": "In addition, speaking another language opens doors to different cultures and career opportunities."},
+      {"id": 5, "text": "Despite these benefits, many adults give up before reaching fluency."},
+      {"id": 6, "text": "Experts suggest that setting small, achievable goals is the key to staying motivated."}
+    ],
+    "valid_orders": [[1,2,3,4,5,6]],
+    "links": [
+      {"from": 1, "to": 2, "cue": "bilingual individuals (elaborates on 'cognitive benefits')", "type": "elaboration"},
+      {"from": 2, "to": 3, "cue": "This advantage (refers to problem-solving skills)", "type": "demonstrative_reference"},
+      {"from": 3, "to": 4, "cue": "In addition", "type": "addition"},
+      {"from": 4, "to": 5, "cue": "Despite these benefits", "type": "concession"},
+      {"from": 5, "to": 6, "cue": "staying motivated (relates to giving up)", "type": "lexical_chain"}
+    ]
+  },
+  {
+    "id": 9,
+    "level": 5,
+    "topic": "the future of electric cars",
+    "sentences": [
+      {"id": 1, "text": "The automotive industry is undergoing a major transformation as electric vehicles gain popularity worldwide."},
+      {"id": 2, "text": "Sales of electric cars have more than doubled in the past three years alone."},
+      {"id": 3, "text": "One of the main reasons for this growth is increasing concern about air pollution in cities."},
+      {"id": 4, "text": "Governments have also played a role by offering tax incentives to buyers of electric vehicles."},
+      {"id": 5, "text": "Nevertheless, some challenges remain, particularly the limited availability of charging infrastructure."},
+      {"id": 6, "text": "Battery technology, too, still needs improvement to allow for longer driving ranges."},
+      {"id": 7, "text": "Industry analysts predict, however, that most of these obstacles will be overcome within the next decade."}
+    ],
+    "valid_orders": [[1,2,3,4,5,6,7]],
+    "links": [
+      {"from": 1, "to": 2, "cue": "electric cars (lexical chain from 'electric vehicles')", "type": "lexical_chain"},
+      {"from": 2, "to": 3, "cue": "this growth (refers to doubling of sales)", "type": "demonstrative_reference"},
+      {"from": 3, "to": 4, "cue": "also (additional reason)", "type": "addition"},
+      {"from": 4, "to": 5, "cue": "Nevertheless", "type": "contrast"},
+      {"from": 5, "to": 6, "cue": "too (adding another challenge)", "type": "addition"},
+      {"from": 6, "to": 7, "cue": "however / these obstacles (refers to challenges)", "type": "contrast"}
+    ]
+  },
+  {
+    "id": 10,
+    "level": 6,
+    "topic": "the role of universities in society",
+    "sentences": [
+      {"id": 1, "text": "Universities have traditionally been regarded as institutions dedicated to the pursuit of knowledge and the advancement of society."},
+      {"id": 2, "text": "Throughout history, they have produced groundbreaking research that has shaped the modern world."},
+      {"id": 3, "text": "In recent decades, however, the role of higher education has come under increasing scrutiny."},
+      {"id": 4, "text": "Critics argue that many universities have shifted their focus towards profit, treating students more like customers than scholars."},
+      {"id": 5, "text": "This commercialisation, they claim, has led to rising tuition fees without a corresponding improvement in the quality of teaching."},
+      {"id": 6, "text": "Supporters of the current system, on the other hand, point out that universities must adapt to survive in a competitive global market."},
+      {"id": 7, "text": "They maintain that partnerships with industry provide students with practical skills and improve graduate employability."},
+      {"id": 8, "text": "Ultimately, the challenge lies in finding a balance between academic integrity and financial sustainability."}
+    ],
+    "valid_orders": [[1,2,3,4,5,6,7,8]],
+    "links": [
+      {"from": 1, "to": 2, "cue": "they (refers to universities)", "type": "pronoun_chain"},
+      {"from": 2, "to": 3, "cue": "however (shifts from positive history to scrutiny)", "type": "contrast"},
+      {"from": 3, "to": 4, "cue": "Critics argue (elaborates on 'scrutiny')", "type": "elaboration"},
+      {"from": 4, "to": 5, "cue": "This commercialisation (refers to profit focus)", "type": "demonstrative_reference"},
+      {"from": 5, "to": 6, "cue": "on the other hand (opposing viewpoint)", "type": "contrast"},
+      {"from": 6, "to": 7, "cue": "They maintain (continues supporter argument)", "type": "pronoun_chain"},
+      {"from": 7, "to": 8, "cue": "Ultimately (conclusion drawing both sides together)", "type": "summary"}
+    ]
+  }
+]
