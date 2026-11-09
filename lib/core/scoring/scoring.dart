@@ -73,28 +73,71 @@ Set<String> _tokenize(String s) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Word Siege Scoring
+// Word Siege Scoring & Spelling Normalization
 // ─────────────────────────────────────────────────────────────────────────────
+
+/// Normalizes common US/UK spelling variants so both forms match equivalently:
+/// -our / -or (colour/color, honour/honor, favour/favor, rumour/rumor)
+/// -ise / -ize (realise/realize, organise/organize, criticise/criticize)
+/// -re / -er (centre/center, theatre/theater, metre/meter, litre/liter)
+/// -ence / -ense (defence/defense, licence/license, offence/offense)
+/// -ogue / -og (catalogue/catalog, dialogue/dialog)
+String normalizeSpellingVariant(String word) {
+  var s = word.trim().toLowerCase();
+  s = s.replaceAll(RegExp(r'our\b'), 'or');
+  s = s.replaceAll(RegExp(r'ise\b'), 'ize');
+  s = s.replaceAll(RegExp(r'ised\b'), 'ized');
+  s = s.replaceAll(RegExp(r'ising\b'), 'izing');
+  s = s.replaceAll(RegExp(r'isation\b'), 'ization');
+  s = s.replaceAll(RegExp(r're\b'), 'er');
+  s = s.replaceAll(RegExp(r'ence\b'), 'ense');
+  s = s.replaceAll(RegExp(r'ogue\b'), 'og');
+  return s;
+}
 
 /// Checks if a Word Siege answer is acceptable.
 ///
 /// An answer is "ok" if:
-/// - It exactly matches (case-insensitive), OR
-/// - The Levenshtein distance is within [tolerance] (default 1 for words
-///   longer than 4 characters, 0 otherwise).
+/// - It exactly matches (case-insensitive)
+/// - Matches an accepted variant or normalized US/UK spelling
+/// - The Levenshtein distance is within [tolerance] (forgiving at lower levels)
 ///
 /// Parameters:
 /// - [answer]: the player's typed answer.
 /// - [expected]: the correct word/phrase.
 /// - [tolerance]: optional explicit tolerance override.
-bool isAnswerOk(String answer, String expected, {int? tolerance}) {
+/// - [acceptedVariants]: optional list of accepted alternative forms.
+bool isAnswerOk(
+  String answer,
+  String expected, {
+  int? tolerance,
+  List<String> acceptedVariants = const [],
+}) {
   final a = answer.trim().toLowerCase();
   final e = expected.trim().toLowerCase();
 
   if (a == e) return true;
 
+  // Check explicit accepted variants
+  for (final variant in acceptedVariants) {
+    if (a == variant.trim().toLowerCase()) return true;
+  }
+
+  // Check US/UK normalized spellings
+  final normA = normalizeSpellingVariant(a);
+  final normE = normalizeSpellingVariant(e);
+  if (normA == normE) return true;
+
+  for (final variant in acceptedVariants) {
+    if (normA == normalizeSpellingVariant(variant)) return true;
+  }
+
   final tol = tolerance ?? (e.length > 4 ? 1 : 0);
-  return levenshtein(a, e) <= tol;
+  if (tol > 0) {
+    if (levenshtein(a, e) <= tol) return true;
+    if (levenshtein(normA, normE) <= tol) return true;
+  }
+  return false;
 }
 
 /// Scores a single Word Siege answer.
