@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "level": 1,
+    "text": "The children played happily in the park after school.",
+    "chunks": ["The children", "played happily", "in the park", "after school."],
+    "audio_path": "",
+    "audio_slow_path": "",
+    "chunk_timings_ms": [0, 750, 1400, 2100, 2800]
+  },
+  {
+    "id": 2,
+    "level": 1,
+    "text": "She always drinks coffee before going to work.",
+    "chunks": ["She always", "drinks coffee", "before going to work."],
+    "audio_path": "",
+    "audio_slow_path": "",
+    "chunk_timings_ms": [0, 650, 1300, 2100]
+  },
+  {
+    "id": 3,
+    "level": 2,
+    "text": "My brother usually takes the bus to his office downtown.",
+    "chunks": ["My brother", "usually takes the bus", "to his office downtown."],
+    "audio_path": "",
+    "audio_slow_path": "",
+    "chunk_timings_ms": [0, 700, 1500, 2400]
+  },
+  {
+    "id": 4,
+    "level": 2,
+    "text": "We decided to stay home because of the heavy rain.",
+    "chunks": ["We decided", "to stay home", "because of the heavy rain."],
+    "audio_path": "",
+    "audio_slow_path": "",
+    "chunk_timings_ms": [0, 650, 1300, 2100]
+  },
+  {
+    "id": 5,
+    "level": 3,
+    "text": "The students who finished their exams early were allowed to leave the building.",
+    "chunks": ["The students", "who finished their exams early", "were allowed to leave", "the building."],
+    "audio_path": "",
+    "audio_slow_path": "",
+    "chunk_timings_ms": [0, 700, 1700, 2600, 3300]
+  },
+  {
+    "id": 6,
+    "level": 3,
+    "text": "After waiting for more than an hour, they finally received their food order.",
+    "chunks": ["After waiting", "for more than an hour,", "they finally received", "their food order."],
+    "audio_path": "",
+    "audio_slow_path": "",
+    "chunk_timings_ms": [0, 700, 1600, 2500, 3200]
+  },
+  {
+    "id": 7,
+    "level": 3,
+    "text": "The new restaurant on the corner has become very popular with local residents.",
+    "chunks": ["The new restaurant", "on the corner", "has become very popular", "with local residents."],
+    "audio_path": "",
+    "audio_slow_path": "",
+    "chunk_timings_ms": [0, 800, 1500, 2500, 3300]
+  },
+  {
+    "id": 8,
+    "level": 3,
+    "text": "She was planning to travel abroad, but her flight was cancelled at the last minute.",
+    "chunks": ["She was planning", "to travel abroad,", "but her flight was cancelled", "at the last minute."],
+    "audio_path": "",
+    "audio_slow_path": "",
+    "chunk_timings_ms": [0, 750, 1500, 2500, 3400]
+  },
+  {
+    "id": 9,
+    "level": 4,
+    "text": "Although the weather forecast predicted rain, the outdoor concert went ahead and attracted thousands of visitors.",
+    "chunks": ["Although the weather forecast", "predicted rain,", "the outdoor concert went ahead", "and attracted thousands of visitors."],
+    "audio_path": "",
+    "audio_slow_path": "",
+    "chunk_timings_ms": [0, 900, 1600, 2700, 3800]
+  },
+  {
+    "id": 10,
+    "level": 4,
+    "text": "The company introduced a new policy that requires all employees to complete an online training course.",
+    "chunks": ["The company", "introduced a new policy", "that requires all employees", "to complete an online training course."],
+    "audio_path": "",
+    "audio_slow_path": "",
+    "chunk_timings_ms": [0, 650, 1500, 2400, 3500]
+  },
+  {
+    "id": 11,
+    "level": 4,
+    "text": "Because of rising sea levels, several coastal towns have started building stronger barriers to protect their communities.",
+    "chunks": ["Because of rising sea levels,", "several coastal towns", "have started building", "stronger barriers", "to protect their communities."],
+    "audio_path": "",
+    "audio_slow_path": "",
+    "chunk_timings_ms": [0, 1000, 1800, 2500, 3200, 4100]
+  },
+  {
+    "id": 12,
+    "level": 4,
+    "text": "Researchers have found that people who exercise regularly tend to sleep better and feel less stressed during the week.",
+    "chunks": ["Researchers have found", "that people who exercise regularly", "tend to sleep better", "and feel less stressed", "during the week."],
+    "audio_path": "",
+    "audio_slow_path": "",
+    "chunk_timings_ms": [0, 850, 1900, 2800, 3600, 4300]
+  },
+  {
+    "id": 13,
+    "level": 5,
+    "text": "Despite the challenges posed by the pandemic, the university managed to continue offering high-quality education through a combination of online lectures and virtual workshops.",
+    "chunks": ["Despite the challenges", "posed by the pandemic,", "the university managed to continue", "offering high-quality education", "through a combination of online lectures and virtual workshops."],
+    "audio_path": "",
+    "audio_slow_path": "",
+    "chunk_timings_ms": [0, 850, 1700, 2700, 3700, 5200]
+  },
+  {
+    "id": 14,
+    "level": 5,
+    "text": "The documentary, which was filmed over a period of three years, explores how climate change is affecting wildlife in remote regions of the planet.",
+    "chunks": ["The documentary,", "which was filmed over a period of three years,", "explores how climate change", "is affecting wildlife", "in remote regions of the planet."],
+    "audio_path": "",
+    "audio_slow_path": "",
+    "chunk_timings_ms": [0, 650, 1900, 2900, 3700, 4700]
+  },
+  {
+    "id": 15,
+    "level": 5,
+    "text": "Having completed her internship at one of the leading technology firms, Sarah felt confident enough to apply for a full-time position in software development.",
+    "chunks": ["Having completed her internship", "at one of the leading technology firms,", "Sarah felt confident enough", "to apply for a full-time position", "in software development."],
+    "audio_path": "",
+    "audio_slow_path": "",
+    "chunk_timings_ms": [0, 950, 2000, 2900, 3900, 4800]
+  },
+  {
+    "id": 16,
+    "level": 5,
+    "text": "While many experts believe that artificial intelligence will create new types of jobs, others warn that it could lead to significant unemployment in traditional industries.",
+    "chunks": ["While many experts believe", "that artificial intelligence will create new types of jobs,", "others warn", "that it could lead to significant unemployment", "in traditional industries."],
+    "audio_path": "",
+    "audio_slow_path": "",
+    "chunk_timings_ms": [0, 900, 2200, 2800, 3900, 4800]
+  },
+  {
+    "id": 17,
+    "level": 6,
+    "text": "The implementation of stricter environmental regulations, which were initially opposed by several major corporations, has resulted in a measurable reduction of carbon emissions across the industrial sector over the past five years.",
+    "chunks": ["The implementation of stricter environmental regulations,", "which were initially opposed by several major corporations,", "has resulted in a measurable reduction", "of carbon emissions across the industrial sector", "over the past five years."],
+    "audio_path": "",
+    "audio_slow_path": "",
+    "chunk_timings_ms": [0, 1300, 2600, 3600, 4800, 5800]
+  },
+  {
+    "id": 18,
+    "level": 6,
+    "text": "According to a recent study published by the World Health Organisation, access to clean drinking water remains a critical issue in developing countries, where approximately one in three people still lacks adequate sanitation facilities.",
+    "chunks": ["According to a recent study", "published by the World Health Organisation,", "access to clean drinking water", "remains a critical issue in developing countries,", "where approximately one in three people", "still lacks adequate sanitation facilities."],
+    "audio_path": "",
+    "audio_slow_path": "",
+    "chunk_timings_ms": [0, 950, 1900, 2800, 3900, 5000, 5900]
+  },
+  {
+    "id": 19,
+    "level": 6,
+    "text": "It is widely acknowledged that the rapid growth of social media platforms has fundamentally altered the way people consume news, making it increasingly difficult for traditional newspapers to maintain their readership and advertising revenue.",
+    "chunks": ["It is widely acknowledged", "that the rapid growth of social media platforms", "has fundamentally altered the way", "people consume news,", "making it increasingly difficult for traditional newspapers", "to maintain their readership and advertising revenue."],
+    "audio_path": "",
+    "audio_slow_path": "",
+    "chunk_timings_ms": [0, 900, 2000, 2900, 3600, 4900, 6100]
+  },
+  {
+    "id": 20,
+    "level": 6,
+    "text": "Notwithstanding the significant investment in renewable energy infrastructure over the last decade, fossil fuels continue to account for a substantial proportion of global energy production, which suggests that the transition to a fully sustainable economy will require considerably more time and political commitment.",
+    "chunks": ["Notwithstanding the significant investment", "in renewable energy infrastructure over the last decade,", "fossil fuels continue to account", "for a substantial proportion of global energy production,", "which suggests that the transition to a fully sustainable economy", "will require considerably more time and political commitment."],
+    "audio_path": "",
+    "audio_slow_path": "",
+    "chunk_timings_ms": [0, 1100, 2400, 3400, 4800, 6300, 7600]
+  }
+]
