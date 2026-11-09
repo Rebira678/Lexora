@@ -4,6 +4,7 @@ import 'tts_service.dart';
 
 /// Sound effect types for games.
 enum SfxType {
+  click,
   correct,
   wrong,
   combo,
@@ -31,6 +32,9 @@ class AudioService {
   Future<void> playSfx(SfxType type) async {
     try {
       switch (type) {
+        case SfxType.click:
+          HapticFeedback.selectionClick();
+          break;
         case SfxType.correct:
           HapticFeedback.lightImpact();
           break;
