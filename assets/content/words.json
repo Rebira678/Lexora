@@ -1,0 +1,7874 @@
+[
+  {
+    "id": 1,
+    "lemma": "achieve",
+    "pos": "verb",
+    "ipa": "/əˈtʃiːv/",
+    "cefr": "B1",
+    "freq_rank": 850,
+    "definition_en": "to succeed in doing something good, usually by working hard",
+    "tags": "work,goals",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "achieve a goal",
+      "achieve success",
+      "achieve results"
+    ],
+    "word_family": [
+      {
+        "form": "achieve",
+        "type": "verb"
+      },
+      {
+        "form": "achievement",
+        "type": "noun"
+      },
+      {
+        "form": "achievable",
+        "type": "adjective"
+      },
+      {
+        "form": "achiever",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "She worked hard to achieve her dream of becoming a doctor.",
+        "translation": ""
+      },
+      {
+        "sentence": "The team achieved excellent results this quarter.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "lemma": "adapt",
+    "pos": "verb",
+    "ipa": "/əˈdæpt/",
+    "cefr": "B1",
+    "freq_rank": 1420,
+    "definition_en": "to change your behavior in order to deal more successfully with a new situation",
+    "tags": "change,life",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "adapt to change",
+      "adapt quickly",
+      "adapt easily"
+    ],
+    "word_family": [
+      {
+        "form": "adapt",
+        "type": "verb"
+      },
+      {
+        "form": "adaptation",
+        "type": "noun"
+      },
+      {
+        "form": "adaptable",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "It took her several months to adapt to the new culture.",
+        "translation": ""
+      },
+      {
+        "sentence": "Living organisms adapt to their environment over time.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "lemma": "afford",
+    "pos": "verb",
+    "ipa": "/əˈfɔːd/",
+    "cefr": "B1",
+    "freq_rank": 720,
+    "definition_en": "to have enough money or time to buy or do something",
+    "tags": "money,finance",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "afford a car",
+      "can barely afford",
+      "afford the time"
+    ],
+    "word_family": [
+      {
+        "form": "afford",
+        "type": "verb"
+      },
+      {
+        "form": "affordable",
+        "type": "adjective"
+      },
+      {
+        "form": "affordability",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "We can't afford a vacation abroad this year.",
+        "translation": ""
+      },
+      {
+        "sentence": "The city needs more affordable housing for young families.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "lemma": "ambition",
+    "pos": "noun",
+    "ipa": "/æmˈbɪʃ.ən/",
+    "cefr": "B1",
+    "freq_rank": 1650,
+    "definition_en": "a strong desire to achieve something, such as success or wealth",
+    "tags": "goals,mind",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "great ambition",
+      "lifelong ambition",
+      "achieve an ambition"
+    ],
+    "word_family": [
+      {
+        "form": "ambition",
+        "type": "noun"
+      },
+      {
+        "form": "ambitious",
+        "type": "adjective"
+      },
+      {
+        "form": "ambitiously",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "His ambition is to start his own technology firm.",
+        "translation": ""
+      },
+      {
+        "sentence": "She has always been ambitious and determined.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "lemma": "apologize",
+    "pos": "verb",
+    "ipa": "/əˈpɒl.ə.dʒaɪz/",
+    "cefr": "B1",
+    "freq_rank": 1100,
+    "definition_en": "to say that you are sorry for something wrong that you did",
+    "tags": "communication,social",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "apologize sincerely",
+      "apologize for an error",
+      "demand an apology"
+    ],
+    "word_family": [
+      {
+        "form": "apologize",
+        "type": "verb"
+      },
+      {
+        "form": "apology",
+        "type": "noun"
+      },
+      {
+        "form": "apologetic",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "He apologized for arriving late to the conference.",
+        "translation": ""
+      },
+      {
+        "sentence": "You should apologize to your sister for breaking her phone.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "lemma": "approach",
+    "pos": "noun",
+    "ipa": "/əˈprəʊtʃ/",
+    "cefr": "B1",
+    "freq_rank": 620,
+    "definition_en": "a way of dealing with somebody or something",
+    "tags": "method,work",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "fresh approach",
+      "take an approach",
+      "new approach"
+    ],
+    "word_family": [
+      {
+        "form": "approach",
+        "type": "noun"
+      },
+      {
+        "form": "approach",
+        "type": "verb"
+      },
+      {
+        "form": "approachable",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "We need a different approach to solve this puzzle.",
+        "translation": ""
+      },
+      {
+        "sentence": "Her friendly approach made all the students feel welcome.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "lemma": "arrange",
+    "pos": "verb",
+    "ipa": "/əˈreɪndʒ/",
+    "cefr": "B1",
+    "freq_rank": 950,
+    "definition_en": "to plan or organize something in advance",
+    "tags": "planning,daily",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "arrange a meeting",
+      "arrange travel",
+      "rearrange"
+    ],
+    "word_family": [
+      {
+        "form": "arrange",
+        "type": "verb"
+      },
+      {
+        "form": "arrangement",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "I will arrange a meeting with the director next Tuesday.",
+        "translation": ""
+      },
+      {
+        "sentence": "The hotel can arrange transport from the airport.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "lemma": "attitude",
+    "pos": "noun",
+    "ipa": "/ˈæt.ɪ.tʃuːd/",
+    "cefr": "B1",
+    "freq_rank": 910,
+    "definition_en": "the way that you think and feel about somebody or something",
+    "tags": "mind,personality",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "positive attitude",
+      "change your attitude",
+      "attitude toward work"
+    ],
+    "word_family": [
+      {
+        "form": "attitude",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "A positive attitude helps you overcome difficult obstacles.",
+        "translation": ""
+      },
+      {
+        "sentence": "Her attitude toward studying improved dramatically.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "lemma": "available",
+    "pos": "adjective",
+    "ipa": "/əˈveɪ.lə.bəl/",
+    "cefr": "B1",
+    "freq_rank": 430,
+    "definition_en": "that you can get, buy, or use; free to see or talk to people",
+    "tags": "daily,work",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "readily available",
+      "available online",
+      "make available"
+    ],
+    "word_family": [
+      {
+        "form": "available",
+        "type": "adjective"
+      },
+      {
+        "form": "availability",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Fresh fruits are readily available at the local market.",
+        "translation": ""
+      },
+      {
+        "sentence": "Is the manager available for a brief discussion?",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "lemma": "benefit",
+    "pos": "noun",
+    "ipa": "/ˈben.ɪ.fɪt/",
+    "cefr": "B1",
+    "freq_rank": 540,
+    "definition_en": "an advantage that something gives you; a helpful effect",
+    "tags": "advantage,health",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "health benefits",
+      "reap the benefits",
+      "mutual benefit"
+    ],
+    "word_family": [
+      {
+        "form": "benefit",
+        "type": "noun"
+      },
+      {
+        "form": "benefit",
+        "type": "verb"
+      },
+      {
+        "form": "beneficial",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Regular exercise offers many long-term health benefits.",
+        "translation": ""
+      },
+      {
+        "sentence": "Both partners gained significant benefit from the agreement.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "lemma": "brief",
+    "pos": "adjective",
+    "ipa": "/briːf/",
+    "cefr": "B1",
+    "freq_rank": 1120,
+    "definition_en": "lasting only for a short time; using few words",
+    "tags": "time,communication",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "brief meeting",
+      "brief explanation",
+      "in brief"
+    ],
+    "word_family": [
+      {
+        "form": "brief",
+        "type": "adjective"
+      },
+      {
+        "form": "briefly",
+        "type": "adverb"
+      },
+      {
+        "form": "brief",
+        "type": "verb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Before we begin, let me give a brief summary of the project.",
+        "translation": ""
+      },
+      {
+        "sentence": "We had a brief conversation in the hallway this morning.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "lemma": "capable",
+    "pos": "adjective",
+    "ipa": "/ˈkeɪ.pə.bəl/",
+    "cefr": "B1",
+    "freq_rank": 1310,
+    "definition_en": "having the ability or qualities necessary for doing something",
+    "tags": "skills,ability",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "capable of doing",
+      "highly capable",
+      "prove capable"
+    ],
+    "word_family": [
+      {
+        "form": "capable",
+        "type": "adjective"
+      },
+      {
+        "form": "capability",
+        "type": "noun"
+      },
+      {
+        "form": "incapable",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "She is capable of handling complex challenges independently.",
+        "translation": ""
+      },
+      {
+        "sentence": "Modern computers are capable of processing huge amounts of data.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "lemma": "challenge",
+    "pos": "noun",
+    "ipa": "/ˈtʃæl.ɪndʒ/",
+    "cefr": "B1",
+    "freq_rank": 680,
+    "definition_en": "a new or difficult thing that tests somebody's ability and skill",
+    "tags": "difficulty,work",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "face a challenge",
+      "major challenge",
+      "accept a challenge"
+    ],
+    "word_family": [
+      {
+        "form": "challenge",
+        "type": "noun"
+      },
+      {
+        "form": "challenge",
+        "type": "verb"
+      },
+      {
+        "form": "challenging",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Learning a new language is a demanding challenge.",
+        "translation": ""
+      },
+      {
+        "sentence": "The project presents an exciting challenge for our engineering team.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "lemma": "clarify",
+    "pos": "verb",
+    "ipa": "/ˈklær.ɪ.faɪ/",
+    "cefr": "B1",
+    "freq_rank": 1750,
+    "definition_en": "to make something clearer or easier to understand",
+    "tags": "communication,clarity",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "clarify a point",
+      "clarify the situation",
+      "seek clarification"
+    ],
+    "word_family": [
+      {
+        "form": "clarify",
+        "type": "verb"
+      },
+      {
+        "form": "clarification",
+        "type": "noun"
+      },
+      {
+        "form": "clarity",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Could you clarify what you mean by that statement?",
+        "translation": ""
+      },
+      {
+        "sentence": "The professor wrote a diagram to clarify the concept.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "lemma": "colleague",
+    "pos": "noun",
+    "ipa": "/ˈkɒl.iːɡ/",
+    "cefr": "B1",
+    "freq_rank": 890,
+    "definition_en": "a person that you work with, especially in a profession or a business",
+    "tags": "work,people",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "close colleague",
+      "former colleague",
+      "work colleague"
+    ],
+    "word_family": [
+      {
+        "form": "colleague",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "A colleague from the accounting department assisted with the audit.",
+        "translation": ""
+      },
+      {
+        "sentence": "She discussed the proposal with several trusted colleagues.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "lemma": "combine",
+    "pos": "verb",
+    "ipa": "/kəmˈbaɪn/",
+    "cefr": "B1",
+    "freq_rank": 990,
+    "definition_en": "to join two or more things together to form a single entity",
+    "tags": "mix,action",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "combine elements",
+      "combine forces",
+      "combine theory and practice"
+    ],
+    "word_family": [
+      {
+        "form": "combine",
+        "type": "verb"
+      },
+      {
+        "form": "combination",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The chef combines traditional herbs with modern techniques.",
+        "translation": ""
+      },
+      {
+        "sentence": "Let us combine our resources to finish the job faster.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "lemma": "community",
+    "pos": "noun",
+    "ipa": "/kəˈmjuː.nə.ti/",
+    "cefr": "B1",
+    "freq_rank": 380,
+    "definition_en": "all the people who live in a particular area or share interests",
+    "tags": "society,people",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "local community",
+      "sense of community",
+      "online community"
+    ],
+    "word_family": [
+      {
+        "form": "community",
+        "type": "noun"
+      },
+      {
+        "form": "communal",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Volunteers from the local community helped clean the park.",
+        "translation": ""
+      },
+      {
+        "sentence": "Social media has allowed rare disease patients to form a supportive community.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "lemma": "compete",
+    "pos": "verb",
+    "ipa": "/kəmˈpiːt/",
+    "cefr": "B1",
+    "freq_rank": 1180,
+    "definition_en": "to try to be more successful than some other person or company",
+    "tags": "games,business",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "compete against",
+      "compete for a prize",
+      "compete fiercely"
+    ],
+    "word_family": [
+      {
+        "form": "compete",
+        "type": "verb"
+      },
+      {
+        "form": "competition",
+        "type": "noun"
+      },
+      {
+        "form": "competitive",
+        "type": "adjective"
+      },
+      {
+        "form": "competitor",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Several international teams will compete in the tournament.",
+        "translation": ""
+      },
+      {
+        "sentence": "Small businesses must compete against large multinational retailers.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "lemma": "complex",
+    "pos": "adjective",
+    "ipa": "/ˈkɒm.pleks/",
+    "cefr": "B1",
+    "freq_rank": 760,
+    "definition_en": "made of many different things or parts that are connected; difficult to understand",
+    "tags": "difficulty,systems",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "complex system",
+      "complex issue",
+      "highly complex"
+    ],
+    "word_family": [
+      {
+        "form": "complex",
+        "type": "adjective"
+      },
+      {
+        "form": "complexity",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Tax law is often too complex for average citizens to navigate.",
+        "translation": ""
+      },
+      {
+        "sentence": "The human brain is an extraordinarily complex organ.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "lemma": "concentrate",
+    "pos": "verb",
+    "ipa": "/ˈkɒn.sən.treɪt/",
+    "cefr": "B1",
+    "freq_rank": 1020,
+    "definition_en": "to give all your attention to the thing that you are doing",
+    "tags": "focus,mind",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "concentrate on studies",
+      "hard to concentrate",
+      "concentrate fully"
+    ],
+    "word_family": [
+      {
+        "form": "concentrate",
+        "type": "verb"
+      },
+      {
+        "form": "concentration",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "It is difficult to concentrate when there is loud construction nearby.",
+        "translation": ""
+      },
+      {
+        "sentence": "Please concentrate on answering one question at a time.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "lemma": "conclude",
+    "pos": "verb",
+    "ipa": "/kənˈkluːd/",
+    "cefr": "B1",
+    "freq_rank": 1080,
+    "definition_en": "to decide that something is true after considering all the information",
+    "tags": "thinking,logic",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "conclude that",
+      "reach a conclusion",
+      "conclude a meeting"
+    ],
+    "word_family": [
+      {
+        "form": "conclude",
+        "type": "verb"
+      },
+      {
+        "form": "conclusion",
+        "type": "noun"
+      },
+      {
+        "form": "conclusive",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Scientists concluded that the substance was completely harmless.",
+        "translation": ""
+      },
+      {
+        "sentence": "The chairperson concluded the meeting at four o'clock.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "lemma": "confidence",
+    "pos": "noun",
+    "ipa": "/ˈkɒn.fɪ.dəns/",
+    "cefr": "B1",
+    "freq_rank": 780,
+    "definition_en": "the feeling that you can trust, believe in and be sure about something",
+    "tags": "emotion,mind",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "gain confidence",
+      "lack confidence",
+      "boost confidence"
+    ],
+    "word_family": [
+      {
+        "form": "confidence",
+        "type": "noun"
+      },
+      {
+        "form": "confident",
+        "type": "adjective"
+      },
+      {
+        "form": "confidently",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Practicing English aloud gave him the confidence to speak in public.",
+        "translation": ""
+      },
+      {
+        "sentence": "Investors expressed confidence in the company's long-term future.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "lemma": "confirm",
+    "pos": "verb",
+    "ipa": "/kənˈfɜːm/",
+    "cefr": "B1",
+    "freq_rank": 640,
+    "definition_en": "to state or show that something is definitely true or correct",
+    "tags": "communication,facts",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "confirm a booking",
+      "confirm rumors",
+      "confirm details"
+    ],
+    "word_family": [
+      {
+        "form": "confirm",
+        "type": "verb"
+      },
+      {
+        "form": "confirmation",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Please reply to this email to confirm your flight reservation.",
+        "translation": ""
+      },
+      {
+        "sentence": "Subsequent experiments confirmed the initial discovery.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "lemma": "connect",
+    "pos": "verb",
+    "ipa": "/kəˈnekt/",
+    "cefr": "B1",
+    "freq_rank": 820,
+    "definition_en": "to join two or more things together; to link thoughts or people",
+    "tags": "technology,relations",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "connect to internet",
+      "connect with people",
+      "connect devices"
+    ],
+    "word_family": [
+      {
+        "form": "connect",
+        "type": "verb"
+      },
+      {
+        "form": "connection",
+        "type": "noun"
+      },
+      {
+        "form": "connected",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "A scenic bridge connects the island to the mainland.",
+        "translation": ""
+      },
+      {
+        "sentence": "She enjoys traveling because it helps her connect with diverse cultures.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "lemma": "consequence",
+    "pos": "noun",
+    "ipa": "/ˈkɒn.sɪ.kwəns/",
+    "cefr": "B1",
+    "freq_rank": 1150,
+    "definition_en": "a result of something that has happened, especially an unpleasant result",
+    "tags": "cause,effect",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "face the consequences",
+      "serious consequences",
+      "as a consequence"
+    ],
+    "word_family": [
+      {
+        "form": "consequence",
+        "type": "noun"
+      },
+      {
+        "form": "consequent",
+        "type": "adjective"
+      },
+      {
+        "form": "consequently",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Climate change will have devastating consequences for coastal areas.",
+        "translation": ""
+      },
+      {
+        "sentence": "He drove too fast and had to accept the legal consequences.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "lemma": "consider",
+    "pos": "verb",
+    "ipa": "/kənˈsɪd.ər/",
+    "cefr": "B1",
+    "freq_rank": 310,
+    "definition_en": "to think about something carefully, especially in order to make a decision",
+    "tags": "thinking,decisions",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "consider options",
+      "carefully consider",
+      "consider doing"
+    ],
+    "word_family": [
+      {
+        "form": "consider",
+        "type": "verb"
+      },
+      {
+        "form": "consideration",
+        "type": "noun"
+      },
+      {
+        "form": "considerate",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "You should consider taking a short break before the exam.",
+        "translation": ""
+      },
+      {
+        "sentence": "The committee will consider several proposals at tomorrow's session.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "lemma": "consistent",
+    "pos": "adjective",
+    "ipa": "/kənˈsɪs.tənt/",
+    "cefr": "B1",
+    "freq_rank": 1290,
+    "definition_en": "always behaving or performing in a similar, positive way",
+    "tags": "behavior,work",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "consistent effort",
+      "consistent results",
+      "remain consistent"
+    ],
+    "word_family": [
+      {
+        "form": "consistent",
+        "type": "adjective"
+      },
+      {
+        "form": "consistently",
+        "type": "adverb"
+      },
+      {
+        "form": "consistency",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Consistent daily practice is the true key to mastering a language.",
+        "translation": ""
+      },
+      {
+        "sentence": "Her grades have remained consistent throughout the entire semester.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "lemma": "contribute",
+    "pos": "verb",
+    "ipa": "/kənˈtrɪb.juːt/",
+    "cefr": "B1",
+    "freq_rank": 1010,
+    "definition_en": "to give something, especially money or ideas, to help achieve something",
+    "tags": "giving,work",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "contribute to success",
+      "contribute money",
+      "contribute ideas"
+    ],
+    "word_family": [
+      {
+        "form": "contribute",
+        "type": "verb"
+      },
+      {
+        "form": "contribution",
+        "type": "noun"
+      },
+      {
+        "form": "contributor",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Every member of the group contributed valuable insights to the report.",
+        "translation": ""
+      },
+      {
+        "sentence": "Regular exercise contributes significantly to mental well-being.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "lemma": "convenient",
+    "pos": "adjective",
+    "ipa": "/kənˈviː.ni.ənt/",
+    "cefr": "B1",
+    "freq_rank": 1370,
+    "definition_en": "useful, easy or quick for you to do; not causing problems",
+    "tags": "daily,ease",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "convenient location",
+      "convenient time",
+      "highly convenient"
+    ],
+    "word_family": [
+      {
+        "form": "convenient",
+        "type": "adjective"
+      },
+      {
+        "form": "convenience",
+        "type": "noun"
+      },
+      {
+        "form": "inconvenient",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The apartment is very convenient because it is near the subway station.",
+        "translation": ""
+      },
+      {
+        "sentence": "Online banking provides a convenient way to pay household bills.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "lemma": "convince",
+    "pos": "verb",
+    "ipa": "/kənˈvɪns/",
+    "cefr": "B1",
+    "freq_rank": 1040,
+    "definition_en": "to persuade somebody to do something or make them feel sure something is true",
+    "tags": "persuasion,mind",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "convince someone",
+      "convince of the truth",
+      "hard to convince"
+    ],
+    "word_family": [
+      {
+        "form": "convince",
+        "type": "verb"
+      },
+      {
+        "form": "convinced",
+        "type": "adjective"
+      },
+      {
+        "form": "convincing",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "I tried hard to convince him to see a doctor about his knee.",
+        "translation": ""
+      },
+      {
+        "sentence": "The lawyer presented convincing evidence in defense of her client.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "lemma": "crucial",
+    "pos": "adjective",
+    "ipa": "/ˈkruː.ʃəl/",
+    "cefr": "B1",
+    "freq_rank": 1480,
+    "definition_en": "extremely important, because it will affect other things",
+    "tags": "importance,logic",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "crucial role",
+      "crucial decision",
+      "play a crucial part"
+    ],
+    "word_family": [
+      {
+        "form": "crucial",
+        "type": "adjective"
+      },
+      {
+        "form": "crucially",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Good communication plays a crucial role in building trust.",
+        "translation": ""
+      },
+      {
+        "sentence": "The final five minutes of the negotiation were crucial.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "lemma": "culture",
+    "pos": "noun",
+    "ipa": "/ˈkʌl.tʃər/",
+    "cefr": "B1",
+    "freq_rank": 410,
+    "definition_en": "the customs and beliefs, art, way of life and social organization of a country or group",
+    "tags": "society,arts",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "rich culture",
+      "corporate culture",
+      "cultural exchange"
+    ],
+    "word_family": [
+      {
+        "form": "culture",
+        "type": "noun"
+      },
+      {
+        "form": "cultural",
+        "type": "adjective"
+      },
+      {
+        "form": "culturally",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Visiting museums helps tourists appreciate the country's ancient culture.",
+        "translation": ""
+      },
+      {
+        "sentence": "Our company promotes a collaborative workplace culture.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "lemma": "curious",
+    "pos": "adjective",
+    "ipa": "/ˈkjʊə.ri.əs/",
+    "cefr": "B1",
+    "freq_rank": 1430,
+    "definition_en": "having a strong desire to know about something",
+    "tags": "personality,learning",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "curious about",
+      "stay curious",
+      "naturally curious"
+    ],
+    "word_family": [
+      {
+        "form": "curious",
+        "type": "adjective"
+      },
+      {
+        "form": "curiosity",
+        "type": "noun"
+      },
+      {
+        "form": "curiously",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Children are naturally curious about everything around them.",
+        "translation": ""
+      },
+      {
+        "sentence": "I was curious to find out why the flight had been postponed.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "lemma": "decade",
+    "pos": "noun",
+    "ipa": "/ˈdek.eɪd/",
+    "cefr": "B1",
+    "freq_rank": 860,
+    "definition_en": "a period of ten years",
+    "tags": "time,history",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "past decade",
+      "last decade",
+      "over a decade"
+    ],
+    "word_family": [
+      {
+        "form": "decade",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Technology has advanced dramatically over the past decade.",
+        "translation": ""
+      },
+      {
+        "sentence": "The city center changed beyond recognition in just two decades.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "lemma": "demand",
+    "pos": "noun",
+    "ipa": "/dɪˈmɑːnd/",
+    "cefr": "B1",
+    "freq_rank": 670,
+    "definition_en": "a very strong request for something; the desire of customers to buy goods",
+    "tags": "business,requests",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "high demand",
+      "in demand",
+      "meet the demand"
+    ],
+    "word_family": [
+      {
+        "form": "demand",
+        "type": "noun"
+      },
+      {
+        "form": "demand",
+        "type": "verb"
+      },
+      {
+        "form": "demanding",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "There is high demand for skilled software developers around the world.",
+        "translation": ""
+      },
+      {
+        "sentence": "The factory increased production to meet surging consumer demand.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "lemma": "describe",
+    "pos": "verb",
+    "ipa": "/dɪˈskraɪb/",
+    "cefr": "B1",
+    "freq_rank": 390,
+    "definition_en": "to say what somebody or something is like",
+    "tags": "communication,details",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "describe accurately",
+      "briefly describe",
+      "describe in detail"
+    ],
+    "word_family": [
+      {
+        "form": "describe",
+        "type": "verb"
+      },
+      {
+        "form": "description",
+        "type": "noun"
+      },
+      {
+        "form": "descriptive",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Can you describe the person you saw entering the building?",
+        "translation": ""
+      },
+      {
+        "sentence": "The author describes the mountain village in breathtaking detail.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "lemma": "determine",
+    "pos": "verb",
+    "ipa": "/dɪˈtɜː.mɪn/",
+    "cefr": "B1",
+    "freq_rank": 790,
+    "definition_en": "to discover the facts about something; to calculate something exactly",
+    "tags": "logic,science",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "determine the cause",
+      "determine factors",
+      "determined to succeed"
+    ],
+    "word_family": [
+      {
+        "form": "determine",
+        "type": "verb"
+      },
+      {
+        "form": "determination",
+        "type": "noun"
+      },
+      {
+        "form": "determined",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "An investigation was launched to determine the cause of the fire.",
+        "translation": ""
+      },
+      {
+        "sentence": "She was determined to finish her degree despite financial hardships.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "lemma": "develop",
+    "pos": "verb",
+    "ipa": "/dɪˈvel.əp/",
+    "cefr": "B1",
+    "freq_rank": 240,
+    "definition_en": "to grow or change into a more advanced, larger, or stronger form",
+    "tags": "growth,change",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "develop skills",
+      "develop a strategy",
+      "develop a habit"
+    ],
+    "word_family": [
+      {
+        "form": "develop",
+        "type": "verb"
+      },
+      {
+        "form": "development",
+        "type": "noun"
+      },
+      {
+        "form": "developer",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Daily reading will help you develop a richer vocabulary.",
+        "translation": ""
+      },
+      {
+        "sentence": "The company plans to develop three new mobile applications this year.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "lemma": "disaster",
+    "pos": "noun",
+    "ipa": "/dɪˈzɑː.stər/",
+    "cefr": "B1",
+    "freq_rank": 1250,
+    "definition_en": "an unexpected event, such as a very bad accident or flood, that causes great damage",
+    "tags": "events,nature",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "natural disaster",
+      "financial disaster",
+      "prevent a disaster"
+    ],
+    "word_family": [
+      {
+        "form": "disaster",
+        "type": "noun"
+      },
+      {
+        "form": "disastrous",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The earthquake was the worst natural disaster the region had seen.",
+        "translation": ""
+      },
+      {
+        "sentence": "Poor planning turned the festival into an operational disaster.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "lemma": "distribute",
+    "pos": "verb",
+    "ipa": "/dɪˈstrɪb.juːt/",
+    "cefr": "B1",
+    "freq_rank": 1470,
+    "definition_en": "to give things to a large number of people; to supply goods to shops",
+    "tags": "sharing,business",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "distribute evenly",
+      "distribute aid",
+      "distribute goods"
+    ],
+    "word_family": [
+      {
+        "form": "distribute",
+        "type": "verb"
+      },
+      {
+        "form": "distribution",
+        "type": "noun"
+      },
+      {
+        "form": "distributor",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Volunteers helped distribute clean drinking water to residents.",
+        "translation": ""
+      },
+      {
+        "sentence": "The publisher will distribute the textbook to schools across the nation.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "lemma": "effective",
+    "pos": "adjective",
+    "ipa": "/ɪˈfek.tɪv/",
+    "cefr": "B1",
+    "freq_rank": 590,
+    "definition_en": "producing the result that is wanted or intended; producing a successful result",
+    "tags": "work,success",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "effective method",
+      "highly effective",
+      "cost effective"
+    ],
+    "word_family": [
+      {
+        "form": "effective",
+        "type": "adjective"
+      },
+      {
+        "form": "effectiveness",
+        "type": "noun"
+      },
+      {
+        "form": "effectively",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Spaced repetition is an effective method for memorizing new words.",
+        "translation": ""
+      },
+      {
+        "sentence": "The new traffic regulations proved highly effective in reducing accidents.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "lemma": "effort",
+    "pos": "noun",
+    "ipa": "/ˈef.ət/",
+    "cefr": "B1",
+    "freq_rank": 440,
+    "definition_en": "the physical or mental energy that you need to do something",
+    "tags": "action,mind",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "make an effort",
+      "joint effort",
+      "worth the effort"
+    ],
+    "word_family": [
+      {
+        "form": "effort",
+        "type": "noun"
+      },
+      {
+        "form": "effortless",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "You need to make an effort if you want to see real improvement.",
+        "translation": ""
+      },
+      {
+        "sentence": "Cleaning up the neighborhood was a wonderful community effort.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "lemma": "emphasize",
+    "pos": "verb",
+    "ipa": "/ˈem.fə.saɪz/",
+    "cefr": "B1",
+    "freq_rank": 1160,
+    "definition_en": "to give special importance or attention to something",
+    "tags": "communication,importance",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "emphasize the importance",
+      "heavily emphasize",
+      "need to emphasize"
+    ],
+    "word_family": [
+      {
+        "form": "emphasize",
+        "type": "verb"
+      },
+      {
+        "form": "emphasis",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The coach emphasized the importance of teamwork and discipline.",
+        "translation": ""
+      },
+      {
+        "sentence": "The report emphasizes that early diagnosis improves recovery rates.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "lemma": "enable",
+    "pos": "verb",
+    "ipa": "/ɪˈneɪ.bəl/",
+    "cefr": "B1",
+    "freq_rank": 810,
+    "definition_en": "to make it possible for somebody to do something, or for something to happen",
+    "tags": "power,action",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "enable someone to do",
+      "enable access",
+      "technology enables"
+    ],
+    "word_family": [
+      {
+        "form": "enable",
+        "type": "verb"
+      },
+      {
+        "form": "enabler",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "This scholarship enabled her to attend university full-time.",
+        "translation": ""
+      },
+      {
+        "sentence": "Modern smartphones enable people to work effectively from anywhere.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "lemma": "encourage",
+    "pos": "verb",
+    "ipa": "/ɪnˈkʌr.ɪdʒ/",
+    "cefr": "B1",
+    "freq_rank": 690,
+    "definition_en": "to give somebody support, courage or hope to do something",
+    "tags": "support,feelings",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "encourage someone to do",
+      "strongly encourage",
+      "encourage growth"
+    ],
+    "word_family": [
+      {
+        "form": "encourage",
+        "type": "verb"
+      },
+      {
+        "form": "encouragement",
+        "type": "noun"
+      },
+      {
+        "form": "encouraging",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Her parents always encouraged her to pursue musical talents.",
+        "translation": ""
+      },
+      {
+        "sentence": "The government offers tax incentives to encourage renewable energy.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "lemma": "environment",
+    "pos": "noun",
+    "ipa": "/ɪnˈvaɪ.rən.mənt/",
+    "cefr": "B1",
+    "freq_rank": 330,
+    "definition_en": "the natural world in which people, animals and plants live",
+    "tags": "nature,planet",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "protect the environment",
+      "work environment",
+      "friendly environment"
+    ],
+    "word_family": [
+      {
+        "form": "environment",
+        "type": "noun"
+      },
+      {
+        "form": "environmental",
+        "type": "adjective"
+      },
+      {
+        "form": "environmentalist",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "We all share a duty to protect the natural environment for future generations.",
+        "translation": ""
+      },
+      {
+        "sentence": "A calm work environment helps employees concentrate on difficult tasks.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "lemma": "essential",
+    "pos": "adjective",
+    "ipa": "/ɪˈsen.ʃəl/",
+    "cefr": "B1",
+    "freq_rank": 710,
+    "definition_en": "completely necessary; that you must have or do",
+    "tags": "importance,necessity",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "essential tool",
+      "essential for life",
+      "play an essential part"
+    ],
+    "word_family": [
+      {
+        "form": "essential",
+        "type": "adjective"
+      },
+      {
+        "form": "essentially",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Clean water and nutritious food are essential for human survival.",
+        "translation": ""
+      },
+      {
+        "sentence": "Active listening is an essential skill for any successful leader.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "lemma": "estimate",
+    "pos": "verb",
+    "ipa": "/ˈes.tɪ.meɪt/",
+    "cefr": "B1",
+    "freq_rank": 960,
+    "definition_en": "to form an idea of the cost, size, or value of something, without calculating exactly",
+    "tags": "numbers,calculation",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "estimate the cost",
+      "rough estimate",
+      "difficult to estimate"
+    ],
+    "word_family": [
+      {
+        "form": "estimate",
+        "type": "verb"
+      },
+      {
+        "form": "estimate",
+        "type": "noun"
+      },
+      {
+        "form": "estimation",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Engineers estimate that the new highway will take three years to build.",
+        "translation": ""
+      },
+      {
+        "sentence": "We asked the builder for a written estimate before starting renovations.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "lemma": "eventual",
+    "pos": "adjective",
+    "ipa": "/ɪˈven.tʃu.əl/",
+    "cefr": "B1",
+    "freq_rank": 1700,
+    "definition_en": "happening at the end of a period of time or of a process",
+    "tags": "time,results",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "eventual outcome",
+      "eventual success",
+      "eventual winner"
+    ],
+    "word_family": [
+      {
+        "form": "eventual",
+        "type": "adjective"
+      },
+      {
+        "form": "eventually",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "His eventual success came after years of relentless experimentation.",
+        "translation": ""
+      },
+      {
+        "sentence": "She worked as an intern, with the eventual goal of becoming partner.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "lemma": "evidence",
+    "pos": "noun",
+    "ipa": "/ˈev.ɪ.dəns/",
+    "cefr": "B1",
+    "freq_rank": 450,
+    "definition_en": "the facts, signs or objects that make you believe that something is true",
+    "tags": "facts,law",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "clear evidence",
+      "scientific evidence",
+      "lack of evidence"
+    ],
+    "word_family": [
+      {
+        "form": "evidence",
+        "type": "noun"
+      },
+      {
+        "form": "evident",
+        "type": "adjective"
+      },
+      {
+        "form": "evidently",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "There is convincing evidence that physical exercise boosts memory.",
+        "translation": ""
+      },
+      {
+        "sentence": "The police found no physical evidence at the scene of the crime.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "lemma": "experience",
+    "pos": "noun",
+    "ipa": "/ɪkˈspɪə.ri.əns/",
+    "cefr": "B1",
+    "freq_rank": 210,
+    "definition_en": "the knowledge and skill that you have gained through doing something for a period of time",
+    "tags": "knowledge,life",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "gain experience",
+      "practical experience",
+      "work experience"
+    ],
+    "word_family": [
+      {
+        "form": "experience",
+        "type": "noun"
+      },
+      {
+        "form": "experience",
+        "type": "verb"
+      },
+      {
+        "form": "experienced",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "She has ten years of practical experience in civil engineering.",
+        "translation": ""
+      },
+      {
+        "sentence": "Traveling alone in a foreign land was a life-changing experience.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "lemma": "explore",
+    "pos": "verb",
+    "ipa": "/ɪkˈsplɔːr/",
+    "cefr": "B1",
+    "freq_rank": 870,
+    "definition_en": "to travel to or around an area or a country in order to learn about it",
+    "tags": "travel,learning",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "explore options",
+      "explore a city",
+      "explore ideas"
+    ],
+    "word_family": [
+      {
+        "form": "explore",
+        "type": "verb"
+      },
+      {
+        "form": "exploration",
+        "type": "noun"
+      },
+      {
+        "form": "explorer",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "We spent the entire afternoon exploring the narrow streets of the old town.",
+        "translation": ""
+      },
+      {
+        "sentence": "The seminar aims to explore innovative solutions to climate change.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "lemma": "factor",
+    "pos": "noun",
+    "ipa": "/ˈfæk.tər/",
+    "cefr": "B1",
+    "freq_rank": 630,
+    "definition_en": "one of several things that cause or influence a situation",
+    "tags": "logic,cause",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "key factor",
+      "deciding factor",
+      "contributing factor"
+    ],
+    "word_family": [
+      {
+        "form": "factor",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Price was the deciding factor when we chose our new office.",
+        "translation": ""
+      },
+      {
+        "sentence": "Diet and genetics are both major factors influencing cardiovascular health.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "lemma": "flexible",
+    "pos": "adjective",
+    "ipa": "/ˈflek.sə.bəl/",
+    "cefr": "B1",
+    "freq_rank": 1360,
+    "definition_en": "able to change to suit new conditions or situations",
+    "tags": "behavior,work",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "flexible schedule",
+      "flexible approach",
+      "remain flexible"
+    ],
+    "word_family": [
+      {
+        "form": "flexible",
+        "type": "adjective"
+      },
+      {
+        "form": "flexibility",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Many modern employers offer flexible working hours to their staff.",
+        "translation": ""
+      },
+      {
+        "sentence": "Our plans are quite flexible, so we can adjust if it starts raining.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "lemma": "focus",
+    "pos": "verb",
+    "ipa": "/ˈfəʊ.kəs/",
+    "cefr": "B1",
+    "freq_rank": 460,
+    "definition_en": "to give attention, effort, etc. to one particular subject, situation or person rather than another",
+    "tags": "mind,work",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "focus on goals",
+      "focus attention",
+      "sharp focus"
+    ],
+    "word_family": [
+      {
+        "form": "focus",
+        "type": "verb"
+      },
+      {
+        "form": "focus",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "You need to focus on completing the urgent tasks first.",
+        "translation": ""
+      },
+      {
+        "sentence": "The keynote speaker focused primarily on renewable energy technologies.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "lemma": "frequent",
+    "pos": "adjective",
+    "ipa": "/ˈfriː.kwənt/",
+    "cefr": "B1",
+    "freq_rank": 1170,
+    "definition_en": "happening or doing something often",
+    "tags": "time,habits",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "frequent flyer",
+      "frequent visits",
+      "fairly frequent"
+    ],
+    "word_family": [
+      {
+        "form": "frequent",
+        "type": "adjective"
+      },
+      {
+        "form": "frequently",
+        "type": "adverb"
+      },
+      {
+        "form": "frequency",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Heavy snow caused frequent delays on the railway line.",
+        "translation": ""
+      },
+      {
+        "sentence": "He is a frequent visitor to the university's main library.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "lemma": "function",
+    "pos": "noun",
+    "ipa": "/ˈfʌŋk.ʃən/",
+    "cefr": "B1",
+    "freq_rank": 610,
+    "definition_en": "a special activity or purpose of a person or thing",
+    "tags": "systems,purpose",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "primary function",
+      "perform a function",
+      "function properly"
+    ],
+    "word_family": [
+      {
+        "form": "function",
+        "type": "noun"
+      },
+      {
+        "form": "function",
+        "type": "verb"
+      },
+      {
+        "form": "functional",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The primary function of the lungs is to supply oxygen to the blood.",
+        "translation": ""
+      },
+      {
+        "sentence": "Does this software function properly on older operating systems?",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "lemma": "generate",
+    "pos": "verb",
+    "ipa": "/ˈdʒen.ə.reɪt/",
+    "cefr": "B1",
+    "freq_rank": 930,
+    "definition_en": "to produce or create something, such as energy, money, or ideas",
+    "tags": "creation,energy",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "generate income",
+      "generate electricity",
+      "generate interest"
+    ],
+    "word_family": [
+      {
+        "form": "generate",
+        "type": "verb"
+      },
+      {
+        "form": "generation",
+        "type": "noun"
+      },
+      {
+        "form": "generator",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Solar panels generate clean electricity directly from sunlight.",
+        "translation": ""
+      },
+      {
+        "sentence": "The advertising campaign generated immense interest across social media.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "lemma": "grateful",
+    "pos": "adjective",
+    "ipa": "/ˈɡreɪt.fəl/",
+    "cefr": "B1",
+    "freq_rank": 1450,
+    "definition_en": "feeling or showing thanks to somebody because they did something kind",
+    "tags": "feelings,polite",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "grateful for help",
+      "deeply grateful",
+      "express gratitude"
+    ],
+    "word_family": [
+      {
+        "form": "grateful",
+        "type": "adjective"
+      },
+      {
+        "form": "gratefully",
+        "type": "adverb"
+      },
+      {
+        "form": "gratitude",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "I am deeply grateful for all the support you gave me during my illness.",
+        "translation": ""
+      },
+      {
+        "sentence": "She smiled and nodded, visibly grateful for their understanding.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "lemma": "hesitate",
+    "pos": "verb",
+    "ipa": "/ˈhez.ɪ.teɪt/",
+    "cefr": "B1",
+    "freq_rank": 1520,
+    "definition_en": "to be slow to speak or act because you feel uncertain or nervous",
+    "tags": "behavior,speaking",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "hesitate to ask",
+      "without hesitating",
+      "brief hesitation"
+    ],
+    "word_family": [
+      {
+        "form": "hesitate",
+        "type": "verb"
+      },
+      {
+        "form": "hesitation",
+        "type": "noun"
+      },
+      {
+        "form": "hesitant",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Do not hesitate to contact our customer support team if you have questions.",
+        "translation": ""
+      },
+      {
+        "sentence": "He hesitated for a second before answering the difficult question.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "lemma": "identify",
+    "pos": "verb",
+    "ipa": "/aɪˈden.tɪ.faɪ/",
+    "cefr": "B1",
+    "freq_rank": 570,
+    "definition_en": "to recognize somebody or something and be able to say who or what they are",
+    "tags": "knowledge,discovery",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "identify a problem",
+      "identify the cause",
+      "correctly identify"
+    ],
+    "word_family": [
+      {
+        "form": "identify",
+        "type": "verb"
+      },
+      {
+        "form": "identification",
+        "type": "noun"
+      },
+      {
+        "form": "identity",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The doctor quickly identified the symptoms of the rare infection.",
+        "translation": ""
+      },
+      {
+        "sentence": "Witnesses were unable to identify the suspect from the photographs.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "lemma": "illustrate",
+    "pos": "verb",
+    "ipa": "/ˈɪl.ə.streɪt/",
+    "cefr": "B1",
+    "freq_rank": 1440,
+    "definition_en": "to make the meaning of something clearer by using examples, pictures, or diagrams",
+    "tags": "communication,clarity",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "illustrate a point",
+      "vividly illustrate",
+      "illustrate with examples"
+    ],
+    "word_family": [
+      {
+        "form": "illustrate",
+        "type": "verb"
+      },
+      {
+        "form": "illustration",
+        "type": "noun"
+      },
+      {
+        "form": "illustrative",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "To illustrate this theory, the teacher drew a simple flowchart on the board.",
+        "translation": ""
+      },
+      {
+        "sentence": "The statistics vividly illustrate the impact of the economic reform.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "lemma": "impact",
+    "pos": "noun",
+    "ipa": "/ˈɪm.pækt/",
+    "cefr": "B1",
+    "freq_rank": 520,
+    "definition_en": "the powerful effect that something, especially something new, has on a situation or person",
+    "tags": "effect,results",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "major impact",
+      "environmental impact",
+      "positive impact"
+    ],
+    "word_family": [
+      {
+        "form": "impact",
+        "type": "noun"
+      },
+      {
+        "form": "impact",
+        "type": "verb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The internet has had a profound impact on the way people communicate.",
+        "translation": ""
+      },
+      {
+        "sentence": "Technological disruptions impact virtually every modern industry.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "lemma": "improve",
+    "pos": "verb",
+    "ipa": "/ɪmˈpruːv/",
+    "cefr": "B1",
+    "freq_rank": 370,
+    "definition_en": "to become better than before; to make something better than before",
+    "tags": "growth,progress",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "improve skills",
+      "dramatically improve",
+      "improve conditions"
+    ],
+    "word_family": [
+      {
+        "form": "improve",
+        "type": "verb"
+      },
+      {
+        "form": "improvement",
+        "type": "noun"
+      },
+      {
+        "form": "improved",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Reading every evening will rapidly improve your reading comprehension.",
+        "translation": ""
+      },
+      {
+        "sentence": "The hospital introduced new protocols to improve patient safety.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "lemma": "indicate",
+    "pos": "verb",
+    "ipa": "/ˈɪn.dɪ.keɪt/",
+    "cefr": "B1",
+    "freq_rank": 580,
+    "definition_en": "to show that something is true or exists; to be a sign of something",
+    "tags": "signs,logic",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "indicate that",
+      "clearly indicate",
+      "studies indicate"
+    ],
+    "word_family": [
+      {
+        "form": "indicate",
+        "type": "verb"
+      },
+      {
+        "form": "indication",
+        "type": "noun"
+      },
+      {
+        "form": "indicator",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Recent surveys indicate that consumer confidence is steadily rising.",
+        "translation": ""
+      },
+      {
+        "sentence": "The red light indicates that the recording device is active.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "lemma": "influence",
+    "pos": "noun",
+    "ipa": "/ˈɪn.flu.əns/",
+    "cefr": "B1",
+    "freq_rank": 530,
+    "definition_en": "the power that somebody or something has to make somebody or something behave in a particular way",
+    "tags": "power,society",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "strong influence",
+      "under the influence",
+      "have an influence"
+    ],
+    "word_family": [
+      {
+        "form": "influence",
+        "type": "noun"
+      },
+      {
+        "form": "influence",
+        "type": "verb"
+      },
+      {
+        "form": "influential",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Her older brother had a strong influence on her musical tastes.",
+        "translation": ""
+      },
+      {
+        "sentence": "Weather conditions can greatly influence flight schedules.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "lemma": "inform",
+    "pos": "verb",
+    "ipa": "/ɪnˈfɔːm/",
+    "cefr": "B1",
+    "freq_rank": 750,
+    "definition_en": "to tell somebody about something, especially in an official way",
+    "tags": "communication,facts",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "inform someone of",
+      "keep informed",
+      "officially inform"
+    ],
+    "word_family": [
+      {
+        "form": "inform",
+        "type": "verb"
+      },
+      {
+        "form": "information",
+        "type": "noun"
+      },
+      {
+        "form": "informative",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Please inform us immediately if your contact details change.",
+        "translation": ""
+      },
+      {
+        "sentence": "We will keep you informed as new developments arise.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "lemma": "initial",
+    "pos": "adjective",
+    "ipa": "/ɪˈnɪʃ.əl/",
+    "cefr": "B1",
+    "freq_rank": 1030,
+    "definition_en": "happening at the beginning; first",
+    "tags": "time,order",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "initial reaction",
+      "initial cost",
+      "initial stage"
+    ],
+    "word_family": [
+      {
+        "form": "initial",
+        "type": "adjective"
+      },
+      {
+        "form": "initially",
+        "type": "adverb"
+      },
+      {
+        "form": "initiate",
+        "type": "verb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Our initial reaction to the proposal was one of cautious optimism.",
+        "translation": ""
+      },
+      {
+        "sentence": "Although the initial cost was high, the machine saved money long term.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "lemma": "maintain",
+    "pos": "verb",
+    "ipa": "/meɪnˈteɪn/",
+    "cefr": "B1",
+    "freq_rank": 550,
+    "definition_en": "to make something continue at the same level, standard, etc.",
+    "tags": "persistence,action",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "maintain a balance",
+      "maintain standards",
+      "maintain contact"
+    ],
+    "word_family": [
+      {
+        "form": "maintain",
+        "type": "verb"
+      },
+      {
+        "form": "maintenance",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "It is important to maintain a healthy balance between work and family.",
+        "translation": ""
+      },
+      {
+        "sentence": "The school maintains very high standards of academic achievement.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "lemma": "manage",
+    "pos": "verb",
+    "ipa": "/ˈmæn.ɪdʒ/",
+    "cefr": "B1",
+    "freq_rank": 320,
+    "definition_en": "to succeed in doing something, especially something difficult",
+    "tags": "control,action",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "manage to do",
+      "manage time",
+      "manage a business"
+    ],
+    "word_family": [
+      {
+        "form": "manage",
+        "type": "verb"
+      },
+      {
+        "form": "management",
+        "type": "noun"
+      },
+      {
+        "form": "manager",
+        "type": "noun"
+      },
+      {
+        "form": "manageable",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "How did you manage to complete that entire essay in one night?",
+        "translation": ""
+      },
+      {
+        "sentence": "Good managers know how to listen and empower their team members.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "lemma": "measure",
+    "pos": "verb",
+    "ipa": "/ˈmeʒ.ər/",
+    "cefr": "B1",
+    "freq_rank": 730,
+    "definition_en": "to find the size, quantity, etc. of something in standard units",
+    "tags": "science,quantities",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "measure progress",
+      "accurately measure",
+      "take measures"
+    ],
+    "word_family": [
+      {
+        "form": "measure",
+        "type": "verb"
+      },
+      {
+        "form": "measure",
+        "type": "noun"
+      },
+      {
+        "form": "measurement",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The technician used a laser instrument to measure the exact distance.",
+        "translation": ""
+      },
+      {
+        "sentence": "We need objective metrics to measure the progress of our trainees.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "lemma": "method",
+    "pos": "noun",
+    "ipa": "/ˈmeθ.əd/",
+    "cefr": "B1",
+    "freq_rank": 490,
+    "definition_en": "a particular way of doing something",
+    "tags": "systems,science",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "effective method",
+      "traditional method",
+      "scientific method"
+    ],
+    "word_family": [
+      {
+        "form": "method",
+        "type": "noun"
+      },
+      {
+        "form": "methodical",
+        "type": "adjective"
+      },
+      {
+        "form": "methodology",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The scientific method relies on careful observation and repeatable tests.",
+        "translation": ""
+      },
+      {
+        "sentence": "Online video tutorials are a popular method of independent study.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "lemma": "motivate",
+    "pos": "verb",
+    "ipa": "/ˈməʊ.tɪ.veɪt/",
+    "cefr": "B1",
+    "freq_rank": 1580,
+    "definition_en": "to make somebody want to do something, especially something that involves hard work",
+    "tags": "mind,energy",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "motivate students",
+      "highly motivated",
+      "stay motivated"
+    ],
+    "word_family": [
+      {
+        "form": "motivate",
+        "type": "verb"
+      },
+      {
+        "form": "motivation",
+        "type": "noun"
+      },
+      {
+        "form": "motivational",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Good teachers find creative ways to motivate their students.",
+        "translation": ""
+      },
+      {
+        "sentence": "She was highly motivated to pass the entrance exam on her first attempt.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "lemma": "necessary",
+    "pos": "adjective",
+    "ipa": "/ˈnes.ə.ser.i/",
+    "cefr": "B1",
+    "freq_rank": 420,
+    "definition_en": "that is needed for a purpose or a reason; that must exist or happen",
+    "tags": "necessity,rules",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "if necessary",
+      "absolutely necessary",
+      "take necessary steps"
+    ],
+    "word_family": [
+      {
+        "form": "necessary",
+        "type": "adjective"
+      },
+      {
+        "form": "necessarily",
+        "type": "adverb"
+      },
+      {
+        "form": "necessity",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "A valid passport is strictly necessary for all international travel.",
+        "translation": ""
+      },
+      {
+        "sentence": "The doctor will perform surgery only if it is absolutely necessary.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "lemma": "notice",
+    "pos": "verb",
+    "ipa": "/ˈnəʊ.tɪs/",
+    "cefr": "B1",
+    "freq_rank": 480,
+    "definition_en": "to see, hear, or become aware of somebody or something",
+    "tags": "senses,mind",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "notice a difference",
+      "hardly notice",
+      "worth noticing"
+    ],
+    "word_family": [
+      {
+        "form": "notice",
+        "type": "verb"
+      },
+      {
+        "form": "notice",
+        "type": "noun"
+      },
+      {
+        "form": "noticeable",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Did you notice any change in his behavior during the meeting?",
+        "translation": ""
+      },
+      {
+        "sentence": "I suddenly noticed that I had left my keys inside the locked car.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "lemma": "obtain",
+    "pos": "verb",
+    "ipa": "/əbˈteɪn/",
+    "cefr": "B1",
+    "freq_rank": 1090,
+    "definition_en": "to get something, especially by making an effort or buying it",
+    "tags": "action,getting",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "obtain permission",
+      "obtain information",
+      "obtain results"
+    ],
+    "word_family": [
+      {
+        "form": "obtain",
+        "type": "verb"
+      },
+      {
+        "form": "obtainable",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "You must obtain written permission from the owner before filming.",
+        "translation": ""
+      },
+      {
+        "sentence": "Researchers obtained data by conducting thousands of citizen interviews.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "lemma": "obvious",
+    "pos": "adjective",
+    "ipa": "/ˈɒb.vi.əs/",
+    "cefr": "B1",
+    "freq_rank": 770,
+    "definition_en": "easy to see or understand; clear",
+    "tags": "clarity,logic",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "obvious choice",
+      "for obvious reasons",
+      "state the obvious"
+    ],
+    "word_family": [
+      {
+        "form": "obvious",
+        "type": "adjective"
+      },
+      {
+        "form": "obviously",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "It was obvious from her expression that she was thrilled with the news.",
+        "translation": ""
+      },
+      {
+        "sentence": "The most obvious solution is often the one that people overlook.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "lemma": "opportunity",
+    "pos": "noun",
+    "ipa": "/ˌɒp.əˈtʃuː.nə.ti/",
+    "cefr": "B1",
+    "freq_rank": 360,
+    "definition_en": "a time when a particular situation makes it possible to do or achieve something",
+    "tags": "chances,life",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "great opportunity",
+      "miss an opportunity",
+      "take the opportunity"
+    ],
+    "word_family": [
+      {
+        "form": "opportunity",
+        "type": "noun"
+      },
+      {
+        "form": "opportunistic",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Studying abroad is a wonderful opportunity to experience another culture.",
+        "translation": ""
+      },
+      {
+        "sentence": "He seized the opportunity to present his startup idea to investors.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "lemma": "participate",
+    "pos": "verb",
+    "ipa": "/pɑːˈtɪs.ɪ.peɪt/",
+    "cefr": "B1",
+    "freq_rank": 940,
+    "definition_en": "to take part in or become involved in an activity",
+    "tags": "action,social",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "participate in",
+      "actively participate",
+      "encourage to participate"
+    ],
+    "word_family": [
+      {
+        "form": "participate",
+        "type": "verb"
+      },
+      {
+        "form": "participation",
+        "type": "noun"
+      },
+      {
+        "form": "participant",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Over five hundred athletes participated in the city marathon.",
+        "translation": ""
+      },
+      {
+        "sentence": "Students are expected to participate actively in seminar discussions.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "lemma": "particular",
+    "pos": "adjective",
+    "ipa": "/pəˈtɪk.jə.lər/",
+    "cefr": "B1",
+    "freq_rank": 340,
+    "definition_en": "used to emphasize that you are referring to one individual person or thing",
+    "tags": "specifics,logic",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "in particular",
+      "particular reason",
+      "pay particular attention"
+    ],
+    "word_family": [
+      {
+        "form": "particular",
+        "type": "adjective"
+      },
+      {
+        "form": "particularly",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Is there a particular restaurant you would like to visit tonight?",
+        "translation": ""
+      },
+      {
+        "sentence": "She was particularly impressed by the museum's collection of modern art.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "lemma": "perform",
+    "pos": "verb",
+    "ipa": "/pəˈfɔːm/",
+    "cefr": "B1",
+    "freq_rank": 660,
+    "definition_en": "to do something, such as a piece of work, task or duty; to entertain an audience",
+    "tags": "action,arts",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "perform a task",
+      "perform on stage",
+      "perform well"
+    ],
+    "word_family": [
+      {
+        "form": "perform",
+        "type": "verb"
+      },
+      {
+        "form": "performance",
+        "type": "noun"
+      },
+      {
+        "form": "performer",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The surgeons performed the complex heart operation successfully.",
+        "translation": ""
+      },
+      {
+        "sentence": "A local jazz band will perform in the city square this Saturday.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "lemma": "perspective",
+    "pos": "noun",
+    "ipa": "/pəˈspek.tɪv/",
+    "cefr": "B1",
+    "freq_rank": 1230,
+    "definition_en": "a particular attitude toward something; a way of thinking about something",
+    "tags": "mind,thinking",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "different perspective",
+      "from my perspective",
+      "gain perspective"
+    ],
+    "word_family": [
+      {
+        "form": "perspective",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Living abroad for a year gives you a completely fresh perspective on life.",
+        "translation": ""
+      },
+      {
+        "sentence": "The book examines the war from the perspective of ordinary citizens.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "lemma": "positive",
+    "pos": "adjective",
+    "ipa": "/ˈpɒz.ə.tɪv/",
+    "cefr": "B1",
+    "freq_rank": 470,
+    "definition_en": "thinking about what is good in a situation; feeling confident and sure",
+    "tags": "mind,attitude",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "positive attitude",
+      "positive feedback",
+      "positive outcome"
+    ],
+    "word_family": [
+      {
+        "form": "positive",
+        "type": "adjective"
+      },
+      {
+        "form": "positively",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The teacher provided encouraging and positive feedback on the essay.",
+        "translation": ""
+      },
+      {
+        "sentence": "Maintaining a positive outlook helps people manage stress effectively.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "lemma": "practical",
+    "pos": "adjective",
+    "ipa": "/ˈpræk.tɪ.kəl/",
+    "cefr": "B1",
+    "freq_rank": 880,
+    "definition_en": "connected with real situations rather than with ideas or theories",
+    "tags": "action,reality",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "practical experience",
+      "practical solution",
+      "for practical purposes"
+    ],
+    "word_family": [
+      {
+        "form": "practical",
+        "type": "adjective"
+      },
+      {
+        "form": "practically",
+        "type": "adverb"
+      },
+      {
+        "form": "impractical",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The course emphasizes practical skills that students can apply immediately.",
+        "translation": ""
+      },
+      {
+        "sentence": "We need a practical solution to this traffic bottleneck, not just theory.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "lemma": "predict",
+    "pos": "verb",
+    "ipa": "/prɪˈdɪkt/",
+    "cefr": "B1",
+    "freq_rank": 1130,
+    "definition_en": "to say that an event or action will happen in the future",
+    "tags": "future,logic",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "predict the future",
+      "hard to predict",
+      "accurately predict"
+    ],
+    "word_family": [
+      {
+        "form": "predict",
+        "type": "verb"
+      },
+      {
+        "form": "prediction",
+        "type": "noun"
+      },
+      {
+        "form": "predictable",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Meteorologists predict heavy rainfall over the weekend.",
+        "translation": ""
+      },
+      {
+        "sentence": "It is impossible to predict exactly how the market will respond.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "lemma": "prepare",
+    "pos": "verb",
+    "ipa": "/prɪˈpeər/",
+    "cefr": "B1",
+    "freq_rank": 400,
+    "definition_en": "to make something or somebody ready to be used or to do something",
+    "tags": "planning,readiness",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "prepare for an exam",
+      "well prepared",
+      "prepare food"
+    ],
+    "word_family": [
+      {
+        "form": "prepare",
+        "type": "verb"
+      },
+      {
+        "form": "preparation",
+        "type": "noun"
+      },
+      {
+        "form": "prepared",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "He spent weeks preparing thoroughly for the certification exam.",
+        "translation": ""
+      },
+      {
+        "sentence": "The chef prepared a delicious three-course meal for the guests.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "lemma": "prevent",
+    "pos": "verb",
+    "ipa": "/prɪˈvent/",
+    "cefr": "B1",
+    "freq_rank": 700,
+    "definition_en": "to stop something from happening or stop somebody from doing something",
+    "tags": "safety,action",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "prevent disease",
+      "prevent accidents",
+      "take steps to prevent"
+    ],
+    "word_family": [
+      {
+        "form": "prevent",
+        "type": "verb"
+      },
+      {
+        "form": "prevention",
+        "type": "noun"
+      },
+      {
+        "form": "preventable",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Wearing seatbelts helps prevent serious injuries during collisions.",
+        "translation": ""
+      },
+      {
+        "sentence": "Regular handwashing is one of the easiest ways to prevent illness.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "lemma": "priority",
+    "pos": "noun",
+    "ipa": "/praɪˈɒr.ə.ti/",
+    "cefr": "B1",
+    "freq_rank": 1210,
+    "definition_en": "something that you think is more important than other things and should be dealt with first",
+    "tags": "importance,time",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "top priority",
+      "give priority to",
+      "set priorities"
+    ],
+    "word_family": [
+      {
+        "form": "priority",
+        "type": "noun"
+      },
+      {
+        "form": "prioritize",
+        "type": "verb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Customer safety must always remain our company's top priority.",
+        "translation": ""
+      },
+      {
+        "sentence": "Learning to prioritize tasks efficiently reduces workplace stress.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "lemma": "produce",
+    "pos": "verb",
+    "ipa": "/prəˈdjuːs/",
+    "cefr": "B1",
+    "freq_rank": 260,
+    "definition_en": "to make things to be sold, especially in large quantities; to cause a particular result",
+    "tags": "creation,industry",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "produce results",
+      "produce goods",
+      "produce energy"
+    ],
+    "word_family": [
+      {
+        "form": "produce",
+        "type": "verb"
+      },
+      {
+        "form": "production",
+        "type": "noun"
+      },
+      {
+        "form": "product",
+        "type": "noun"
+      },
+      {
+        "form": "productive",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The factory produces more than ten thousand vehicles each month.",
+        "translation": ""
+      },
+      {
+        "sentence": "Hard work and creative strategies will eventually produce great results.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "lemma": "progress",
+    "pos": "noun",
+    "ipa": "/ˈprəʊ.ɡres/",
+    "cefr": "B1",
+    "freq_rank": 600,
+    "definition_en": "movement forward toward a place or toward reaching an aim",
+    "tags": "growth,success",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "make progress",
+      "steady progress",
+      "rapid progress"
+    ],
+    "word_family": [
+      {
+        "form": "progress",
+        "type": "noun"
+      },
+      {
+        "form": "progress",
+        "type": "verb"
+      },
+      {
+        "form": "progressive",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "She made remarkable progress in English within six months of practice.",
+        "translation": ""
+      },
+      {
+        "sentence": "Construction workers reported steady progress on the new bridge.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "lemma": "protect",
+    "pos": "verb",
+    "ipa": "/prəˈtekt/",
+    "cefr": "B1",
+    "freq_rank": 510,
+    "definition_en": "to make sure that somebody or something is not harmed, injured, or damaged",
+    "tags": "safety,care",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "protect against",
+      "protect the environment",
+      "protect rights"
+    ],
+    "word_family": [
+      {
+        "form": "protect",
+        "type": "verb"
+      },
+      {
+        "form": "protection",
+        "type": "noun"
+      },
+      {
+        "form": "protective",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "A sturdy case will protect your smartphone from accidental drops.",
+        "translation": ""
+      },
+      {
+        "sentence": "Laws exist to protect workers against unsafe factory conditions.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "lemma": "reaction",
+    "pos": "noun",
+    "ipa": "/riˈæk.ʃən/",
+    "cefr": "B1",
+    "freq_rank": 830,
+    "definition_en": "what you do, say or think as a result of something that has happened",
+    "tags": "emotion,behavior",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "initial reaction",
+      "chain reaction",
+      "allergic reaction"
+    ],
+    "word_family": [
+      {
+        "form": "reaction",
+        "type": "noun"
+      },
+      {
+        "form": "react",
+        "type": "verb"
+      },
+      {
+        "form": "reactive",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "What was her initial reaction when you shared the exciting news?",
+        "translation": ""
+      },
+      {
+        "sentence": "He had an allergic reaction after eating peanuts at the banquet.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "lemma": "recognize",
+    "pos": "verb",
+    "ipa": "/ˈrek.əɡ.naɪz/",
+    "cefr": "B1",
+    "freq_rank": 500,
+    "definition_en": "to know who somebody is or what something is when you see or hear them",
+    "tags": "memory,sight",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "recognize the voice",
+      "hard to recognize",
+      "widely recognized"
+    ],
+    "word_family": [
+      {
+        "form": "recognize",
+        "type": "verb"
+      },
+      {
+        "form": "recognition",
+        "type": "noun"
+      },
+      {
+        "form": "recognizable",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "I could barely recognize my childhood friend after twenty years apart.",
+        "translation": ""
+      },
+      {
+        "sentence": "Her groundbreaking research was widely recognized across the scientific community.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "lemma": "recommend",
+    "pos": "verb",
+    "ipa": "/ˌrek.əˈmend/",
+    "cefr": "B1",
+    "freq_rank": 740,
+    "definition_en": "to tell somebody that something is good or useful, or that somebody would be suitable for a job",
+    "tags": "advice,sharing",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "highly recommend",
+      "recommend doing",
+      "recommend a book"
+    ],
+    "word_family": [
+      {
+        "form": "recommend",
+        "type": "verb"
+      },
+      {
+        "form": "recommendation",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Can you recommend a reliable mechanic in this neighborhood?",
+        "translation": ""
+      },
+      {
+        "sentence": "I would highly recommend this documentary to anyone interested in history.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "lemma": "reduce",
+    "pos": "verb",
+    "ipa": "/rɪˈdjuːs/",
+    "cefr": "B1",
+    "freq_rank": 350,
+    "definition_en": "to make something less or smaller in size, quantity, price, etc.",
+    "tags": "change,numbers",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "reduce costs",
+      "reduce stress",
+      "reduce emissions"
+    ],
+    "word_family": [
+      {
+        "form": "reduce",
+        "type": "verb"
+      },
+      {
+        "form": "reduction",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Cycling to work helps reduce carbon emissions and saves money.",
+        "translation": ""
+      },
+      {
+        "sentence": "Meditation and deep breathing can help reduce everyday anxiety.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "lemma": "refuse",
+    "pos": "verb",
+    "ipa": "/rɪˈfjuːz/",
+    "cefr": "B1",
+    "freq_rank": 800,
+    "definition_en": "to say that you will not do something that somebody has asked you to do",
+    "tags": "decisions,social",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "refuse to do",
+      "flatly refuse",
+      "refuse an offer"
+    ],
+    "word_family": [
+      {
+        "form": "refuse",
+        "type": "verb"
+      },
+      {
+        "form": "refusal",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "He politely refused the job offer because the salary was too low.",
+        "translation": ""
+      },
+      {
+        "sentence": "She refused to give up, continuing to train despite the harsh weather.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "lemma": "regular",
+    "pos": "adjective",
+    "ipa": "/ˈreɡ.jə.lər/",
+    "cefr": "B1",
+    "freq_rank": 560,
+    "definition_en": "done or happening often; done at the same times every day, week, month, etc.",
+    "tags": "time,habits",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "regular exercise",
+      "on a regular basis",
+      "regular updates"
+    ],
+    "word_family": [
+      {
+        "form": "regular",
+        "type": "adjective"
+      },
+      {
+        "form": "regularly",
+        "type": "adverb"
+      },
+      {
+        "form": "regularity",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Dentists advise having a regular checkup at least once every six months.",
+        "translation": ""
+      },
+      {
+        "sentence": "Staying in touch on a regular basis keeps friendships strong.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "lemma": "relationship",
+    "pos": "noun",
+    "ipa": "/rɪˈleɪ.ʃən.ʃɪp/",
+    "cefr": "B1",
+    "freq_rank": 290,
+    "definition_en": "the way in which two or more people, groups or countries behave toward each other",
+    "tags": "people,feelings",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "close relationship",
+      "build a relationship",
+      "working relationship"
+    ],
+    "word_family": [
+      {
+        "form": "relationship",
+        "type": "noun"
+      },
+      {
+        "form": "relate",
+        "type": "verb"
+      },
+      {
+        "form": "related",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Open communication is the cornerstone of any healthy relationship.",
+        "translation": ""
+      },
+      {
+        "sentence": "The two neighboring nations have established a strong trading relationship.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "lemma": "relevant",
+    "pos": "adjective",
+    "ipa": "/ˈrel.ə.vənt/",
+    "cefr": "B1",
+    "freq_rank": 970,
+    "definition_en": "closely connected or appropriate to what is being done or considered",
+    "tags": "logic,importance",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "relevant information",
+      "highly relevant",
+      "remain relevant"
+    ],
+    "word_family": [
+      {
+        "form": "relevant",
+        "type": "adjective"
+      },
+      {
+        "form": "relevance",
+        "type": "noun"
+      },
+      {
+        "form": "irrelevant",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Please include only information that is directly relevant to the application.",
+        "translation": ""
+      },
+      {
+        "sentence": "His practical comments were highly relevant to our discussion.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "lemma": "rely",
+    "pos": "verb",
+    "ipa": "/rɪˈlaɪ/",
+    "cefr": "B1",
+    "freq_rank": 1140,
+    "definition_en": "to need or depend on somebody or something; to trust somebody or something",
+    "tags": "trust,support",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "rely on someone",
+      "heavily rely",
+      "rely on technology"
+    ],
+    "word_family": [
+      {
+        "form": "rely",
+        "type": "verb"
+      },
+      {
+        "form": "reliable",
+        "type": "adjective"
+      },
+      {
+        "form": "reliability",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Many rural communities rely heavily on volunteer firefighters.",
+        "translation": ""
+      },
+      {
+        "sentence": "You can always rely on David to deliver accurate reports on time.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "lemma": "abandon",
+    "pos": "verb",
+    "ipa": "/əˈbæn.dən/",
+    "cefr": "B2",
+    "freq_rank": 1850,
+    "definition_en": "to leave a place, thing, or person, usually for ever",
+    "tags": "loss,departure",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "abandon hope",
+      "abandon a plan",
+      "abandon ship"
+    ],
+    "word_family": [
+      {
+        "form": "abandon",
+        "type": "verb"
+      },
+      {
+        "form": "abandonment",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Bad weather forced the mountain climbers to abandon their expedition.",
+        "translation": ""
+      },
+      {
+        "sentence": "They had to abandon their car when floodwaters began to rise.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "lemma": "accommodate",
+    "pos": "verb",
+    "ipa": "/əˈkɒm.ə.deɪt/",
+    "cefr": "B2",
+    "freq_rank": 2100,
+    "definition_en": "to provide someone with a room or place to sleep, live, or sit; to adjust to needs",
+    "tags": "space,travel",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "accommodate guests",
+      "accommodate needs",
+      "accommodate changes"
+    ],
+    "word_family": [
+      {
+        "form": "accommodate",
+        "type": "verb"
+      },
+      {
+        "form": "accommodation",
+        "type": "noun"
+      },
+      {
+        "form": "accommodating",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The new auditorium can accommodate up to one thousand people.",
+        "translation": ""
+      },
+      {
+        "sentence": "The hotel staff was eager to accommodate every special dietary request.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "lemma": "accumulate",
+    "pos": "verb",
+    "ipa": "/əˈkjuː.mjə.leɪt/",
+    "cefr": "B2",
+    "freq_rank": 2300,
+    "definition_en": "to gradually get more and more of something over a period of time",
+    "tags": "growth,wealth",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "accumulate wealth",
+      "accumulate evidence",
+      "accumulate debt"
+    ],
+    "word_family": [
+      {
+        "form": "accumulate",
+        "type": "verb"
+      },
+      {
+        "form": "accumulation",
+        "type": "noun"
+      },
+      {
+        "form": "cumulative",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Dust tends to accumulate quickly in unattended rooms.",
+        "translation": ""
+      },
+      {
+        "sentence": "Through smart investments, she accumulated substantial savings over two decades.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "lemma": "acknowledge",
+    "pos": "verb",
+    "ipa": "/əkˈnɒl.ɪdʒ/",
+    "cefr": "B2",
+    "freq_rank": 1550,
+    "definition_en": "to accept that something is true; to admit something",
+    "tags": "truth,communication",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "acknowledge a mistake",
+      "acknowledge receipt",
+      "reluctantly acknowledge"
+    ],
+    "word_family": [
+      {
+        "form": "acknowledge",
+        "type": "verb"
+      },
+      {
+        "form": "acknowledgment",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The CEO publicly acknowledged that the company had made a strategic error.",
+        "translation": ""
+      },
+      {
+        "sentence": "Please acknowledge receipt of this message at your earliest convenience.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "lemma": "acquire",
+    "pos": "verb",
+    "ipa": "/əˈkwaɪər/",
+    "cefr": "B2",
+    "freq_rank": 1350,
+    "definition_en": "to gain something by your own efforts, ability or behavior; to buy something",
+    "tags": "knowledge,getting",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "acquire skills",
+      "acquire knowledge",
+      "acquire a company"
+    ],
+    "word_family": [
+      {
+        "form": "acquire",
+        "type": "verb"
+      },
+      {
+        "form": "acquisition",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "She managed to acquire fluent Spanish after living in Madrid for two years.",
+        "translation": ""
+      },
+      {
+        "sentence": "The tech conglomerate recently acquired a promising artificial intelligence startup.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "lemma": "adequate",
+    "pos": "adjective",
+    "ipa": "/ˈæd.ə.kwət/",
+    "cefr": "B2",
+    "freq_rank": 1680,
+    "definition_en": "enough in quantity, or good enough in quality, for a particular purpose or need",
+    "tags": "quality,sufficiency",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "adequate preparation",
+      "adequate resources",
+      "barely adequate"
+    ],
+    "word_family": [
+      {
+        "form": "adequate",
+        "type": "adjective"
+      },
+      {
+        "form": "adequately",
+        "type": "adverb"
+      },
+      {
+        "form": "inadequate",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Ensure that you drink an adequate amount of water during hot summer days.",
+        "translation": ""
+      },
+      {
+        "sentence": "The safety equipment proved barely adequate during the emergency test.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "lemma": "advocate",
+    "pos": "verb",
+    "ipa": "/ˈæd.və.keɪt/",
+    "cefr": "B2",
+    "freq_rank": 1920,
+    "definition_en": "to publicly support or recommend a particular policy or way of doing things",
+    "tags": "support,politics",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "advocate for reform",
+      "strongly advocate",
+      "consumer advocate"
+    ],
+    "word_family": [
+      {
+        "form": "advocate",
+        "type": "verb"
+      },
+      {
+        "form": "advocate",
+        "type": "noun"
+      },
+      {
+        "form": "advocacy",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Environmental groups advocate for stricter limits on industrial carbon pollution.",
+        "translation": ""
+      },
+      {
+        "sentence": "She has been an outspoken advocate for children's educational rights.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "lemma": "allocate",
+    "pos": "verb",
+    "ipa": "/ˈæl.ə.keɪt/",
+    "cefr": "B2",
+    "freq_rank": 2250,
+    "definition_en": "to give something officially to somebody or something for a particular purpose",
+    "tags": "money,work",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "allocate resources",
+      "allocate funds",
+      "allocate time"
+    ],
+    "word_family": [
+      {
+        "form": "allocate",
+        "type": "verb"
+      },
+      {
+        "form": "allocation",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The municipal government allocated funds to repair the historic bridge.",
+        "translation": ""
+      },
+      {
+        "sentence": "You should allocate at least twenty minutes each day to language review.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "lemma": "apparent",
+    "pos": "adjective",
+    "ipa": "/əˈpær.ənt/",
+    "cefr": "B2",
+    "freq_rank": 1280,
+    "definition_en": "easy to see or understand; that seems to be real, but may not be",
+    "tags": "clarity,perception",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "readily apparent",
+      "for no apparent reason",
+      "apparent contradiction"
+    ],
+    "word_family": [
+      {
+        "form": "apparent",
+        "type": "adjective"
+      },
+      {
+        "form": "apparently",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "It soon became apparent that the initial sales estimates had been overly optimistic.",
+        "translation": ""
+      },
+      {
+        "sentence": "He resigned from his post for no apparent reason.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "lemma": "arbitrary",
+    "pos": "adjective",
+    "ipa": "/ˈɑː.bɪ.trər.i/",
+    "cefr": "B2",
+    "freq_rank": 2850,
+    "definition_en": "based on random choice or personal whim, rather than any reason or system",
+    "tags": "logic,decisions",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "arbitrary decision",
+      "arbitrary rule",
+      "seem arbitrary"
+    ],
+    "word_family": [
+      {
+        "form": "arbitrary",
+        "type": "adjective"
+      },
+      {
+        "form": "arbitrarily",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The company's dress code seemed completely arbitrary to most employees.",
+        "translation": ""
+      },
+      {
+        "sentence": "Judges must base sentences on established law rather than arbitrary preferences.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "lemma": "articulate",
+    "pos": "verb",
+    "ipa": "/ɑːˈtɪk.jə.leɪt/",
+    "cefr": "B2",
+    "freq_rank": 2700,
+    "definition_en": "to express an idea, thought, or feeling clearly in words",
+    "tags": "speaking,clarity",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "articulate thoughts",
+      "articulate a vision",
+      "clearly articulate"
+    ],
+    "word_family": [
+      {
+        "form": "articulate",
+        "type": "verb"
+      },
+      {
+        "form": "articulate",
+        "type": "adjective"
+      },
+      {
+        "form": "articulation",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "She was able to articulate her complex concerns clearly to the board.",
+        "translation": ""
+      },
+      {
+        "sentence": "An articulate speaker can sway public opinion during political debates.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "lemma": "assert",
+    "pos": "verb",
+    "ipa": "/əˈsɜːt/",
+    "cefr": "B2",
+    "freq_rank": 2150,
+    "definition_en": "to state clearly and firmly that something is true",
+    "tags": "confidence,speaking",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "assert authority",
+      "assert rights",
+      "assert confidence"
+    ],
+    "word_family": [
+      {
+        "form": "assert",
+        "type": "verb"
+      },
+      {
+        "form": "assertion",
+        "type": "noun"
+      },
+      {
+        "form": "assertive",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The author asserts that economic equality is foundational to peace.",
+        "translation": ""
+      },
+      {
+        "sentence": "She learned to assert herself calmly whenever unfair demands were made.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "lemma": "assess",
+    "pos": "verb",
+    "ipa": "/əˈses/",
+    "cefr": "B2",
+    "freq_rank": 1260,
+    "definition_en": "to make a judgment about the nature, value, or quality of somebody or something",
+    "tags": "evaluating,thinking",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "assess damage",
+      "assess performance",
+      "carefully assess"
+    ],
+    "word_family": [
+      {
+        "form": "assess",
+        "type": "verb"
+      },
+      {
+        "form": "assessment",
+        "type": "noun"
+      },
+      {
+        "form": "assessor",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Independent insurance adjusters arrived to assess the flood damage.",
+        "translation": ""
+      },
+      {
+        "sentence": "Teachers use regular quizzes to assess students' reading comprehension.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "lemma": "coherent",
+    "pos": "adjective",
+    "ipa": "/kəʊˈhɪə.rənt/",
+    "cefr": "B2",
+    "freq_rank": 2600,
+    "definition_en": "logical and well-organized; easy to understand and clear",
+    "tags": "logic,writing",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "coherent argument",
+      "coherent plan",
+      "coherent explanation"
+    ],
+    "word_family": [
+      {
+        "form": "coherent",
+        "type": "adjective"
+      },
+      {
+        "form": "coherence",
+        "type": "noun"
+      },
+      {
+        "form": "incoherent",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "He struggled to present a coherent explanation for his sudden absence.",
+        "translation": ""
+      },
+      {
+        "sentence": "The essay was praised for its clear structure and coherent reasoning.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "lemma": "coincide",
+    "pos": "verb",
+    "ipa": "/ˌkəʊ.ɪnˈsaɪd/",
+    "cefr": "B2",
+    "freq_rank": 2550,
+    "definition_en": "to take place at the same time; to be the same or very similar",
+    "tags": "time,agreement",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "coincide with",
+      "dates coincide",
+      "interests coincide"
+    ],
+    "word_family": [
+      {
+        "form": "coincide",
+        "type": "verb"
+      },
+      {
+        "form": "coincidence",
+        "type": "noun"
+      },
+      {
+        "form": "coincidental",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The publication of the novel coincided with the author's fiftieth birthday.",
+        "translation": ""
+      },
+      {
+        "sentence": "Our vacation schedules unfortunately did not coincide this summer.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "lemma": "collaborate",
+    "pos": "verb",
+    "ipa": "/kəˈlæb.ə.reɪt/",
+    "cefr": "B2",
+    "freq_rank": 2200,
+    "definition_en": "to work together with somebody in order to produce or achieve something",
+    "tags": "work,team",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "collaborate closely",
+      "collaborate on a project",
+      "collaborate with rivals"
+    ],
+    "word_family": [
+      {
+        "form": "collaborate",
+        "type": "verb"
+      },
+      {
+        "form": "collaboration",
+        "type": "noun"
+      },
+      {
+        "form": "collaborative",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Scientists from twelve different countries collaborated on the vaccine study.",
+        "translation": ""
+      },
+      {
+        "sentence": "Writers and graphic designers must collaborate closely on comic books.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "lemma": "commence",
+    "pos": "verb",
+    "ipa": "/kəˈmens/",
+    "cefr": "B2",
+    "freq_rank": 2950,
+    "definition_en": "to begin something",
+    "tags": "time,action",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "commence operations",
+      "commence work",
+      "due to commence"
+    ],
+    "word_family": [
+      {
+        "form": "commence",
+        "type": "verb"
+      },
+      {
+        "form": "commencement",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The graduation ceremony will commence promptly at ten o'clock.",
+        "translation": ""
+      },
+      {
+        "sentence": "Construction on the new library is scheduled to commence next spring.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "lemma": "compatible",
+    "pos": "adjective",
+    "ipa": "/kəmˈpæt.ə.bəl/",
+    "cefr": "B2",
+    "freq_rank": 2350,
+    "definition_en": "able to exist, live or work together without serious problems; able to be used together",
+    "tags": "technology,relations",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "fully compatible",
+      "compatible devices",
+      "mutually compatible"
+    ],
+    "word_family": [
+      {
+        "form": "compatible",
+        "type": "adjective"
+      },
+      {
+        "form": "compatibility",
+        "type": "noun"
+      },
+      {
+        "form": "incompatible",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Make sure the new graphics card is compatible with your computer's motherboard.",
+        "translation": ""
+      },
+      {
+        "sentence": "Their contrasting personalities turned out to be wonderfully compatible.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "lemma": "compensate",
+    "pos": "verb",
+    "ipa": "/ˈkɒm.pən.seɪt/",
+    "cefr": "B2",
+    "freq_rank": 2050,
+    "definition_en": "to provide something good to balance or reduce the bad effect of damage or loss",
+    "tags": "money,balance",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "compensate for loss",
+      "compensate workers",
+      "adequately compensate"
+    ],
+    "word_family": [
+      {
+        "form": "compensate",
+        "type": "verb"
+      },
+      {
+        "form": "compensation",
+        "type": "noun"
+      },
+      {
+        "form": "compensatory",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The airline compensated passengers for the eighteen-hour flight delay.",
+        "translation": ""
+      },
+      {
+        "sentence": "His exceptional enthusiasm compensated for his initial lack of experience.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "lemma": "comprehensive",
+    "pos": "adjective",
+    "ipa": "/ˌkɒm.prɪˈhen.sɪv/",
+    "cefr": "B2",
+    "freq_rank": 1720,
+    "definition_en": "including all, or almost all, the items, details, facts, information, etc.",
+    "tags": "details,completeness",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "comprehensive study",
+      "comprehensive review",
+      "comprehensive coverage"
+    ],
+    "word_family": [
+      {
+        "form": "comprehensive",
+        "type": "adjective"
+      },
+      {
+        "form": "comprehensively",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The medical center offers a comprehensive health screening program.",
+        "translation": ""
+      },
+      {
+        "sentence": "The professor published a comprehensive guide to seventeenth-century literature.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "lemma": "compromise",
+    "pos": "noun",
+    "ipa": "/ˈkɒm.prə.maɪz/",
+    "cefr": "B2",
+    "freq_rank": 1880,
+    "definition_en": "an agreement made between two people or groups in which each gives up something",
+    "tags": "agreements,social",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "reach a compromise",
+      "willing to compromise",
+      "uneasy compromise"
+    ],
+    "word_family": [
+      {
+        "form": "compromise",
+        "type": "noun"
+      },
+      {
+        "form": "compromise",
+        "type": "verb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "After hours of heated debate, both political parties reached a sensible compromise.",
+        "translation": ""
+      },
+      {
+        "sentence": "In any long-term partnership, compromise is an indispensable skill.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "lemma": "conceive",
+    "pos": "verb",
+    "ipa": "/kənˈsiːv/",
+    "cefr": "B2",
+    "freq_rank": 2480,
+    "definition_en": "to form an idea, a plan, etc. in your mind; to imagine something",
+    "tags": "mind,creativity",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "conceive an idea",
+      "hard to conceive",
+      "originally conceived"
+    ],
+    "word_family": [
+      {
+        "form": "conceive",
+        "type": "verb"
+      },
+      {
+        "form": "concept",
+        "type": "noun"
+      },
+      {
+        "form": "conception",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The architect conceived the bold design while walking through the redwood forest.",
+        "translation": ""
+      },
+      {
+        "sentence": "It is difficult to conceive of a world entirely without smartphones.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "lemma": "confront",
+    "pos": "verb",
+    "ipa": "/kənˈfrʌnt/",
+    "cefr": "B2",
+    "freq_rank": 1890,
+    "definition_en": "to face, meet, or deal with a difficult situation or someone in a direct way",
+    "tags": "challenge,bravery",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "confront a problem",
+      "confront fears",
+      "be confronted with"
+    ],
+    "word_family": [
+      {
+        "form": "confront",
+        "type": "verb"
+      },
+      {
+        "form": "confrontation",
+        "type": "noun"
+      },
+      {
+        "form": "confrontational",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "She decided it was time to confront her supervisor about the unfair workload.",
+        "translation": ""
+      },
+      {
+        "sentence": "Society must confront the reality of diminishing freshwater reserves.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "lemma": "consent",
+    "pos": "noun",
+    "ipa": "/kənˈsent/",
+    "cefr": "B2",
+    "freq_rank": 2120,
+    "definition_en": "permission to do something, especially given by somebody in authority",
+    "tags": "permission,law",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "informed consent",
+      "parental consent",
+      "without consent"
+    ],
+    "word_family": [
+      {
+        "form": "consent",
+        "type": "noun"
+      },
+      {
+        "form": "consent",
+        "type": "verb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Medical researchers cannot proceed without the patient's informed consent.",
+        "translation": ""
+      },
+      {
+        "sentence": "He borrowed his brother's car without obtaining prior consent.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 125,
+    "lemma": "contradict",
+    "pos": "verb",
+    "ipa": "/ˌkɒn.trəˈdɪkt/",
+    "cefr": "B2",
+    "freq_rank": 2650,
+    "definition_en": "to say that what somebody has said is wrong; to be so different that both cannot be true",
+    "tags": "logic,truth",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "contradict evidence",
+      "directly contradict",
+      "contradict oneself"
+    ],
+    "word_family": [
+      {
+        "form": "contradict",
+        "type": "verb"
+      },
+      {
+        "form": "contradiction",
+        "type": "noun"
+      },
+      {
+        "form": "contradictory",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The witness's second statement appeared to contradict her initial testimony.",
+        "translation": ""
+      },
+      {
+        "sentence": "His actions frequently contradict the high moral values he preaches.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 126,
+    "lemma": "conventional",
+    "pos": "adjective",
+    "ipa": "/kənˈven.ʃən.əl/",
+    "cefr": "B2",
+    "freq_rank": 1760,
+    "definition_en": "tending to follow what has been done before; traditional and normal",
+    "tags": "tradition,society",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "conventional wisdom",
+      "conventional methods",
+      "break from conventional"
+    ],
+    "word_family": [
+      {
+        "form": "conventional",
+        "type": "adjective"
+      },
+      {
+        "form": "convention",
+        "type": "noun"
+      },
+      {
+        "form": "unconventional",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The young artist chose to reject conventional painting styles in favor of digital collage.",
+        "translation": ""
+      },
+      {
+        "sentence": "Conventional wisdom suggests that getting eight hours of sleep is optimal.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "lemma": "convey",
+    "pos": "verb",
+    "ipa": "/kənˈveɪ/",
+    "cefr": "B2",
+    "freq_rank": 2020,
+    "definition_en": "to make feelings, thoughts, or information known to somebody",
+    "tags": "communication,emotions",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "convey a message",
+      "convey meaning",
+      "convey emotions"
+    ],
+    "word_family": [
+      {
+        "form": "convey",
+        "type": "verb"
+      },
+      {
+        "form": "conveyance",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Words alone cannot fully convey how deeply grateful I am for your help.",
+        "translation": ""
+      },
+      {
+        "sentence": "The documentary conveys the urgent reality of Arctic ice loss.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 128,
+    "lemma": "criteria",
+    "pos": "noun",
+    "ipa": "/kraɪˈtɪə.ri.ə/",
+    "cefr": "B2",
+    "freq_rank": 1620,
+    "definition_en": "standards that you use to judge, decide, or evaluate something",
+    "tags": "evaluation,logic",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "selection criteria",
+      "meet criteria",
+      "strict criteria"
+    ],
+    "word_family": [
+      {
+        "form": "criteria",
+        "type": "noun"
+      },
+      {
+        "form": "criterion",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Applicants must meet strict academic criteria to qualify for the fellowship.",
+        "translation": ""
+      },
+      {
+        "sentence": "What are the key criteria used to assess employee performance here?",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "lemma": "crucial",
+    "pos": "adjective",
+    "ipa": "/ˈkruː.ʃəl/",
+    "cefr": "B2",
+    "freq_rank": 1480,
+    "definition_en": "extremely important, because it will affect other things",
+    "tags": "importance,logic",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "crucial factor",
+      "crucial role",
+      "crucial decision"
+    ],
+    "word_family": [
+      {
+        "form": "crucial",
+        "type": "adjective"
+      },
+      {
+        "form": "crucially",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Securing early funding is crucial for the survival of any tech startup.",
+        "translation": ""
+      },
+      {
+        "sentence": "The defense lawyer made a crucial breakthrough during cross-examination.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 130,
+    "lemma": "deficiency",
+    "pos": "noun",
+    "ipa": "/dɪˈfɪʃ.ən.si/",
+    "cefr": "B2",
+    "freq_rank": 2800,
+    "definition_en": "the state of not having, or not having enough of, something that is essential",
+    "tags": "health,lack",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "vitamin deficiency",
+      "correct a deficiency",
+      "iron deficiency"
+    ],
+    "word_family": [
+      {
+        "form": "deficiency",
+        "type": "noun"
+      },
+      {
+        "form": "deficient",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "A severe vitamin D deficiency can weaken bones and affect mood.",
+        "translation": ""
+      },
+      {
+        "sentence": "The inspection revealed critical deficiencies in the factory's fire safety system.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "lemma": "demonstrate",
+    "pos": "verb",
+    "ipa": "/ˈdem.ən.streɪt/",
+    "cefr": "B2",
+    "freq_rank": 1190,
+    "definition_en": "to show something clearly by giving proof or evidence; to show how something works",
+    "tags": "science,proof",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "demonstrate competence",
+      "demonstrate ability",
+      "clearly demonstrate"
+    ],
+    "word_family": [
+      {
+        "form": "demonstrate",
+        "type": "verb"
+      },
+      {
+        "form": "demonstration",
+        "type": "noun"
+      },
+      {
+        "form": "demonstrative",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The experiment clearly demonstrated the effectiveness of the new filtration system.",
+        "translation": ""
+      },
+      {
+        "sentence": "She demonstrated remarkable leadership skills throughout the international crisis.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 132,
+    "lemma": "deny",
+    "pos": "verb",
+    "ipa": "/dɪˈnaɪ/",
+    "cefr": "B2",
+    "freq_rank": 980,
+    "definition_en": "to say that something is not true; to refuse to allow somebody to have something",
+    "tags": "truth,refusal",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "deny allegations",
+      "deny access",
+      "categorically deny"
+    ],
+    "word_family": [
+      {
+        "form": "deny",
+        "type": "verb"
+      },
+      {
+        "form": "denial",
+        "type": "noun"
+      },
+      {
+        "form": "undeniable",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The spokesperson categorically denied all allegations of financial impropriety.",
+        "translation": ""
+      },
+      {
+        "sentence": "Protesters were denied access to the public square by security personnel.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 133,
+    "lemma": "derive",
+    "pos": "verb",
+    "ipa": "/dɪˈraɪv/",
+    "cefr": "B2",
+    "freq_rank": 2280,
+    "definition_en": "to get something from something else; to come from or develop from something",
+    "tags": "origin,science",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "derive from",
+      "derive pleasure",
+      "derive benefits"
+    ],
+    "word_family": [
+      {
+        "form": "derive",
+        "type": "verb"
+      },
+      {
+        "form": "derivation",
+        "type": "noun"
+      },
+      {
+        "form": "derivative",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Many modern medicines are originally derived from tropical rain forest plants.",
+        "translation": ""
+      },
+      {
+        "sentence": "He derives immense satisfaction from coaching the youth soccer league.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 134,
+    "lemma": "deteriorate",
+    "pos": "verb",
+    "ipa": "/dɪˈtɪə.ri.ə.reɪt/",
+    "cefr": "B2",
+    "freq_rank": 2750,
+    "definition_en": "to become worse in quality, condition, or character over time",
+    "tags": "change,health",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "rapidly deteriorate",
+      "condition deteriorates",
+      "deteriorate over time"
+    ],
+    "word_family": [
+      {
+        "form": "deteriorate",
+        "type": "verb"
+      },
+      {
+        "form": "deterioration",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Relations between the two border countries have deteriorated sharply this month.",
+        "translation": ""
+      },
+      {
+        "sentence": "Without regular maintenance, the historic brickwork will slowly deteriorate.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 135,
+    "lemma": "differentiate",
+    "pos": "verb",
+    "ipa": "/ˌdɪf.əˈren.ʃi.eɪt/",
+    "cefr": "B2",
+    "freq_rank": 2620,
+    "definition_en": "to recognize or show the difference between things or people",
+    "tags": "logic,distinction",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "differentiate between",
+      "differentiate oneself",
+      "clearly differentiate"
+    ],
+    "word_family": [
+      {
+        "form": "differentiate",
+        "type": "verb"
+      },
+      {
+        "form": "differentiation",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "It is important to differentiate between correlation and actual causation.",
+        "translation": ""
+      },
+      {
+        "sentence": "The luxury brand seeks to differentiate itself through artisanal craftsmanship.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 136,
+    "lemma": "diminish",
+    "pos": "verb",
+    "ipa": "/dɪˈmɪn.ɪʃ/",
+    "cefr": "B2",
+    "freq_rank": 2400,
+    "definition_en": "to become or to make something become smaller, weaker, etc.",
+    "tags": "change,numbers",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "diminish importance",
+      "diminish returns",
+      "gradually diminish"
+    ],
+    "word_family": [
+      {
+        "form": "diminish",
+        "type": "verb"
+      },
+      {
+        "form": "diminution",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The pain in his shoulder gradually diminished after physical therapy.",
+        "translation": ""
+      },
+      {
+        "sentence": "Nothing can diminish the profound significance of her scientific discovery.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 137,
+    "lemma": "discreet",
+    "pos": "adjective",
+    "ipa": "/dɪˈskriːt/",
+    "cefr": "B2",
+    "freq_rank": 2980,
+    "definition_en": "careful in what you say or do, so that you do not cause embarrassment or make things known",
+    "tags": "behavior,manners",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "discreet inquiry",
+      "remain discreet",
+      "discreet silence"
+    ],
+    "word_family": [
+      {
+        "form": "discreet",
+        "type": "adjective"
+      },
+      {
+        "form": "discreetly",
+        "type": "adverb"
+      },
+      {
+        "form": "discretion",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The private investigator made discreet inquiries about the businessman's background.",
+        "translation": ""
+      },
+      {
+        "sentence": "She was always discreet and never repeated confidential office gossip.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "lemma": "diverse",
+    "pos": "adjective",
+    "ipa": "/daɪˈvɜːs/",
+    "cefr": "B2",
+    "freq_rank": 1540,
+    "definition_en": "very different from each other and of various kinds",
+    "tags": "variety,society",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "diverse backgrounds",
+      "culturally diverse",
+      "diverse range"
+    ],
+    "word_family": [
+      {
+        "form": "diverse",
+        "type": "adjective"
+      },
+      {
+        "form": "diversity",
+        "type": "noun"
+      },
+      {
+        "form": "diversify",
+        "type": "verb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The university attracts an exceptionally diverse student body from sixty nations.",
+        "translation": ""
+      },
+      {
+        "sentence": "A resilient investment portfolio includes a diverse range of asset classes.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 139,
+    "lemma": "elaborate",
+    "pos": "adjective",
+    "ipa": "/ɪˈlæb.ər.ət/",
+    "cefr": "B2",
+    "freq_rank": 2180,
+    "definition_en": "very complicated and detailed; carefully prepared and organized",
+    "tags": "details,complexity",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "elaborate plan",
+      "elaborate design",
+      "elaborate ceremony"
+    ],
+    "word_family": [
+      {
+        "form": "elaborate",
+        "type": "adjective"
+      },
+      {
+        "form": "elaborate",
+        "type": "verb"
+      },
+      {
+        "form": "elaboration",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "They developed an elaborate security plan before the summit commenced.",
+        "translation": ""
+      },
+      {
+        "sentence": "Could you elaborate on the third point you mentioned during your lecture?",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "lemma": "eliminate",
+    "pos": "verb",
+    "ipa": "/ɪˈlɪm.ɪ.neɪt/",
+    "cefr": "B2",
+    "freq_rank": 1640,
+    "definition_en": "to remove or get rid of something, especially something unwanted",
+    "tags": "removal,action",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "eliminate waste",
+      "eliminate errors",
+      "completely eliminate"
+    ],
+    "word_family": [
+      {
+        "form": "eliminate",
+        "type": "verb"
+      },
+      {
+        "form": "elimination",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Automating repetitive data entry helped eliminate frequent clerical errors.",
+        "translation": ""
+      },
+      {
+        "sentence": "The new policy aims to eliminate unnecessary paper waste across all departments.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "lemma": "elusive",
+    "pos": "adjective",
+    "ipa": "/ɪˈluː.sɪv/",
+    "cefr": "B2",
+    "freq_rank": 3100,
+    "definition_en": "difficult to find, define, catch, or achieve",
+    "tags": "difficulty,goals",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "elusive goal",
+      "remain elusive",
+      "elusive answer"
+    ],
+    "word_family": [
+      {
+        "form": "elusive",
+        "type": "adjective"
+      },
+      {
+        "form": "elude",
+        "type": "verb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "A lasting diplomatic peace has unfortunately remained an elusive goal.",
+        "translation": ""
+      },
+      {
+        "sentence": "The elusive leopard is notoriously difficult to photograph in the wild.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "lemma": "emerge",
+    "pos": "verb",
+    "ipa": "/ɪˈmɜːdʒ/",
+    "cefr": "B2",
+    "freq_rank": 1240,
+    "definition_en": "to come out of a dark, confined or hidden place; to become known",
+    "tags": "growth,discovery",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "emerge from",
+      "new evidence emerges",
+      "emerge as a leader"
+    ],
+    "word_family": [
+      {
+        "form": "emerge",
+        "type": "verb"
+      },
+      {
+        "form": "emergence",
+        "type": "noun"
+      },
+      {
+        "form": "emergent",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Several surprising facts emerged during the financial committee's audit.",
+        "translation": ""
+      },
+      {
+        "sentence": "She emerged as the leading candidate after the second round of interviews.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 143,
+    "lemma": "encounter",
+    "pos": "verb",
+    "ipa": "/ɪnˈkaʊn.tər/",
+    "cefr": "B2",
+    "freq_rank": 1590,
+    "definition_en": "to experience something, especially problems or opposition; to meet somebody unexpectedly",
+    "tags": "events,challenge",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "encounter difficulties",
+      "encounter resistance",
+      "first encounter"
+    ],
+    "word_family": [
+      {
+        "form": "encounter",
+        "type": "verb"
+      },
+      {
+        "form": "encounter",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Travelers often encounter unexpected cultural differences when living abroad.",
+        "translation": ""
+      },
+      {
+        "sentence": "The engineering team encountered major technical hurdles during phase two.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 144,
+    "lemma": "enhance",
+    "pos": "verb",
+    "ipa": "/ɪnˈhɑːns/",
+    "cefr": "B2",
+    "freq_rank": 1460,
+    "definition_en": "to increase or further improve the good quality, value or status of somebody or something",
+    "tags": "improvement,value",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "enhance performance",
+      "enhance skills",
+      "enhance the flavor"
+    ],
+    "word_family": [
+      {
+        "form": "enhance",
+        "type": "verb"
+      },
+      {
+        "form": "enhancement",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Regular physical exercise enhances cardiovascular health and mental focus.",
+        "translation": ""
+      },
+      {
+        "sentence": "The chef added a pinch of smoked paprika to enhance the dish's flavor.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 145,
+    "lemma": "enrich",
+    "pos": "verb",
+    "ipa": "/ɪnˈrɪtʃ/",
+    "cefr": "B2",
+    "freq_rank": 2720,
+    "definition_en": "to improve the quality of something, often by adding something to it",
+    "tags": "value,growth",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "enrich the mind",
+      "enrich experience",
+      "enrich soil"
+    ],
+    "word_family": [
+      {
+        "form": "enrich",
+        "type": "verb"
+      },
+      {
+        "form": "enrichment",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Reading classic literature will enrich your vocabulary and deepen your perspective.",
+        "translation": ""
+      },
+      {
+        "sentence": "Compost was added to enrich the dry soil before spring planting.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 146,
+    "lemma": "equate",
+    "pos": "verb",
+    "ipa": "/ɪˈkweɪt/",
+    "cefr": "B2",
+    "freq_rank": 2820,
+    "definition_en": "to think that something is the same as something else or is as important",
+    "tags": "logic,thinking",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "equate with",
+      "falsely equate",
+      "cannot equate"
+    ],
+    "word_family": [
+      {
+        "form": "equate",
+        "type": "verb"
+      },
+      {
+        "form": "equation",
+        "type": "noun"
+      },
+      {
+        "form": "equivalent",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "You cannot simply equate high financial wealth with genuine personal happiness.",
+        "translation": ""
+      },
+      {
+        "sentence": "Many people incorrectly equate quietness with a lack of confidence.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 147,
+    "lemma": "establish",
+    "pos": "verb",
+    "ipa": "/ɪˈstæb.lɪʃ/",
+    "cefr": "B2",
+    "freq_rank": 650,
+    "definition_en": "to start or create an organization, a system, etc.; to prove facts",
+    "tags": "creation,facts",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "establish a reputation",
+      "establish contact",
+      "establish facts"
+    ],
+    "word_family": [
+      {
+        "form": "establish",
+        "type": "verb"
+      },
+      {
+        "form": "establishment",
+        "type": "noun"
+      },
+      {
+        "form": "established",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The institute was established in 1924 to study infectious diseases.",
+        "translation": ""
+      },
+      {
+        "sentence": "Investigators worked diligently to establish the timeline of events.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 148,
+    "lemma": "evaluate",
+    "pos": "verb",
+    "ipa": "/ɪˈvæl.ju.eɪt/",
+    "cefr": "B2",
+    "freq_rank": 1320,
+    "definition_en": "to form an opinion of the amount, value or quality of something after thinking carefully",
+    "tags": "thinking,judgment",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "evaluate performance",
+      "evaluate options",
+      "carefully evaluate"
+    ],
+    "word_family": [
+      {
+        "form": "evaluate",
+        "type": "verb"
+      },
+      {
+        "form": "evaluation",
+        "type": "noun"
+      },
+      {
+        "form": "evaluative",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Our hiring committee will evaluate each candidate's portfolio next week.",
+        "translation": ""
+      },
+      {
+        "sentence": "Doctors carefully evaluated the patient's symptoms before prescribing treatment.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 149,
+    "lemma": "evolve",
+    "pos": "verb",
+    "ipa": "/ɪˈvɒlv/",
+    "cefr": "B2",
+    "freq_rank": 1690,
+    "definition_en": "to develop gradually, especially from a simple to a more complicated form",
+    "tags": "growth,nature",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "evolve over time",
+      "constantly evolve",
+      "evolve into"
+    ],
+    "word_family": [
+      {
+        "form": "evolve",
+        "type": "verb"
+      },
+      {
+        "form": "evolution",
+        "type": "noun"
+      },
+      {
+        "form": "evolutionary",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Human languages constantly evolve as new generations create slang and idioms.",
+        "translation": ""
+      },
+      {
+        "sentence": "The startup evolved into one of the world's most valuable tech firms.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 150,
+    "lemma": "exceed",
+    "pos": "verb",
+    "ipa": "/ɪkˈsiːd/",
+    "cefr": "B2",
+    "freq_rank": 1820,
+    "definition_en": "to be greater than a particular number or amount; to go beyond what rules allow",
+    "tags": "limits,numbers",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "exceed expectations",
+      "exceed the limit",
+      "far exceed"
+    ],
+    "word_family": [
+      {
+        "form": "exceed",
+        "type": "verb"
+      },
+      {
+        "form": "excess",
+        "type": "noun"
+      },
+      {
+        "form": "excessive",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Company revenue this quarter far exceeded Wall Street's highest expectations.",
+        "translation": ""
+      },
+      {
+        "sentence": "Drivers must never exceed the posted speed limit in school zones.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 151,
+    "lemma": "exclude",
+    "pos": "verb",
+    "ipa": "/ɪkˈskluːd/",
+    "cefr": "B2",
+    "freq_rank": 1910,
+    "definition_en": "to deliberately not include something in what you are doing or considering",
+    "tags": "rejection,rules",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "exclude someone from",
+      "cannot exclude the possibility",
+      "mutually exclusive"
+    ],
+    "word_family": [
+      {
+        "form": "exclude",
+        "type": "verb"
+      },
+      {
+        "form": "exclusion",
+        "type": "noun"
+      },
+      {
+        "form": "exclusive",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The medical study excluded participants who had a prior history of heart disease.",
+        "translation": ""
+      },
+      {
+        "sentence": "We cannot exclude the possibility that human error caused the outage.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 152,
+    "lemma": "exemplify",
+    "pos": "verb",
+    "ipa": "/ɪɡˈzem.plɪ.faɪ/",
+    "cefr": "B2",
+    "freq_rank": 3050,
+    "definition_en": "to be a typical example of something",
+    "tags": "example,quality",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "exemplify the ideal",
+      "perfectly exemplify",
+      "exemplify qualities"
+    ],
+    "word_family": [
+      {
+        "form": "exemplify",
+        "type": "verb"
+      },
+      {
+        "form": "exemplary",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Her selfless dedication to community healthcare exemplifies true leadership.",
+        "translation": ""
+      },
+      {
+        "sentence": "The historic cathedral exemplifies Gothic architecture at its peak.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 153,
+    "lemma": "expand",
+    "pos": "verb",
+    "ipa": "/ɪkˈspænd/",
+    "cefr": "B2",
+    "freq_rank": 1110,
+    "definition_en": "to become greater in size, number or importance; to make something greater",
+    "tags": "growth,business",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "expand a business",
+      "expand rapidly",
+      "expand horizons"
+    ],
+    "word_family": [
+      {
+        "form": "expand",
+        "type": "verb"
+      },
+      {
+        "form": "expansion",
+        "type": "noun"
+      },
+      {
+        "form": "expansive",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The retail chain plans to expand rapidly into neighboring European countries.",
+        "translation": ""
+      },
+      {
+        "sentence": "Traveling to remote places will broaden your mind and expand your horizons.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 154,
+    "lemma": "explicit",
+    "pos": "adjective",
+    "ipa": "/ɪkˈsplɪs.ɪt/",
+    "cefr": "B2",
+    "freq_rank": 2320,
+    "definition_en": "clear and easy to understand, so that there is no doubt about what is meant",
+    "tags": "clarity,rules",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "explicit instructions",
+      "make explicit",
+      "explicit warning"
+    ],
+    "word_family": [
+      {
+        "form": "explicit",
+        "type": "adjective"
+      },
+      {
+        "form": "explicitly",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The user manual provides explicit instructions for calibrating the sensor.",
+        "translation": ""
+      },
+      {
+        "sentence": "The director gave explicit warnings regarding the dangers of high altitudes.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 155,
+    "lemma": "exploit",
+    "pos": "verb",
+    "ipa": "/ɪkˈsplɔɪt/",
+    "cefr": "B2",
+    "freq_rank": 2170,
+    "definition_en": "to treat a person or situation as an opportunity to gain an advantage, sometimes unfairly",
+    "tags": "use,advantage",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "exploit resources",
+      "exploit a weakness",
+      "exploit workers"
+    ],
+    "word_family": [
+      {
+        "form": "exploit",
+        "type": "verb"
+      },
+      {
+        "form": "exploitation",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The cunning hacker tried to exploit a known vulnerability in the server software.",
+        "translation": ""
+      },
+      {
+        "sentence": "Laws were enacted to prevent unscrupulous employers from exploiting young workers.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 156,
+    "lemma": "facilitate",
+    "pos": "verb",
+    "ipa": "/fəˈsɪl.ɪ.teɪt/",
+    "cefr": "B2",
+    "freq_rank": 2080,
+    "definition_en": "to make an action or a process possible or easier",
+    "tags": "help,systems",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "facilitate discussions",
+      "facilitate trade",
+      "facilitate learning"
+    ],
+    "word_family": [
+      {
+        "form": "facilitate",
+        "type": "verb"
+      },
+      {
+        "form": "facilitator",
+        "type": "noun"
+      },
+      {
+        "form": "facility",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The mediator was brought in to facilitate constructive discussions between both factions.",
+        "translation": ""
+      },
+      {
+        "sentence": "Modern digital tools facilitate collaborative remote work across global teams.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 157,
+    "lemma": "fluctuate",
+    "pos": "verb",
+    "ipa": "/ˈflʌk.tʃu.eɪt/",
+    "cefr": "B2",
+    "freq_rank": 2740,
+    "definition_en": "to change frequently in size, amount, quality, etc., especially from one extreme to another",
+    "tags": "change,numbers",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "fluctuate wildly",
+      "prices fluctuate",
+      "fluctuate between"
+    ],
+    "word_family": [
+      {
+        "form": "fluctuate",
+        "type": "verb"
+      },
+      {
+        "form": "fluctuation",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Vegetable prices fluctuate throughout the year depending on local weather conditions.",
+        "translation": ""
+      },
+      {
+        "sentence": "Her body temperature fluctuated wildly during the severe fever.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 158,
+    "lemma": "fundamental",
+    "pos": "adjective",
+    "ipa": "/ˌfʌn.dəˈmen.təl/",
+    "cefr": "B2",
+    "freq_rank": 1390,
+    "definition_en": "serious and very important; affecting the most central and important parts of something",
+    "tags": "importance,logic",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "fundamental change",
+      "fundamental difference",
+      "fundamental right"
+    ],
+    "word_family": [
+      {
+        "form": "fundamental",
+        "type": "adjective"
+      },
+      {
+        "form": "fundamentally",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Freedom of speech is widely regarded as a fundamental human right.",
+        "translation": ""
+      },
+      {
+        "sentence": "There is a fundamental difference between memorizing facts and truly understanding principles.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 159,
+    "lemma": "highlight",
+    "pos": "verb",
+    "ipa": "/ˈhaɪ.laɪt/",
+    "cefr": "B2",
+    "freq_rank": 1380,
+    "definition_en": "to emphasize something, especially so that people give it special attention",
+    "tags": "importance,clarity",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "highlight a problem",
+      "highlight key points",
+      "highlight the need"
+    ],
+    "word_family": [
+      {
+        "form": "highlight",
+        "type": "verb"
+      },
+      {
+        "form": "highlight",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The annual report highlights several significant achievements by the engineering division.",
+        "translation": ""
+      },
+      {
+        "sentence": "Use a fluorescent marker to highlight the most important vocabulary words.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 160,
+    "lemma": "hypothesis",
+    "pos": "noun",
+    "ipa": "/haɪˈpɒθ.ə.sɪs/",
+    "cefr": "B2",
+    "freq_rank": 2220,
+    "definition_en": "an idea or explanation of something that is based on a few known facts but that has not yet been proved",
+    "tags": "science,logic",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "test a hypothesis",
+      "support a hypothesis",
+      "working hypothesis"
+    ],
+    "word_family": [
+      {
+        "form": "hypothesis",
+        "type": "noun"
+      },
+      {
+        "form": "hypothetical",
+        "type": "adjective"
+      },
+      {
+        "form": "hypothesize",
+        "type": "verb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Scientists conducted three rounds of experiments to test their original hypothesis.",
+        "translation": ""
+      },
+      {
+        "sentence": "The observational data provided strong evidence supporting her bold hypothesis.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 161,
+    "lemma": "implement",
+    "pos": "verb",
+    "ipa": "/ˈɪm.plɪ.ment/",
+    "cefr": "B2",
+    "freq_rank": 1490,
+    "definition_en": "to make something that has been officially decided start to happen or be used",
+    "tags": "action,management",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "implement a policy",
+      "implement changes",
+      "successfully implement"
+    ],
+    "word_family": [
+      {
+        "form": "implement",
+        "type": "verb"
+      },
+      {
+        "form": "implementation",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The hospital will implement the updated hygiene guidelines starting next month.",
+        "translation": ""
+      },
+      {
+        "sentence": "Management struggled to implement the organizational changes smoothly.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 162,
+    "lemma": "implication",
+    "pos": "noun",
+    "ipa": "/ˌɪm.plɪˈkeɪ.ʃən/",
+    "cefr": "B2",
+    "freq_rank": 1570,
+    "definition_en": "a possible effect or result of an action or a decision",
+    "tags": "results,logic",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "future implications",
+      "practical implications",
+      "serious implications"
+    ],
+    "word_family": [
+      {
+        "form": "implication",
+        "type": "noun"
+      },
+      {
+        "form": "imply",
+        "type": "verb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "We must consider the ethical implications of artificial intelligence in healthcare.",
+        "translation": ""
+      },
+      {
+        "sentence": "The discovery of water on Mars has profound implications for astronomy.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 163,
+    "lemma": "incentive",
+    "pos": "noun",
+    "ipa": "/ɪnˈsen.tɪv/",
+    "cefr": "B2",
+    "freq_rank": 1960,
+    "definition_en": "something that encourages you to do something or to work harder",
+    "tags": "motivation,money",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "financial incentive",
+      "strong incentive",
+      "create an incentive"
+    ],
+    "word_family": [
+      {
+        "form": "incentive",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The government offered tax incentives to homeowners installing solar panels.",
+        "translation": ""
+      },
+      {
+        "sentence": "Bonus payments provide employees with a strong incentive to surpass sales quotas.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 164,
+    "lemma": "inevitable",
+    "pos": "adjective",
+    "ipa": "/ɪnˈev.ɪ.tə.bəl/",
+    "cefr": "B2",
+    "freq_rank": 1790,
+    "definition_en": "that you cannot avoid or prevent; certain to happen",
+    "tags": "fate,certainty",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "inevitable result",
+      "seem inevitable",
+      "accept the inevitable"
+    ],
+    "word_family": [
+      {
+        "form": "inevitable",
+        "type": "adjective"
+      },
+      {
+        "form": "inevitably",
+        "type": "adverb"
+      },
+      {
+        "form": "inevitability",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Given the heavy snowstorm, flight cancellations were entirely inevitable.",
+        "translation": ""
+      },
+      {
+        "sentence": "Aging is an inevitable biological process that every living being undergoes.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 165,
+    "lemma": "inherent",
+    "pos": "adjective",
+    "ipa": "/ɪnˈher.ənt/",
+    "cefr": "B2",
+    "freq_rank": 2450,
+    "definition_en": "that is a basic or permanent part of somebody or something and that cannot be removed",
+    "tags": "nature,logic",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "inherent risk",
+      "inherent danger",
+      "inherent flaw"
+    ],
+    "word_family": [
+      {
+        "form": "inherent",
+        "type": "adjective"
+      },
+      {
+        "form": "inherently",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Every business venture involves an inherent degree of financial risk.",
+        "translation": ""
+      },
+      {
+        "sentence": "The detective identified an inherent flaw in the suspect's carefully constructed alibi.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 166,
+    "lemma": "innovate",
+    "pos": "verb",
+    "ipa": "/ˈɪn.ə.veɪt/",
+    "cefr": "B2",
+    "freq_rank": 2380,
+    "definition_en": "to introduce new things, ideas, or ways of doing something",
+    "tags": "creativity,technology",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "constantly innovate",
+      "innovate to survive",
+      "drive innovation"
+    ],
+    "word_family": [
+      {
+        "form": "innovate",
+        "type": "verb"
+      },
+      {
+        "form": "innovation",
+        "type": "noun"
+      },
+      {
+        "form": "innovative",
+        "type": "adjective"
+      },
+      {
+        "form": "innovator",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Companies must constantly innovate if they hope to remain competitive.",
+        "translation": ""
+      },
+      {
+        "sentence": "Her team pioneered an innovative approach to recycling industrial plastics.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 167,
+    "lemma": "insight",
+    "pos": "noun",
+    "ipa": "/ˈɪn.saɪt/",
+    "cefr": "B2",
+    "freq_rank": 1630,
+    "definition_en": "an understanding of what something is like or how it works",
+    "tags": "knowledge,mind",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "valuable insight",
+      "gain insight",
+      "provide insights"
+    ],
+    "word_family": [
+      {
+        "form": "insight",
+        "type": "noun"
+      },
+      {
+        "form": "insightful",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The documentary provides fascinating insights into the lives of deep-sea creatures.",
+        "translation": ""
+      },
+      {
+        "sentence": "Talking with local residents gave the anthropologist valuable cultural insights.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 168,
+    "lemma": "integrate",
+    "pos": "verb",
+    "ipa": "/ˈɪn.tɪ.ɡreɪt/",
+    "cefr": "B2",
+    "freq_rank": 1740,
+    "definition_en": "to combine two or more things in order to become more effective",
+    "tags": "systems,society",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "integrate into society",
+      "integrate systems",
+      "fully integrate"
+    ],
+    "word_family": [
+      {
+        "form": "integrate",
+        "type": "verb"
+      },
+      {
+        "form": "integration",
+        "type": "noun"
+      },
+      {
+        "form": "integrated",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The program helps new immigrants integrate successfully into local communities.",
+        "translation": ""
+      },
+      {
+        "sentence": "Our goal is to seamlessly integrate all three software platforms into one dashboard.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 169,
+    "lemma": "interpret",
+    "pos": "verb",
+    "ipa": "/ɪnˈtɜː.prɪt/",
+    "cefr": "B2",
+    "freq_rank": 1560,
+    "definition_en": "to explain the meaning of something; to translate what someone is saying into another language",
+    "tags": "language,meaning",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "interpret data",
+      "interpret results",
+      "widely interpreted"
+    ],
+    "word_family": [
+      {
+        "form": "interpret",
+        "type": "verb"
+      },
+      {
+        "form": "interpretation",
+        "type": "noun"
+      },
+      {
+        "form": "interpreter",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Historians interpret the ancient inscription in several different ways.",
+        "translation": ""
+      },
+      {
+        "sentence": "A professional interpreter accompanied the foreign delegation during official talks.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 170,
+    "lemma": "intervene",
+    "pos": "verb",
+    "ipa": "/ˌɪn.təˈviːn/",
+    "cefr": "B2",
+    "freq_rank": 2580,
+    "definition_en": "to become involved in a situation in order to improve or help it",
+    "tags": "action,help",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "intervene to stop",
+      "military intervened",
+      "diplomatic intervention"
+    ],
+    "word_family": [
+      {
+        "form": "intervene",
+        "type": "verb"
+      },
+      {
+        "form": "intervention",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The referee was forced to intervene when the players began shouting aggressively.",
+        "translation": ""
+      },
+      {
+        "sentence": "Prompt medical intervention saved the patient's life after the accident.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 171,
+    "lemma": "justify",
+    "pos": "verb",
+    "ipa": "/ˈdʒʌs.tɪ.faɪ/",
+    "cefr": "B2",
+    "freq_rank": 1610,
+    "definition_en": "to show that somebody or something is right or reasonable",
+    "tags": "logic,reasons",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "justify the cost",
+      "hard to justify",
+      "justify an action"
+    ],
+    "word_family": [
+      {
+        "form": "justify",
+        "type": "verb"
+      },
+      {
+        "form": "justification",
+        "type": "noun"
+      },
+      {
+        "form": "justifiable",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "How can management justify spending millions on executive bonuses during layoffs?",
+        "translation": ""
+      },
+      {
+        "sentence": "The prosecutor argued that self-defense did not justify the use of deadly force.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 172,
+    "lemma": "manipulate",
+    "pos": "verb",
+    "ipa": "/məˈnɪp.jə.leɪt/",
+    "cefr": "B2",
+    "freq_rank": 2420,
+    "definition_en": "to control or influence somebody or something, often in a dishonest way; to handle skillfully",
+    "tags": "influence,control",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "manipulate data",
+      "manipulate public opinion",
+      "easy to manipulate"
+    ],
+    "word_family": [
+      {
+        "form": "manipulate",
+        "type": "verb"
+      },
+      {
+        "form": "manipulation",
+        "type": "noun"
+      },
+      {
+        "form": "manipulative",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Unethical marketing campaigns frequently manipulate consumer insecurities.",
+        "translation": ""
+      },
+      {
+        "sentence": "A skilled surgeon can manipulate delicate instruments with micron precision.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 173,
+    "lemma": "mature",
+    "pos": "adjective",
+    "ipa": "/məˈtʃʊər/",
+    "cefr": "B2",
+    "freq_rank": 1780,
+    "definition_en": "behaving in a sensible way, like an adult; fully grown and developed",
+    "tags": "personality,growth",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "mature decision",
+      "mature attitude",
+      "sexually mature"
+    ],
+    "word_family": [
+      {
+        "form": "mature",
+        "type": "adjective"
+      },
+      {
+        "form": "mature",
+        "type": "verb"
+      },
+      {
+        "form": "maturity",
+        "type": "noun"
+      },
+      {
+        "form": "immature",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "She handled the unexpected criticism in a very calm and mature manner.",
+        "translation": ""
+      },
+      {
+        "sentence": "The wine develops complex, earthy notes as it matures in French oak barrels.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 174,
+    "lemma": "mediate",
+    "pos": "verb",
+    "ipa": "/ˈmiː.di.eɪt/",
+    "cefr": "B2",
+    "freq_rank": 3120,
+    "definition_en": "to try to end a disagreement between two people or groups",
+    "tags": "conflict,peace",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "mediate a dispute",
+      "help mediate",
+      "impartial mediator"
+    ],
+    "word_family": [
+      {
+        "form": "mediate",
+        "type": "verb"
+      },
+      {
+        "form": "mediation",
+        "type": "noun"
+      },
+      {
+        "form": "mediator",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "A veteran United Nations diplomat was appointed to mediate the border conflict.",
+        "translation": ""
+      },
+      {
+        "sentence": "The human resources director stepped in to mediate the dispute between colleagues.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 175,
+    "lemma": "modify",
+    "pos": "verb",
+    "ipa": "/ˈmɒd.ɪ.faɪ/",
+    "cefr": "B2",
+    "freq_rank": 1810,
+    "definition_en": "to change something slightly, especially in order to make it more suitable for a particular purpose",
+    "tags": "change,improvement",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "modify behavior",
+      "modify a plan",
+      "slightly modify"
+    ],
+    "word_family": [
+      {
+        "form": "modify",
+        "type": "verb"
+      },
+      {
+        "form": "modification",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The architect agreed to modify the blueprints to accommodate the client's budget.",
+        "translation": ""
+      },
+      {
+        "sentence": "You may need to modify your exercise routine as you recover from the knee injury.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 176,
+    "lemma": "mutual",
+    "pos": "adjective",
+    "ipa": "/ˈmjuː.tʃu.əl/",
+    "cefr": "B2",
+    "freq_rank": 1770,
+    "definition_en": "felt or done equally by two or more people; shared by two or more people",
+    "tags": "relations,sharing",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "mutual respect",
+      "mutual benefit",
+      "mutual friend"
+    ],
+    "word_family": [
+      {
+        "form": "mutual",
+        "type": "adjective"
+      },
+      {
+        "form": "mutually",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Lasting peace requires mutual respect and understanding between both nations.",
+        "translation": ""
+      },
+      {
+        "sentence": "We met through a mutual friend at an international academic conference.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 177,
+    "lemma": "neutral",
+    "pos": "adjective",
+    "ipa": "/ˈnjuː.trəl/",
+    "cefr": "B2",
+    "freq_rank": 1860,
+    "definition_en": "not supporting or helping either side in a disagreement, competition, or war",
+    "tags": "fairness,politics",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "remain neutral",
+      "neutral stance",
+      "neutral observer"
+    ],
+    "word_family": [
+      {
+        "form": "neutral",
+        "type": "adjective"
+      },
+      {
+        "form": "neutrality",
+        "type": "noun"
+      },
+      {
+        "form": "neutralize",
+        "type": "verb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Switzerland has maintained a strictly neutral stance throughout numerous European wars.",
+        "translation": ""
+      },
+      {
+        "sentence": "The chairperson remained neutral, allowing both sides to present their views.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 178,
+    "lemma": "negotiate",
+    "pos": "verb",
+    "ipa": "/nəˈɡəʊ.ʃi.eɪt/",
+    "cefr": "B2",
+    "freq_rank": 1660,
+    "definition_en": "to try to reach an agreement by formal discussion",
+    "tags": "business,peace",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "negotiate terms",
+      "negotiate a contract",
+      "successfully negotiate"
+    ],
+    "word_family": [
+      {
+        "form": "negotiate",
+        "type": "verb"
+      },
+      {
+        "form": "negotiation",
+        "type": "noun"
+      },
+      {
+        "form": "negotiator",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The union representatives met with management to negotiate higher wages.",
+        "translation": ""
+      },
+      {
+        "sentence": "She successfully negotiated a flexible remote work arrangement with her employer.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 179,
+    "lemma": "notion",
+    "pos": "noun",
+    "ipa": "/ˈnəʊ.ʃən/",
+    "cefr": "B2",
+    "freq_rank": 1950,
+    "definition_en": "an idea, a belief or an understanding of something",
+    "tags": "mind,philosophy",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "vague notion",
+      "reject the notion",
+      "notion that"
+    ],
+    "word_family": [
+      {
+        "form": "notion",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "I had only a vague notion of what quantum mechanics actually involved.",
+        "translation": ""
+      },
+      {
+        "sentence": "She strongly rejected the notion that women are less suited for leadership roles.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 180,
+    "lemma": "obstacle",
+    "pos": "noun",
+    "ipa": "/ˈɒb.stə.kəl/",
+    "cefr": "B2",
+    "freq_rank": 1840,
+    "definition_en": "a situation, an event, etc. that makes it difficult for you to do or achieve something",
+    "tags": "difficulty,challenge",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "overcome obstacles",
+      "major obstacle",
+      "face obstacles"
+    ],
+    "word_family": [
+      {
+        "form": "obstacle",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Lack of reliable transportation was the single biggest obstacle to finding steady work.",
+        "translation": ""
+      },
+      {
+        "sentence": "With relentless grit and family support, she overcame every obstacle in her path.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 181,
+    "lemma": "ongoing",
+    "pos": "adjective",
+    "ipa": "/ˈɒnˌɡəʊ.ɪŋ/",
+    "cefr": "B2",
+    "freq_rank": 1930,
+    "definition_en": "continuing to exist or develop; currently happening",
+    "tags": "time,action",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "ongoing investigation",
+      "ongoing debate",
+      "ongoing process"
+    ],
+    "word_family": [
+      {
+        "form": "ongoing",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Police detectives declined to comment on the case due to the ongoing investigation.",
+        "translation": ""
+      },
+      {
+        "sentence": "Negotiations over maritime fishing rights are an ongoing process between the two states.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 182,
+    "lemma": "orient",
+    "pos": "verb",
+    "ipa": "/ˈɔː.ri.ənt/",
+    "cefr": "B2",
+    "freq_rank": 2880,
+    "definition_en": "to direct somebody or something toward something; to find your position in relation to surroundings",
+    "tags": "direction,adaptation",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "orient oneself",
+      "market oriented",
+      "future oriented"
+    ],
+    "word_family": [
+      {
+        "form": "orient",
+        "type": "verb"
+      },
+      {
+        "form": "orientation",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "It took the traveler a few minutes to orient himself using the offline GPS map.",
+        "translation": ""
+      },
+      {
+        "sentence": "Our startup is oriented toward providing sustainable packaging solutions.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 183,
+    "lemma": "overall",
+    "pos": "adjective",
+    "ipa": "/ˌəʊ.vərˈɔːl/",
+    "cefr": "B2",
+    "freq_rank": 1070,
+    "definition_en": "including all the different aspects of something, rather than just particular parts",
+    "tags": "general,summary",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "overall performance",
+      "overall picture",
+      "overall impression"
+    ],
+    "word_family": [
+      {
+        "form": "overall",
+        "type": "adjective"
+      },
+      {
+        "form": "overall",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The overall performance of the global stock market remained exceptionally strong.",
+        "translation": ""
+      },
+      {
+        "sentence": "Overall, the workshop was an informative and rewarding experience for all attendees.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 184,
+    "lemma": "parallel",
+    "pos": "adjective",
+    "ipa": "/ˈpær.ə.lel/",
+    "cefr": "B2",
+    "freq_rank": 1710,
+    "definition_en": "two or more lines that are the same distance apart at every point; very similar",
+    "tags": "shapes,comparisons",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "draw a parallel",
+      "run parallel to",
+      "parallel lines"
+    ],
+    "word_family": [
+      {
+        "form": "parallel",
+        "type": "adjective"
+      },
+      {
+        "form": "parallel",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The train tracks run parallel to the coastal highway for nearly fifty miles.",
+        "translation": ""
+      },
+      {
+        "sentence": "The historian drew a compelling parallel between ancient Rome and modern empires.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 185,
+    "lemma": "perceive",
+    "pos": "verb",
+    "ipa": "/pəˈsiːv/",
+    "cefr": "B2",
+    "freq_rank": 1670,
+    "definition_en": "to notice or become aware of something; to understand or think of something in a particular way",
+    "tags": "senses,mind",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "widely perceived",
+      "perceive a threat",
+      "perceive as"
+    ],
+    "word_family": [
+      {
+        "form": "perceive",
+        "type": "verb"
+      },
+      {
+        "form": "perception",
+        "type": "noun"
+      },
+      {
+        "form": "perceptive",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Children often perceive the passage of time very differently than adults do.",
+        "translation": ""
+      },
+      {
+        "sentence": "The proposed tax reform was widely perceived as unfair to working-class families.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 186,
+    "lemma": "persistent",
+    "pos": "adjective",
+    "ipa": "/pəˈsɪs.tənt/",
+    "cefr": "B2",
+    "freq_rank": 2340,
+    "definition_en": "continuing for a long period of time without stopping, or determined to continue doing something",
+    "tags": "habits,determination",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "persistent cough",
+      "persistent effort",
+      "remain persistent"
+    ],
+    "word_family": [
+      {
+        "form": "persistent",
+        "type": "adjective"
+      },
+      {
+        "form": "persist",
+        "type": "verb"
+      },
+      {
+        "form": "persistence",
+        "type": "noun"
+      },
+      {
+        "form": "persistently",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Her persistent efforts over four long years finally earned her a patent.",
+        "translation": ""
+      },
+      {
+        "sentence": "You should consult a physician if that persistent dry cough does not resolve.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 187,
+    "lemma": "plausible",
+    "pos": "adjective",
+    "ipa": "/ˈplɔː.zə.bəl/",
+    "cefr": "B2",
+    "freq_rank": 2920,
+    "definition_en": "reasonable and likely to be true or possible",
+    "tags": "truth,logic",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "plausible explanation",
+      "sound plausible",
+      "perfectly plausible"
+    ],
+    "word_family": [
+      {
+        "form": "plausible",
+        "type": "adjective"
+      },
+      {
+        "form": "plausibility",
+        "type": "noun"
+      },
+      {
+        "form": "implausible",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The scientist offered a plausible explanation for the unexpected laboratory readings.",
+        "translation": ""
+      },
+      {
+        "sentence": "His excuse sounded plausible on the surface, but further inquiries proved otherwise.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 188,
+    "lemma": "potential",
+    "pos": "noun",
+    "ipa": "/pəˈten.ʃəl/",
+    "cefr": "B2",
+    "freq_rank": 920,
+    "definition_en": "qualities that exist and can be developed into a future success",
+    "tags": "ability,future",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "reach full potential",
+      "tremendous potential",
+      "potential danger"
+    ],
+    "word_family": [
+      {
+        "form": "potential",
+        "type": "noun"
+      },
+      {
+        "form": "potential",
+        "type": "adjective"
+      },
+      {
+        "form": "potentially",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The young cellist shows tremendous musical potential and dedication.",
+        "translation": ""
+      },
+      {
+        "sentence": "Inspectors warned the crew about the potential hazards of the chemical spill.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 189,
+    "lemma": "preliminary",
+    "pos": "adjective",
+    "ipa": "/prɪˈlɪm.ɪ.nər.i/",
+    "cefr": "B2",
+    "freq_rank": 2260,
+    "definition_en": "happening before a more important action or event; initial",
+    "tags": "time,order",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "preliminary results",
+      "preliminary investigation",
+      "preliminary findings"
+    ],
+    "word_family": [
+      {
+        "form": "preliminary",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Preliminary laboratory findings suggest that the new drug is both safe and effective.",
+        "translation": ""
+      },
+      {
+        "sentence": "The police released a preliminary report following the downtown traffic collision.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 190,
+    "lemma": "presume",
+    "pos": "verb",
+    "ipa": "/prɪˈzjuːm/",
+    "cefr": "B2",
+    "freq_rank": 2460,
+    "definition_en": "to suppose that something is true, although you do not have actual proof",
+    "tags": "thinking,assumptions",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "presume innocent",
+      "fair to presume",
+      "presume that"
+    ],
+    "word_family": [
+      {
+        "form": "presume",
+        "type": "verb"
+      },
+      {
+        "form": "presumption",
+        "type": "noun"
+      },
+      {
+        "form": "presumably",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "In modern legal systems, a defendant is presumed innocent until proven guilty.",
+        "translation": ""
+      },
+      {
+        "sentence": "Since her car was in the driveway, I presumed she had already returned home.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 191,
+    "lemma": "prevail",
+    "pos": "verb",
+    "ipa": "/prɪˈveɪl/",
+    "cefr": "B2",
+    "freq_rank": 2860,
+    "definition_en": "to exist or be very common at a particular time or in a particular place; to be successful",
+    "tags": "success,society",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "justice will prevail",
+      "common sense prevails",
+      "prevail against"
+    ],
+    "word_family": [
+      {
+        "form": "prevail",
+        "type": "verb"
+      },
+      {
+        "form": "prevalent",
+        "type": "adjective"
+      },
+      {
+        "form": "prevalence",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "After months of bitter political dispute, common sense finally prevailed.",
+        "translation": ""
+      },
+      {
+        "sentence": "Despite facing overwhelming odds, the underdog soccer team prevailed in the final.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 192,
+    "lemma": "profound",
+    "pos": "adjective",
+    "ipa": "/prəˈfaʊnd/",
+    "cefr": "B2",
+    "freq_rank": 2140,
+    "definition_en": "very great; felt or experienced very strongly; showing great knowledge",
+    "tags": "depth,feelings",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "profound impact",
+      "profound effect",
+      "profound insight"
+    ],
+    "word_family": [
+      {
+        "form": "profound",
+        "type": "adjective"
+      },
+      {
+        "form": "profoundly",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The unexpected death of her mentor had a profound impact on her artistic career.",
+        "translation": ""
+      },
+      {
+        "sentence": "The philosopher was renowned for his profound insights into human morality.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 193,
+    "lemma": "prohibit",
+    "pos": "verb",
+    "ipa": "/prəˈhɪb.ɪt/",
+    "cefr": "B2",
+    "freq_rank": 2190,
+    "definition_en": "to stop something from being done or used especially by law or a rule",
+    "tags": "rules,law",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "strictly prohibit",
+      "prohibit smoking",
+      "prohibited by law"
+    ],
+    "word_family": [
+      {
+        "form": "prohibit",
+        "type": "verb"
+      },
+      {
+        "form": "prohibition",
+        "type": "noun"
+      },
+      {
+        "form": "prohibitive",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Smoking is strictly prohibited in all indoor public spaces throughout the state.",
+        "translation": ""
+      },
+      {
+        "sentence": "National park regulations prohibit the feeding of wild bears and deer.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 194,
+    "lemma": "prominent",
+    "pos": "adjective",
+    "ipa": "/ˈprɒm.ɪ.nənt/",
+    "cefr": "B2",
+    "freq_rank": 1830,
+    "definition_en": "important or well known; easily seen",
+    "tags": "fame,visibility",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "prominent role",
+      "prominent figure",
+      "prominent feature"
+    ],
+    "word_family": [
+      {
+        "form": "prominent",
+        "type": "adjective"
+      },
+      {
+        "form": "prominence",
+        "type": "noun"
+      },
+      {
+        "form": "prominently",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "She is a prominent figure in international climate change negotiations.",
+        "translation": ""
+      },
+      {
+        "sentence": "The historic clock tower is the most prominent landmark in the town square.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 195,
+    "lemma": "prospective",
+    "pos": "adjective",
+    "ipa": "/prəˈspek.tɪv/",
+    "cefr": "B2",
+    "freq_rank": 2520,
+    "definition_en": "expected to do something or to become something; future",
+    "tags": "future,chances",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "prospective buyers",
+      "prospective students",
+      "prospective employer"
+    ],
+    "word_family": [
+      {
+        "form": "prospective",
+        "type": "adjective"
+      },
+      {
+        "form": "prospect",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The real estate agent showed the apartment to three prospective buyers this morning.",
+        "translation": ""
+      },
+      {
+        "sentence": "University admissions officers conducted campus tours for prospective freshmen.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 196,
+    "lemma": "rational",
+    "pos": "adjective",
+    "ipa": "/ˈræʃ.ən.əl/",
+    "cefr": "B2",
+    "freq_rank": 2130,
+    "definition_en": "based on reason rather than on emotions",
+    "tags": "logic,thinking",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "rational decision",
+      "rational approach",
+      "remain rational"
+    ],
+    "word_family": [
+      {
+        "form": "rational",
+        "type": "adjective"
+      },
+      {
+        "form": "rationality",
+        "type": "noun"
+      },
+      {
+        "form": "rationally",
+        "type": "adverb"
+      },
+      {
+        "form": "irrational",
+        "type": "adjective"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "In a crisis, it is imperative to remain calm and make rational decisions.",
+        "translation": ""
+      },
+      {
+        "sentence": "He tried to find a rational explanation for the mysterious laboratory noises.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 197,
+    "lemma": "reluctant",
+    "pos": "adjective",
+    "ipa": "/rɪˈlʌk.tənt/",
+    "cefr": "B2",
+    "freq_rank": 1980,
+    "definition_en": "hesitating before doing something because you do not want to do it or not sure it is right",
+    "tags": "feelings,hesitation",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "reluctant to do",
+      "seem reluctant",
+      "reluctant agreement"
+    ],
+    "word_family": [
+      {
+        "form": "reluctant",
+        "type": "adjective"
+      },
+      {
+        "form": "reluctance",
+        "type": "noun"
+      },
+      {
+        "form": "reluctantly",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "He was reluctant to admit that he had made an error in the financial forecast.",
+        "translation": ""
+      },
+      {
+        "sentence": "She agreed to speak at the banquet, though she was noticeably reluctant.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 198,
+    "lemma": "subsequent",
+    "pos": "adjective",
+    "ipa": "/ˈsʌb.sɪ.kwənt/",
+    "cefr": "B2",
+    "freq_rank": 1870,
+    "definition_en": "happening or coming after something else",
+    "tags": "time,order",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "subsequent years",
+      "subsequent events",
+      "subsequent study"
+    ],
+    "word_family": [
+      {
+        "form": "subsequent",
+        "type": "adjective"
+      },
+      {
+        "form": "subsequently",
+        "type": "adverb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "The initial test failed, but subsequent trials showed significant improvements.",
+        "translation": ""
+      },
+      {
+        "sentence": "He retired from professional cricket and subsequently became a respected coach.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 199,
+    "lemma": "sustainable",
+    "pos": "adjective",
+    "ipa": "/səˈsteɪ.nə.bəl/",
+    "cefr": "B2",
+    "freq_rank": 1970,
+    "definition_en": "involving the use of natural products and energy in a way that does not harm the environment",
+    "tags": "environment,future",
+    "register": "neutral",
+    "nuance_note": "",
+    "collocations": [
+      "sustainable energy",
+      "sustainable development",
+      "sustainable agriculture"
+    ],
+    "word_family": [
+      {
+        "form": "sustainable",
+        "type": "adjective"
+      },
+      {
+        "form": "sustain",
+        "type": "verb"
+      },
+      {
+        "form": "sustainability",
+        "type": "noun"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "Investing in solar and wind power creates a clean and sustainable energy future.",
+        "translation": ""
+      },
+      {
+        "sentence": "The coastal community relies heavily on sustainable marine fishing practices.",
+        "translation": ""
+      }
+    ]
+  },
+  {
+    "id": 200,
+    "lemma": "undergo",
+    "pos": "verb",
+    "ipa": "/ˌʌn.dəˈɡəʊ/",
+    "cefr": "B2",
+    "freq_rank": 2040,
+    "definition_en": "to experience something, especially a change or something unpleasant",
+    "tags": "change,experience",
+    "register": "formal",
+    "nuance_note": "",
+    "collocations": [
+      "undergo surgery",
+      "undergo training",
+      "undergo changes"
+    ],
+    "word_family": [
+      {
+        "form": "undergo",
+        "type": "verb"
+      }
+    ],
+    "examples": [
+      {
+        "sentence": "All new airline pilots must undergo rigorous simulator training before flying.",
+        "translation": ""
+      },
+      {
+        "sentence": "The historic cathedral is currently undergoing extensive architectural restoration.",
+        "translation": ""
+      }
+    ]
+  }
+]
