@@ -670,48 +670,49 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
           children: [
             // Top HUD
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-              color: Theme.of(context).colorScheme.surfaceContainerHighest.withAlpha(80),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.surface,
+                border: Border(bottom: BorderSide(color: Theme.of(context).colorScheme.outline)),
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
-                    children: [
-                      const Icon(Icons.stars_rounded, color: AppColors.combo, size: 20),
-                      const SizedBox(width: 4),
-                      Text('$_score', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                    ],
-                  ),
+                  Text('Score: $_score', style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 15)),
                   if (_combo > 1)
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                       decoration: BoxDecoration(
-                        color: AppColors.combo,
-                        borderRadius: BorderRadius.circular(12),
+                        color: Theme.of(context).colorScheme.primary.withAlpha(20),
+                        borderRadius: BorderRadius.circular(6),
                       ),
                       child: Text(
                         'Combo x$_combo',
-                        style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 12),
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.primary,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 12,
+                        ),
                       ),
                     ),
                   Row(
                     children: [
                       if (_combo >= 5)
                         IconButton(
-                          icon: const Icon(Icons.ac_unit, color: Colors.cyan),
+                          icon: const Icon(Icons.pause_circle_outline_rounded, size: 20),
                           tooltip: 'Freeze',
                           onPressed: _triggerFreeze,
                         ),
                       if (_combo >= 8 && widget.level < 5)
                         IconButton(
-                          icon: const Icon(Icons.volume_up, color: AppColors.accent),
+                          icon: const Icon(Icons.volume_up_outlined, size: 20),
                           tooltip: 'Echo Hint',
                           onPressed: _triggerEcho,
                         ),
                       if (_combo >= 12)
                         IconButton(
-                          icon: const Icon(Icons.local_fire_department, color: Colors.orange),
-                          tooltip: 'Bomb Lane',
+                          icon: const Icon(Icons.clear_all_rounded, size: 20),
+                          tooltip: 'Clear Lane',
                           onPressed: _triggerBomb,
                         ),
                     ],
@@ -724,12 +725,12 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
             if (_isFrozen)
               Container(
                 width: double.infinity,
-                padding: const EdgeInsets.symmetric(vertical: 4),
-                color: Colors.cyan.withAlpha(160),
+                padding: const EdgeInsets.symmetric(vertical: 6),
+                color: Theme.of(context).colorScheme.primary,
                 child: const Text(
-                  '❄️ FROZEN — 4 SECONDS ❄️',
+                  'FROZEN — 4 SECONDS',
                   textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 12),
+                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 12, letterSpacing: 0.5),
                 ),
               ),
 
@@ -757,31 +758,46 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
                       top: enemy.y * (MediaQuery.of(context).size.height * 0.40),
                       child: AnimatedContainer(
                         duration: const Duration(milliseconds: 50),
-                        padding: const EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: isTarget
-                              ? (enemy.isBoss ? Colors.purple.shade900 : AppColors.accentDark)
-                              : Colors.grey.shade800,
-                          borderRadius: BorderRadius.circular(12),
+                          color: Theme.of(context).colorScheme.surface,
+                          borderRadius: BorderRadius.circular(10),
                           border: Border.all(
-                            color: isTarget ? AppColors.combo : Colors.transparent,
-                            width: 2,
+                            color: isTarget ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.outline,
+                            width: isTarget ? 2 : 1,
                           ),
-                          boxShadow: isTarget
-                              ? [BoxShadow(color: AppColors.combo.withAlpha(100), blurRadius: 8)]
-                              : null,
                         ),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             if (enemy.isBoss)
-                              const Text('👑 BOSS', style: TextStyle(color: AppColors.combo, fontSize: 10, fontWeight: FontWeight.bold)),
+                              Container(
+                                margin: const EdgeInsets.only(bottom: 4),
+                                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
+                                decoration: BoxDecoration(
+                                  color: Theme.of(context).colorScheme.primary.withAlpha(20),
+                                  borderRadius: BorderRadius.circular(4),
+                                ),
+                                child: Text(
+                                  'BOSS',
+                                  style: TextStyle(
+                                    color: Theme.of(context).colorScheme.primary,
+                                    fontSize: 9,
+                                    fontWeight: FontWeight.w700,
+                                    letterSpacing: 0.5,
+                                  ),
+                                ),
+                              ),
                             Text(
                               enemy.clue,
                               textAlign: TextAlign.center,
                               maxLines: 3,
                               overflow: TextOverflow.ellipsis,
-                              style: const TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.w600),
+                              style: TextStyle(
+                                color: Theme.of(context).colorScheme.onSurface,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
                           ],
                         ),
@@ -795,12 +811,12 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
                     left: 0,
                     right: 0,
                     child: Container(
-                      height: 18,
-                      color: AppColors.wrong.withAlpha(160),
+                      height: 16,
+                      color: AppColors.wrong.withAlpha(140),
                       child: const Center(
                         child: Text(
-                          '⚡ DEFEND THE GATE ⚡',
-                          style: TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold),
+                          'DEFEND THE GATE',
+                          style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.w700, letterSpacing: 0.8),
                         ),
                       ),
                     ),

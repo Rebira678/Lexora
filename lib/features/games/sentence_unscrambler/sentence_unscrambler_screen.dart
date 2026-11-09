@@ -283,12 +283,12 @@ class _SentenceUnscramblerScreenState extends ConsumerState<SentenceUnscramblerS
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
                     color: theme.colorScheme.surface,
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(14),
                     border: Border.all(
                       color: _hasChecked
                           ? (_isCorrect ? AppColors.correct : AppColors.wrong)
-                          : AppColors.accent.withAlpha(100),
-                      width: 2,
+                          : theme.colorScheme.outline,
+                      width: _hasChecked ? 1.5 : 1,
                     ),
                   ),
                   child: _assembledWords.isEmpty
@@ -307,9 +307,11 @@ class _SentenceUnscramblerScreenState extends ConsumerState<SentenceUnscramblerS
                             return ActionChip(
                               label: Text(
                                 _assembledWords[index],
-                                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                                style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
                               ),
-                              backgroundColor: AppColors.accent.withAlpha(50),
+                              backgroundColor: theme.colorScheme.primary.withAlpha(20),
+                              side: BorderSide(color: theme.colorScheme.primary.withAlpha(80)),
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                               onPressed: () => _moveWordToBank(index),
                             );
                           }),
@@ -329,9 +331,11 @@ class _SentenceUnscramblerScreenState extends ConsumerState<SentenceUnscramblerS
                       return ActionChip(
                         label: Text(
                           _bankWords[index],
-                          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                          style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
                         ),
-                        backgroundColor: theme.colorScheme.surfaceContainerHighest,
+                        backgroundColor: theme.colorScheme.surface,
+                        side: BorderSide(color: theme.colorScheme.outline),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                         onPressed: () => _moveWordToAssembled(index),
                       );
                     }),

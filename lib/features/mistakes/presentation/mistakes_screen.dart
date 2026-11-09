@@ -46,12 +46,12 @@ class _MistakesScreenState extends ConsumerState<MistakesScreen>
         title: const Text('My Words & Mistakes'),
         bottom: TabBar(
           controller: _tabController,
-          indicatorColor: AppColors.accent,
-          labelColor: AppColors.accent,
+          indicatorColor: theme.colorScheme.primary,
+          labelColor: theme.colorScheme.primary,
           unselectedLabelColor: theme.colorScheme.onSurfaceVariant,
           tabs: const [
-            Tab(icon: Icon(Icons.fitness_center_rounded), text: 'Mistake Gym'),
-            Tab(icon: Icon(Icons.bookmark_rounded), text: 'Saved Words'),
+            Tab(text: 'Mistake Gym'),
+            Tab(text: 'Saved Words'),
           ],
         ),
       ),

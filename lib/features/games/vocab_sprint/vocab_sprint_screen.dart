@@ -476,39 +476,44 @@ class _VocabSprintScreenState extends ConsumerState<VocabSprintScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('Score: $_score', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                  Text('Score: $_score', style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700)),
                   if (_combo > 1)
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                       decoration: BoxDecoration(
-                        color: AppColors.combo,
-                        borderRadius: BorderRadius.circular(12),
+                        color: theme.colorScheme.primary.withAlpha(20),
+                        borderRadius: BorderRadius.circular(6),
                       ),
                       child: Text(
-                        'Combo x$_combo (${_combo >= 5 ? "1.5x XP" : "1.2x XP"})',
-                        style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                        'Combo x$_combo',
+                        style: TextStyle(
+                          color: theme.colorScheme.primary,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 12,
+                        ),
                       ),
                     ),
                 ],
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 14),
 
               // Question Mode Pill
               Align(
                 alignment: Alignment.centerLeft,
                 child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                   decoration: BoxDecoration(
-                    color: AppColors.accent.withAlpha(30),
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(color: AppColors.accent.withAlpha(100)),
+                    color: theme.colorScheme.primary.withAlpha(15),
+                    borderRadius: BorderRadius.circular(6),
+                    border: Border.all(color: theme.colorScheme.primary.withAlpha(60)),
                   ),
                   child: Text(
-                    question.promptType,
-                    style: const TextStyle(
-                      color: AppColors.accent,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 13,
+                    question.promptType.toUpperCase(),
+                    style: TextStyle(
+                      color: theme.colorScheme.primary,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 11,
+                      letterSpacing: 0.5,
                     ),
                   ),
                 ),

@@ -225,13 +225,13 @@ class _AnagramWheelScreenState extends ConsumerState<AnagramWheelScreen>
       );
 
       final msg = isMegaWord
-          ? '🌟 MEGA WORD! ${_currentWord!.lemma}! +$pts pts'
-          : '🎉 Found: ${_currentWord!.lemma}! +$pts pts${_combo >= 3 ? " (x2 COMBO!)" : ""}';
+          ? 'Mega Word Bonus: ${_currentWord!.lemma} (+$pts pts)'
+          : 'Correct: ${_currentWord!.lemma} (+$pts pts)';
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(msg),
-          backgroundColor: isMegaWord ? Colors.deepPurpleAccent : AppColors.correct,
+          backgroundColor: isMegaWord ? Theme.of(context).colorScheme.primary : AppColors.correct,
           duration: const Duration(milliseconds: 1400),
         ),
       );
@@ -374,54 +374,58 @@ class _AnagramWheelScreenState extends ConsumerState<AnagramWheelScreen>
           child: Column(
             children: [
               // Score, Combo, Progress
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('Score: $_score', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                  if (_combo > 1)
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                      decoration: BoxDecoration(
-                        color: AppColors.combo,
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Text(
-                        _combo >= 3 ? '🔥 Combo x$_combo (x2 XP!)' : 'Combo x$_combo',
-                        style: const TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                ],
-              ),
-            ),
-
-            // Definition Clue (appears after 10s or when unlocked)
-            AnimatedOpacity(
-              opacity: _showClue && _currentWord != null ? 1.0 : 0.0,
-              duration: const Duration(milliseconds: 500),
-              child: Container(
-                margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 6),
-                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-                decoration: BoxDecoration(
-                  color: theme.colorScheme.surfaceContainerHighest.withAlpha(140),
-                  borderRadius: BorderRadius.circular(14),
-                  border: Border.all(color: AppColors.combo.withAlpha(120)),
-                ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Icon(Icons.lightbulb_rounded, color: AppColors.combo, size: 22),
-                    const SizedBox(width: 10),
-                    Expanded(
-                      child: Text(
-                        _currentWord?.definitionEn ?? '',
-                        style: theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w500),
+                    Text('Score: $_score', style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700)),
+                    if (_combo > 1)
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                        decoration: BoxDecoration(
+                          color: theme.colorScheme.primary.withAlpha(20),
+                          borderRadius: BorderRadius.circular(6),
+                        ),
+                        child: Text(
+                          'Combo x$_combo',
+                          style: TextStyle(
+                            color: theme.colorScheme.primary,
+                            fontWeight: FontWeight.w700,
+                            fontSize: 12,
+                          ),
+                        ),
                       ),
-                    ),
                   ],
                 ),
               ),
-            ),
+
+              // Definition Clue (appears after 10s or when unlocked)
+              AnimatedOpacity(
+                opacity: _showClue && _currentWord != null ? 1.0 : 0.0,
+                duration: const Duration(milliseconds: 500),
+                child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 6),
+                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                  decoration: BoxDecoration(
+                    color: theme.colorScheme.surface,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: theme.colorScheme.outline),
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(Icons.info_outline_rounded, color: theme.colorScheme.primary, size: 18),
+                      const SizedBox(width: 10),
+                      Expanded(
+                        child: Text(
+                          _currentWord?.definitionEn ?? '',
+                          style: theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w500),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
 
             const SizedBox(height: 16),
 

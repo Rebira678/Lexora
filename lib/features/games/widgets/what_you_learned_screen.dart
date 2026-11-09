@@ -114,34 +114,20 @@ class _WhatYouLearnedScreenState extends ConsumerState<WhatYouLearnedScreen> {
             // Score Banner
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-              padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 20),
+              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
               decoration: BoxDecoration(
-                gradient: const LinearGradient(
-                  colors: [
-                    Color(0xFF00BFA5),
-                    Color(0xFF00897B),
-                  ],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                    color: AppColors.accent.withAlpha(60),
-                    blurRadius: 12,
-                    offset: const Offset(0, 4),
-                  ),
-                ],
+                color: theme.colorScheme.surface,
+                borderRadius: BorderRadius.circular(14),
+                border: Border.all(color: theme.colorScheme.outline),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  _StatColumn(label: 'Score', value: '${widget.score}', icon: Icons.stars_rounded),
-                  _StatColumn(label: 'XP', value: '+${widget.xpEarned}', icon: Icons.bolt_rounded),
+                  _StatColumn(label: 'Score', value: '${widget.score}'),
+                  _StatColumn(label: 'XP', value: '+${widget.xpEarned}'),
                   _StatColumn(
                     label: 'Accuracy',
                     value: '${(widget.accuracy * 100).round()}%',
-                    icon: Icons.check_circle_rounded,
                   ),
                 ],
               ),
@@ -156,22 +142,22 @@ class _WhatYouLearnedScreenState extends ConsumerState<WhatYouLearnedScreen> {
                     child: Container(
                       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
                       decoration: BoxDecoration(
-                        color: AppColors.correct.withAlpha(25),
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: AppColors.correct.withAlpha(80)),
+                        color: theme.colorScheme.surface,
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: theme.colorScheme.outline),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Icon(Icons.check_circle_outline_rounded,
-                              size: 18, color: AppColors.correct),
+                          Icon(Icons.check_rounded,
+                              size: 16, color: theme.colorScheme.primary),
                           const SizedBox(width: 6),
                           Text(
-                            'Defeated: $defeatedCount',
-                            style: const TextStyle(
-                              color: AppColors.correct,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 13,
+                            'Mastered: $defeatedCount',
+                            style: TextStyle(
+                              color: theme.colorScheme.onSurface,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 12,
                             ),
                           ),
                         ],
@@ -183,22 +169,22 @@ class _WhatYouLearnedScreenState extends ConsumerState<WhatYouLearnedScreen> {
                     child: Container(
                       padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
                       decoration: BoxDecoration(
-                        color: AppColors.wrong.withAlpha(25),
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: AppColors.wrong.withAlpha(80)),
+                        color: theme.colorScheme.surface,
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: theme.colorScheme.outline),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Icon(Icons.shield_outlined,
-                              size: 18, color: AppColors.wrong),
+                          Icon(Icons.refresh_rounded,
+                              size: 16, color: theme.colorScheme.onSurfaceVariant),
                           const SizedBox(width: 6),
                           Text(
-                            'Mistakes: $mistakeCount',
-                            style: const TextStyle(
-                              color: AppColors.wrong,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 13,
+                            'To Review: $mistakeCount',
+                            style: TextStyle(
+                              color: theme.colorScheme.onSurfaceVariant,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 12,
                             ),
                           ),
                         ],
@@ -383,33 +369,32 @@ class _WhatYouLearnedScreenState extends ConsumerState<WhatYouLearnedScreen> {
 class _StatColumn extends StatelessWidget {
   final String label;
   final String value;
-  final IconData icon;
 
   const _StatColumn({
     required this.label,
     required this.value,
-    required this.icon,
   });
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Icon(icon, color: Colors.white, size: 28),
-        const SizedBox(height: 4),
         Text(
           value,
           style: const TextStyle(
-            color: Colors.white,
             fontSize: 22,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w700,
+            letterSpacing: -0.4,
           ),
         ),
+        const SizedBox(height: 2),
         Text(
-          label,
+          label.toUpperCase(),
           style: TextStyle(
-            color: Colors.white.withAlpha(200),
-            fontSize: 12,
+            color: Theme.of(context).colorScheme.onSurfaceVariant,
+            fontSize: 10,
+            fontWeight: FontWeight.w600,
+            letterSpacing: 0.5,
           ),
         ),
       ],

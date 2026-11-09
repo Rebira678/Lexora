@@ -31,23 +31,23 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: AppColors.accent.withAlpha(25),
-                borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: AppColors.accent.withAlpha(80)),
+                color: theme.colorScheme.surface,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: theme.colorScheme.outline),
               ),
-              child: const Row(
+              child: Row(
                 children: [
-                  Icon(Icons.shield_rounded, color: AppColors.accent, size: 28),
-                  SizedBox(width: 12),
+                  Icon(Icons.lock_outline_rounded, color: theme.colorScheme.primary, size: 22),
+                  const SizedBox(width: 12),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('100% Offline & Private', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
-                        SizedBox(height: 2),
+                        const Text('100% Offline & Private', style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14)),
+                        const SizedBox(height: 2),
                         Text(
-                          'No cloud, no logins, no analytics tracking. All progress and audio live locally on your device.',
-                          style: TextStyle(fontSize: 12),
+                          'Zero cloud tracking, zero network permissions. All progress and audio live locally on your device.',
+                          style: TextStyle(fontSize: 12, color: theme.colorScheme.onSurfaceVariant),
                         ),
                       ],
                     ),

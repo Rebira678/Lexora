@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:drift/drift.dart' as drift;
-import '../../../app/theme.dart';
 import '../../../app/providers.dart';
 import '../../../core/db/database.dart';
 
@@ -33,23 +32,17 @@ class StatsScreen extends ConsumerWidget {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               // Hero Level & Rank Card
               Container(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(18),
                 decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                    colors: [Color(0xFF26A69A), Color(0xFF00796B)],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ),
-                  borderRadius: BorderRadius.circular(24),
-                  boxShadow: [
-                    BoxShadow(color: AppColors.accent.withAlpha(60), blurRadius: 12, offset: const Offset(0, 4)),
-                  ],
+                  color: theme.colorScheme.surface,
+                  borderRadius: BorderRadius.circular(14),
+                  border: Border.all(color: theme.colorScheme.outline),
                 ),
                 child: Column(
                   children: [
@@ -61,42 +54,45 @@ class StatsScreen extends ConsumerWidget {
                           children: [
                             Text(
                               'Rank Tier',
-                              style: TextStyle(color: Colors.white.withAlpha(200), fontSize: 13),
+                              style: theme.textTheme.labelSmall,
                             ),
+                            const SizedBox(height: 2),
                             Text(
                               rank,
                               style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 24,
-                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                                fontWeight: FontWeight.w700,
+                                letterSpacing: -0.3,
                               ),
                             ),
                           ],
                         ),
                         Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                           decoration: BoxDecoration(
-                            color: Colors.white.withAlpha(40),
-                            borderRadius: BorderRadius.circular(16),
+                            color: theme.colorScheme.primary.withAlpha(20),
+                            borderRadius: BorderRadius.circular(6),
                           ),
                           child: Text(
                             'Level $level',
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
+                            style: TextStyle(
+                              color: theme.colorScheme.primary,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 13,
                             ),
                           ),
                         ),
                       ],
                     ),
+                    const SizedBox(height: 18),
+                    Divider(color: theme.colorScheme.outline, height: 1),
                     const SizedBox(height: 16),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        _HeroStat(label: 'Total XP', value: '$totalXp', icon: Icons.bolt_rounded),
-                        _HeroStat(label: 'Mastered', value: '$masteredWords', icon: Icons.star_rounded),
-                        _HeroStat(label: 'Days Active', value: '$totalDays', icon: Icons.calendar_today_rounded),
+                        _HeroStat(label: 'Total XP', value: '$totalXp'),
+                        _HeroStat(label: 'Mastered', value: '$masteredWords'),
+                        _HeroStat(label: 'Active Days', value: '$totalDays'),
                       ],
                     ),
                   ],
@@ -105,34 +101,37 @@ class StatsScreen extends ConsumerWidget {
               const SizedBox(height: 20),
 
               // Streak & Habits Summary
-              Text('Streak & Consistency', style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
-              const SizedBox(height: 12),
+              Text(
+                'Consistency Metrics',
+                style: theme.textTheme.titleMedium?.copyWith(
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: -0.2,
+                ),
+              ),
+              const SizedBox(height: 10),
               Row(
                 children: [
                   Expanded(
                     child: _MetricCard(
-                      icon: '🔥',
-                      title: 'Current Streak',
+                      title: 'CURRENT',
                       value: '$streak Days',
-                      subtitle: 'Keep it going!',
+                      subtitle: 'Active run',
                     ),
                   ),
-                  const SizedBox(width: 12),
+                  const SizedBox(width: 10),
                   Expanded(
                     child: _MetricCard(
-                      icon: '🏆',
-                      title: 'Best Streak',
+                      title: 'BEST RECORD',
                       value: '$bestStreak Days',
-                      subtitle: 'All-time personal record',
+                      subtitle: 'All-time best',
                     ),
                   ),
-                  const SizedBox(width: 12),
+                  const SizedBox(width: 10),
                   Expanded(
                     child: _MetricCard(
-                      icon: '❄️',
-                      title: 'Streak Freezes',
+                      title: 'FREEZES',
                       value: '$freezes / 3',
-                      subtitle: 'Emergency shields',
+                      subtitle: 'Tokens ready',
                     ),
                   ),
                 ],
@@ -140,8 +139,14 @@ class StatsScreen extends ConsumerWidget {
               const SizedBox(height: 24),
 
               // Recent Game Sessions History
-              Text('Recent Game Sessions', style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
-              const SizedBox(height: 12),
+              Text(
+                'Recent Sessions',
+                style: theme.textTheme.titleMedium?.copyWith(
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: -0.2,
+                ),
+              ),
+              const SizedBox(height: 10),
 
               FutureBuilder<List<GameSession>>(
                 future: (db.select(db.gameSessions)
@@ -155,14 +160,17 @@ class StatsScreen extends ConsumerWidget {
 
                   final sessions = snapshot.data ?? [];
                   if (sessions.isEmpty) {
-                    return Card(
-                      child: Padding(
-                        padding: const EdgeInsets.all(24),
-                        child: Center(
-                          child: Text(
-                            'No sessions completed yet. Play your first round!',
-                            style: TextStyle(color: theme.colorScheme.onSurfaceVariant),
-                          ),
+                    return Container(
+                      padding: const EdgeInsets.all(24),
+                      decoration: BoxDecoration(
+                        color: theme.colorScheme.surface,
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: theme.colorScheme.outline),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'No practice sessions recorded yet.',
+                          style: TextStyle(color: theme.colorScheme.onSurfaceVariant),
                         ),
                       ),
                     );
@@ -178,33 +186,54 @@ class StatsScreen extends ConsumerWidget {
                       final date = DateTime.fromMillisecondsSinceEpoch(s.startedAt);
                       final timeStr = '${date.hour.toString().padLeft(2, '0')}:${date.minute.toString().padLeft(2, '0')}';
 
-                      return Card(
-                        margin: EdgeInsets.zero,
-                        child: ListTile(
-                          dense: true,
-                          leading: CircleAvatar(
-                            backgroundColor: AppColors.accent.withAlpha(30),
-                            child: const Icon(Icons.videogame_asset_rounded, color: AppColors.accent, size: 20),
-                          ),
-                          title: Text(
-                            s.game.replaceAll('_', ' ').toUpperCase(),
-                            style: const TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          subtitle: Text(
-                            '${(s.durationMs / 1000).round()}s • Accuracy: ${(s.accuracy * 100).round()}%',
-                            style: const TextStyle(fontSize: 12),
-                          ),
-                          trailing: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Text(
-                                '+${s.score} pts',
-                                style: const TextStyle(fontWeight: FontWeight.bold, color: AppColors.correct),
-                              ),
-                              Text(timeStr, style: TextStyle(fontSize: 11, color: theme.colorScheme.onSurfaceVariant)),
-                            ],
-                          ),
+                      return Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+                        decoration: BoxDecoration(
+                          color: theme.colorScheme.surface,
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: theme.colorScheme.outline),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  s.game.replaceAll('_', ' ').toUpperCase(),
+                                  style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 13),
+                                ),
+                                const SizedBox(height: 2),
+                                Text(
+                                  '${(s.durationMs / 1000).round()}s • Accuracy ${(s.accuracy * 100).round()}%',
+                                  style: TextStyle(
+                                    fontSize: 11,
+                                    color: theme.colorScheme.onSurfaceVariant,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Text(
+                                  '+${s.score} pts',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 13,
+                                    color: theme.colorScheme.primary,
+                                  ),
+                                ),
+                                Text(
+                                  timeStr,
+                                  style: TextStyle(
+                                    fontSize: 11,
+                                    color: theme.colorScheme.onSurfaceVariant,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       );
                     },
@@ -222,31 +251,38 @@ class StatsScreen extends ConsumerWidget {
 class _HeroStat extends StatelessWidget {
   final String label;
   final String value;
-  final IconData icon;
 
-  const _HeroStat({required this.label, required this.value, required this.icon});
+  const _HeroStat({required this.label, required this.value});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Icon(icon, color: Colors.white, size: 24),
-        const SizedBox(height: 4),
-        Text(value, style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
-        Text(label, style: TextStyle(color: Colors.white.withAlpha(180), fontSize: 11)),
+        Text(
+          value,
+          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700, letterSpacing: -0.3),
+        ),
+        const SizedBox(height: 2),
+        Text(
+          label.toUpperCase(),
+          style: TextStyle(
+            color: Theme.of(context).colorScheme.onSurfaceVariant,
+            fontSize: 10,
+            fontWeight: FontWeight.w600,
+            letterSpacing: 0.5,
+          ),
+        ),
       ],
     );
   }
 }
 
 class _MetricCard extends StatelessWidget {
-  final String icon;
   final String title;
   final String value;
   final String subtitle;
 
   const _MetricCard({
-    required this.icon,
     required this.title,
     required this.value,
     required this.subtitle,
@@ -254,21 +290,41 @@ class _MetricCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: EdgeInsets.zero,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      child: Padding(
-        padding: const EdgeInsets.all(12),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(icon, style: const TextStyle(fontSize: 22)),
-            const SizedBox(height: 6),
-            Text(title, style: TextStyle(fontSize: 11, color: Theme.of(context).colorScheme.onSurfaceVariant)),
-            const SizedBox(height: 2),
-            Text(value, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
-          ],
-        ),
+    final theme = Theme.of(context);
+
+    return Container(
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: theme.colorScheme.surface,
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: theme.colorScheme.outline),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            style: TextStyle(
+              fontSize: 10,
+              fontWeight: FontWeight.w700,
+              letterSpacing: 0.5,
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
+          ),
+          const SizedBox(height: 6),
+          Text(
+            value,
+            style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
+          ),
+          const SizedBox(height: 2),
+          Text(
+            subtitle,
+            style: TextStyle(
+              fontSize: 10,
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
+          ),
+        ],
       ),
     );
   }
