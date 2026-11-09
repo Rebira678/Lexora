@@ -9,6 +9,8 @@ import '../core/streak/streak_logic.dart';
 import '../core/xp/xp_service.dart';
 import '../core/audio/audio_service.dart';
 import '../core/audio/tts_service.dart';
+import '../core/notifications/notification_service.dart';
+import '../core/planner/daily_planner.dart';
 
 // Database Singleton Provider
 final databaseProvider = Provider<AppDatabase>((ref) {
@@ -56,7 +58,24 @@ final ttsServiceProvider = Provider<TtsService>((ref) {
   return TtsService();
 });
 
-// Current Streak State Stream/Future Provider
+final notificationServiceProvider = Provider<NotificationService>((ref) {
+  return NotificationService();
+});
+
+// Daily Planner Provider
+final dailyPlanBuilderProvider = Provider<DailyPlanBuilder>((ref) {
+  return DailyPlanBuilder(
+    srsDao: ref.watch(srsDaoProvider),
+    statsDao: ref.watch(statsDaoProvider),
+  );
+});
+
+final todayPlanProvider = FutureProvider<DailyPlan>((ref) async {
+  final builder = ref.watch(dailyPlanBuilderProvider);
+  return builder.buildPlanForToday();
+});
+
+// Current Streak State Stream Provider
 final streakStreamProvider = StreamProvider<Streak?>((ref) {
   final db = ref.watch(databaseProvider);
   return (db.select(db.streaks)..where((s) => s.id.equals(1))).watchSingleOrNull();
@@ -72,4 +91,13 @@ final dueCardCountProvider = FutureProvider<int>((ref) async {
 final masteredCountProvider = FutureProvider<int>((ref) async {
   final srsDao = ref.watch(srsDaoProvider);
   return srsDao.getMasteredCount();
+});
+
+// Total XP and Daily Stats Provider
+final todayStatsProvider = FutureProvider<DailyStat?>((ref) async {
+  final statsDao = ref.watch(statsDaoProvider);
+  final today = DateTime.now();
+  final todayKey =
+      '${today.year.toString().padLeft(4, '0')}-${today.month.toString().padLeft(2, '0')}-${today.day.toString().padLeft(2, '0')}';
+  return statsDao.getStatForDay(todayKey);
 });
