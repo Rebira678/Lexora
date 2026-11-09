@@ -86,6 +86,7 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
 
   final List<WordSiegeEnemy> _activeEnemies = [];
   final List<LearnedItem> _learnedItems = [];
+  final List<Word> _requeuedBreachesForWave3 = [];
   final TextEditingController _inputController = TextEditingController();
   final FocusNode _focusNode = FocusNode();
 
@@ -167,10 +168,15 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
     final wordDao = ref.read(wordDaoProvider);
 
     for (int i = 0; i < count; i++) {
-      if (_wordPool.isEmpty) {
-        _wordPool = List.of(_allWords)..shuffle();
+      Word word;
+      if (_wave == 3 && _requeuedBreachesForWave3.isNotEmpty && i < _requeuedBreachesForWave3.length) {
+        word = _requeuedBreachesForWave3[i];
+      } else {
+        if (_wordPool.isEmpty) {
+          _wordPool = List.of(_allWords)..shuffle();
+        }
+        word = _wordPool.removeLast();
       }
-      final word = _wordPool.removeLast();
       final isBoss = (_wave == 3 && i == count - 1);
 
       String clue = word.definitionEn ?? 'Identify the word';
@@ -181,9 +187,15 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
         final examples = await wordDao.getExamplesForWord(word.id);
         if (examples.isNotEmpty) {
           final ex = examples.first.sentence;
-          final masked = ex.replaceAll(
+          final wordsInEx = ex.split(' ').where((w) => w.length > 3 && !w.toLowerCase().contains(word.lemma.toLowerCase())).toList();
+          final secondWord = wordsInEx.isNotEmpty ? wordsInEx.first.replaceAll(RegExp(r'[^\w]'), '') : '';
+          var masked = ex.replaceAll(
               RegExp('\\b${RegExp.escape(word.lemma)}\\b', caseSensitive: false), '_____');
-          clue = '👑 BOSS GAP: $masked';
+          if (secondWord.isNotEmpty) {
+            masked = masked.replaceAll(
+                RegExp('\\b${RegExp.escape(secondWord)}\\b', caseSensitive: false), '_____');
+          }
+          clue = '👑 BOSS (2 Gaps): $masked';
           example = ex;
         } else {
           clue = '👑 BOSS: ${word.definitionEn ?? word.lemma}';
@@ -278,6 +290,23 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
           correct: false,
           responseMs: 8000,
           quality: 1,
+        );
+
+    // Re-queue in wave 3 of the same round (app.md 24.1)
+    if (_wave < 3) {
+      final matches = _allWords.where((w) => w.id == enemy.wordId).toList();
+      if (matches.isNotEmpty) {
+        _requeuedBreachesForWave3.add(matches.first);
+      }
+    }
+
+    // Save directly to Mistake Notebook (WildItems) per app.md 24.1
+    ref.read(databaseProvider).into(ref.read(databaseProvider).wildItems).insert(
+          WildItemsCompanion.insert(
+            sentence: enemy.example.isNotEmpty ? enemy.example : enemy.answer,
+            source: drift.Value('Siege breach: ${enemy.answer} — ${enemy.definition}'),
+            savedAt: DateTime.now().millisecondsSinceEpoch,
+          ),
         );
 
     // Anti-frustration rule (app.md 24.1):
