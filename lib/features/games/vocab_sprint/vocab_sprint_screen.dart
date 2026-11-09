@@ -15,6 +15,7 @@ enum SprintQuestionMode {
   wordToMeaning,
   sentenceGap,
   synonym,
+  antonym,
 }
 
 class SprintQuestion {
@@ -108,6 +109,7 @@ class _VocabSprintScreenState extends ConsumerState<VocabSprintScreen> {
       SprintQuestionMode.wordToMeaning,
       SprintQuestionMode.sentenceGap,
       SprintQuestionMode.synonym,
+      SprintQuestionMode.antonym,
     ];
 
     for (int i = 0; i < selected.length; i++) {
@@ -167,6 +169,25 @@ class _VocabSprintScreenState extends ConsumerState<VocabSprintScreen> {
           }
           // Fall through to meaningToWord if no example sentence
           continue meaningFallback;
+
+        case SprintQuestionMode.antonym:
+          final distractorsAnt = (List.of(allWords)..remove(target)..shuffle())
+              .take(3)
+              .map((w) => w.lemma)
+              .toList();
+          final optionsAnt = (distractorsAnt..add(target.lemma))..shuffle();
+
+          questions.add(
+            SprintQuestion(
+              targetWord: target,
+              mode: mode,
+              promptType: '🔄 Antonym / Context',
+              questionText: 'Which word contrasts with:\n"${target.definitionEn ?? target.lemma}"?',
+              options: optionsAnt,
+              correctOption: target.lemma,
+            ),
+          );
+          break;
 
         meaningFallback:
         case SprintQuestionMode.synonym:
