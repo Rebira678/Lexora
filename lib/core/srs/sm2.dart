@@ -76,7 +76,7 @@ void review(SrsCard c, int quality, {DateTime? now}) {
     } else if (c.reps == 1) {
       c.interval = 6;
     } else {
-      c.interval = (c.interval * c.ease).round();
+      c.interval = (c.interval * c.ease).round().clamp(1, 365);
     }
     c.reps++;
   }
