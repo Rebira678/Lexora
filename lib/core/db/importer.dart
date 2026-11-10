@@ -16,13 +16,14 @@ class ContentImporter {
 
   /// Checks if content needs import and executes it if so.
   ///
-  /// Returns the number of items imported or 0 if already up to date.
-  Future<bool> importIfNeeded({int targetVersion = 1}) async {
-    // Check if words table already has data
-    final existingCount = await (db.selectOnly(db.words)..addColumns([db.words.id.count()])).map((r) => r.read(db.words.id.count())).getSingle();
+  /// Returns true if content was imported, false if already up to date.
+  Future<bool> importIfNeeded({int targetVersion = 2}) async {
+    // Check if words and passages tables already have complete datasets
+    final wordCount = await (db.selectOnly(db.words)..addColumns([db.words.id.count()])).map((r) => r.read(db.words.id.count())).getSingle();
+    final passageCount = await (db.selectOnly(db.passages)..addColumns([db.passages.id.count()])).map((r) => r.read(db.passages.id.count())).getSingle();
 
-    if ((existingCount ?? 0) > 0) {
-      return false; // Already imported
+    if ((wordCount ?? 0) >= 200 && (passageCount ?? 0) >= 8) {
+      return false; // Already imported and up to date
     }
 
     await importAll();
@@ -189,9 +190,11 @@ class ContentImporter {
               cefr: Value(item['cefr'] as String?),
               wordCount: item['word_count'] as int,
             ),
+            mode: InsertMode.insertOrReplace,
           );
 
       if (item['questions'] != null) {
+        await (db.delete(db.questions)..where((tbl) => tbl.passageId.equals(passageId))).go();
         for (final q in item['questions']) {
           await db.into(db.questions).insert(
                 QuestionsCompanion.insert(
@@ -202,6 +205,7 @@ class ContentImporter {
                   answer: q['answer'] as String,
                   explanation: Value(q['explanation'] as String?),
                 ),
+                mode: InsertMode.insertOrReplace,
               );
         }
       }

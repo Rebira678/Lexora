@@ -57,7 +57,7 @@ class WordSiegeScreen extends ConsumerStatefulWidget {
   const WordSiegeScreen({
     super.key,
     this.level = 3,
-    this.tapMode = false,
+    this.tapMode = true,
     this.mode = SiegeGameMode.meaningToWord,
   });
 
@@ -85,6 +85,7 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
   Timer? _freezeTimer;
   Timer? _gameLoopTimer;
   DateTime? _targetSpawnTime;
+  WordSiegeEnemy? _selectedEnemy;
 
   final List<WordSiegeEnemy> _activeEnemies = [];
   final List<LearnedItem> _learnedItems = [];
@@ -133,7 +134,7 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
       if (_isFrozen || _isPaused) return;
 
       final acc = _totalCount == 0 ? 0.8 : _correctCount / _totalCount;
-      final speed = enemySpeed(acc, widget.level) * 0.005; // per 50ms tick
+      final speed = enemySpeed(acc, widget.level) * 0.05; // 50ms tick = 0.05s * screen heights per sec
 
       setState(() {
         for (final enemy in _activeEnemies) {
@@ -267,6 +268,7 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
   }
 
   void _handleGateBreach(WordSiegeEnemy enemy) {
+    if (_selectedEnemy == enemy) _selectedEnemy = null;
     enemy.isDefeated = true;
     _hp--;
     _combo = 0;
@@ -392,6 +394,9 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
   }
 
   WordSiegeEnemy? _getTargetEnemy() {
+    if (_selectedEnemy != null && !_selectedEnemy!.isDefeated && _selectedEnemy!.y >= 0.0) {
+      return _selectedEnemy;
+    }
     WordSiegeEnemy? front;
     for (final e in _activeEnemies) {
       if (!e.isDefeated && e.y >= 0.0) {
@@ -421,6 +426,7 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
     _totalCount++;
 
     if (isCorrect) {
+      if (_selectedEnemy == target) _selectedEnemy = null;
       target.isDefeated = true;
       _correctCount++;
       _combo++;
@@ -736,92 +742,111 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
 
             // 3-Lane Battlefield
             Expanded(
-              child: Stack(
-                children: [
-                  Row(
+              child: LayoutBuilder(
+                builder: (context, constraints) {
+                  final laneWidth = constraints.maxWidth / 3;
+                  final availableHeight = (constraints.maxHeight - 85).clamp(100.0, 1200.0);
+
+                  return Stack(
                     children: [
-                      Expanded(child: Container(decoration: BoxDecoration(border: Border(right: BorderSide(color: Colors.white.withAlpha(20)))))),
-                      Expanded(child: Container(decoration: BoxDecoration(border: Border(right: BorderSide(color: Colors.white.withAlpha(20)))))),
-                      const Expanded(child: SizedBox()),
-                    ],
-                  ),
+                      Row(
+                        children: [
+                          Expanded(child: Container(decoration: BoxDecoration(border: Border(right: BorderSide(color: Colors.white.withAlpha(20)))))),
+                          Expanded(child: Container(decoration: BoxDecoration(border: Border(right: BorderSide(color: Colors.white.withAlpha(20)))))),
+                          const Expanded(child: SizedBox()),
+                        ],
+                      ),
 
-                  // Enemies
-                  ..._activeEnemies.where((e) => !e.isDefeated && e.y >= 0.0).map((enemy) {
-                    final isTarget = enemy == target;
-                    final laneWidth = MediaQuery.of(context).size.width / 3;
-                    final leftPos = enemy.lane * laneWidth;
+                      // Enemies
+                      ..._activeEnemies.where((e) => !e.isDefeated && e.y >= 0.0).map((enemy) {
+                        final isTarget = enemy == target;
+                        final leftPos = enemy.lane * laneWidth;
+                        final topPos = (enemy.y * availableHeight).clamp(0.0, availableHeight);
 
-                    return Positioned(
-                      left: leftPos + 4,
-                      width: laneWidth - 8,
-                      top: enemy.y * (MediaQuery.of(context).size.height * 0.40),
-                      child: AnimatedContainer(
-                        duration: const Duration(milliseconds: 50),
-                        padding: const EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: Theme.of(context).colorScheme.surface,
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(
-                            color: isTarget ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.outline,
-                            width: isTarget ? 2 : 1,
-                          ),
-                        ),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            if (enemy.isBoss)
-                              Container(
-                                margin: const EdgeInsets.only(bottom: 4),
-                                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
-                                decoration: BoxDecoration(
-                                  color: Theme.of(context).colorScheme.primary.withAlpha(20),
-                                  borderRadius: BorderRadius.circular(4),
+                        return Positioned(
+                          left: leftPos + 4,
+                          width: laneWidth - 8,
+                          top: topPos,
+                          child: GestureDetector(
+                            onTap: () => setState(() => _selectedEnemy = enemy),
+                            child: AnimatedContainer(
+                              duration: const Duration(milliseconds: 50),
+                              padding: const EdgeInsets.all(8),
+                              decoration: BoxDecoration(
+                                color: Theme.of(context).colorScheme.surface,
+                                borderRadius: BorderRadius.circular(10),
+                                border: Border.all(
+                                  color: isTarget ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.outline,
+                                  width: isTarget ? 2.5 : 1,
                                 ),
-                                child: Text(
-                                  'BOSS',
-                                  style: TextStyle(
-                                    color: Theme.of(context).colorScheme.primary,
-                                    fontSize: 9,
-                                    fontWeight: FontWeight.w700,
-                                    letterSpacing: 0.5,
-                                  ),
-                                ),
+                                boxShadow: isTarget
+                                    ? [
+                                        BoxShadow(
+                                          color: Theme.of(context).colorScheme.primary.withAlpha(70),
+                                          blurRadius: 8,
+                                          spreadRadius: 1,
+                                        ),
+                                      ]
+                                    : null,
                               ),
-                            Text(
-                              enemy.clue,
-                              textAlign: TextAlign.center,
-                              maxLines: 3,
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                color: Theme.of(context).colorScheme.onSurface,
-                                fontSize: 12,
-                                fontWeight: FontWeight.w500,
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  if (enemy.isBoss)
+                                    Container(
+                                      margin: const EdgeInsets.only(bottom: 4),
+                                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
+                                      decoration: BoxDecoration(
+                                        color: Theme.of(context).colorScheme.primary.withAlpha(20),
+                                        borderRadius: BorderRadius.circular(4),
+                                      ),
+                                      child: Text(
+                                        'BOSS',
+                                        style: TextStyle(
+                                          color: Theme.of(context).colorScheme.primary,
+                                          fontSize: 9,
+                                          fontWeight: FontWeight.w700,
+                                          letterSpacing: 0.5,
+                                        ),
+                                      ),
+                                    ),
+                                  Text(
+                                    enemy.clue,
+                                    textAlign: TextAlign.center,
+                                    maxLines: 3,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      color: Theme.of(context).colorScheme.onSurface,
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
-                          ],
-                        ),
-                      ),
-                    );
-                  }),
+                          ),
+                        );
+                      }),
 
-                  // Gate
-                  Positioned(
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    child: Container(
-                      height: 16,
-                      color: AppColors.wrong.withAlpha(140),
-                      child: const Center(
-                        child: Text(
-                          'DEFEND THE GATE',
-                          style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.w700, letterSpacing: 0.8),
+                      // Gate
+                      Positioned(
+                        bottom: 0,
+                        left: 0,
+                        right: 0,
+                        child: Container(
+                          height: 18,
+                          color: AppColors.wrong.withAlpha(150),
+                          child: const Center(
+                            child: Text(
+                              'DEFEND THE GATE',
+                              style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.w700, letterSpacing: 0.8),
+                            ),
+                          ),
                         ),
                       ),
-                    ),
-                  ),
-                ],
+                    ],
+                  );
+                },
               ),
             ),
 
@@ -843,6 +868,8 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
                       target.clue,
                       textAlign: TextAlign.center,
                       style: Theme.of(context).textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.bold),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
                     ),
                     const SizedBox(height: 10),
                   ],
@@ -862,25 +889,26 @@ class _WordSiegeScreenState extends ConsumerState<WordSiegeScreen>
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
                           ),
                           onPressed: () => _submitAnswer(opt),
-                          child: Text(opt, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                          child: Text(opt, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
                         );
                       }).toList(),
                     ),
                   ] else ...[
-                    // Typing Mode: Text field
+                    // Typing Mode: Text field with length hint
                     Row(
                       children: [
                         Expanded(
                           child: TextField(
                             controller: _inputController,
                             focusNode: _focusNode,
-                            autofocus: true,
                             autocorrect: false,
                             textInputAction: TextInputAction.send,
                             decoration: InputDecoration(
-                              hintText: 'Type front enemy word...',
+                              hintText: target != null
+                                  ? 'Type: ${target.answer[0].toUpperCase()}... (${target.answer.length} letters)'
+                                  : 'Type front enemy word...',
                               suffixIcon: IconButton(
-                                icon: const Icon(Icons.send_rounded, color: AppColors.accent),
+                                icon: Icon(Icons.send_rounded, color: Theme.of(context).colorScheme.primary),
                                 onPressed: () => _submitAnswer(_inputController.text),
                               ),
                             ),

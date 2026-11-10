@@ -49,7 +49,7 @@ void main() {
 
     // Verify passages table
     final passages = await db.select(db.passages).get();
-    expect(passages.length, 5);
+    expect(passages.length, 8);
 
     // Verify second run does not duplicate (returns false)
     final secondRun = await importer.importIfNeeded();

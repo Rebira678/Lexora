@@ -166,7 +166,7 @@ class _SentenceUnscramblerScreenState extends ConsumerState<SentenceUnscramblerS
   }
 
   void _nextSentence() {
-    if (_currentIndex + 1 < _sentences.length && _currentIndex + 1 < 5) {
+    if (_currentIndex + 1 < _sentences.length && _currentIndex + 1 < 10) {
       setState(() {
         _currentIndex++;
         _setupCurrentSentence();
@@ -236,10 +236,11 @@ class _SentenceUnscramblerScreenState extends ConsumerState<SentenceUnscramblerS
 
     final theme = Theme.of(context);
     final current = _sentences[_currentIndex];
+    final maxSentences = _sentences.length < 10 ? _sentences.length : 10;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sentence Unscrambler (${_currentIndex + 1}/5)'),
+        title: Text('Sentence Unscrambler (${_currentIndex + 1}/$maxSentences)'),
         actions: [
           IconButton(
             icon: const Icon(Icons.volume_up_rounded, color: AppColors.accent),

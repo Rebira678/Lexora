@@ -17,7 +17,7 @@ class ReadingScreen extends ConsumerStatefulWidget {
 
 class _ReadingScreenState extends ConsumerState<ReadingScreen> {
   List<Passage> _passages = [];
-  final int _currentIndex = 0;
+  int _currentIndex = 0;
   List<Question> _questions = [];
   bool _isLoading = true;
 
@@ -50,6 +50,20 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
         _isLoading = false;
       });
     }
+  }
+
+  Future<void> _switchPassage(int index) async {
+    if (index < 0 || index >= _passages.length) return;
+    final gameDao = ref.read(gameDaoProvider);
+    final passage = _passages[index];
+    final qs = await gameDao.getQuestionsForPassage(passage.id);
+    setState(() {
+      _currentIndex = index;
+      _questions = qs;
+      _selectedQuestionIndex = 0;
+      _selectedOption = null;
+      _hasAnswered = false;
+    });
   }
 
   void _showWordLookup(String word) async {
@@ -150,9 +164,64 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
         _selectedOption = null;
         _hasAnswered = false;
       });
+    } else if (_currentIndex + 1 < _passages.length) {
+      _showPassageCompleteDialog();
     } else {
       _endReadingSession();
     }
+  }
+
+  void _showPassageCompleteDialog() {
+    final theme = Theme.of(context);
+    showModalBottomSheet(
+      context: context,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder: (ctx) => Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(Icons.check_circle_rounded, color: theme.colorScheme.primary, size: 48),
+            const SizedBox(height: 12),
+            Text(
+              'Passage ${_currentIndex + 1} Cleared!',
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              'Quiz completed for this text.',
+              style: TextStyle(color: theme.colorScheme.onSurfaceVariant),
+            ),
+            const SizedBox(height: 20),
+            Row(
+              children: [
+                Expanded(
+                  child: OutlinedButton(
+                    onPressed: () {
+                      Navigator.pop(ctx);
+                      _endReadingSession();
+                    },
+                    child: const Text('View Summary'),
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pop(ctx);
+                      _switchPassage(_currentIndex + 1);
+                    },
+                    child: const Text('Next Passage'),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   Future<void> _endReadingSession() async {
@@ -227,10 +296,32 @@ class _ReadingScreenState extends ConsumerState<ReadingScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(passage.title),
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(passage.title, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            Text(
+              'Passage ${_currentIndex + 1}/${_passages.length} • CEFR ${passage.cefr ?? "B1"}',
+              style: TextStyle(fontSize: 11, color: theme.colorScheme.onSurfaceVariant),
+            ),
+          ],
+        ),
         actions: [
+          if (_currentIndex > 0)
+            IconButton(
+              icon: const Icon(Icons.chevron_left_rounded),
+              tooltip: 'Previous Passage',
+              onPressed: () => _switchPassage(_currentIndex - 1),
+            ),
+          if (_currentIndex < _passages.length - 1)
+            IconButton(
+              icon: const Icon(Icons.chevron_right_rounded),
+              tooltip: 'Next Passage',
+              onPressed: () => _switchPassage(_currentIndex + 1),
+            ),
           IconButton(
-            icon: const Icon(Icons.volume_up_rounded, color: AppColors.accent),
+            icon: const Icon(Icons.volume_up_rounded),
+            tooltip: 'Listen to Passage',
             onPressed: () => ref.read(audioServiceProvider).speakOrPlay(passage.body),
           ),
         ],

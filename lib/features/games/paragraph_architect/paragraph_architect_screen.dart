@@ -43,6 +43,8 @@ class ParagraphArchitectScreen extends ConsumerStatefulWidget {
 }
 
 class _ParagraphArchitectScreenState extends ConsumerState<ParagraphArchitectScreen> {
+  List<Paragraph> _paragraphs = [];
+  int _paragraphIndex = 0;
   Paragraph? _paragraph;
   List<ParagraphSentence> _currentOrder = [];
   List<int> _correctOrder = [];
@@ -55,52 +57,76 @@ class _ParagraphArchitectScreenState extends ConsumerState<ParagraphArchitectScr
   int _xpEarned = 0;
   double _penaltyMultiplier = 1.0;
   int _roundStartTime = 0;
+  final List<LearnedItem> _learnedItems = [];
 
   @override
   void initState() {
     super.initState();
     _roundStartTime = DateTime.now().millisecondsSinceEpoch;
-    _loadParagraph();
+    _loadParagraphs();
   }
 
-  Future<void> _loadParagraph() async {
+  Future<void> _loadParagraphs() async {
     final gameDao = ref.read(gameDaoProvider);
     final list = await gameDao.getParagraphsForLevel(widget.level);
     if (!mounted) return;
 
-    Paragraph? chosen;
+    List<Paragraph> paras = [];
     if (list.isNotEmpty) {
-      chosen = (List.of(list)..shuffle()).first;
+      paras = List.of(list)..shuffle();
     } else {
       final all = await ref.read(databaseProvider).select(ref.read(databaseProvider).paragraphs).get();
-      if (all.isNotEmpty) chosen = (List.of(all)..shuffle()).first;
+      if (all.isNotEmpty) paras = List.of(all)..shuffle();
     }
 
-    if (chosen != null) {
-      final List<dynamic> rawSentences = json.decode(chosen.sentencesJson);
-      final List<dynamic> rawOrders = json.decode(chosen.validOrdersJson);
-      final List<dynamic> rawLinks = json.decode(chosen.linksJson);
-
-      final sentences = rawSentences.map((s) => ParagraphSentence(id: s['id'] as int, text: s['text'] as String)).toList();
-      final validOrder = (rawOrders.first as List<dynamic>).map((e) => e as int).toList();
-      final links = rawLinks
-          .map((l) => CohesionLink(
-                from: l['from'] as int,
-                to: l['to'] as int,
-                cue: l['cue'] as String,
-                type: l['type'] as String,
-              ))
-          .toList();
-
-      final shuffled = List<ParagraphSentence>.from(sentences)..shuffle();
-
+    if (paras.isNotEmpty) {
       setState(() {
-        _paragraph = chosen;
-        _currentOrder = shuffled;
-        _correctOrder = validOrder;
-        _links = links;
-        _isLoading = false;
+        _paragraphs = paras;
+        _paragraphIndex = 0;
       });
+      _setupParagraph(_paragraphs[0]);
+    }
+  }
+
+  void _setupParagraph(Paragraph chosen) {
+    final List<dynamic> rawSentences = json.decode(chosen.sentencesJson);
+    final List<dynamic> rawOrders = json.decode(chosen.validOrdersJson);
+    final List<dynamic> rawLinks = json.decode(chosen.linksJson);
+
+    final sentences = rawSentences.map((s) => ParagraphSentence(id: s['id'] as int, text: s['text'] as String)).toList();
+    final validOrder = (rawOrders.first as List<dynamic>).map((e) => e as int).toList();
+    final links = rawLinks
+        .map((l) => CohesionLink(
+              from: l['from'] as int,
+              to: l['to'] as int,
+              cue: l['cue'] as String,
+              type: l['type'] as String,
+            ))
+        .toList();
+
+    final shuffled = List<ParagraphSentence>.from(sentences)..shuffle();
+
+    setState(() {
+      _paragraph = chosen;
+      _currentOrder = shuffled;
+      _correctOrder = validOrder;
+      _links = links;
+      _hasChecked = false;
+      _highlightConnectors = false;
+      _penaltyMultiplier = 1.0;
+      _isLoading = false;
+    });
+  }
+
+  void _nextParagraph() {
+    final total = _paragraphs.length < 3 ? _paragraphs.length : 3;
+    if (_paragraphIndex + 1 < total) {
+      setState(() {
+        _paragraphIndex++;
+      });
+      _setupParagraph(_paragraphs[_paragraphIndex]);
+    } else {
+      _endGame();
     }
   }
 
@@ -127,9 +153,18 @@ class _ParagraphArchitectScreenState extends ConsumerState<ParagraphArchitectScr
 
     setState(() {
       _hasChecked = true;
-      _score = finalScore;
-      _xpEarned = (finalScore * 0.4).round();
+      _score += finalScore;
+      _xpEarned += (finalScore * 0.4).round();
     });
+
+    _learnedItems.add(
+      LearnedItem(
+        term: 'Paragraph: ${_paragraph?.topic ?? "Topic"}',
+        definition: 'Cohesion & connector flow',
+        example: isExact ? 'Perfect logical order!' : 'Review transition words',
+        wasMistake: !isExact,
+      ),
+    );
 
     if (isExact) {
       ref.read(audioServiceProvider).playSfx(SfxType.correct);
@@ -205,7 +240,7 @@ class _ParagraphArchitectScreenState extends ConsumerState<ParagraphArchitectScr
           score: _score,
           xpEarned: _xpEarned,
           accuracy: accuracy,
-          items: items,
+          items: _learnedItems.isNotEmpty ? _learnedItems : items,
           onPlayAgain: () {
             Navigator.of(context).pushReplacement(
               MaterialPageRoute(builder: (_) => ParagraphArchitectScreen(level: widget.level)),
@@ -224,9 +259,13 @@ class _ParagraphArchitectScreenState extends ConsumerState<ParagraphArchitectScr
 
     final theme = Theme.of(context);
 
+    final maxParas = _paragraphs.length < 3 ? _paragraphs.length : 3;
+
     return Scaffold(
       appBar: AppBar(
-        title: Text('Paragraph Architect (${_paragraph!.topic ?? "Topic"})'),
+        title: Text(
+          'Paragraph Architect (${_paragraphIndex + 1}/$maxParas)',
+        ),
       ),
       body: SafeArea(
         child: Column(
@@ -335,8 +374,12 @@ class _ParagraphArchitectScreenState extends ConsumerState<ParagraphArchitectScr
               padding: const EdgeInsets.all(16),
               child: _hasChecked
                   ? ElevatedButton(
-                      onPressed: _endGame,
-                      child: const Text('Continue to Summary'),
+                      onPressed: _nextParagraph,
+                      child: Text(
+                        _paragraphIndex + 1 < maxParas
+                            ? 'Next Paragraph (${_paragraphIndex + 1}/$maxParas)'
+                            : 'Finish & View Summary',
+                      ),
                     )
                   : ElevatedButton(
                       onPressed: _checkOrder,

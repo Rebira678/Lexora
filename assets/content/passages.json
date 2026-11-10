@@ -176,5 +176,116 @@
         "explanation": "The passage states that teachers 'freed from repetitive tasks such as grading multiple-choice tests, can devote more time to mentoring students.'"
       }
     ]
+  },
+  {
+    "id": 6,
+    "title": "The Science of Habits",
+    "body": "Much of our daily behavior is governed by automatic routines known as habits. Neuroscientists explain that the brain creates habits through a three-part process: a cue, a routine, and a reward. The cue triggers the brain into automatic mode, determining which habit to use. The routine is the physical, mental, or emotional behavior that follows. Finally, the reward satisfies a craving and helps the brain remember whether this particular loop is worth storing for future use.\n\nOver time, this loop becomes increasingly automated within the basal ganglia, an ancient region of the brain. When a habit takes hold, the brain expends less conscious energy on decision-making, allowing attention to be directed elsewhere. While this efficiency is advantageous for positive behaviors such as brushing teeth or exercising, it also explains why undesirable habits are notoriously difficult to eliminate. Trying to extinguish a habit solely through willpower often fails because the neurological craving remains intact.\n\nModern behavioral psychologists suggest that rather than attempting to eradicate a bad habit, one should focus on transforming the routine while keeping the cue and reward consistent. For example, if stress at work prompts you to eat sugary snacks, substituting a brisk five-minute walk can provide a similar mental reset without the negative health consequences. Furthermore, creating clear implementation intentions—such as deciding in advance exactly when and where you will practice a new behavior—dramatically increases the likelihood of long-term success.",
+    "cefr": "B2",
+    "word_count": 252,
+    "questions": [
+      {
+        "type": "multiple_choice",
+        "prompt": "According to the passage, what are the three components of a habit loop?",
+        "options": ["Memory, repetition, and focus", "A cue, a routine, and a reward", "Willpower, desire, and outcome", "Decision, energy, and satisfaction"],
+        "answer": "A cue, a routine, and a reward",
+        "explanation": "The passage clearly identifies the three-part process: 'a cue, a routine, and a reward.'"
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which brain structure is primarily involved in automating habits?",
+        "options": ["The prefrontal cortex", "The cerebellum", "The basal ganglia", "The visual cortex"],
+        "answer": "The basal ganglia",
+        "explanation": "The text states that the habit loop 'becomes increasingly automated within the basal ganglia.'"
+      },
+      {
+        "type": "true_false",
+        "prompt": "The passage claims that willpower alone is usually sufficient to eliminate bad habits.",
+        "options": ["True", "False"],
+        "answer": "False",
+        "explanation": "The text states: 'Trying to extinguish a habit solely through willpower often fails because the neurological craving remains intact.'"
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "What strategy does the passage recommend for changing an undesirable habit?",
+        "options": ["Eliminating all cues from your life", "Ignoring the reward completely", "Changing the routine while preserving the cue and reward", "Stopping the behavior immediately without substitutes"],
+        "answer": "Changing the routine while preserving the cue and reward",
+        "explanation": "Psychologists advise 'transforming the routine while keeping the cue and reward consistent.'"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "The Architecture of Renewable Energy",
+    "body": "Transitioning global power generation from fossil fuels to sustainable sources represents one of the greatest engineering undertakings in human history. Solar and wind technologies have made enormous strides over the past decade, with costs falling by more than eighty percent in many regions. However, integrating these renewable sources into electrical grids presents unprecedented engineering challenges.\n\nThe most formidable obstacle is intermittency. Sunlight varies with cloud cover and nightfall, while wind fluctuates unpredictably. Traditional grids were engineered around steady, dispatchable power plants that could ramp production up or down on demand. To accommodate fluctuating clean energy, modern energy architects are designing intelligent grids equipped with advanced battery storage systems and bidirectional power distribution.\n\nUtility-scale lithium-ion and flow batteries can store surplus energy generated during windy nights or sunny afternoons, releasing it during peak evening demand. Additionally, smart meters and AI-driven forecasting algorithms enable grid operators to predict consumption patterns hours in advance. Interconnecting national power grids across geographical borders also allows countries experiencing excess solar generation to export electricity to neighboring regions experiencing overcast skies. Through this combination of storage, smart distribution, and regional cooperation, a fully decarbonized energy network is becoming a viable reality.",
+    "cefr": "B2+",
+    "word_count": 218,
+    "questions": [
+      {
+        "type": "multiple_choice",
+        "prompt": "What is described as the most formidable obstacle for renewable energy integration?",
+        "options": ["High installation costs", "Public opposition", "Intermittency of sun and wind", "Lack of solar panels"],
+        "answer": "Intermittency of sun and wind",
+        "explanation": "The text states: 'The most formidable obstacle is intermittency. Sunlight varies with cloud cover and nightfall, while wind fluctuates unpredictably.'"
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "How do utility-scale batteries assist modern electrical grids?",
+        "options": ["They convert wind into solar radiation", "They store surplus power and release it during peak demand", "They eliminate the need for power lines", "They reduce the total consumption of electricity"],
+        "answer": "They store surplus power and release it during peak demand",
+        "explanation": "Batteries 'store surplus energy generated during windy nights or sunny afternoons, releasing it during peak evening demand.'"
+      },
+      {
+        "type": "true_false",
+        "prompt": "The cost of solar and wind technologies has increased significantly over the past decade.",
+        "options": ["True", "False"],
+        "answer": "False",
+        "explanation": "The passage notes that costs have been 'falling by more than eighty percent in many regions.'"
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Why is cross-border grid interconnection advantageous?",
+        "options": ["It standardizes electricity prices worldwide", "It allows regions with excess generation to export to regions in need", "It prevents energy companies from competing", "It reduces the need for smart meters"],
+        "answer": "It allows regions with excess generation to export to regions in need",
+        "explanation": "Interconnecting grids allows 'countries experiencing excess solar generation to export electricity to neighboring regions experiencing overcast skies.'"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Bioluminescence: Cold Light in the Ocean",
+    "body": "In the perpetual darkness of the deep ocean, countless organisms possess the extraordinary ability to produce their own light—a phenomenon known as bioluminescence. Unlike light emitted by a lamp, which generates considerable thermal energy, bioluminescence is 'cold light,' meaning that nearly ninety percent of the energy involved is converted directly into visible illumination rather than wasted as heat.\n\nThe chemical mechanism relies on two essential substances: a light-emitting pigment called luciferin, and an enzyme designated as luciferase. When luciferase catalyzes the oxidation of luciferin, a burst of blue-green light is generated. This specific hue travels farther through oceanic depths than red or orange light, maximizing visibility in the aquatic twilight.\n\nMarine species employ bioluminescence for diverse evolutionary purposes. Predators such as anglerfish use luminous lures dangling before their jaws to draw curious prey into striking range. Conversely, other creatures utilize luminescence for defensive deception. Many deep-sea squid expel clouds of glowing ink to dazzle and disorient attackers while they escape into the dark. Furthermore, bioluminescent research has proved invaluable to modern medicine; green fluorescent proteins extracted from luminous organisms are now standard laboratory markers used to track gene expression and observe cellular development in real time.",
+    "cefr": "B2",
+    "word_count": 212,
+    "questions": [
+      {
+        "type": "multiple_choice",
+        "prompt": "Why is bioluminescence referred to as 'cold light'?",
+        "options": ["It can only occur in icy ocean waters", "Most of the energy is converted into light rather than heat", "It emits only ultra-violet light", "It causes organisms to drop in temperature"],
+        "answer": "Most of the energy is converted into light rather than heat",
+        "explanation": "The passage explains that 'nearly ninety percent of the energy involved is converted directly into visible illumination rather than wasted as heat.'"
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Which enzyme catalyzes the chemical reaction that produces marine light?",
+        "options": ["Luciferin", "Luciferase", "Hemoglobin", "Amylase"],
+        "answer": "Luciferase",
+        "explanation": "The text specifies that 'an enzyme designated as luciferase' catalyzes the oxidation of luciferin."
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "Why is blue-green light particularly effective underwater?",
+        "options": ["It is invisible to predators", "It travels farther through ocean water than other colors", "It reflects off of coral reefs", "It warms the surrounding water"],
+        "answer": "It travels farther through ocean water than other colors",
+        "explanation": "The text states that blue-green light 'travels farther through oceanic depths than red or orange light, maximizing visibility.'"
+      },
+      {
+        "type": "multiple_choice",
+        "prompt": "How has bioluminescent research contributed to modern medical science?",
+        "options": ["By providing a cure for common colds", "By serving as fluorescent markers to track cellular development", "By replacing prescription antibiotics", "By purifying surgical equipment"],
+        "answer": "By serving as fluorescent markers to track cellular development",
+        "explanation": "Proteins from luminous organisms 'are now standard laboratory markers used to track gene expression and observe cellular development in real time.'"
+      }
+    ]
   }
 ]

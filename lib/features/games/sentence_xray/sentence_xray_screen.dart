@@ -139,7 +139,7 @@ class _SentenceXRayScreenState extends ConsumerState<SentenceXRayScreen> {
   }
 
   void _nextSentence() {
-    if (_currentIndex + 1 < _sentences.length && _currentIndex + 1 < 4) {
+    if (_currentIndex + 1 < _sentences.length && _currentIndex + 1 < 8) {
       setState(() {
         _currentIndex++;
         _resetSelection();
@@ -208,10 +208,11 @@ class _SentenceXRayScreenState extends ConsumerState<SentenceXRayScreen> {
     final theme = Theme.of(context);
     final current = _sentences[_currentIndex];
     final words = current.sentence.split(' ');
+    final maxSentences = _sentences.length < 8 ? _sentences.length : 8;
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sentence X-Ray (${_currentIndex + 1}/4)'),
+        title: Text('Sentence X-Ray (${_currentIndex + 1}/$maxSentences)'),
         actions: [
           IconButton(
             icon: const Icon(Icons.volume_up_rounded, color: AppColors.accent),
