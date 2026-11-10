@@ -28,13 +28,15 @@ void main() {
     await db.close();
   });
 
-  test('buildPlanForToday creates 4 balanced mission steps', () async {
+  test('buildPlanForToday creates 5 balanced 30-minute mission steps', () async {
     final plan = await planBuilder.buildPlanForToday();
-    expect(plan.steps.length, 4);
+    expect(plan.steps.length, 5);
     expect(plan.steps[0].type, MissionType.srsReview);
-    expect(plan.steps[1].type, MissionType.sentencePractice);
-    expect(plan.steps[2].type, MissionType.wordAction);
-    expect(plan.steps[3].type, MissionType.speedFluency);
+    expect(plan.steps[1].type, MissionType.vocabularyAcquisition);
+    expect(plan.steps[2].type, MissionType.readingSyntax);
+    expect(plan.steps[3].type, MissionType.listeningShadowing);
+    expect(plan.steps[4].type, MissionType.writtenProduction);
+    expect(plan.totalMinutesTarget, 30);
     expect(plan.progress, 0.0);
     expect(plan.isAllCompleted, isFalse);
   });

@@ -54,6 +54,7 @@ import '../../games/reference_hunter/reference_hunter_screen.dart';
 import '../../games/summarize_ten_words/summarize_ten_words_screen.dart';
 import '../../games/sentence_race/sentence_race_screen.dart';
 import '../../games/define_it_yourself/define_it_yourself_screen.dart';
+import '../../planner/daily_journey_screen.dart';
 import 'widgets/daily_quest_board_widget.dart';
 import 'widgets/game_art_painters.dart';
 
@@ -285,6 +286,41 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           MaterialPageRoute(builder: (_) => const SentenceXRayScreen(level: 2)),
         );
         break;
+      case '/games/prefix-suffix':
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (_) => const PrefixSuffixLabScreen()),
+        );
+        break;
+      case '/games/word-family':
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (_) => const WordFamilyTreeScreen()),
+        );
+        break;
+      case '/reading/graded-reader':
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (_) => const ReadingScreen()),
+        );
+        break;
+      case '/reading/c2-reader':
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (_) => const C2LongReaderScreen()),
+        );
+        break;
+      case '/listening/lecture-notes':
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (_) => const LectureNotesScreen()),
+        );
+        break;
+      case '/writing/daily-journal':
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (_) => const DailyJournalScreen()),
+        );
+        break;
+      case '/writing/layer-builder':
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (_) => const LayerBuilderScreen(level: 2)),
+        );
+        break;
       default:
         Navigator.of(context).push(
           MaterialPageRoute(builder: (_) => const WordSiegeScreen(level: 3)),
@@ -299,6 +335,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final todayStatsAsync = ref.watch(todayStatsProvider);
     final dueCardsAsync = ref.watch(dueCardCountProvider);
     final masteredWordsAsync = ref.watch(masteredCountProvider);
+    final todayPlanAsync = ref.watch(todayPlanProvider);
 
     final streak = streakStateAsync.value?.current ?? 0;
     final freezes = streakStateAsync.value?.freezes ?? 0;
@@ -347,6 +384,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           ],
         ),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.alt_route_rounded, size: 20),
+            tooltip: 'Phase 1–5 Daily Journey',
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute(builder: (_) => const DailyJourneyScreen()),
+            ),
+          ),
           IconButton(
             icon: const Icon(Icons.menu_book_rounded, size: 20),
             tooltip: 'Word Notebook (Pokédex)',
@@ -532,7 +576,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   ),
                   const SizedBox(height: 16),
 
-                  // Primary Mission Card
+                  // Primary Mission Card (30-Min Daily Plan Architecture)
                   Container(
                     padding: const EdgeInsets.all(18),
                     decoration: BoxDecoration(
@@ -549,20 +593,28 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
-                              "TODAY'S MISSION",
-                              style: TextStyle(
-                                fontSize: 11,
-                                fontWeight: FontWeight.w700,
-                                letterSpacing: 0.8,
-                                color: theme.colorScheme.primary,
+                            Flexible(
+                              child: Text(
+                                todayPlanAsync.value != null
+                                    ? "TODAY'S MISSION • PHASE ${todayPlanAsync.value!.currentPhaseNumber}"
+                                    : "TODAY'S MISSION",
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.w700,
+                                  letterSpacing: 0.8,
+                                  color: theme.colorScheme.primary,
+                                ),
                               ),
                             ),
+                            const SizedBox(width: 8),
                             Text(
-                              dueCards > 0 ? '$dueCards Reviews Due' : 'Reviews Completed',
+                              todayPlanAsync.value != null
+                                  ? todayPlanAsync.value!.dayOfWeek
+                                  : (dueCards > 0 ? '$dueCards Reviews Due' : 'Reviews Completed'),
                               style: TextStyle(
                                 fontSize: 12,
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 color: theme.colorScheme.onSurfaceVariant,
                               ),
                             ),
@@ -570,7 +622,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         ),
                         const SizedBox(height: 10),
                         Text(
-                          'Spaced Review & Sentence Expansion',
+                          todayPlanAsync.value?.dayOfWeekFocus ?? 'Spaced Review & Sentence Expansion',
                           style: theme.textTheme.titleMedium?.copyWith(
                             fontWeight: FontWeight.w700,
                             letterSpacing: -0.2,
@@ -578,13 +630,34 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          'Complete 5 structured steps to reinforce long-term memory.',
+                          todayPlanAsync.value != null
+                              ? '${todayPlanAsync.value!.completedStepsCount} of ${todayPlanAsync.value!.steps.length} steps completed • 30-min daily target'
+                              : 'Complete 5 structured steps to reinforce long-term memory.',
                           style: theme.textTheme.bodySmall,
                         ),
                         const SizedBox(height: 16),
-                        ElevatedButton(
-                          onPressed: () => _launchNextMissionStep(ref),
-                          child: const Text('Start Session'),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: ElevatedButton.icon(
+                                onPressed: () => _launchNextMissionStep(ref),
+                                icon: const Icon(Icons.play_arrow, size: 18),
+                                label: const Text('Start Session'),
+                              ),
+                            ),
+                            const SizedBox(width: 10),
+                            Expanded(
+                              child: OutlinedButton(
+                                style: OutlinedButton.styleFrom(
+                                  minimumSize: const Size(0, 48),
+                                ),
+                                onPressed: () => Navigator.of(context).push(
+                                  MaterialPageRoute(builder: (_) => const DailyJourneyScreen()),
+                                ),
+                                child: const Text('Plan & Roadmap ➔'),
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),

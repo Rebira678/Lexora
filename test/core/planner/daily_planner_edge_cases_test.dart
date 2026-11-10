@@ -50,13 +50,14 @@ void main() {
       expect(allowed, 10);
     });
 
-    test('buildPlanForToday creates exactly 4 balanced steps', () async {
+    test('buildPlanForToday creates exactly 5 balanced steps for 30-min plan', () async {
       final plan = await planBuilder.buildPlanForToday();
-      expect(plan.steps.length, 4);
+      expect(plan.steps.length, 5);
       expect(plan.steps.any((s) => s.type == MissionType.srsReview), isTrue);
-      expect(plan.steps.any((s) => s.type == MissionType.sentencePractice), isTrue);
-      expect(plan.steps.any((s) => s.type == MissionType.wordAction), isTrue);
-      expect(plan.steps.any((s) => s.type == MissionType.speedFluency), isTrue);
+      expect(plan.steps.any((s) => s.type == MissionType.vocabularyAcquisition), isTrue);
+      expect(plan.steps.any((s) => s.type == MissionType.readingSyntax), isTrue);
+      expect(plan.steps.any((s) => s.type == MissionType.listeningShadowing), isTrue);
+      expect(plan.steps.any((s) => s.type == MissionType.writtenProduction), isTrue);
     });
   });
 }
