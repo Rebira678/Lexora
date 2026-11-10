@@ -11,6 +11,14 @@ import '../../games/paragraph_architect/paragraph_architect_screen.dart';
 import '../../games/chunk_echo/chunk_echo_screen.dart';
 import '../../games/sentence_xray/sentence_xray_screen.dart';
 import '../../games/slice_it/slice_it_screen.dart';
+import '../../games/connector_match/connector_match_screen.dart';
+import '../../games/layer_builder/layer_builder_screen.dart';
+import '../../games/context_detective/context_detective_screen.dart';
+import '../../games/prefix_suffix_lab/prefix_suffix_lab_screen.dart';
+import '../../games/word_family_tree/word_family_tree_screen.dart';
+import '../../games/dictation_dash/dictation_dash_screen.dart';
+import '../../games/sound_sniper/sound_sniper_screen.dart';
+import '../../games/error_hunter/error_hunter_screen.dart';
 import '../../reading/reading_screen.dart';
 import '../../mistakes/presentation/mistakes_screen.dart';
 import '../../stats/presentation/stats_screen.dart';
@@ -611,13 +619,29 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   ),
                   const SizedBox(height: 28),
 
-                  // Additional Modules Header
-                  Text(
-                    'Sentence & Text Modules',
-                    style: theme.textTheme.titleMedium?.copyWith(
-                      fontWeight: FontWeight.w700,
-                      letterSpacing: -0.2,
-                    ),
+                  // Phase 2: Long Sentences & Cohesion
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          'Phase 2: Syntax & Cohesion',
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            fontWeight: FontWeight.w700,
+                            letterSpacing: -0.2,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Text(
+                        'Fix Weak Points',
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: theme.colorScheme.onSurfaceVariant,
+                        ),
+                      ),
+                    ],
                   ),
                   const SizedBox(height: 12),
 
@@ -629,24 +653,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     crossAxisSpacing: 14,
                     childAspectRatio: 0.82,
                     children: [
-                      _IllustratedGameCard(
-                        type: GameArtType.paragraphArchitect,
-                        category: 'COHESION',
-                        title: 'Paragraph Arch.',
-                        description: 'Cohesion map & sentence connectors',
-                        onTap: () => Navigator.of(context).push(
-                          MaterialPageRoute(builder: (_) => const ParagraphArchitectScreen(level: 2)),
-                        ),
-                      ),
-                      _IllustratedGameCard(
-                        type: GameArtType.chunkEcho,
-                        category: 'LISTENING',
-                        title: 'Chunk Echo',
-                        description: 'Acoustic waveform & chunk assembly',
-                        onTap: () => Navigator.of(context).push(
-                          MaterialPageRoute(builder: (_) => const ChunkEchoScreen(level: 2)),
-                        ),
-                      ),
                       _IllustratedGameCard(
                         type: GameArtType.sentenceXray,
                         category: 'GRAMMAR',
@@ -666,12 +672,104 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         ),
                       ),
                       _IllustratedGameCard(
+                        type: GameArtType.connectorMatch,
+                        category: 'DISCOURSE',
+                        title: 'Connector Match',
+                        description: 'Master transitions & cohesive flow',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const ConnectorMatchScreen(level: 2)),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.layerBuilder,
+                        category: 'SYNTAX ARCH',
+                        title: 'Layer Builder',
+                        description: 'Expand kernel clauses into C1 sentences',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const LayerBuilderScreen(level: 2)),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.paragraphArchitect,
+                        category: 'COHESION',
+                        title: 'Paragraph Arch.',
+                        description: 'Cohesion map & sentence connectors',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const ParagraphArchitectScreen(level: 2)),
+                        ),
+                      ),
+                      _IllustratedGameCard(
                         type: GameArtType.gradedReader,
                         category: 'READING',
                         title: 'Graded Reader',
                         description: 'Tap-to-define passages with wild word save',
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(builder: (_) => const ReadingScreen()),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 28),
+
+                  // Phase 2: Vocabulary & Morphology Mastery
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          'Phase 2: Vocabulary & Morphology',
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            fontWeight: FontWeight.w700,
+                            letterSpacing: -0.2,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Text(
+                        'Multiplier Tools',
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: theme.colorScheme.onSurfaceVariant,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+
+                  GridView.count(
+                    crossAxisCount: 2,
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    mainAxisSpacing: 14,
+                    crossAxisSpacing: 14,
+                    childAspectRatio: 0.82,
+                    children: [
+                      _IllustratedGameCard(
+                        type: GameArtType.contextDetective,
+                        category: 'INFERENCE',
+                        title: 'Context Detective',
+                        description: 'Deduce C1 words from 4 context clue types',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const ContextDetectiveScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.prefixSuffix,
+                        category: 'MORPHOLOGY',
+                        title: 'Prefix/Suffix Lab',
+                        description: 'Derivational morpheme affix forge',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const PrefixSuffixLabScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.wordFamilyTree,
+                        category: 'DERIVATION',
+                        title: 'Word Family Tree',
+                        description: 'Noun, verb, adjective, adverb quadrants',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const WordFamilyTreeScreen()),
                         ),
                       ),
                       _IllustratedGameCard(
@@ -681,6 +779,80 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         description: 'Targeted drill on missed sentences & wild items',
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(builder: (_) => const MistakesScreen()),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 28),
+
+                  // Phase 2: Listening & Precision Skills
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          'Phase 2: Listening & Precision',
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            fontWeight: FontWeight.w700,
+                            letterSpacing: -0.2,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Text(
+                        'Four Skills Expansion',
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: theme.colorScheme.onSurfaceVariant,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+
+                  GridView.count(
+                    crossAxisCount: 2,
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    mainAxisSpacing: 14,
+                    crossAxisSpacing: 14,
+                    childAspectRatio: 0.82,
+                    children: [
+                      _IllustratedGameCard(
+                        type: GameArtType.chunkEcho,
+                        category: 'ACOUSTIC',
+                        title: 'Chunk Echo',
+                        description: 'Acoustic waveform & memory ladder climb',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const ChunkEchoScreen(level: 2)),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.dictationDash,
+                        category: 'TRANSCRIPTION',
+                        title: 'Dictation Dash',
+                        description: 'Listen and type with letter-level diff',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const DictationDashScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.soundSniper,
+                        category: 'MINIMAL PAIRS',
+                        title: 'Sound Sniper',
+                        description: 'Rapid phoneme contrast shooter reaction',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const SoundSniperScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.errorHunter,
+                        category: 'PROOFREADING',
+                        title: 'Error Hunter',
+                        description: 'Spot and fix subtle grammar and syntax errors',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const ErrorHunterScreen()),
                         ),
                       ),
                     ],

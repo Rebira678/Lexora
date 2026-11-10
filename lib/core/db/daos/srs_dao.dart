@@ -81,4 +81,20 @@ class SrsDao extends DatabaseAccessor<AppDatabase> with _$SrsDaoMixin {
         .getSingle();
     return row.read(count) ?? 0;
   }
+
+  /// Instantly marks a word as mastered/known (Gap Finder & bypass).
+  Future<void> markWordAsKnown(int wordId) async {
+    final now = DateTime.now().millisecondsSinceEpoch;
+    final yearLater = now + (365 * 24 * 3600 * 1000);
+    await (update(srsCards)..where((c) => c.itemType.equals('word') & c.itemId.equals(wordId))).write(
+      SrsCardsCompanion(
+        ease: const Value(3.0),
+        intervalDays: const Value(365),
+        repetitions: const Value(5),
+        lapses: const Value(0),
+        dueAt: Value(yearLater),
+        lastReviewedAt: Value(now),
+      ),
+    );
+  }
 }

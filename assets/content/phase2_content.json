@@ -1,0 +1,319 @@
+{
+  "connectors": [
+    {
+      "id": 1,
+      "level": 2,
+      "sentenceBefore": "The government invested heavily in public transportation;",
+      "sentenceAfter": "traffic congestion in major metropolitan areas continued to worsen.",
+      "correct": "however",
+      "category": "Contrast",
+      "options": ["however", "therefore", "furthermore", "similarly"],
+      "explanation": "'However' signals a contrast between substantial investment and ongoing congestion."
+    },
+    {
+      "id": 2,
+      "level": 2,
+      "sentenceBefore": "The research team omitted several key variables from their statistical model;",
+      "sentenceAfter": "their published conclusions were questioned by independent peer reviewers.",
+      "correct": "consequently",
+      "category": "Cause & Effect",
+      "options": ["consequently", "meanwhile", "on the contrary", "in spite of"],
+      "explanation": "'Consequently' introduces the logical outcome or result of omitting key variables."
+    },
+    {
+      "id": 3,
+      "level": 3,
+      "sentenceBefore": "Electric vehicles produce zero tailpipe emissions during operation;",
+      "sentenceAfter": "they significantly reduce ambient urban air pollution when charged with renewable energy.",
+      "correct": "furthermore",
+      "category": "Addition",
+      "options": ["furthermore", "nevertheless", "instead", "otherwise"],
+      "explanation": "'Furthermore' adds an additional reinforcing benefit to zero tailpipe emissions."
+    },
+    {
+      "id": 4,
+      "level": 3,
+      "sentenceBefore": "Traditional manufacturing relies heavily on repetitive manual assembly,",
+      "sentenceAfter": "modern automated facilities depend on real-time robotics and machine vision.",
+      "correct": "whereas",
+      "category": "Comparison",
+      "options": ["whereas", "therefore", "consequently", "besides"],
+      "explanation": "'Whereas' indicates direct comparison between two contrasting systems or facts."
+    },
+    {
+      "id": 5,
+      "level": 4,
+      "sentenceBefore": "The experimental drug failed to completely eradicate the bacterial culture in vitro;",
+      "sentenceAfter": "it demonstrated a remarkable capacity to inhibit cell replication without toxic side effects.",
+      "correct": "nevertheless",
+      "category": "Concession",
+      "options": ["nevertheless", "hence", "likewise", "accordingly"],
+      "explanation": "'Nevertheless' concedes the failure while presenting an unexpected positive breakthrough."
+    },
+    {
+      "id": 6,
+      "level": 4,
+      "sentenceBefore": "Large international corporations possess vast financial capital for innovation;",
+      "sentenceAfter": "small, agile startups often discover disruptive breakthroughs much faster.",
+      "correct": "in contrast",
+      "category": "Contrast",
+      "options": ["in contrast", "as a result", "for instance", "similarly"],
+      "explanation": "'In contrast' explicitly counterposes multinational resources against startup agility."
+    }
+  ],
+  "layer_builder": [
+    {
+      "id": 1,
+      "level": 2,
+      "kernel": "The scientist verified the data.",
+      "layers": [
+        {
+          "type": "Relative Clause",
+          "fragment": "who had spent three years in Antarctica,",
+          "targetSentence": "The scientist, who had spent three years in Antarctica, verified the data.",
+          "instruction": "Add a relative clause describing the scientist."
+        },
+        {
+          "type": "Adverbial Concession",
+          "fragment": "Although critics were initially skeptical,",
+          "targetSentence": "Although critics were initially skeptical, the scientist, who had spent three years in Antarctica, verified the data.",
+          "instruction": "Add an opening concession clause."
+        },
+        {
+          "type": "Manner & Precision",
+          "fragment": "with utmost mathematical precision.",
+          "targetSentence": "Although critics were initially skeptical, the scientist, who had spent three years in Antarctica, verified the data with utmost mathematical precision.",
+          "instruction": "Add an adverbial phrase of manner at the end."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "level": 3,
+      "kernel": "The company launched the platform.",
+      "layers": [
+        {
+          "type": "Temporal Preposition",
+          "fragment": "After securing series-B funding from venture partners,",
+          "targetSentence": "After securing series-B funding from venture partners, the company launched the platform.",
+          "instruction": "Add the preceding time condition."
+        },
+        {
+          "type": "Appositive Descriptor",
+          "fragment": "a pioneering artificial intelligence startup,",
+          "targetSentence": "After securing series-B funding from venture partners, the company, a pioneering artificial intelligence startup, launched the platform.",
+          "instruction": "Add an appositive phrase identifying the company."
+        },
+        {
+          "type": "Purpose Clause",
+          "fragment": "to accelerate decentralized medical diagnostics across developing nations.",
+          "targetSentence": "After securing series-B funding from venture partners, the company, a pioneering artificial intelligence startup, launched the platform to accelerate decentralized medical diagnostics across developing nations.",
+          "instruction": "Add an infinitive clause stating the ultimate objective."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "level": 4,
+      "kernel": "Renewable energy will stabilize the power grid.",
+      "layers": [
+        {
+          "type": "Adverbial Condition",
+          "fragment": "Provided that high-capacity battery storage systems are integrated,",
+          "targetSentence": "Provided that high-capacity battery storage systems are integrated, renewable energy will stabilize the power grid.",
+          "instruction": "Add a fronted conditional layer with 'Provided that'."
+        },
+        {
+          "type": "Exemplification",
+          "fragment": "particularly offshore wind and solar photovoltaics,",
+          "targetSentence": "Provided that high-capacity battery storage systems are integrated, renewable energy, particularly offshore wind and solar photovoltaics, will stabilize the power grid.",
+          "instruction": "Insert an exemplifying parenthetical phrase."
+        },
+        {
+          "type": "Consequential Clause",
+          "fragment": "thereby insulating consumers from volatile fossil fuel price shocks.",
+          "targetSentence": "Provided that high-capacity battery storage systems are integrated, renewable energy, particularly offshore wind and solar photovoltaics, will stabilize the power grid, thereby insulating consumers from volatile fossil fuel price shocks.",
+          "instruction": "Add a participial clause showing the ongoing consequence."
+        }
+      ]
+    }
+  ],
+  "context_detective": [
+    {
+      "id": 1,
+      "targetWord": "pragmatic",
+      "sentence": "Rather than clinging to idealistic political theories that had repeatedly failed in practice, the governor adopted a pragmatic approach to fiscal reform.",
+      "options": ["Practical and realistic", "Stubborn and unyielding", "Theoretical and abstract", "Reckless and impulsive"],
+      "answer": "Practical and realistic",
+      "clueType": "Contrast Clue",
+      "explanation": "The contrast indicator 'Rather than clinging to idealistic... theories' directly clues that 'pragmatic' means grounded in real-world practicality."
+    },
+    {
+      "id": 2,
+      "targetWord": "ambiguous",
+      "sentence": "Because the legal contract contained ambiguous phrasing regarding termination deadlines, both parties interpreted their contractual obligations differently.",
+      "options": ["Vague or open to multiple interpretations", "Completely binding and clear", "Unlawful and invalid", "Strictly confidential"],
+      "answer": "Vague or open to multiple interpretations",
+      "clueType": "Cause & Effect Clue",
+      "explanation": "'Because... both parties interpreted it differently' indicates the language was not clear, pointing directly to 'ambiguous'."
+    },
+    {
+      "id": 3,
+      "targetWord": "ubiquitous",
+      "sentence": "In modern urban society, smartphones have become ubiquitous; you will find commuters using them on subways, diners in restaurants, and students in lecture halls.",
+      "options": ["Present everywhere simultaneously", "Extremely expensive", "Rare and coveted", "Obsolete and outdated"],
+      "answer": "Present everywhere simultaneously",
+      "clueType": "Example Clue",
+      "explanation": "The examples listed (subways, restaurants, lecture halls) reveal that smartphones are found everywhere."
+    },
+    {
+      "id": 4,
+      "targetWord": "resilient",
+      "sentence": "Despite experiencing devastating consecutive quarterly losses, the resilient company restructured its debt and bounced back stronger the following year.",
+      "options": ["Able to recover quickly from hardship", "Reluctant to change", "Financially bankrupt", "Overly cautious"],
+      "answer": "Able to recover quickly from hardship",
+      "clueType": "Contrast & Concession Clue",
+      "explanation": "'Despite... losses, it bounced back stronger' establishes that 'resilient' signifies toughness and bounce-back ability."
+    },
+    {
+      "id": 5,
+      "targetWord": "meticulous",
+      "sentence": "The forensic pathologist conducted a meticulous examination of the evidence, painstakingly documenting every microscopic scratch on the glass.",
+      "options": ["Showing great attention to detail", "Hurried and careless", "Bored and unmotivated", "Aggressive and combative"],
+      "answer": "Showing great attention to detail",
+      "clueType": "Restatement Clue",
+      "explanation": "'Painstakingly documenting every microscopic scratch' restates the extreme care of 'meticulous'."
+    }
+  ],
+  "prefix_suffix_lab": [
+    {
+      "id": 1,
+      "root": "PREDICT",
+      "sentence": "The weather in this mountainous region is notoriously ________ (PREDICT).",
+      "target": "unpredictable",
+      "prefix": "un-",
+      "suffix": "-able",
+      "availablePrefixes": ["un-", "in-", "dis-", "re-"],
+      "availableSuffixes": ["-able", "-ment", "-tion", "-ive"],
+      "explanation": "Root: PREDICT (verb) + un- (negative prefix) + -able (adjective suffix) = 'unpredictable' (cannot be forecasted)."
+    },
+    {
+      "id": 2,
+      "root": "RELY",
+      "sentence": "Automated driving software requires absolute ________ (RELY) before public deployment.",
+      "target": "reliability",
+      "prefix": "",
+      "suffix": "-ability",
+      "availablePrefixes": ["none", "un-", "dis-", "mis-"],
+      "availableSuffixes": ["-ability", "-ment", "-ous", "-ful"],
+      "explanation": "Root: RELY (verb) + -ability (noun suffix indicating capacity or quality) = 'reliability'."
+    },
+    {
+      "id": 3,
+      "root": "SUSTAIN",
+      "sentence": "Overfishing at current commercial rates is completely ________ (SUSTAIN) for marine ecosystems.",
+      "target": "unsustainable",
+      "prefix": "un-",
+      "suffix": "-able",
+      "availablePrefixes": ["un-", "in-", "non-", "pre-"],
+      "availableSuffixes": ["-able", "-ment", "-ness", "-ity"],
+      "explanation": "Root: SUSTAIN (verb) + un- (negative) + -able (adjective) = 'unsustainable' (cannot be maintained)."
+    },
+    {
+      "id": 4,
+      "root": "ACCURATE",
+      "sentence": "A single decimal ________ (ACCURATE) in the astronomical trajectory can lead to mission failure.",
+      "target": "inaccuracy",
+      "prefix": "in-",
+      "suffix": "-y",
+      "availablePrefixes": ["in-", "un-", "dis-", "anti-"],
+      "availableSuffixes": ["-y", "-ment", "-tion", "-ful"],
+      "explanation": "Root: ACCURATE (adjective) + in- (negative prefix) + -y (noun suffix) = 'inaccuracy' (a mistake or error)."
+    }
+  ],
+  "sound_sniper": [
+    {
+      "id": 1,
+      "target": "sheep",
+      "ipaTarget": "/ʃiːp/",
+      "distractor": "ship",
+      "ipaDistractor": "/ʃɪp/",
+      "phonemeContrast": "Long vowel /iː/ vs Short lax vowel /ɪ/",
+      "explanation": "'Sheep' uses the long tense /iː/ with smiling lips; 'ship' uses the short relaxed /ɪ/."
+    },
+    {
+      "id": 2,
+      "target": "bed",
+      "ipaTarget": "/bɛd/",
+      "distractor": "bad",
+      "ipaDistractor": "/bæd/",
+      "phonemeContrast": "Mid vowel /ɛ/ vs Open vowel /æ/",
+      "explanation": "'Bed' has a mid-open jaw; 'bad' drops the jaw wide open for /æ/."
+    },
+    {
+      "id": 3,
+      "target": "think",
+      "ipaTarget": "/θɪŋk/",
+      "distractor": "sink",
+      "ipaDistractor": "/sɪŋk/",
+      "phonemeContrast": "Voiceless dental fricative /θ/ vs Alveolar fricative /s/",
+      "explanation": "Place the tongue lightly between your teeth for /θ/ in 'think'; behind teeth for /s/ in 'sink'."
+    },
+    {
+      "id": 4,
+      "target": "leave",
+      "ipaTarget": "/liːv/",
+      "distractor": "live",
+      "ipaDistractor": "/lɪv/",
+      "phonemeContrast": "Long tense /iː/ vs Short /ɪ/",
+      "explanation": "'Leave' has prolonged vowel length /liːv/; 'live' has quick /lɪv/."
+    },
+    {
+      "id": 5,
+      "target": "fool",
+      "ipaTarget": "/fuːl/",
+      "distractor": "full",
+      "ipaDistractor": "/fʊl/",
+      "phonemeContrast": "Tense rounded /uː/ vs Lax near-back /ʊ/",
+      "explanation": "'Fool' rounds the lips firmly for /uː/; 'full' keeps lips relaxed for /ʊ/."
+    }
+  ],
+  "error_hunter": [
+    {
+      "id": 1,
+      "sentence": "The collection of ancient manuscripts in the university library were severely damaged by water.",
+      "errorWord": "were",
+      "correction": "was",
+      "errorIndex": 8,
+      "category": "Subject-Verb Agreement",
+      "explanation": "The true grammatical subject is the singular noun 'The collection', not the plural prepositional object 'manuscripts'. Therefore, the verb must be 'was', not 'were'."
+    },
+    {
+      "id": 2,
+      "sentence": "She insisted that he arrives at the conference hall at least thirty minutes before the keynote.",
+      "errorWord": "arrives",
+      "correction": "arrive",
+      "errorIndex": 4,
+      "category": "Subjunctive Mood",
+      "explanation": "Verbs of demand, recommendation, or insistence (demand, insist, recommend that) govern the present subjunctive base form: 'that he arrive'."
+    },
+    {
+      "id": 3,
+      "sentence": "Despite of the turbulent weather conditions, the transatlantic flight landed smoothly on runway four.",
+      "errorWord": "Despite",
+      "correction": "In spite",
+      "errorIndex": 0,
+      "category": "Preposition Collocation",
+      "explanation": "'Despite' takes a direct noun phrase without 'of'. Write either 'Despite the turbulent weather' or 'In spite of the turbulent weather'."
+    },
+    {
+      "id": 4,
+      "sentence": "The CEO congratulated the engineering department for developing such an extraordinarily innovative algorithm.",
+      "errorWord": "for",
+      "correction": "on",
+      "errorIndex": 4,
+      "category": "Prepositional Verb",
+      "explanation": "The verb 'congratulate' collogates with 'on', not 'for': 'congratulated someone ON doing something'."
+    }
+  ]
+}

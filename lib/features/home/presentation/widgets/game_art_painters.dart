@@ -13,6 +13,14 @@ enum GameArtType {
   chunkEcho,
   sentenceXray,
   sliceIt,
+  connectorMatch,
+  layerBuilder,
+  contextDetective,
+  prefixSuffix,
+  wordFamilyTree,
+  dictationDash,
+  soundSniper,
+  errorHunter,
   gradedReader,
 }
 
@@ -115,6 +123,30 @@ class _GameArtPainter extends CustomPainter {
         break;
       case GameArtType.sliceIt:
         _drawSliceItArt(canvas, size, center);
+        break;
+      case GameArtType.connectorMatch:
+        _drawConnectorMatchArt(canvas, size, center);
+        break;
+      case GameArtType.layerBuilder:
+        _drawLayerBuilderArt(canvas, size, center);
+        break;
+      case GameArtType.contextDetective:
+        _drawContextDetectiveArt(canvas, size, center);
+        break;
+      case GameArtType.prefixSuffix:
+        _drawPrefixSuffixArt(canvas, size, center);
+        break;
+      case GameArtType.wordFamilyTree:
+        _drawWordFamilyTreeArt(canvas, size, center);
+        break;
+      case GameArtType.dictationDash:
+        _drawDictationDashArt(canvas, size, center);
+        break;
+      case GameArtType.soundSniper:
+        _drawSoundSniperArt(canvas, size, center);
+        break;
+      case GameArtType.errorHunter:
+        _drawErrorHunterArt(canvas, size, center);
         break;
       case GameArtType.gradedReader:
         _drawGradedReaderArt(canvas, size, center);
@@ -402,6 +434,230 @@ class _GameArtPainter extends CustomPainter {
       ..strokeWidth = 1.6;
     canvas.drawLine(Offset(center.dx - 8, center.dy - 16), Offset(center.dx - 4, center.dy - 12), notchPaint);
     canvas.drawLine(Offset(center.dx, center.dy - 16), Offset(center.dx - 4, center.dy - 12), notchPaint);
+  }
+
+  /// 🔗 Connector Match: Bidirectional discourse bridge
+  void _drawConnectorMatchArt(Canvas canvas, Size size, Offset center) {
+    final strokePaint = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    final fillPaint = Paint()
+      ..color = primaryColor.withAlpha(40)
+      ..style = PaintingStyle.fill;
+
+    // Left Node
+    canvas.drawCircle(Offset(center.dx - 26, center.dy), 10, fillPaint);
+    canvas.drawCircle(Offset(center.dx - 26, center.dy), 10, strokePaint);
+
+    // Right Node
+    canvas.drawCircle(Offset(center.dx + 26, center.dy), 10, fillPaint);
+    canvas.drawCircle(Offset(center.dx + 26, center.dy), 10, strokePaint);
+
+    // Double bridge connector line
+    canvas.drawLine(Offset(center.dx - 16, center.dy - 3), Offset(center.dx + 16, center.dy - 3), strokePaint);
+    canvas.drawLine(Offset(center.dx - 16, center.dy + 3), Offset(center.dx + 16, center.dy + 3), strokePaint);
+
+    // Center jewel node
+    canvas.drawCircle(center, 5, Paint()..color = primaryColor);
+  }
+
+  /// 🏗️ Layer Builder: Isometric architectural steps
+  void _drawLayerBuilderArt(Canvas canvas, Size size, Offset center) {
+    final paint = Paint()
+      ..color = primaryColor.withAlpha(45)
+      ..style = PaintingStyle.fill;
+
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.8;
+
+    // Foundation Base
+    final r1 = RRect.fromRectAndRadius(Rect.fromLTWH(center.dx - 34, center.dy + 8, 68, 14), const Radius.circular(4));
+    canvas.drawRRect(r1, paint);
+    canvas.drawRRect(r1, stroke);
+
+    // Second Layer
+    final r2 = RRect.fromRectAndRadius(Rect.fromLTWH(center.dx - 24, center.dy - 6, 48, 14), const Radius.circular(4));
+    canvas.drawRRect(r2, paint);
+    canvas.drawRRect(r2, stroke);
+
+    // Top Layer
+    final r3 = RRect.fromRectAndRadius(Rect.fromLTWH(center.dx - 14, center.dy - 20, 28, 14), const Radius.circular(4));
+    canvas.drawRRect(r3, Paint()..color = primaryColor.withAlpha(80));
+    canvas.drawRRect(r3, stroke);
+  }
+
+  /// 🔍 Context Detective: Forensic lens targeting text clues
+  void _drawContextDetectiveArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.2;
+
+    final fill = Paint()
+      ..color = primaryColor.withAlpha(35)
+      ..style = PaintingStyle.fill;
+
+    // Magnifying lens
+    final lensCenter = Offset(center.dx - 4, center.dy - 4);
+    canvas.drawCircle(lensCenter, 18, fill);
+    canvas.drawCircle(lensCenter, 18, stroke);
+
+    // Handle
+    final handlePaint = Paint()
+      ..color = primaryColor
+      ..strokeWidth = 3.5
+      ..strokeCap = StrokeCap.round;
+    canvas.drawLine(Offset(lensCenter.dx + 13, lensCenter.dy + 13), Offset(center.dx + 28, center.dy + 28), handlePaint);
+
+    // Target text line inside lens
+    final linePaint = Paint()
+      ..color = primaryColor.withAlpha(200)
+      ..strokeWidth = 2.0
+      ..strokeCap = StrokeCap.round;
+    canvas.drawLine(Offset(lensCenter.dx - 10, lensCenter.dy - 3), Offset(lensCenter.dx + 10, lensCenter.dy - 3), linePaint);
+    canvas.drawLine(Offset(lensCenter.dx - 6, lensCenter.dy + 4), Offset(lensCenter.dx + 6, lensCenter.dy + 4), linePaint);
+  }
+
+  /// 🧪 Prefix & Suffix Lab: Molecular morphology interlocking tiles
+  void _drawPrefixSuffixArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.8;
+
+    final fill = Paint()
+      ..color = primaryColor.withAlpha(40)
+      ..style = PaintingStyle.fill;
+
+    // Prefix block
+    final pR = RRect.fromRectAndRadius(Rect.fromLTWH(center.dx - 38, center.dy - 12, 22, 24), const Radius.circular(5));
+    canvas.drawRRect(pR, fill);
+    canvas.drawRRect(pR, stroke);
+
+    // Core Root block
+    final cR = RRect.fromRectAndRadius(Rect.fromLTWH(center.dx - 12, center.dy - 15, 24, 30), const Radius.circular(5));
+    canvas.drawRRect(cR, Paint()..color = primaryColor.withAlpha(70));
+    canvas.drawRRect(cR, stroke);
+
+    // Suffix block
+    final sR = RRect.fromRectAndRadius(Rect.fromLTWH(center.dx + 16, center.dy - 12, 22, 24), const Radius.circular(5));
+    canvas.drawRRect(sR, fill);
+    canvas.drawRRect(sR, stroke);
+
+    // Connection pulses
+    canvas.drawCircle(Offset(center.dx - 14, center.dy), 2.5, Paint()..color = primaryColor);
+    canvas.drawCircle(Offset(center.dx + 14, center.dy), 2.5, Paint()..color = primaryColor);
+  }
+
+  /// 🌳 Word Family Tree: Minimalist morphological hierarchy
+  void _drawWordFamilyTreeArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.6;
+
+    final nodePaint = Paint()
+      ..color = primaryColor.withAlpha(60)
+      ..style = PaintingStyle.fill;
+
+    final rootPos = Offset(center.dx, center.dy - 16);
+    final leftPos = Offset(center.dx - 26, center.dy + 16);
+    final midPos = Offset(center.dx, center.dy + 18);
+    final rightPos = Offset(center.dx + 26, center.dy + 16);
+
+    // Tree branches
+    canvas.drawLine(rootPos, leftPos, stroke);
+    canvas.drawLine(rootPos, midPos, stroke);
+    canvas.drawLine(rootPos, rightPos, stroke);
+
+    // Root bud
+    canvas.drawCircle(rootPos, 9, Paint()..color = primaryColor);
+
+    // Branch leaves
+    canvas.drawCircle(leftPos, 6, nodePaint);
+    canvas.drawCircle(leftPos, 6, stroke);
+    canvas.drawCircle(midPos, 6, nodePaint);
+    canvas.drawCircle(midPos, 6, stroke);
+    canvas.drawCircle(rightPos, 6, nodePaint);
+    canvas.drawCircle(rightPos, 6, stroke);
+  }
+
+  /// 🎧 Dictation Dash: Audio waveform and keyboard transcription cursor
+  void _drawDictationDashArt(Canvas canvas, Size size, Offset center) {
+    final wavePaint = Paint()
+      ..color = primaryColor
+      ..strokeWidth = 2.4
+      ..strokeCap = StrokeCap.round;
+
+    // Waveform bars
+    const heights = [6.0, 16.0, 26.0, 14.0, 28.0, 18.0, 8.0];
+    for (int i = 0; i < heights.length; i++) {
+      final x = center.dx - 30 + (i * 10);
+      final h = heights[i];
+      canvas.drawLine(Offset(x, center.dy - 6 - h / 2), Offset(x, center.dy - 6 + h / 2), wavePaint);
+    }
+
+    // Underline and cursor below
+    final linePaint = Paint()
+      ..color = primaryColor.withAlpha(140)
+      ..strokeWidth = 1.5;
+    canvas.drawLine(Offset(center.dx - 32, center.dy + 20), Offset(center.dx + 16, center.dy + 20), linePaint);
+    // Cursor
+    canvas.drawLine(Offset(center.dx + 20, center.dy + 14), Offset(center.dx + 20, center.dy + 24), wavePaint);
+  }
+
+  /// 🎯 Sound Sniper: Precision auditory minimal-pairs crosshair
+  void _drawSoundSniperArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.6;
+
+    // Dual target reticles
+    canvas.drawCircle(center, 22, stroke);
+    canvas.drawCircle(center, 12, stroke);
+
+    // Crosshair axes
+    canvas.drawLine(Offset(center.dx - 28, center.dy), Offset(center.dx - 14, center.dy), stroke);
+    canvas.drawLine(Offset(center.dx + 14, center.dy), Offset(center.dx + 28, center.dy), stroke);
+    canvas.drawLine(Offset(center.dx, center.dy - 28), Offset(center.dx, center.dy - 14), stroke);
+    canvas.drawLine(Offset(center.dx, center.dy + 14), Offset(center.dx, center.dy + 28), stroke);
+
+    // Bullseye point
+    canvas.drawCircle(center, 3.5, Paint()..color = primaryColor);
+  }
+
+  /// 🦅 Error Hunter: Precision scanning lens with capture brackets
+  void _drawErrorHunterArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0
+      ..strokeCap = StrokeCap.round;
+
+    const s = 18.0;
+    // Top-left bracket
+    canvas.drawLine(Offset(center.dx - s, center.dy - s + 8), Offset(center.dx - s, center.dy - s), stroke);
+    canvas.drawLine(Offset(center.dx - s, center.dy - s), Offset(center.dx - s + 8, center.dy - s), stroke);
+
+    // Top-right bracket
+    canvas.drawLine(Offset(center.dx + s - 8, center.dy - s), Offset(center.dx + s, center.dy - s), stroke);
+    canvas.drawLine(Offset(center.dx + s, center.dy - s), Offset(center.dx + s, center.dy - s + 8), stroke);
+
+    // Bottom-left bracket
+    canvas.drawLine(Offset(center.dx - s, center.dy + s - 8), Offset(center.dx - s, center.dy + s), stroke);
+    canvas.drawLine(Offset(center.dx - s, center.dy + s), Offset(center.dx - s + 8, center.dy + s), stroke);
+
+    // Bottom-right bracket
+    canvas.drawLine(Offset(center.dx + s - 8, center.dy + s), Offset(center.dx + s, center.dy + s), stroke);
+    canvas.drawLine(Offset(center.dx + s, center.dy + s), Offset(center.dx + s, center.dy + s - 8), stroke);
+
+    // Center warning capture dot
+    canvas.drawCircle(center, 4, Paint()..color = primaryColor);
   }
 
   /// 📖 Graded Reader: Open illuminated book

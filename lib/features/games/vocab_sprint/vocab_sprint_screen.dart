@@ -237,6 +237,35 @@ class _VocabSprintScreenState extends ConsumerState<VocabSprintScreen> {
     });
   }
 
+  Future<void> _markAlreadyKnown() async {
+    final question = _questions[_currentIndex];
+    await ref.read(srsDaoProvider).markWordAsKnown(question.targetWord.id);
+
+    _score += 50;
+    _xpEarned += 10;
+    _correctCount++;
+    ref.read(audioServiceProvider).playSfx(SfxType.correct);
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Marked "${question.targetWord.lemma}" as already known!'),
+          duration: const Duration(seconds: 1),
+          backgroundColor: AppColors.correct,
+        ),
+      );
+    }
+
+    if (_currentIndex + 1 < _questions.length) {
+      setState(() {
+        _currentIndex++;
+        _questionStartTime = DateTime.now();
+      });
+    } else {
+      _timer?.cancel();
+      _endGame();
+    }
+  }
+
   void _handleAnswer(String option) {
     if (_currentIndex >= _questions.length) return;
     final current = _questions[_currentIndex];
@@ -616,6 +645,16 @@ class _VocabSprintScreenState extends ConsumerState<VocabSprintScreen> {
                   ),
                 );
               }),
+              const SizedBox(height: 8),
+
+              // "I Already Know This" button
+              Center(
+                child: TextButton.icon(
+                  icon: const Icon(Icons.done_all_rounded, size: 18, color: AppColors.accent),
+                  label: const Text('I already know this word', style: TextStyle(fontSize: 13)),
+                  onPressed: _markAlreadyKnown,
+                ),
+              ),
             ],
           ),
         ),
