@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../app/theme.dart';
 import '../../../app/providers.dart';
 import 'backup_restore_screen.dart';
@@ -15,6 +16,41 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
   bool _remindersEnabled = true;
   TimeOfDay _reminderTime = const TimeOfDay(hour: 8, minute: 30);
   double _speechRate = 0.5;
+  bool _useFsrs = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadSrsPreference();
+  }
+
+  Future<void> _loadSrsPreference() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      if (mounted) {
+        setState(() {
+          _useFsrs = prefs.getBool('use_fsrs_engine') ?? false;
+        });
+      }
+    } catch (_) {}
+  }
+
+  Future<void> _toggleSrsPreference(bool val) async {
+    setState(() => _useFsrs = val);
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setBool('use_fsrs_engine', val);
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(val ? 'FSRS v4.5 Scheduler Activated (90% target retention)' : 'SM-2 Classic Scheduler Activated'),
+            backgroundColor: AppColors.correct,
+            duration: const Duration(seconds: 2),
+          ),
+        );
+      }
+    } catch (_) {}
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -151,6 +187,48 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
                           ref.read(audioServiceProvider).speakOrPlay('Welcome to English Arena. Build mastery one day at a time.');
                         },
                       ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(height: 24),
+
+            // Spaced Repetition Engine (Spec 2.1 & Phase 5)
+            Text('Spaced Repetition Algorithm', style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+            const SizedBox(height: 8),
+            Card(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SwitchListTile(
+                      contentPadding: EdgeInsets.zero,
+                      title: const Text('Use FSRS v4.5 (Modern DSR Engine)', style: TextStyle(fontWeight: FontWeight.w600)),
+                      subtitle: Text(
+                        _useFsrs
+                            ? 'FSRS active: Retrievability decay model targeting 90% retention'
+                            : 'SM-2 active: Classical SuperMemo fixed-factor progression',
+                        style: TextStyle(fontSize: 12, color: theme.colorScheme.onSurfaceVariant),
+                      ),
+                      value: _useFsrs,
+                      activeColor: const Color(0xFF10B981),
+                      onChanged: _toggleSrsPreference,
+                    ),
+                    const Divider(height: 1),
+                    const SizedBox(height: 8),
+                    Row(
+                      children: [
+                        Icon(Icons.info_outline, size: 16, color: theme.colorScheme.primary),
+                        const SizedBox(width: 8),
+                        Expanded(
+                          child: Text(
+                            'FSRS calculates item stability (S) and difficulty (D) to eliminate review bottlenecks on mature cards.',
+                            style: TextStyle(fontSize: 11, color: theme.colorScheme.onSurfaceVariant),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),

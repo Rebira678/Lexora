@@ -44,6 +44,10 @@ enum GameArtType {
   debateMode,
   cohesionFixer,
   realEnglishLog,
+  styleAnalyzer,
+  c2LongReader,
+  linguisticEvaluator,
+  gapFinder,
 }
 
 class GameArtWidget extends StatelessWidget {
@@ -238,6 +242,18 @@ class _GameArtPainter extends CustomPainter {
         break;
       case GameArtType.realEnglishLog:
         _drawRealEnglishLogArt(canvas, size, center);
+        break;
+      case GameArtType.styleAnalyzer:
+        _drawStyleAnalyzerArt(canvas, size, center);
+        break;
+      case GameArtType.c2LongReader:
+        _drawC2LongReaderArt(canvas, size, center);
+        break;
+      case GameArtType.linguisticEvaluator:
+        _drawLinguisticEvaluatorArt(canvas, size, center);
+        break;
+      case GameArtType.gapFinder:
+        _drawGapFinderArt(canvas, size, center);
         break;
     }
   }
@@ -1364,6 +1380,120 @@ class _GameArtPainter extends CustomPainter {
     // Magnifying lens on bottom right
     canvas.drawCircle(Offset(center.dx + 12, center.dy + 4), 9, stroke);
     canvas.drawLine(Offset(center.dx + 18, center.dy + 11), Offset(center.dx + 24, center.dy + 18), stroke);
+  }
+
+  /// ✒️ Style & Rhetoric Analyzer: Quill pen with ink droplet & classic parchment
+  void _drawStyleAnalyzerArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    // Classic scroll
+    final scrollPath = Path()
+      ..moveTo(center.dx - 22, center.dy - 16)
+      ..cubicTo(center.dx - 12, center.dy - 20, center.dx + 10, center.dy - 12, center.dx + 20, center.dy - 16)
+      ..lineTo(center.dx + 20, center.dy + 16)
+      ..cubicTo(center.dx + 10, center.dy + 12, center.dx - 12, center.dy + 20, center.dx - 22, center.dy + 16)
+      ..close();
+    canvas.drawPath(scrollPath, Paint()..color = primaryColor.withValues(alpha: 0.15));
+    canvas.drawPath(scrollPath, stroke);
+
+    // Quill pen angled across
+    final quillPath = Path()
+      ..moveTo(center.dx + 16, center.dy - 22)
+      ..quadraticBezierTo(center.dx + 2, center.dy - 8, center.dx - 10, center.dy + 8)
+      ..lineTo(center.dx - 12, center.dy + 12)
+      ..lineTo(center.dx - 8, center.dy + 10)
+      ..quadraticBezierTo(center.dx + 6, center.dy - 2, center.dx + 22, center.dy - 16)
+      ..close();
+    canvas.drawPath(quillPath, Paint()..color = const Color(0xFFF59E0B).withValues(alpha: 0.3));
+    canvas.drawPath(quillPath, Paint()..color = const Color(0xFFF59E0B)..style = PaintingStyle.stroke..strokeWidth = 1.8);
+
+    // Ink droplet
+    canvas.drawCircle(Offset(center.dx - 14, center.dy + 15), 2.5, Paint()..color = const Color(0xFFF59E0B));
+  }
+
+  /// 📖 Great Works & Essays (C2): Open antique leatherbound codex with golden bookmark
+  void _drawC2LongReaderArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    // Open book pages left & right
+    final leftPage = Path()
+      ..moveTo(center.dx, center.dy + 14)
+      ..quadraticBezierTo(center.dx - 14, center.dy + 10, center.dx - 26, center.dy + 14)
+      ..lineTo(center.dx - 26, center.dy - 14)
+      ..quadraticBezierTo(center.dx - 14, center.dy - 18, center.dx, center.dy - 14)
+      ..close();
+
+    final rightPage = Path()
+      ..moveTo(center.dx, center.dy + 14)
+      ..quadraticBezierTo(center.dx + 14, center.dy + 10, center.dx + 26, center.dy + 14)
+      ..lineTo(center.dx + 26, center.dy - 14)
+      ..quadraticBezierTo(center.dx + 14, center.dy - 18, center.dx, center.dy - 14)
+      ..close();
+
+    canvas.drawPath(leftPage, Paint()..color = primaryColor.withValues(alpha: 0.2));
+    canvas.drawPath(leftPage, stroke);
+    canvas.drawPath(rightPage, Paint()..color = primaryColor.withValues(alpha: 0.2));
+    canvas.drawPath(rightPage, stroke);
+
+    // Golden bookmark ribbon dangling
+    final ribbon = Path()
+      ..moveTo(center.dx - 2, center.dy - 14)
+      ..lineTo(center.dx - 2, center.dy + 20)
+      ..lineTo(center.dx + 1, center.dy + 17)
+      ..lineTo(center.dx + 4, center.dy + 20)
+      ..lineTo(center.dx + 4, center.dy - 14)
+      ..close();
+    canvas.drawPath(ribbon, Paint()..color = const Color(0xFFF59E0B));
+  }
+
+  /// 📊 Linguistic Evaluator: Spectrum equalizer bars & diamond precision reticle
+  void _drawLinguisticEvaluatorArt(Canvas canvas, Size size, Offset center) {
+    final paint = Paint()..color = primaryColor;
+    final heights = [12.0, 22.0, 32.0, 26.0, 18.0, 28.0];
+    final startX = center.dx - 25;
+
+    for (int i = 0; i < heights.length; i++) {
+      final rect = RRect.fromRectAndRadius(
+        Rect.fromLTWH(startX + i * 9, center.dy + 14 - heights[i], 6, heights[i]),
+        const Radius.circular(2),
+      );
+      canvas.drawRRect(rect, paint..color = (i % 2 == 0 ? primaryColor : const Color(0xFF10B981)));
+    }
+
+    // Diagnostic diamond reticle
+    final diamond = Path()
+      ..moveTo(center.dx + 18, center.dy - 14)
+      ..lineTo(center.dx + 24, center.dy - 8)
+      ..lineTo(center.dx + 18, center.dy - 2)
+      ..lineTo(center.dx + 12, center.dy - 8)
+      ..close();
+    canvas.drawPath(diamond, Paint()..color = const Color(0xFF38BDF8)..style = PaintingStyle.stroke..strokeWidth = 1.8);
+  }
+
+  /// 🎯 Lexical Gap Finder: Radar sweep circle with isolated missing puzzle fragment
+  void _drawGapFinderArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    // Outer radar ring
+    canvas.drawCircle(center, 22, stroke);
+    canvas.drawCircle(center, 12, Paint()..color = primaryColor.withValues(alpha: 0.15));
+
+    // Radar crosshairs
+    canvas.drawLine(Offset(center.dx - 22, center.dy), Offset(center.dx + 22, center.dy), Paint()..color = primaryColor.withValues(alpha: 0.4));
+    canvas.drawLine(Offset(center.dx, center.dy - 22), Offset(center.dx, center.dy + 22), Paint()..color = primaryColor.withValues(alpha: 0.4));
+
+    // Blip pulse target
+    canvas.drawCircle(Offset(center.dx + 8, center.dy - 8), 4, Paint()..color = const Color(0xFFEF4444));
+    canvas.drawCircle(Offset(center.dx + 8, center.dy - 8), 7, Paint()..color = const Color(0xFFEF4444).withValues(alpha: 0.3));
   }
 
   @override

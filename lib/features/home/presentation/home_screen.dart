@@ -46,6 +46,10 @@ import '../../speaking/debate_mode_screen.dart';
 import '../../writing/cohesion_fixer_screen.dart';
 import '../../wild_items/real_english_log_screen.dart';
 import '../../word_notebook/word_notebook_screen.dart';
+import '../../games/style_analyzer/style_analyzer_screen.dart';
+import '../../reading/c2_long_reader_screen.dart';
+import '../../writing/linguistic_evaluator_screen.dart';
+import '../../games/gap_finder/gap_finder_screen.dart';
 import 'widgets/daily_quest_board_widget.dart';
 import 'widgets/game_art_painters.dart';
 
@@ -1280,6 +1284,88 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                       ),
                     ],
                   ),
+                  const SizedBox(height: 28),
+
+                  // Phase 5: C2 Mastery & Scholarship
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          'Phase 5: C2 Mastery & Scholarship',
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            fontWeight: FontWeight.w700,
+                            letterSpacing: -0.2,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFF59E0B).withValues(alpha: 0.15),
+                          borderRadius: BorderRadius.circular(6),
+                          border: Border.all(color: const Color(0xFFF59E0B).withValues(alpha: 0.3)),
+                        ),
+                        child: const Text(
+                          'C2 MASTERY',
+                          style: TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w700,
+                            color: Color(0xFFF59E0B),
+                            letterSpacing: 0.5,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 14),
+                  GridView.count(
+                    crossAxisCount: 2,
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    crossAxisSpacing: 12,
+                    mainAxisSpacing: 12,
+                    childAspectRatio: 0.85,
+                    children: [
+                      _IllustratedGameCard(
+                        type: GameArtType.styleAnalyzer,
+                        category: 'RHETORIC & STYLE',
+                        title: 'Style Analyzer',
+                        description: 'Chiasmus, zeugma, litotes & classical rhetorical figures',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const StyleAnalyzerScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.c2LongReader,
+                        category: 'CLASSIC ESSAYS',
+                        title: 'Great Works Reader',
+                        description: 'Bacon, Orwell & classic essays with margin notes',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const C2LongReaderScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.linguisticEvaluator,
+                        category: 'ON-DEVICE NLP',
+                        title: 'Linguistic Evaluator',
+                        description: 'Syntactic complexity, AWL density & register audit',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const LinguisticEvaluatorScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.gapFinder,
+                        category: 'ADAPTIVE DIAGNOSTIC',
+                        title: 'Lexical Gap Finder',
+                        description: 'High-speed diagnostic identifying gaps into SRS',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const GapFinderScreen()),
+                        ),
+                      ),
+                    ],
+                  ),
                   const SizedBox(height: 24),
                 ],
               ),
@@ -1374,22 +1460,26 @@ class _IllustratedGameCard extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                            decoration: BoxDecoration(
-                              color: theme.colorScheme.primary.withAlpha(20),
-                              borderRadius: BorderRadius.circular(4),
-                            ),
-                            child: Text(
-                              category,
-                              style: TextStyle(
-                                fontSize: 9,
-                                fontWeight: FontWeight.w700,
-                                letterSpacing: 0.5,
-                                color: theme.colorScheme.primary,
+                          Flexible(
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                              decoration: BoxDecoration(
+                                color: theme.colorScheme.primary.withAlpha(20),
+                                borderRadius: BorderRadius.circular(4),
+                              ),
+                              child: Text(
+                                category,
+                                style: TextStyle(
+                                  fontSize: 9,
+                                  fontWeight: FontWeight.w700,
+                                  letterSpacing: 0.5,
+                                  color: theme.colorScheme.primary,
+                                ),
+                                overflow: TextOverflow.ellipsis,
                               ),
                             ),
                           ),
+                          const SizedBox(width: 4),
                           Icon(
                             Icons.arrow_forward_rounded,
                             size: 13,

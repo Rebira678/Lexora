@@ -1,0 +1,252 @@
+{
+  "rhetorical_analysis": [
+    {
+      "id": 1,
+      "author": "John F. Kennedy",
+      "work": "Inaugural Address (1961)",
+      "excerpt": "Ask not what your country can do for you—ask what you can do for your country.",
+      "targetDevice": "Chiasmus",
+      "targetSpan": "Ask not what your country can do for you—ask what you can do for your country",
+      "options": ["Chiasmus", "Zeugma", "Litotes", "Hyperbaton"],
+      "explanation": "Chiasmus is a rhetorical figure in which words, grammatical constructions, or concepts are repeated in reverse order (ABBA structure: country/you → you/country)."
+    },
+    {
+      "id": 2,
+      "author": "Charles Dickens",
+      "work": "The Pickwick Papers",
+      "excerpt": "Miss Bolo went straight home, in a flood of tears and a sedan chair.",
+      "targetDevice": "Zeugma",
+      "targetSpan": "in a flood of tears and a sedan chair",
+      "options": ["Zeugma", "Litotes", "Chiasmus", "Synecdoche"],
+      "explanation": "Zeugma (or Syllepsis) applies a single preposition or verb to two distinct nouns with different semantic senses (one metaphorical: 'tears'; one physical: 'sedan chair')."
+    },
+    {
+      "id": 3,
+      "author": "George Orwell",
+      "work": "Politics and the English Language (1946)",
+      "excerpt": "A citizen of our country will find that this political outcome is no small misfortune.",
+      "targetDevice": "Litotes",
+      "targetSpan": "no small misfortune",
+      "options": ["Litotes", "Hyperbaton", "Polysyndeton", "Zeugma"],
+      "explanation": "Litotes employs deliberate understatement through double negation or denying the contrary ('no small misfortune' = a colossal catastrophe)."
+    },
+    {
+      "id": 4,
+      "author": "William Shakespeare",
+      "work": "Julius Caesar",
+      "excerpt": "This was the most unkindest cut of all; for when the noble Caesar saw him stab, ingratitude, more strong than traitors' arms, quite vanquished him.",
+      "targetDevice": "Hyperbaton",
+      "targetSpan": "most unkindest cut of all",
+      "options": ["Hyperbaton", "Chiasmus", "Litotes", "Metonymy"],
+      "explanation": "Hyperbaton disrupts standard syntactic word order to create dramatic emphasis and emotional intensity."
+    },
+    {
+      "id": 5,
+      "author": "Abraham Lincoln",
+      "work": "Gettysburg Address (1863)",
+      "excerpt": "Government of the people, by the people, for the people, shall not perish from the earth.",
+      "targetDevice": "Epistrophe",
+      "targetSpan": "of the people, by the people, for the people",
+      "options": ["Epistrophe", "Zeugma", "Litotes", "Hyperbaton"],
+      "explanation": "Epistrophe (or Epiphora) is the repetition of the same word or phrase at the end of successive clauses, delivering majestic rhythmic finality."
+    },
+    {
+      "id": 6,
+      "author": "Winston Churchill",
+      "work": "House of Commons Speech (1940)",
+      "excerpt": "We shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields and in the streets, we shall fight in the hills; we shall never surrender.",
+      "targetDevice": "Anaphora",
+      "targetSpan": "We shall fight... we shall fight... we shall fight",
+      "options": ["Anaphora", "Chiasmus", "Zeugma", "Litotes"],
+      "explanation": "Anaphora is the deliberate repetition of a phrase at the beginning of successive sentences to forge unyielding oratorical momentum."
+    },
+    {
+      "id": 7,
+      "author": "Edward Bulwer-Lytton",
+      "work": "Richelieu (1839)",
+      "excerpt": "The pen is mightier than the sword.",
+      "targetDevice": "Metonymy",
+      "targetSpan": "pen is mightier than the sword",
+      "options": ["Metonymy", "Hyperbaton", "Litotes", "Zeugma"],
+      "explanation": "Metonymy substitutes the name of an attribute or adjunct for that of the thing meant (the 'pen' stands for the written word / diplomacy; the 'sword' for martial force)."
+    },
+    {
+      "id": 8,
+      "author": "Virginia Woolf",
+      "work": "To the Lighthouse (1927)",
+      "excerpt": "The night was full of wind and destruction; trees fell, and shingles were torn from the roofs, and the sea roared in fury.",
+      "targetDevice": "Polysyndeton",
+      "targetSpan": "and shingles were torn... and the sea roared",
+      "options": ["Polysyndeton", "Asyndeton", "Chiasmus", "Litotes"],
+      "explanation": "Polysyndeton uses multiple coordinating conjunctions ('and... and...') in close succession to convey overwhelming accumulation and continuous relentless force."
+    }
+  ],
+  "long_form_essays": [
+    {
+      "id": 1,
+      "title": "Of Studies",
+      "author": "Francis Bacon (1625)",
+      "wordCount": 510,
+      "theme": "Classical Rhetoric & Intellectual Discipline",
+      "paragraphs": [
+        {
+          "text": "Studies serve for delight, for ornament, and for ability. Their chief use for delight is in privateness and retiring; for ornament, is in discourse; and for ability, is in the judgment and disposition of business. For expert men can execute, and perhaps judge of particulars, one by one; but the general counsels, and the plots and marshalling of affairs, come best from those that are learned.",
+          "annotation": "Tripartite parallel structure. Bacon opens with balanced tricolon ('delight, ornament, ability') defining the fundamental virtues of learning.",
+          "c2Vocabulary": ["privateness", "retiring", "marshalling", "disposition"]
+        },
+        {
+          "text": "To spend too much time in studies is sloth; to use them too much for ornament, is affectation; to make judgment wholly by their rules, is the humor of a scholar. They perfect nature, and are perfected by experience: for natural abilities are like natural plants, that need proyning, by study; and studies themselves do give forth directions too much at large, except they be bounded in by experience.",
+          "annotation": "Antithetical balancing. Notice how Bacon contrasts pure scholastic theory with empirical pragmatism, employing botanical metaphor.",
+          "c2Vocabulary": ["sloth", "affectation", "proyning", "bounded"]
+        },
+        {
+          "text": "Crafty men contemn studies, simple men admire them, and wise men use them; for they teach not their own use; but that is a wisdom without them, and above them, won by observation. Read not to contradict and confute; nor to believe and take for granted; nor to find talk and discourse; but to weigh and consider.",
+          "annotation": "Epigrammatic aphorisms. The concluding imperative establishes the golden maxim of critical hermeneutics: reading to weigh and consider.",
+          "c2Vocabulary": ["contemn", "confute", "hermeneutics", "epigrammatic"]
+        }
+      ],
+      "comprehensionQuestions": [
+        {
+          "question": "According to Bacon, what is the grave hazard of relying entirely on book learning without worldly experience?",
+          "options": [
+            "It turns into the eccentric humor of a pedant and lacks pragmatic boundaries",
+            "It leads to total financial insolvency and poverty",
+            "It causes people to lose the ability to speak Latin",
+            "It makes writing too brief and plain for public discourse"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "question": "What is the recommended attitude toward reading championed in the final paragraph?",
+          "options": [
+            "To accept every printed assertion as undeniable dogma",
+            "To aggressively contradict authors and disprove their theses",
+            "To deliberate, weigh, and critically evaluate assertions objectively",
+            "To gather entertaining anecdotes for social dinner parties"
+          ],
+          "correctIndex": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Politics and the English Language",
+      "author": "George Orwell (1946)",
+      "wordCount": 620,
+      "theme": "Linguistic Clarity & Political Resistance",
+      "paragraphs": [
+        {
+          "text": "Now, it is clear that the decline of a language must ultimately have political and economic causes: it is not due simply to the bad influence of this or that individual writer. But an effect can become a cause, reinforcing the original cause and producing the same effect in an intensified form, and so on indefinitely. A man may take to drink because he feels himself to be a failure, and then fail all the more completely because he drinks. It is rather the same thing that is happening to the English language. It becomes ugly and inaccurate because our thoughts are foolish, but the slovenliness of our language makes it easier for us to have foolish thoughts.",
+          "annotation": "Causal feedback loop. Orwell illustrates how corrupted political language acts as a cognitive accelerant for intellectual passivity.",
+          "c2Vocabulary": ["slovenliness", "intensified", "feedback loop", "indefinitely"]
+        },
+        {
+          "text": "In our time, political speech and writing are largely the defence of the indefensible. Things like the continuance of British rule in India, the Russian purges and deportations, the dropping of the atom bombs on Japan, can indeed be defended, but only by arguments which are too brutal for most people to face, and which do not square with the professed aims of political parties. Thus political language has to consist largely of euphemism, question-begging and sheer cloudy vagueness.",
+          "annotation": "Moral indictment of euphemistic framing. Euphemisms anesthetize moral conscience by substituting Latinate abstractions for visceral suffering.",
+          "c2Vocabulary": ["euphemism", "question-begging", "indefensible", "anesthetize"]
+        },
+        {
+          "text": "Political language—and with variations this is true of all political parties, from Conservatives to Anarchists—is designed to make lies sound truthful and murder respectable, and to give an appearance of solidity to pure wind. One cannot change this all in a moment, but one can at least change one's own habits, and from time to time one can even, if one jeers loudly enough, send some worn-out and useless phrase into the dustbin where it belongs.",
+          "annotation": "Aesthetic of resistance. Individual linguistic vigilance serves as a bulwark against totalitarian obfuscation.",
+          "c2Vocabulary": ["obfuscation", "bulwark", "jeers", "dustbin"]
+        }
+      ],
+      "comprehensionQuestions": [
+        {
+          "question": "What reciprocal relationship does Orwell describe between foolish thoughts and slovenly language?",
+          "options": [
+            "Language and thought are completely independent neurobiological systems",
+            "Slovenly language makes foolish thoughts easier, which further degrades language",
+            "Foolish thoughts automatically improve grammar through evolutionary pressure",
+            "Only professional novelists possess the authority to alter language"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "question": "What is the primary function of euphemism in modern political rhetoric according to Orwell?",
+          "options": [
+            "To make scientific data comprehensible to rural populations",
+            "To disguise brutal realities and make the indefensible sound respectable",
+            "To teach classical Latin syntax to university undergraduates",
+            "To reduce printing expenses in government bulletins"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    }
+  ],
+  "gap_finder_words": [
+    {
+      "id": 1,
+      "lemma": "ephemeral",
+      "cefr": "C1",
+      "ipa": "/ɪˈfem.ər.əl/",
+      "pos": "adjective",
+      "definition": "Lasting for a very short time; fleeting.",
+      "sentence": "Fame in the digital age is often ephemeral, vanishing with the next algorithmic cycle."
+    },
+    {
+      "id": 2,
+      "lemma": "panacea",
+      "cefr": "C2",
+      "ipa": "/ˌpæn.əˈsiː.ə/",
+      "pos": "noun",
+      "definition": "A solution or remedy for all difficulties or diseases; a universal cure.",
+      "sentence": "Technological innovation is valuable, but it is not a panacea for deep structural poverty."
+    },
+    {
+      "id": 3,
+      "lemma": "ubiquitous",
+      "cefr": "B2",
+      "ipa": "/juːˈbɪk.wɪ.təs/",
+      "pos": "adjective",
+      "definition": "Present, appearing, or found everywhere simultaneously.",
+      "sentence": "Smartphones have become ubiquitous across all demographics of modern society."
+    },
+    {
+      "id": 4,
+      "lemma": "pernicious",
+      "cefr": "C2",
+      "ipa": "/pərˈnɪʃ.əs/",
+      "pos": "adjective",
+      "definition": "Having a harmful effect, especially in a gradual or subtle way.",
+      "sentence": "The pervasive spread of unverified disinformation exerts a pernicious influence on democratic institutions."
+    },
+    {
+      "id": 5,
+      "lemma": "quintessential",
+      "cefr": "C1",
+      "ipa": "/ˌkwɪn.təˈsen.ʃəl/",
+      "pos": "adjective",
+      "definition": "Representing the most perfect or typical example of a quality or class.",
+      "sentence": "His diplomatic poise and eloquence made him the quintessential statesman."
+    },
+    {
+      "id": 6,
+      "lemma": "insidious",
+      "cefr": "C1",
+      "ipa": "/ɪnˈsɪd.i.əs/",
+      "pos": "adjective",
+      "definition": "Proceeding in a gradual, subtle way, but with harmful consequences.",
+      "sentence": "Carbon monoxide is an insidious hazard because it is colorless and odorless."
+    },
+    {
+      "id": 7,
+      "lemma": "esoteric",
+      "cefr": "C2",
+      "ipa": "/ˌes.əˈter.ɪk/",
+      "pos": "adjective",
+      "definition": "Intended for or likely to be understood by only a small number of people with specialized knowledge.",
+      "sentence": "The symposium focused on esoteric proofs in non-Euclidean algebraic geometry."
+    },
+    {
+      "id": 8,
+      "lemma": "anachronistic",
+      "cefr": "C1",
+      "ipa": "/əˌnæk.rəˈnɪs.tɪk/",
+      "pos": "adjective",
+      "definition": "Belonging or appropriate to an earlier period, especially so as to seem conspicuously old-fashioned.",
+      "sentence": "The company's rigid paper-based filing system seemed completely anachronistic in a cloud-first era."
+    }
+  ]
+}
