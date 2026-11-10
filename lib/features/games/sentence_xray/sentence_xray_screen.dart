@@ -5,6 +5,8 @@ import '../../../app/theme.dart';
 import '../../../core/audio/audio_service.dart';
 import '../../../core/db/database.dart';
 import '../../../app/providers.dart';
+import '../../../core/scoring/scoring.dart';
+import '../../../core/planner/difficulty_tuner.dart';
 import '../widgets/what_you_learned_screen.dart';
 
 enum XRayTagMode { subject, verb, extras }
@@ -100,10 +102,42 @@ class _SentenceXRayScreenState extends ConsumerState<SentenceXRayScreen> {
     });
   }
 
+  Set<int> _parseSpan(String? span) {
+    if (span == null || span.trim().isEmpty) return {};
+    final s = span.trim();
+    if (s.contains('-')) {
+      final parts = s.split('-');
+      final start = int.tryParse(parts[0]) ?? 0;
+      final end = int.tryParse(parts[1]) ?? start;
+      return {for (int i = start; i <= end; i++) i};
+    } else {
+      final val = int.tryParse(s);
+      return val != null ? {val} : {};
+    }
+  }
+
   void _checkBreakdown() {
     final current = _sentences[_currentIndex];
-    // Check subject & verb identification
-    bool isGood = _selectedSubject.isNotEmpty && _selectedVerb.isNotEmpty;
+    final words = current.sentence.split(RegExp(r'\s+'));
+    final correctSubject = _parseSpan(current.subjectSpan);
+    final correctVerb = _parseSpan(current.verbSpan);
+    final correctExtras = <int>{};
+    for (int i = 0; i < words.length; i++) {
+      if (!correctSubject.contains(i) && !correctVerb.contains(i)) {
+        correctExtras.add(i);
+      }
+    }
+
+    final simScore = xraySpanScore(
+      tappedSubject: _selectedSubject,
+      correctSubject: correctSubject,
+      tappedVerb: _selectedVerb,
+      correctVerb: correctVerb,
+      tappedExtras: _selectedExtras,
+      correctExtras: correctExtras,
+    );
+
+    final isGood = simScore >= 0.65;
 
     setState(() {
       _hasChecked = true;
@@ -111,8 +145,9 @@ class _SentenceXRayScreenState extends ConsumerState<SentenceXRayScreen> {
 
     if (isGood) {
       _correctCount++;
-      _score += 150;
-      _xpEarned += 30;
+      final earned = (simScore * 200).round();
+      _score += earned;
+      _xpEarned += (earned * 0.25).round();
       ref.read(audioServiceProvider).playSfx(SfxType.correct);
       ref.read(audioServiceProvider).speakOrPlay(current.sentence);
 
@@ -120,7 +155,7 @@ class _SentenceXRayScreenState extends ConsumerState<SentenceXRayScreen> {
         LearnedItem(
           term: current.sentence,
           definition: current.simpleMeaning ?? 'Deconstructed English core sentence',
-          example: 'Subject & Main Verb identified successfully',
+          example: 'Match ${(simScore * 100).round()}%: Subject & Main Verb identified successfully',
           wasMistake: false,
         ),
       );
@@ -131,7 +166,7 @@ class _SentenceXRayScreenState extends ConsumerState<SentenceXRayScreen> {
         LearnedItem(
           term: current.sentence,
           definition: current.simpleMeaning ?? 'Deconstructed English core sentence',
-          example: 'Review subject and verb identification',
+          example: 'Review core subject & verb identification (Score: ${(simScore * 100).round()}%)',
           wasMistake: true,
         ),
       );
@@ -154,6 +189,7 @@ class _SentenceXRayScreenState extends ConsumerState<SentenceXRayScreen> {
     final durationMs = now - _roundStartTime;
     final total = _currentIndex + 1;
     final accuracy = total == 0 ? 0.0 : _correctCount / total;
+    final nextLevel = nextSentenceLevel(widget.level, accuracy, 3);
 
     await ref.read(gameDaoProvider).recordSession(
           GameSessionsCompanion.insert(
@@ -184,14 +220,14 @@ class _SentenceXRayScreenState extends ConsumerState<SentenceXRayScreen> {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
         builder: (_) => WhatYouLearnedScreen(
-          gameTitle: '🔬 Sentence X-Ray',
+          gameTitle: '🔬 Sentence X-Ray (Level ${widget.level} ➔ $nextLevel)',
           score: _score,
           xpEarned: _xpEarned,
           accuracy: accuracy,
           items: _learnedItems,
           onPlayAgain: () {
             Navigator.of(context).pushReplacement(
-              MaterialPageRoute(builder: (_) => SentenceXRayScreen(level: widget.level)),
+              MaterialPageRoute(builder: (_) => SentenceXRayScreen(level: nextLevel)),
             );
           },
         ),
@@ -311,8 +347,26 @@ class _SentenceXRayScreenState extends ConsumerState<SentenceXRayScreen> {
                     children: [
                       const Text('💡 X-Ray Core Breakdown', style: TextStyle(fontWeight: FontWeight.bold)),
                       const SizedBox(height: 6),
-                      Text('Core Subject: ${current.subjectSpan ?? "Target Subject"}'),
-                      Text('Core Verb: ${current.verbSpan ?? "Target Action"}'),
+                      Builder(builder: (_) {
+                        final subjSpan = _parseSpan(current.subjectSpan);
+                        final verbSpan = _parseSpan(current.verbSpan);
+                        final subjWords = subjSpan.where((i) => i < words.length).map((i) => words[i]).join(' ');
+                        final verbWords = verbSpan.where((i) => i < words.length).map((i) => words[i]).join(' ');
+                        return Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Core Subject: "$subjWords"',
+                              style: const TextStyle(fontWeight: FontWeight.w600, color: Colors.blueAccent),
+                            ),
+                            const SizedBox(height: 4),
+                            Text(
+                              'Core Verb: "$verbWords"',
+                              style: const TextStyle(fontWeight: FontWeight.w600, color: Colors.redAccent),
+                            ),
+                          ],
+                        );
+                      }),
                       if (current.simpleMeaning != null) ...[
                         const SizedBox(height: 6),
                         Text(
@@ -337,7 +391,7 @@ class _SentenceXRayScreenState extends ConsumerState<SentenceXRayScreen> {
               else
                 ElevatedButton(
                   onPressed: _nextSentence,
-                  child: Text(_currentIndex + 1 < 4 ? 'Next Sentence' : 'Finish Round'),
+                  child: Text(_currentIndex + 1 < maxSentences ? 'Next Sentence' : 'Finish Round'),
                 ),
             ],
           ),

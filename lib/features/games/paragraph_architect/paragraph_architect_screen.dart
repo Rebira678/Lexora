@@ -52,12 +52,16 @@ class _ParagraphArchitectScreenState extends ConsumerState<ParagraphArchitectScr
 
   bool _isLoading = true;
   bool _highlightConnectors = false;
+  bool _showLinkUsed = false;
   bool _hasChecked = false;
   int _score = 0;
   int _xpEarned = 0;
   double _penaltyMultiplier = 1.0;
   int _roundStartTime = 0;
   final List<LearnedItem> _learnedItems = [];
+
+  // Bonus Reference question
+  bool _bonusAnswered = false;
 
   @override
   void initState() {
@@ -113,6 +117,8 @@ class _ParagraphArchitectScreenState extends ConsumerState<ParagraphArchitectScr
       _links = links;
       _hasChecked = false;
       _highlightConnectors = false;
+      _showLinkUsed = false;
+      _bonusAnswered = false;
       _penaltyMultiplier = 1.0;
       _isLoading = false;
     });
@@ -190,6 +196,26 @@ class _ParagraphArchitectScreenState extends ConsumerState<ParagraphArchitectScr
         _currentOrder.insert(0, opener);
         _penaltyMultiplier -= 0.20;
       });
+    }
+  }
+
+  void _useShowOneLinkHelper() {
+    if (_correctOrder.length < 2 || _showLinkUsed) return;
+    for (int i = 0; i < _correctOrder.length - 1; i++) {
+      final a = _correctOrder[i];
+      final b = _correctOrder[i + 1];
+      final idxA = _currentOrder.indexWhere((s) => s.id == a);
+      final idxB = _currentOrder.indexWhere((s) => s.id == b);
+      if (idxA >= 0 && idxB >= 0 && idxB != idxA + 1) {
+        setState(() {
+          final itemB = _currentOrder.removeAt(idxB);
+          final newIdxA = _currentOrder.indexWhere((s) => s.id == a);
+          _currentOrder.insert(newIdxA + 1, itemB);
+          _penaltyMultiplier -= 0.15;
+          _showLinkUsed = true;
+        });
+        break;
+      }
     }
   }
 
@@ -278,17 +304,25 @@ class _ParagraphArchitectScreenState extends ConsumerState<ParagraphArchitectScr
                   children: [
                     Expanded(
                       child: ActionChip(
-                        avatar: const Icon(Icons.highlight, size: 16),
-                        label: const Text('Highlight (-10%)', style: TextStyle(fontSize: 11)),
+                        avatar: const Icon(Icons.highlight, size: 15),
+                        label: const Text('Highlight (-10%)', style: TextStyle(fontSize: 10)),
                         onPressed: _highlightConnectors ? null : _useHighlightHelper,
                       ),
                     ),
-                    const SizedBox(width: 8),
+                    const SizedBox(width: 6),
                     Expanded(
                       child: ActionChip(
-                        avatar: const Icon(Icons.push_pin, size: 16),
-                        label: const Text('Pin First (-20%)', style: TextStyle(fontSize: 11)),
+                        avatar: const Icon(Icons.push_pin, size: 15),
+                        label: const Text('Pin First (-20%)', style: TextStyle(fontSize: 10)),
                         onPressed: _usePinOpenerHelper,
+                      ),
+                    ),
+                    const SizedBox(width: 6),
+                    Expanded(
+                      child: ActionChip(
+                        avatar: const Icon(Icons.link, size: 15),
+                        label: const Text('Show Link (-15%)', style: TextStyle(fontSize: 10)),
+                        onPressed: _showLinkUsed ? null : _useShowOneLinkHelper,
                       ),
                     ),
                   ],
@@ -348,23 +382,96 @@ class _ParagraphArchitectScreenState extends ConsumerState<ParagraphArchitectScr
             if (_hasChecked && _links.isNotEmpty)
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                padding: const EdgeInsets.all(12),
+                padding: const EdgeInsets.all(14),
                 decoration: BoxDecoration(
-                  color: theme.colorScheme.surfaceContainerHighest.withAlpha(120),
+                  color: theme.colorScheme.surface,
                   borderRadius: BorderRadius.circular(16),
+                  border: Border.all(color: theme.colorScheme.primary.withAlpha(80)),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('🔗 Cohesion Map', style: TextStyle(fontWeight: FontWeight.bold)),
-                    const SizedBox(height: 6),
-                    ..._links.map((link) => Padding(
-                          padding: const EdgeInsets.only(bottom: 4),
-                          child: Text(
-                            '• "${link.cue}" links Idea ${link.from} ➔ ${link.to} (${link.type})',
-                            style: const TextStyle(fontSize: 13),
-                          ),
-                        )),
+                    Row(
+                      children: [
+                        Icon(Icons.hub_rounded, size: 16, color: theme.colorScheme.primary),
+                        const SizedBox(width: 8),
+                        const Text('Cohesion Map', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: _links.map((link) {
+                          return Container(
+                            margin: const EdgeInsets.only(right: 8),
+                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                            decoration: BoxDecoration(
+                              color: theme.colorScheme.surfaceContainerHighest.withAlpha(120),
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(color: theme.colorScheme.outline.withAlpha(60)),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text('Sentence ${link.from}', style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
+                                const SizedBox(width: 6),
+                                Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
+                                  decoration: BoxDecoration(
+                                    color: theme.colorScheme.primary.withAlpha(30),
+                                    borderRadius: BorderRadius.circular(4),
+                                  ),
+                                  child: Text(
+                                    '${link.cue} (${link.type})',
+                                    style: TextStyle(fontSize: 10, fontWeight: FontWeight.w700, color: theme.colorScheme.primary),
+                                  ),
+                                ),
+                                const SizedBox(width: 6),
+                                const Icon(Icons.arrow_forward_rounded, size: 12),
+                                const SizedBox(width: 4),
+                                Text('Sentence ${link.to}', style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
+                              ],
+                            ),
+                          );
+                        }).toList(),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+            // Optional Bonus Reference Question if applicable
+            if (_hasChecked && _links.any((l) => l.type == 'reference') && !_bonusAnswered)
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: theme.colorScheme.surfaceContainerHighest.withAlpha(100),
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: AppColors.accent.withAlpha(60)),
+                ),
+                child: Row(
+                  children: [
+                    const Icon(Icons.psychology_alt_rounded, size: 18, color: AppColors.accent),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: Text(
+                        'Bonus: Does "${_links.firstWhere((l) => l.type == 'reference').cue}" refer to Idea ${_links.firstWhere((l) => l.type == 'reference').from}?',
+                        style: const TextStyle(fontSize: 12),
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        setState(() {
+                          _bonusAnswered = true;
+                          _score += 50;
+                          _xpEarned += 20;
+                        });
+                        ref.read(audioServiceProvider).playSfx(SfxType.correct);
+                      },
+                      child: const Text('Yes (+20 XP)'),
+                    ),
                   ],
                 ),
               ),

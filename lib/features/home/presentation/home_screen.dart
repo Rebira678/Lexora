@@ -10,6 +10,7 @@ import '../../games/sentence_unscrambler/sentence_unscrambler_screen.dart';
 import '../../games/paragraph_architect/paragraph_architect_screen.dart';
 import '../../games/chunk_echo/chunk_echo_screen.dart';
 import '../../games/sentence_xray/sentence_xray_screen.dart';
+import '../../games/slice_it/slice_it_screen.dart';
 import '../../reading/reading_screen.dart';
 import '../../mistakes/presentation/mistakes_screen.dart';
 import '../../stats/presentation/stats_screen.dart';
@@ -656,12 +657,30 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         ),
                       ),
                       _IllustratedGameCard(
+                        type: GameArtType.sliceIt,
+                        category: 'CHUNKING',
+                        title: 'Slice It',
+                        description: 'Interactive phrase cuts & boundary recognition',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const SliceItScreen(level: 2)),
+                        ),
+                      ),
+                      _IllustratedGameCard(
                         type: GameArtType.gradedReader,
                         category: 'READING',
                         title: 'Graded Reader',
                         description: 'Tap-to-define passages with wild word save',
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(builder: (_) => const ReadingScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.vocabSprint,
+                        category: 'RECOVERY',
+                        title: 'Mistake Gym',
+                        description: 'Targeted drill on missed sentences & wild items',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const MistakesScreen()),
                         ),
                       ),
                     ],

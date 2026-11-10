@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -6,14 +7,19 @@ import '../../../app/theme.dart';
 import '../../../core/audio/audio_service.dart';
 import '../../../core/db/database.dart';
 import '../../../app/providers.dart';
+import '../../../core/planner/difficulty_tuner.dart';
 import '../widgets/what_you_learned_screen.dart';
+
+enum ChunkEchoMode { rebuild, memoryLadder }
 
 class ChunkEchoScreen extends ConsumerStatefulWidget {
   final int level;
+  final ChunkEchoMode initialMode;
 
   const ChunkEchoScreen({
     super.key,
     this.level = 1,
+    this.initialMode = ChunkEchoMode.rebuild,
   });
 
   @override
@@ -21,6 +27,7 @@ class ChunkEchoScreen extends ConsumerStatefulWidget {
 }
 
 class _ChunkEchoScreenState extends ConsumerState<ChunkEchoScreen> {
+  late ChunkEchoMode _mode;
   List<ChunkSentence> _sentences = [];
   int _currentIndex = 0;
   bool _isLoading = true;
@@ -28,12 +35,15 @@ class _ChunkEchoScreenState extends ConsumerState<ChunkEchoScreen> {
   int _replaysAllowed = 2;
   int _replaysUsed = 0;
   bool _isPlayingAudio = false;
+  int _activeAudioChunkIndex = -1;
+  Timer? _chunkHighlightTimer;
 
   List<String> _bankChunks = [];
   List<String> _assembledChunks = [];
   List<String> _correctChunks = [];
   bool _hasChecked = false;
   bool _isCorrect = false;
+  bool _shadowedThisSentence = false;
 
   int _score = 0;
   int _xpEarned = 0;
@@ -44,9 +54,16 @@ class _ChunkEchoScreenState extends ConsumerState<ChunkEchoScreen> {
   @override
   void initState() {
     super.initState();
+    _mode = widget.initialMode;
     _roundStartTime = DateTime.now().millisecondsSinceEpoch;
     _replaysAllowed = widget.level <= 2 ? 3 : (widget.level <= 4 ? 2 : 1);
     _loadChunks();
+  }
+
+  @override
+  void dispose() {
+    _chunkHighlightTimer?.cancel();
+    super.dispose();
   }
 
   Future<void> _loadChunks() async {
@@ -54,18 +71,29 @@ class _ChunkEchoScreenState extends ConsumerState<ChunkEchoScreen> {
     final list = await gameDao.getChunksForLevel(widget.level);
     if (!mounted) return;
 
+    List<ChunkSentence> sentences;
     if (list.isNotEmpty) {
-      setState(() {
-        _sentences = List.of(list)..shuffle();
-        _isLoading = false;
-      });
+      sentences = List.of(list);
     } else {
       final all = await ref.read(databaseProvider).select(ref.read(databaseProvider).chunkSentences).get();
-      setState(() {
-        _sentences = List.of(all)..shuffle();
-        _isLoading = false;
-      });
+      sentences = List.of(all);
     }
+
+    if (_mode == ChunkEchoMode.memoryLadder) {
+      // Sort progressively by chunk count for Memory Ladder climb
+      sentences.sort((a, b) {
+        final lenA = (json.decode(a.chunksJson) as List).length;
+        final lenB = (json.decode(b.chunksJson) as List).length;
+        return lenA.compareTo(lenB);
+      });
+    } else {
+      sentences.shuffle();
+    }
+
+    setState(() {
+      _sentences = sentences;
+      _isLoading = false;
+    });
 
     if (_sentences.isNotEmpty) {
       _setupCurrentSentence();
@@ -84,7 +112,9 @@ class _ChunkEchoScreenState extends ConsumerState<ChunkEchoScreen> {
       _assembledChunks = [];
       _hasChecked = false;
       _isCorrect = false;
+      _shadowedThisSentence = false;
       _replaysUsed = 0;
+      _activeAudioChunkIndex = -1;
     });
 
     _playSentenceAudio();
@@ -92,10 +122,36 @@ class _ChunkEchoScreenState extends ConsumerState<ChunkEchoScreen> {
 
   Future<void> _playSentenceAudio() async {
     if (_isPlayingAudio) return;
-    setState(() => _isPlayingAudio = true);
+    _chunkHighlightTimer?.cancel();
+    setState(() {
+      _isPlayingAudio = true;
+      _activeAudioChunkIndex = 0;
+    });
+
     final current = _sentences[_currentIndex];
+
+    // Rhythmic chunk highlighting during audio
+    if (_correctChunks.isNotEmpty) {
+      int step = 0;
+      _chunkHighlightTimer = Timer.periodic(const Duration(milliseconds: 1100), (timer) {
+        step++;
+        if (step < _correctChunks.length) {
+          if (mounted) setState(() => _activeAudioChunkIndex = step);
+        } else {
+          timer.cancel();
+          if (mounted) setState(() => _activeAudioChunkIndex = -1);
+        }
+      });
+    }
+
     await ref.read(audioServiceProvider).speakOrPlay(current.textContent);
-    if (mounted) setState(() => _isPlayingAudio = false);
+    _chunkHighlightTimer?.cancel();
+    if (mounted) {
+      setState(() {
+        _isPlayingAudio = false;
+        _activeAudioChunkIndex = -1;
+      });
+    }
   }
 
   void _onReplayTap() {
@@ -173,7 +229,11 @@ class _ChunkEchoScreenState extends ConsumerState<ChunkEchoScreen> {
   }
 
   void _nextSentence() {
-    if (_currentIndex + 1 < _sentences.length && _currentIndex + 1 < 10) {
+    final maxSentences = _mode == ChunkEchoMode.memoryLadder
+        ? _sentences.length
+        : (_sentences.length < 10 ? _sentences.length : 10);
+
+    if (_currentIndex + 1 < maxSentences) {
       setState(() {
         _currentIndex++;
         _setupCurrentSentence();
@@ -188,11 +248,14 @@ class _ChunkEchoScreenState extends ConsumerState<ChunkEchoScreen> {
     final durationMs = now - _roundStartTime;
     final total = _currentIndex + 1;
     final accuracy = total == 0 ? 0.0 : _correctCount / total;
+    final nextLevel = nextSentenceLevel(widget.level, accuracy, 3);
+
+    final modeString = _mode == ChunkEchoMode.memoryLadder ? 'memory_ladder' : 'rebuild';
 
     await ref.read(gameDaoProvider).recordSession(
           GameSessionsCompanion.insert(
             game: 'chunk_echo',
-            mode: const drift.Value('rebuild'),
+            mode: drift.Value(modeString),
             level: drift.Value(widget.level),
             startedAt: _roundStartTime,
             durationMs: durationMs,
@@ -201,6 +264,18 @@ class _ChunkEchoScreenState extends ConsumerState<ChunkEchoScreen> {
             xpEarned: _xpEarned,
           ),
         );
+
+    if (_mode == ChunkEchoMode.memoryLadder) {
+      await ref.read(gameDaoProvider).savePersonalBest(
+            PersonalBestsCompanion.insert(
+              game: 'chunk_echo',
+              mode: 'memory_ladder',
+              metric: 'rung',
+              value: _correctCount.toDouble(),
+              setAt: now,
+            ),
+          );
+    }
 
     final today = DateTime.now();
     final todayKey =
@@ -215,17 +290,26 @@ class _ChunkEchoScreenState extends ConsumerState<ChunkEchoScreen> {
 
     if (!mounted) return;
 
+    final title = _mode == ChunkEchoMode.memoryLadder
+        ? '🪜 Memory Ladder (Rung $_correctCount)'
+        : '🔊 Chunk Echo (Level ${widget.level} ➔ $nextLevel)';
+
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
         builder: (_) => WhatYouLearnedScreen(
-          gameTitle: '🔊 Chunk Echo',
+          gameTitle: title,
           score: _score,
           xpEarned: _xpEarned,
           accuracy: accuracy,
           items: _learnedItems,
           onPlayAgain: () {
             Navigator.of(context).pushReplacement(
-              MaterialPageRoute(builder: (_) => ChunkEchoScreen(level: widget.level)),
+              MaterialPageRoute(
+                builder: (_) => ChunkEchoScreen(
+                  level: nextLevel,
+                  initialMode: _mode,
+                ),
+              ),
             );
           },
         ),
@@ -241,18 +325,24 @@ class _ChunkEchoScreenState extends ConsumerState<ChunkEchoScreen> {
 
     final theme = Theme.of(context);
     final current = _sentences[_currentIndex];
-    final maxSentences = _sentences.length < 10 ? _sentences.length : 10;
+    final maxSentences = _mode == ChunkEchoMode.memoryLadder
+        ? _sentences.length
+        : (_sentences.length < 10 ? _sentences.length : 10);
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Chunk Echo (${_currentIndex + 1}/$maxSentences)'),
+        title: Text(
+          _mode == ChunkEchoMode.memoryLadder
+              ? 'Memory Ladder (Rung ${_correctCount + 1})'
+              : 'Chunk Echo (${_currentIndex + 1}/$maxSentences)',
+        ),
         actions: [
           Row(
             children: [
               IconButton(
                 icon: Icon(
                   _isPlayingAudio ? Icons.graphic_eq_rounded : Icons.replay_rounded,
-                  color: _replaysUsed < _replaysAllowed ? AppColors.accent : Colors.grey,
+                  color: _replaysUsed < _replaysAllowed ? theme.colorScheme.primary : Colors.grey,
                 ),
                 tooltip: 'Replay (${_replaysAllowed - _replaysUsed} left)',
                 onPressed: _onReplayTap,
@@ -272,53 +362,98 @@ class _ChunkEchoScreenState extends ConsumerState<ChunkEchoScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              // Mode switcher
+              SegmentedButton<ChunkEchoMode>(
+                segments: const [
+                  ButtonSegment(
+                    value: ChunkEchoMode.rebuild,
+                    label: Text('Chunk Rebuild'),
+                  ),
+                  ButtonSegment(
+                    value: ChunkEchoMode.memoryLadder,
+                    label: Text('Memory Ladder 🪜'),
+                  ),
+                ],
+                selected: {_mode},
+                onSelectionChanged: (set) {
+                  setState(() {
+                    _mode = set.first;
+                    _currentIndex = 0;
+                    _score = 0;
+                    _xpEarned = 0;
+                    _correctCount = 0;
+                    _learnedItems.clear();
+                    _isLoading = true;
+                  });
+                  _loadChunks();
+                },
+              ),
+              const SizedBox(height: 14),
+
               // Audio Waveform Visualizer Area
               Container(
-                height: 100,
+                height: 90,
                 decoration: BoxDecoration(
                   color: theme.colorScheme.surface,
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: AppColors.accent.withAlpha(60)),
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(
+                    color: _isPlayingAudio ? theme.colorScheme.primary : theme.colorScheme.outline,
+                    width: _isPlayingAudio ? 1.5 : 1.0,
+                  ),
                 ),
                 child: Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(
-                        _isPlayingAudio ? Icons.multitrack_audio_rounded : Icons.hearing_rounded,
-                        color: _isPlayingAudio ? AppColors.accent : AppColors.accentDark,
-                        size: 42,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: List.generate(7, (i) {
+                          final h = _isPlayingAudio ? (12.0 + ((i % 4) * 6.0)) : 6.0;
+                          return Container(
+                            margin: const EdgeInsets.symmetric(horizontal: 3),
+                            width: 4,
+                            height: h,
+                            decoration: BoxDecoration(
+                              color: _isPlayingAudio ? theme.colorScheme.primary : theme.colorScheme.onSurfaceVariant.withAlpha(60),
+                              borderRadius: BorderRadius.circular(2),
+                            ),
+                          );
+                        }),
                       ),
                       const SizedBox(height: 8),
                       Text(
-                        _isPlayingAudio ? 'Listening to sentence...' : 'Tap Replay to listen again',
+                        _isPlayingAudio
+                            ? (_activeAudioChunkIndex >= 0 && _activeAudioChunkIndex < _correctChunks.length
+                                ? 'Echo: "${_correctChunks[_activeAudioChunkIndex]}"'
+                                : 'Listening to acoustic waveform...')
+                            : 'Tap Replay to listen again',
                         style: theme.textTheme.bodySmall,
                       ),
                     ],
                   ),
                 ),
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 14),
 
               // Rebuilt Chunks Container
               Expanded(
                 flex: 3,
                 child: Container(
-                  padding: const EdgeInsets.all(16),
+                  padding: const EdgeInsets.all(14),
                   decoration: BoxDecoration(
                     color: theme.colorScheme.surface,
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(16),
                     border: Border.all(
                       color: _hasChecked
                           ? (_isCorrect ? AppColors.correct : AppColors.wrong)
-                          : AppColors.accent.withAlpha(80),
-                      width: 2,
+                          : theme.colorScheme.outline,
+                      width: 1.5,
                     ),
                   ),
                   child: _assembledChunks.isEmpty
                       ? Center(
                           child: Text(
-                            'Order the chunk tiles as you heard them',
+                            'Assemble the chunk tiles in order',
                             style: theme.textTheme.bodyMedium?.copyWith(
                               color: theme.colorScheme.onSurfaceVariant,
                             ),
@@ -328,19 +463,30 @@ class _ChunkEchoScreenState extends ConsumerState<ChunkEchoScreen> {
                           spacing: 8,
                           runSpacing: 8,
                           children: List.generate(_assembledChunks.length, (index) {
+                            final isHighlight = _isPlayingAudio && _activeAudioChunkIndex == index;
                             return ActionChip(
                               label: Text(
                                 _assembledChunks[index],
-                                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15,
+                                  color: isHighlight ? theme.colorScheme.primary : theme.colorScheme.onSurface,
+                                ),
                               ),
-                              backgroundColor: AppColors.accent.withAlpha(60),
+                              backgroundColor: isHighlight
+                                  ? theme.colorScheme.primary.withAlpha(50)
+                                  : theme.colorScheme.primary.withAlpha(20),
+                              side: BorderSide(
+                                color: isHighlight ? theme.colorScheme.primary : Colors.transparent,
+                                width: 1.5,
+                              ),
                               onPressed: () => _moveChunkToBank(index),
                             );
                           }),
                         ),
                 ),
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 14),
 
               // Chunk Tiles Bank
               Expanded(
@@ -353,7 +499,7 @@ class _ChunkEchoScreenState extends ConsumerState<ChunkEchoScreen> {
                       return ActionChip(
                         label: Text(
                           _bankChunks[index],
-                          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
                         ),
                         backgroundColor: theme.colorScheme.surfaceContainerHighest,
                         onPressed: () => _moveChunkToAssembled(index),
@@ -362,6 +508,24 @@ class _ChunkEchoScreenState extends ConsumerState<ChunkEchoScreen> {
                   ),
                 ),
               ),
+
+              // Optional Shadowing Action
+              if (_hasChecked && _isCorrect && !_shadowedThisSentence)
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 8),
+                  child: OutlinedButton.icon(
+                    icon: const Icon(Icons.mic_rounded, size: 18),
+                    label: const Text('Say Aloud Shadowing (+20 XP)'),
+                    onPressed: () {
+                      setState(() {
+                        _shadowedThisSentence = true;
+                        _score += 40;
+                        _xpEarned += 20;
+                      });
+                      ref.read(audioServiceProvider).playSfx(SfxType.correct);
+                    },
+                  ),
+                ),
 
               // Bottom Action Button
               if (!_hasChecked)
@@ -376,14 +540,14 @@ class _ChunkEchoScreenState extends ConsumerState<ChunkEchoScreen> {
                       Padding(
                         padding: const EdgeInsets.only(bottom: 8),
                         child: Text(
-                          'Correct: ${current.textContent}',
+                          'Target: ${current.textContent}',
                           textAlign: TextAlign.center,
-                          style: const TextStyle(color: AppColors.wrong, fontWeight: FontWeight.bold),
+                          style: const TextStyle(color: AppColors.wrong, fontWeight: FontWeight.bold, fontSize: 13),
                         ),
                       ),
                     ElevatedButton(
                       onPressed: _nextSentence,
-                      child: Text(_currentIndex + 1 < 5 ? 'Next Sentence' : 'Finish Round'),
+                      child: Text(_currentIndex + 1 < maxSentences ? 'Next Sentence' : 'Finish Round'),
                     ),
                   ],
                 ),

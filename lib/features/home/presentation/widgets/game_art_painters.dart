@@ -12,6 +12,7 @@ enum GameArtType {
   paragraphArchitect,
   chunkEcho,
   sentenceXray,
+  sliceIt,
   gradedReader,
 }
 
@@ -111,6 +112,9 @@ class _GameArtPainter extends CustomPainter {
         break;
       case GameArtType.sentenceXray:
         _drawSentenceXrayArt(canvas, size, center);
+        break;
+      case GameArtType.sliceIt:
+        _drawSliceItArt(canvas, size, center);
         break;
       case GameArtType.gradedReader:
         _drawGradedReaderArt(canvas, size, center);
@@ -350,6 +354,54 @@ class _GameArtPainter extends CustomPainter {
 
     // Core focus dot
     canvas.drawCircle(center, 4, Paint()..color = primaryColor);
+  }
+
+  /// ✂️ Slice It: Sentence chunk blocks with precision divider laser cuts
+  void _drawSliceItArt(Canvas canvas, Size size, Offset center) {
+    final blockPaint = Paint()
+      ..color = primaryColor.withAlpha(40)
+      ..style = PaintingStyle.fill;
+
+    final borderPaint = Paint()
+      ..color = primaryColor.withAlpha(140)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.4;
+
+    final laserCutPaint = Paint()
+      ..color = primaryColor
+      ..strokeWidth = 2.4
+      ..strokeCap = StrokeCap.round;
+
+    // Segment 1 (Left block)
+    final r1 = RRect.fromRectAndRadius(
+      Rect.fromLTWH(center.dx - 42, center.dy - 12, 34, 24),
+      const Radius.circular(6),
+    );
+    canvas.drawRRect(r1, blockPaint);
+    canvas.drawRRect(r1, borderPaint);
+
+    // Segment 2 (Right block)
+    final r2 = RRect.fromRectAndRadius(
+      Rect.fromLTWH(center.dx + 8, center.dy - 12, 34, 24),
+      const Radius.circular(6),
+    );
+    canvas.drawRRect(r2, blockPaint);
+    canvas.drawRRect(r2, borderPaint);
+
+    // Vertical neon cut line between segments
+    canvas.drawLine(
+      Offset(center.dx - 4, center.dy - 18),
+      Offset(center.dx - 4, center.dy + 18),
+      laserCutPaint,
+    );
+
+    // Subtle scissor notch indicators
+    final notchPaint = Paint()
+      ..color = primaryColor.withAlpha(220)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.6;
+    canvas.drawLine(Offset(center.dx - 8, center.dy - 16), Offset(center.dx - 4, center.dy - 12), notchPaint);
+    canvas.drawLine(Offset(center.dx, center.dy - 16), Offset(center.dx - 4, center.dy - 12), notchPaint);
   }
 
   /// 📖 Graded Reader: Open illuminated book

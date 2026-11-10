@@ -282,8 +282,46 @@ int chunkEchoScore({
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// X-Ray Scoring
+// X-Ray & Slice It Scoring
 // ─────────────────────────────────────────────────────────────────────────────
+
+/// Scores an X-Ray game answer using Jaccard similarity across spans.
+///
+/// Implements section 21.4 of spec:
+/// 0.35 * J(subject) + 0.35 * J(verb) + 0.30 * J(extras)
+double xraySpanScore({
+  required Set<int> tappedSubject,
+  required Set<int> correctSubject,
+  required Set<int> tappedVerb,
+  required Set<int> correctVerb,
+  required Set<int> tappedExtras,
+  required Set<int> correctExtras,
+}) {
+  double j(Set<int> a, Set<int> b) {
+    if (a.isEmpty && b.isEmpty) return 1.0;
+    final union = a.union(b).length;
+    if (union == 0) return 1.0;
+    return a.intersection(b).length / union;
+  }
+
+  return 0.35 * j(tappedSubject, correctSubject) +
+      0.35 * j(tappedVerb, correctVerb) +
+      0.30 * j(tappedExtras, correctExtras);
+}
+
+/// Scores a Slice It answer by comparing cut positions between word tokens.
+///
+/// Jaccard similarity between tapped cuts and expected chunk cuts:
+/// |tapped ∩ correct| / |tapped ∪ correct|
+double sliceItScore({
+  required Set<int> tappedCuts,
+  required Set<int> correctCuts,
+}) {
+  if (tappedCuts.isEmpty && correctCuts.isEmpty) return 1.0;
+  final union = tappedCuts.union(correctCuts).length;
+  if (union == 0) return 1.0;
+  return tappedCuts.intersection(correctCuts).length / union;
+}
 
 /// Scores an X-Ray game answer using Jaccard similarity.
 ///
