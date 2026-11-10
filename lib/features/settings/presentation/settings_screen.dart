@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../app/theme.dart';
 import '../../../app/providers.dart';
+import 'backup_restore_screen.dart';
 
 class SettingsScreen extends ConsumerStatefulWidget {
   const SettingsScreen({super.key});
@@ -159,6 +160,20 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
 
             // Danger Zone
             Text('Data & Progress', style: theme.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
+            const SizedBox(height: 8),
+            Card(
+              child: ListTile(
+                leading: const Icon(Icons.backup_rounded, color: AppColors.accent),
+                title: const Text('Backup & Restore'),
+                subtitle: const Text('Export or restore offline JSON progress'),
+                trailing: const Icon(Icons.chevron_right_rounded),
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => const BackupRestoreScreen()),
+                  );
+                },
+              ),
+            ),
             const SizedBox(height: 8),
             Card(
               child: ListTile(

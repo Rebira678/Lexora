@@ -1,0 +1,279 @@
+{
+  "collocations": [
+    {
+      "id": 1,
+      "base": "draw a",
+      "correct": "conclusion",
+      "options": ["conclusion", "decision", "judgement", "thought"],
+      "type": "verb_noun",
+      "carrier": "Based on the empirical evidence presented, researchers were able to draw a definitive ______.",
+      "explanation": "'Draw a conclusion' is a fixed academic collocation meaning to deduce a result after considering the evidence."
+    },
+    {
+      "id": 2,
+      "base": "pose a",
+      "correct": "threat",
+      "options": ["threat", "danger", "harm", "damage"],
+      "type": "verb_noun",
+      "carrier": "Unregulated artificial intelligence models may pose a serious ______ to data privacy.",
+      "explanation": "'Pose a threat/risk' is standard academic collocation; 'make danger' or 'give harm' are typical non-native errors."
+    },
+    {
+      "id": 3,
+      "base": "exert",
+      "correct": "influence",
+      "options": ["influence", "powerness", "impactment", "persuasion"],
+      "type": "verb_noun",
+      "carrier": "Socioeconomic conditions exert a profound ______ on educational attainment.",
+      "explanation": "'Exert influence/pressure' describes applying force or having an active effect on an outcome."
+    },
+    {
+      "id": 4,
+      "base": "account",
+      "correct": "for",
+      "options": ["for", "about", "to", "with"],
+      "type": "phrasal_verb",
+      "carrier": "Technological advancements account ______ nearly forty percent of productivity gains.",
+      "explanation": "'Account for' means to explain the cause of something or to form a particular proportion of something."
+    },
+    {
+      "id": 5,
+      "base": "stem",
+      "correct": "from",
+      "options": ["from", "of", "out", "by"],
+      "type": "phrasal_verb",
+      "carrier": "Many contemporary environmental challenges stem ______ decades of unchecked industrial growth.",
+      "explanation": "'Stem from' means to originate or develop as a result of something."
+    },
+    {
+      "id": 6,
+      "base": "hinge",
+      "correct": "upon",
+      "options": ["upon", "at", "against", "into"],
+      "type": "phrasal_verb",
+      "carrier": "The success of the proposed healthcare reform will hinge ______ bipartisan legislative support.",
+      "explanation": "'Hinge on/upon' means to depend entirely on a particular factor or contingency."
+    },
+    {
+      "id": 7,
+      "base": "conduct an",
+      "correct": "investigation",
+      "options": ["investigation", "inspectionment", "examination", "inquiry"],
+      "type": "verb_noun",
+      "carrier": "The supervisory board decided to conduct an exhaustive ______ into financial discrepancies.",
+      "explanation": "'Conduct an investigation/experiment/survey' is the canonical academic phrase for carrying out research."
+    },
+    {
+      "id": 8,
+      "base": "exercise",
+      "correct": "caution",
+      "options": ["caution", "carefulness", "warning", "attention"],
+      "type": "verb_noun",
+      "carrier": "Economists advise policymakers to exercise extreme ______ before implementing tariff hikes.",
+      "explanation": "'Exercise caution/restraint' is a formal collocation meaning to be careful or judicious."
+    }
+  ],
+  "talker_prompts": [
+    {
+      "id": 1,
+      "topic": "The Automation Dilemma",
+      "category": "Technology & Society",
+      "prompt": "Speak for 60 seconds about whether artificial intelligence will create more meaningful jobs than it displaces. State your thesis, provide one concrete example, and address a potential counterargument.",
+      "scaffolds": [
+        "While it is undeniable that...",
+        "On the one hand, repetitive tasks will...",
+        "Conversely, emergent industries will require...",
+        "Ultimately, the net outcome hinges upon..."
+      ],
+      "targetKeywords": ["displace", "emergent", "unprecedented", "mitigate"],
+      "minWords": 80
+    },
+    {
+      "id": 2,
+      "topic": "Urban Sustainability",
+      "category": "Environment & Infrastructure",
+      "prompt": "Speak for 60 seconds on the most effective measure modern cities can implement to curb carbon emissions. Discuss public transit versus renewable zoning laws.",
+      "scaffolds": [
+        "In tackling metropolitan emissions...",
+        "A compelling argument can be made for...",
+        "Furthermore, empirical studies indicate...",
+        "In light of these considerations..."
+      ],
+      "targetKeywords": ["infrastructure", "sustainable", "incentivize", "drastic"],
+      "minWords": 80
+    },
+    {
+      "id": 3,
+      "topic": "Remote Work Paradigms",
+      "category": "Modern Workplace",
+      "prompt": "Speak for 60 seconds analyzing how telecommuting affects team cohesion and spontaneous innovation in corporate environments.",
+      "scaffolds": [
+        "The widespread transition to remote work has...",
+        "Although individual productivity often surges...",
+        "Nevertheless, the erosion of informal collaboration...",
+        "Therefore, hybrid frameworks appear to offer..."
+      ],
+      "targetKeywords": ["cohesion", "spontaneous", "compromise", "dynamic"],
+      "minWords": 80
+    }
+  ],
+  "word_forge": [
+    {
+      "id": 1,
+      "targetWords": ["mitigate", "unprecedented", "pragmatic"],
+      "theme": "Crisis Management & Environmental Policy",
+      "modelAnswer": "To mitigate the unprecedented effects of climate change, policymakers must adopt pragmatic economic frameworks rather than purely ideological stances.",
+      "pedagogyNote": "Notice how 'mitigate' functions as an infinitive of purpose, 'unprecedented' modifies 'effects', and 'pragmatic' qualifies the proposed solution."
+    },
+    {
+      "id": 2,
+      "targetWords": ["substantiate", "plausible", "discrepancy"],
+      "theme": "Scientific Research & Evidence",
+      "modelAnswer": "Although the researcher proposed a plausible hypothesis, she was unable to substantiate her claims due to an unresolved discrepancy in the laboratory data.",
+      "pedagogyNote": "Observe the contrast clause introduced by 'Although', contrasting 'plausible' with the failure to 'substantiate' caused by the 'discrepancy'."
+    },
+    {
+      "id": 3,
+      "targetWords": ["inherent", "deteriorate", "inevitable"],
+      "theme": "Urban Infrastructure & Engineering",
+      "modelAnswer": "Without periodic maintenance, the inherent structural flaws in aging bridges will inevitably cause them to deteriorate over time.",
+      "pedagogyNote": "'Inherent' correctly precedes the noun 'flaws', while 'inevitably' acts as an adverb modifying the causative verb 'cause'."
+    },
+    {
+      "id": 4,
+      "targetWords": ["advocate", "comprehensive", "feasible"],
+      "theme": "Educational Reform & Access",
+      "modelAnswer": "Distinguished educators advocate for a comprehensive curriculum overhaul that remains economically feasible for underfunded public schools.",
+      "pedagogyNote": "'Advocate for' selects a noun phrase qualified by 'comprehensive', balanced by an adjective clause 'that remains feasible'."
+    }
+  ],
+  "journal_prompts": [
+    {
+      "id": 1,
+      "theme": "Cognitive Reflection & Growth",
+      "sentence1Prompt": "State an intellectual insight or realization you encountered today.",
+      "sentence1Starter": "Today, I realized that understanding complex systems requires...",
+      "sentence2Prompt": "Introduce a contrast or unexpected obstacle related to that insight.",
+      "sentence2Starter": "Although initial assumptions seemed straightforward, in reality...",
+      "sentence3Prompt": "Draw a pragmatic takeaway or future intention.",
+      "sentence3Starter": "Consequently, I intend to approach tomorrow's challenges by..."
+    },
+    {
+      "id": 2,
+      "theme": "Linguistic & Communicative Nuance",
+      "sentence1Prompt": "Describe a subtle English phrase or word you practiced recently.",
+      "sentence1Starter": "Recently, I have become attuned to the precise usage of...",
+      "sentence2Prompt": "Explain why it is preferable to simpler or more common alternatives.",
+      "sentence2Starter": "Whereas common phrasing can sound overly basic, this term conveys...",
+      "sentence3Prompt": "Articulate how you plan to integrate it into your active speaking/writing.",
+      "sentence3Starter": "Therefore, I will deliberately employ it whenever I need to..."
+    }
+  ],
+  "boss_battle": [
+    {
+      "id": 1,
+      "bossName": "Syntax Leviathan",
+      "type": "connector",
+      "prompt": "Choose the precise connector to bridge these academic propositions:",
+      "sentence": "The initial trials produced inconclusive metrics. ______, secondary telemetry verified the fundamental hypothesis.",
+      "options": ["Nevertheless", "Consequently", "Namely", "Similarly"],
+      "answer": "Nevertheless",
+      "damage": 100,
+      "explanation": "'Nevertheless' provides the concession required when initial findings are inconclusive but later confirmed."
+    },
+    {
+      "id": 2,
+      "bossName": "Morphology Titan",
+      "type": "morphology",
+      "prompt": "Synthesize the correct adverbial derivation from root 'PRECEDENT':",
+      "sentence": "The rapid expansion of telecommunications occurred ______ fast during the late nineties.",
+      "options": ["unprecedentedly", "precedently", "imprecedented", "precedence"],
+      "answer": "unprecedentedly",
+      "damage": 120,
+      "explanation": "'Un- + precedent + -ed + -ly' creates the negative adverb meaning in a manner never before seen."
+    },
+    {
+      "id": 3,
+      "bossName": "Collocation Wyrm",
+      "type": "collocation",
+      "prompt": "Complete the academic collocation:",
+      "sentence": "Strict adherence to safety guidelines will ______ a vital role in preventing workplace accidents.",
+      "options": ["play", "do", "make", "lead"],
+      "answer": "play",
+      "damage": 90,
+      "explanation": "'Play a role' is the canonical collocation; *do a role* or *make a role* are erroneous."
+    },
+    {
+      "id": 4,
+      "bossName": "Error Behemoth",
+      "type": "error_hunt",
+      "prompt": "Identify the flawed segment in the sentence:",
+      "sentence": "Neither the lead investigator nor his research assistants was prepared for the audit.",
+      "options": ["neither", "investigator", "was", "prepared"],
+      "answer": "was",
+      "damage": 130,
+      "explanation": "With 'neither... nor', the verb agrees with the closer subject ('assistants', plural), so it must be 'were'."
+    },
+    {
+      "id": 5,
+      "bossName": "Acoustic Dragon",
+      "type": "sound_sniper",
+      "prompt": "Phonemic discrimination: Target sound /æ/ as in 'flash':",
+      "sentence": "Which word contains the lax front vowel /æ/?",
+      "options": ["flash", "flesh", "flush", "flock"],
+      "answer": "flash",
+      "damage": 110,
+      "explanation": "'Flash' has /æ/, whereas 'flesh' is /ɛ/, 'flush' is /ʌ/, and 'flock' is /ɒ/."
+    }
+  ],
+  "mock_test": [
+    {
+      "section": "Reading & Inference",
+      "prompt": "Read the excerpt: 'While early economists posited that market actors behave with unyielding rationality, behavioral economics has revealed that cognitive heuristics consistently skew financial decisions.'\n\nWhat is the primary assertion of the text?",
+      "options": [
+        "Cognitive shortcuts predictably diverge from traditional models of pure economic rationality.",
+        "Early economists were completely fraudulent in their research.",
+        "Market actors never make financial mistakes under pressure.",
+        "Heuristics guarantee optimal investment outcomes."
+      ],
+      "answer": "Cognitive shortcuts predictably diverge from traditional models of pure economic rationality.",
+      "skill": "reading"
+    },
+    {
+      "section": "Syntax & Structure",
+      "prompt": "Select the sentence with impeccable C1 parallelism and subordination:",
+      "options": [
+        "Not only did the policy reduce fiscal waste, but it also incentivized sustainable industrial practices.",
+        "Not only the policy reduced waste, but also incentivizing industry.",
+        "The policy reduced waste not only, but also it had incentivized.",
+        "Reducing waste not only was done by the policy, but also industry was incentivized."
+      ],
+      "answer": "Not only did the policy reduce fiscal waste, but it also incentivized sustainable industrial practices.",
+      "skill": "writing"
+    },
+    {
+      "section": "Acoustic & Listening Precision",
+      "prompt": "In connected speech, what does the phonetic reduction /wʊdəv/ correspond to in orthography?",
+      "options": [
+        "would have",
+        "would of",
+        "will have",
+        "word of"
+      ],
+      "answer": "would have",
+      "skill": "listening"
+    },
+    {
+      "section": "Lexical Sophistication",
+      "prompt": "Choose the most accurate synonym for 'ephemeral' in an academic context:",
+      "options": [
+        "transitory",
+        "eternal",
+        "ponderous",
+        "substantive"
+      ],
+      "answer": "transitory",
+      "skill": "vocab"
+    }
+  ]
+}

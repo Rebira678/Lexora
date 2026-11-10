@@ -23,6 +23,14 @@ import '../../reading/reading_screen.dart';
 import '../../mistakes/presentation/mistakes_screen.dart';
 import '../../stats/presentation/stats_screen.dart';
 import '../../settings/presentation/settings_screen.dart';
+import '../../games/collocation_match/collocation_match_screen.dart';
+import '../../writing/word_forge_screen.dart';
+import '../../writing/daily_journal_screen.dart';
+import '../../speaking/sixty_second_talker_screen.dart';
+import '../../speaking/shadow_boxing_screen.dart';
+import '../../boss_battle/boss_battle_screen.dart';
+import '../../mock_test/mock_test_screen.dart';
+import '../../achievements/presentation/achievements_screen.dart';
 import 'widgets/game_art_painters.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
@@ -853,6 +861,154 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         description: 'Spot and fix subtle grammar and syntax errors',
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(builder: (_) => const ErrorHunterScreen()),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 28),
+
+                  // Phase 3: Speaking & Productive Fluency
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          'Phase 3: Speaking & Fluency',
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            fontWeight: FontWeight.w700,
+                            letterSpacing: -0.2,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Text(
+                        'Active Production',
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: theme.colorScheme.onSurfaceVariant,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+
+                  GridView.count(
+                    crossAxisCount: 2,
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    mainAxisSpacing: 14,
+                    crossAxisSpacing: 14,
+                    childAspectRatio: 0.82,
+                    children: [
+                      _IllustratedGameCard(
+                        type: GameArtType.sixtySecondTalker,
+                        category: 'FLUENCY SPRINT',
+                        title: '60s Talker',
+                        description: 'Unbroken monologue with CEFR self-assessment',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const SixtySecondTalkerScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.shadowBoxing,
+                        category: 'PROSODY',
+                        title: 'Shadow Boxing',
+                        description: 'Speech shadowing for natural native rhythm',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const ShadowBoxingScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.wordForge,
+                        category: 'SYNTACTIC FORGE',
+                        title: 'Word Forge',
+                        description: 'Synthesize 3 target words into one complex sentence',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const WordForgeScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.dailyJournal,
+                        category: 'DISCOURSE JOURNAL',
+                        title: 'Daily 3 Sentences',
+                        description: 'Observation, contrast, and resolution portfolio',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const DailyJournalScreen()),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 28),
+
+                  // Phase 3: Lexis, Boss Battles & Benchmarks
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          'Phase 3: Lexis & Capstone',
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            fontWeight: FontWeight.w700,
+                            letterSpacing: -0.2,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Text(
+                        'Raids & Benchmarks',
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: theme.colorScheme.onSurfaceVariant,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+
+                  GridView.count(
+                    crossAxisCount: 2,
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    mainAxisSpacing: 14,
+                    crossAxisSpacing: 14,
+                    childAspectRatio: 0.82,
+                    children: [
+                      _IllustratedGameCard(
+                        type: GameArtType.collocationMatch,
+                        category: 'ACADEMIC LEXIS',
+                        title: 'Collocation Match',
+                        description: 'Fixed verb-noun pairings & phrasal verbs',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const CollocationMatchScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.bossBattle,
+                        category: 'WEEKLY RAID',
+                        title: 'Weekly Boss',
+                        description: 'Multi-skill exam gauntlet against the Leviathan',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const BossBattleScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.mockTest,
+                        category: 'DIAGNOSTIC',
+                        title: 'CEFR Mock Test',
+                        description: '4-skill benchmark test with CEFR breakdown',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const MockTestScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.achievements,
+                        category: 'MILESTONES',
+                        title: 'Achievements',
+                        description: 'Badges and trophies for mastery milestones',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const AchievementsScreen()),
                         ),
                       ),
                     ],

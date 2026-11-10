@@ -22,6 +22,14 @@ enum GameArtType {
   soundSniper,
   errorHunter,
   gradedReader,
+  collocationMatch,
+  wordForge,
+  dailyJournal,
+  sixtySecondTalker,
+  shadowBoxing,
+  bossBattle,
+  mockTest,
+  achievements,
 }
 
 class GameArtWidget extends StatelessWidget {
@@ -150,6 +158,30 @@ class _GameArtPainter extends CustomPainter {
         break;
       case GameArtType.gradedReader:
         _drawGradedReaderArt(canvas, size, center);
+        break;
+      case GameArtType.collocationMatch:
+        _drawCollocationMatchArt(canvas, size, center);
+        break;
+      case GameArtType.wordForge:
+        _drawWordForgeArt(canvas, size, center);
+        break;
+      case GameArtType.dailyJournal:
+        _drawDailyJournalArt(canvas, size, center);
+        break;
+      case GameArtType.sixtySecondTalker:
+        _drawSixtySecondTalkerArt(canvas, size, center);
+        break;
+      case GameArtType.shadowBoxing:
+        _drawShadowBoxingArt(canvas, size, center);
+        break;
+      case GameArtType.bossBattle:
+        _drawBossBattleArt(canvas, size, center);
+        break;
+      case GameArtType.mockTest:
+        _drawMockTestArt(canvas, size, center);
+        break;
+      case GameArtType.achievements:
+        _drawAchievementsArt(canvas, size, center);
         break;
     }
   }
@@ -696,6 +728,213 @@ class _GameArtPainter extends CustomPainter {
       ..color = primaryColor
       ..strokeWidth = 2.0;
     canvas.drawLine(Offset(center.dx, center.dy - 18), Offset(center.dx, center.dy + 22), ribbonPaint);
+  }
+
+  /// 🔗 Collocation Match: Interlocking semantic rings
+  void _drawCollocationMatchArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 3.0;
+
+    canvas.drawRRect(
+      RRect.fromRectAndRadius(
+        Rect.fromCenter(center: Offset(center.dx - 12, center.dy), width: 34, height: 22),
+        const Radius.circular(11),
+      ),
+      stroke,
+    );
+    canvas.drawRRect(
+      RRect.fromRectAndRadius(
+        Rect.fromCenter(center: Offset(center.dx + 12, center.dy), width: 34, height: 22),
+        const Radius.circular(11),
+      ),
+      stroke,
+    );
+  }
+
+  /// ✍️ Word Forge: Anvil and rising sparks
+  void _drawWordForgeArt(Canvas canvas, Size size, Offset center) {
+    final fill = Paint()..color = primaryColor.withAlpha(40);
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    final anvil = Path()
+      ..moveTo(center.dx - 24, center.dy - 6)
+      ..lineTo(center.dx + 24, center.dy - 6)
+      ..lineTo(center.dx + 16, center.dy + 4)
+      ..lineTo(center.dx + 10, center.dy + 4)
+      ..lineTo(center.dx + 14, center.dy + 16)
+      ..lineTo(center.dx - 14, center.dy + 16)
+      ..lineTo(center.dx - 10, center.dy + 4)
+      ..lineTo(center.dx - 16, center.dy + 4)
+      ..close();
+
+    canvas.drawPath(anvil, fill);
+    canvas.drawPath(anvil, stroke);
+
+    // Sparks
+    final spark = Paint()..color = primaryColor..style = PaintingStyle.fill;
+    canvas.drawCircle(Offset(center.dx - 8, center.dy - 14), 2.0, spark);
+    canvas.drawCircle(Offset(center.dx + 4, center.dy - 18), 2.5, spark);
+    canvas.drawCircle(Offset(center.dx + 14, center.dy - 12), 1.5, spark);
+  }
+
+  /// 📓 Daily Journal: Ruled notebook with pen
+  void _drawDailyJournalArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.8;
+
+    final page = RRect.fromRectAndRadius(
+      Rect.fromCenter(center: center, width: 44, height: 48),
+      const Radius.circular(6),
+    );
+    canvas.drawRRect(page, Paint()..color = primaryColor.withAlpha(30));
+    canvas.drawRRect(page, stroke);
+
+    // 3 lines
+    for (int i = -1; i <= 1; i++) {
+      canvas.drawLine(
+        Offset(center.dx - 14, center.dy + (i * 9)),
+        Offset(center.dx + 14, center.dy + (i * 9)),
+        stroke,
+      );
+    }
+  }
+
+  /// 🗣️ 60-Second Talker: Studio mic inside a running timer arc
+  void _drawSixtySecondTalkerArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    // Timer outer arc
+    canvas.drawArc(
+      Rect.fromCircle(center: center, radius: 26),
+      -pi / 2,
+      1.6 * pi,
+      false,
+      stroke,
+    );
+
+    // Mic capsule
+    final mic = RRect.fromRectAndRadius(
+      Rect.fromCenter(center: Offset(center.dx, center.dy - 3), width: 14, height: 22),
+      const Radius.circular(7),
+    );
+    canvas.drawRRect(mic, Paint()..color = primaryColor.withAlpha(40));
+    canvas.drawRRect(mic, stroke);
+
+    // Mic stand
+    canvas.drawLine(Offset(center.dx, center.dy + 8), Offset(center.dx, center.dy + 17), stroke);
+    canvas.drawLine(Offset(center.dx - 8, center.dy + 17), Offset(center.dx + 8, center.dy + 17), stroke);
+  }
+
+  /// 🥊 Shadow Boxing: Twin overlapping acoustic sound waves
+  void _drawShadowBoxingArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    // Wave A
+    final wave1 = Path()
+      ..moveTo(center.dx - 28, center.dy - 4)
+      ..quadraticBezierTo(center.dx - 14, center.dy - 20, center.dx, center.dy - 4)
+      ..quadraticBezierTo(center.dx + 14, center.dy + 12, center.dx + 28, center.dy - 4);
+    canvas.drawPath(wave1, stroke);
+
+    // Wave B (Shadow)
+    final strokeGhost = Paint()
+      ..color = primaryColor.withAlpha(80)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.5;
+    final wave2 = Path()
+      ..moveTo(center.dx - 28, center.dy + 6)
+      ..quadraticBezierTo(center.dx - 14, center.dy - 10, center.dx, center.dy + 6)
+      ..quadraticBezierTo(center.dx + 14, center.dy + 22, center.dx + 28, center.dy + 6);
+    canvas.drawPath(wave2, strokeGhost);
+  }
+
+  /// ⚔️ Weekly Boss: Twin crossed blades with crowned skull/helm
+  void _drawBossBattleArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    // Crossed blades
+    canvas.drawLine(Offset(center.dx - 22, center.dy - 18), Offset(center.dx + 22, center.dy + 18), stroke);
+    canvas.drawLine(Offset(center.dx + 22, center.dy - 18), Offset(center.dx - 22, center.dy + 18), stroke);
+
+    // Boss Crown / Shield
+    final crown = Path()
+      ..moveTo(center.dx - 12, center.dy + 8)
+      ..lineTo(center.dx - 14, center.dy - 8)
+      ..lineTo(center.dx - 6, center.dy - 2)
+      ..lineTo(center.dx, center.dy - 12)
+      ..lineTo(center.dx + 6, center.dy - 2)
+      ..lineTo(center.dx + 14, center.dy - 8)
+      ..lineTo(center.dx + 12, center.dy + 8)
+      ..close();
+
+    canvas.drawPath(crown, Paint()..color = primaryColor.withAlpha(40));
+    canvas.drawPath(crown, stroke);
+  }
+
+  /// 📊 Mock Test: Diagnostic exam sheet with seal
+  void _drawMockTestArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.8;
+
+    final sheet = RRect.fromRectAndRadius(
+      Rect.fromCenter(center: center, width: 40, height: 48),
+      const Radius.circular(6),
+    );
+    canvas.drawRRect(sheet, Paint()..color = primaryColor.withAlpha(30));
+    canvas.drawRRect(sheet, stroke);
+
+    // Checklist lines
+    canvas.drawLine(Offset(center.dx - 12, center.dy - 12), Offset(center.dx + 12, center.dy - 12), stroke);
+    canvas.drawLine(Offset(center.dx - 12, center.dy - 4), Offset(center.dx + 12, center.dy - 4), stroke);
+    canvas.drawLine(Offset(center.dx - 12, center.dy + 4), Offset(center.dx + 4, center.dy + 4), stroke);
+
+    // Star seal
+    canvas.drawCircle(Offset(center.dx + 8, center.dy + 12), 4.5, Paint()..color = primaryColor);
+  }
+
+  /// 🏆 Achievements: Laurel wreath and center star
+  void _drawAchievementsArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    // Laurel branches
+    canvas.drawArc(
+      Rect.fromCircle(center: Offset(center.dx - 6, center.dy), radius: 18),
+      pi * 0.4,
+      pi * 1.2,
+      false,
+      stroke,
+    );
+    canvas.drawArc(
+      Rect.fromCircle(center: Offset(center.dx + 6, center.dy), radius: 18),
+      -pi * 0.6,
+      pi * 1.2,
+      false,
+      stroke,
+    );
+
+    // Star in center
+    canvas.drawCircle(center, 4.0, Paint()..color = primaryColor..style = PaintingStyle.fill);
   }
 
   @override

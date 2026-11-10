@@ -138,6 +138,57 @@ class StatsScreen extends ConsumerWidget {
               ),
               const SizedBox(height: 24),
 
+              // CEFR Four-Skill Competence Profile
+              Text(
+                'CEFR Skill Mastery Profile',
+                style: theme.textTheme.titleMedium?.copyWith(
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: -0.2,
+                ),
+              ),
+              const SizedBox(height: 10),
+
+              FutureBuilder<List<SkillLevel>>(
+                future: (db.select(db.skillLevels)
+                      ..orderBy([(t) => drift.OrderingTerm.desc(t.measuredAt)]))
+                    .get(),
+                builder: (context, snapshot) {
+                  final skills = snapshot.data ?? [];
+                  double readingScore = 0.75;
+                  double writingScore = 0.70;
+                  double listeningScore = 0.65;
+                  double vocabScore = 0.80;
+
+                  for (final s in skills) {
+                    if (s.skill == 'reading') readingScore = s.score;
+                    if (s.skill == 'writing') writingScore = s.score;
+                    if (s.skill == 'listening') listeningScore = s.score;
+                    if (s.skill == 'vocab') vocabScore = s.score;
+                  }
+
+                  return Container(
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: theme.colorScheme.surface,
+                      borderRadius: BorderRadius.circular(14),
+                      border: Border.all(color: theme.colorScheme.outline),
+                    ),
+                    child: Column(
+                      children: [
+                        _SkillBar(skill: 'Reading & Inference', score: readingScore, cefr: readingScore >= 0.8 ? 'C1' : 'B2'),
+                        const SizedBox(height: 10),
+                        _SkillBar(skill: 'Writing & Syntax', score: writingScore, cefr: writingScore >= 0.8 ? 'C1' : 'B2'),
+                        const SizedBox(height: 10),
+                        _SkillBar(skill: 'Listening & Acoustic', score: listeningScore, cefr: listeningScore >= 0.8 ? 'C1' : 'B2'),
+                        const SizedBox(height: 10),
+                        _SkillBar(skill: 'Lexical Range & Collocation', score: vocabScore, cefr: vocabScore >= 0.8 ? 'C1' : 'B2'),
+                      ],
+                    ),
+                  );
+                },
+              ),
+              const SizedBox(height: 24),
+
               // Recent Game Sessions History
               Text(
                 'Recent Sessions',
@@ -326,6 +377,52 @@ class _MetricCard extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class _SkillBar extends StatelessWidget {
+  final String skill;
+  final double score;
+  final String cefr;
+
+  const _SkillBar({
+    required this.skill,
+    required this.score,
+    required this.cefr,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(skill, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 13)),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+              decoration: BoxDecoration(
+                color: theme.colorScheme.primary.withAlpha(25),
+                borderRadius: BorderRadius.circular(4),
+              ),
+              child: Text(cefr, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 10, color: theme.colorScheme.primary)),
+            ),
+          ],
+        ),
+        const SizedBox(height: 6),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(3),
+          child: LinearProgressIndicator(
+            value: score.clamp(0.0, 1.0),
+            backgroundColor: theme.colorScheme.surfaceContainerHighest,
+            valueColor: AlwaysStoppedAnimation(theme.colorScheme.primary),
+            minHeight: 6,
+          ),
+        ),
+      ],
     );
   }
 }
