@@ -36,6 +36,14 @@ enum GameArtType {
   idiomEscape,
   emailBoss,
   customDecks,
+  nuanceDuel,
+  registerShifter,
+  paraphraseBlitz,
+  collocationForge,
+  lectureNotes,
+  debateMode,
+  cohesionFixer,
+  realEnglishLog,
 }
 
 class GameArtWidget extends StatelessWidget {
@@ -206,6 +214,30 @@ class _GameArtPainter extends CustomPainter {
         break;
       case GameArtType.customDecks:
         _drawCustomDecksArt(canvas, size, center);
+        break;
+      case GameArtType.nuanceDuel:
+        _drawNuanceDuelArt(canvas, size, center);
+        break;
+      case GameArtType.registerShifter:
+        _drawRegisterShifterArt(canvas, size, center);
+        break;
+      case GameArtType.paraphraseBlitz:
+        _drawParaphraseBlitzArt(canvas, size, center);
+        break;
+      case GameArtType.collocationForge:
+        _drawCollocationForgeArt(canvas, size, center);
+        break;
+      case GameArtType.lectureNotes:
+        _drawLectureNotesArt(canvas, size, center);
+        break;
+      case GameArtType.debateMode:
+        _drawDebateModeArt(canvas, size, center);
+        break;
+      case GameArtType.cohesionFixer:
+        _drawCohesionFixerArt(canvas, size, center);
+        break;
+      case GameArtType.realEnglishLog:
+        _drawRealEnglishLogArt(canvas, size, center);
         break;
     }
   }
@@ -1118,6 +1150,220 @@ class _GameArtPainter extends CustomPainter {
     canvas.drawLine(Offset(center.dx - 14, center.dy - 4), Offset(center.dx + 6, center.dy - 4), stroke);
     canvas.drawLine(Offset(center.dx - 14, center.dy + 2), Offset(center.dx + 2, center.dy + 2), stroke);
     canvas.drawCircle(Offset(center.dx - 2, center.dy + 14), 4, Paint()..color = primaryColor);
+  }
+
+  /// ⚖️ Nuance Duel: Precise balance beam weighing two lexical tokens
+  void _drawNuanceDuelArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    // Fulcrum
+    final fulcrum = Path()
+      ..moveTo(center.dx, center.dy - 2)
+      ..lineTo(center.dx - 7, center.dy + 16)
+      ..lineTo(center.dx + 7, center.dy + 16)
+      ..close();
+    canvas.drawPath(fulcrum, Paint()..color = primaryColor.withAlpha(40));
+    canvas.drawPath(fulcrum, stroke);
+
+    // Beam (slight angle for dynamic tension)
+    canvas.drawLine(Offset(center.dx - 22, center.dy - 7), Offset(center.dx + 22, center.dy + 3), stroke);
+
+    // Left pan
+    canvas.drawLine(Offset(center.dx - 22, center.dy - 7), Offset(center.dx - 22, center.dy + 3), stroke);
+    canvas.drawArc(Rect.fromCenter(center: Offset(center.dx - 22, center.dy + 6), width: 14, height: 8), 0, pi, false, stroke);
+
+    // Right pan
+    canvas.drawLine(Offset(center.dx + 22, center.dy + 3), Offset(center.dx + 22, center.dy + 13), stroke);
+    canvas.drawArc(Rect.fromCenter(center: Offset(center.dx + 22, center.dy + 16), width: 14, height: 8), 0, pi, false, stroke);
+  }
+
+  /// 🔀 Register Shifter: Slider knob morphing from casual curve to formal classical pillar
+  void _drawRegisterShifterArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    // Track
+    canvas.drawLine(Offset(center.dx - 24, center.dy), Offset(center.dx + 24, center.dy), stroke);
+
+    // Left side: informal speech ripple
+    final ripple = Path()
+      ..moveTo(center.dx - 24, center.dy - 10)
+      ..quadraticBezierTo(center.dx - 20, center.dy - 16, center.dx - 16, center.dy - 10);
+    canvas.drawPath(ripple, stroke);
+
+    // Center toggle knob
+    canvas.drawCircle(Offset(center.dx + 4, center.dy), 7, Paint()..color = primaryColor);
+    canvas.drawCircle(Offset(center.dx + 4, center.dy), 7, stroke);
+
+    // Right side: formal column icon
+    canvas.drawLine(Offset(center.dx + 18, center.dy - 12), Offset(center.dx + 26, center.dy - 12), stroke);
+    canvas.drawLine(Offset(center.dx + 20, center.dy - 12), Offset(center.dx + 20, center.dy - 2), stroke);
+    canvas.drawLine(Offset(center.dx + 24, center.dy - 12), Offset(center.dx + 24, center.dy - 2), stroke);
+  }
+
+  /// ⚡ Paraphrase Blitz: Three orbiting arrows reorganizing core concept
+  void _drawParaphraseBlitzArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    // Core idea circle
+    canvas.drawCircle(center, 5, Paint()..color = primaryColor);
+
+    // 3 orbital arcs
+    canvas.drawArc(Rect.fromCircle(center: center, radius: 16), 0.2, 1.6, false, stroke);
+    canvas.drawArc(Rect.fromCircle(center: center, radius: 16), 2.3, 1.6, false, stroke);
+    canvas.drawArc(Rect.fromCircle(center: center, radius: 16), 4.4, 1.6, false, stroke);
+
+    // Flash/lightning accent
+    final bolt = Path()
+      ..moveTo(center.dx + 18, center.dy - 12)
+      ..lineTo(center.dx + 14, center.dy - 4)
+      ..lineTo(center.dx + 19, center.dy - 4)
+      ..lineTo(center.dx + 13, center.dy + 8);
+    canvas.drawPath(bolt, stroke);
+  }
+
+  /// 🔨 Collocation Forge: Blacksmith anvil and forged interlocking link
+  void _drawCollocationForgeArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    // Anvil base
+    final anvil = Path()
+      ..moveTo(center.dx - 16, center.dy + 14)
+      ..lineTo(center.dx + 16, center.dy + 14)
+      ..lineTo(center.dx + 12, center.dy + 6)
+      ..lineTo(center.dx + 18, center.dy + 6)
+      ..lineTo(center.dx + 14, center.dy - 2)
+      ..lineTo(center.dx - 18, center.dy - 2)
+      ..lineTo(center.dx - 12, center.dy + 6)
+      ..lineTo(center.dx - 16, center.dy + 14);
+    canvas.drawPath(anvil, Paint()..color = primaryColor.withAlpha(30));
+    canvas.drawPath(anvil, stroke);
+
+    // Hammer striking down
+    final hammerHead = RRect.fromRectAndRadius(
+      Rect.fromCenter(center: Offset(center.dx + 2, center.dy - 14), width: 14, height: 8),
+      const Radius.circular(2),
+    );
+    canvas.drawRRect(hammerHead, stroke);
+    canvas.drawLine(Offset(center.dx + 2, center.dy - 18), Offset(center.dx + 14, center.dy - 24), stroke);
+
+    // Spark dots
+    canvas.drawCircle(Offset(center.dx - 8, center.dy - 6), 1.5, Paint()..color = primaryColor);
+    canvas.drawCircle(Offset(center.dx + 10, center.dy - 8), 1.5, Paint()..color = primaryColor);
+  }
+
+  /// 🎙️ Lecture Notes: Academic podium, acoustic waves and notepad
+  void _drawLectureNotesArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    // Notepad on left
+    final pad = RRect.fromRectAndRadius(
+      Rect.fromCenter(center: Offset(center.dx - 10, center.dy), width: 22, height: 30),
+      const Radius.circular(4),
+    );
+    canvas.drawRRect(pad, Paint()..color = primaryColor.withAlpha(25));
+    canvas.drawRRect(pad, stroke);
+
+    // Lines on pad
+    canvas.drawLine(Offset(center.dx - 17, center.dy - 7), Offset(center.dx - 3, center.dy - 7), stroke);
+    canvas.drawLine(Offset(center.dx - 17, center.dy), Offset(center.dx - 3, center.dy), stroke);
+    canvas.drawLine(Offset(center.dx - 17, center.dy + 7), Offset(center.dx - 8, center.dy + 7), stroke);
+
+    // Sound wave arcs on right
+    canvas.drawArc(Rect.fromCircle(center: Offset(center.dx + 10, center.dy), radius: 8), -pi * 0.4, pi * 0.8, false, stroke);
+    canvas.drawArc(Rect.fromCircle(center: Offset(center.dx + 10, center.dy), radius: 15), -pi * 0.4, pi * 0.8, false, stroke);
+  }
+
+  /// 🏛️ Debate Mode: Gavel striking plinth with two competing viewpoints
+  void _drawDebateModeArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    // Sound block / plinth
+    final block = RRect.fromRectAndRadius(
+      Rect.fromCenter(center: Offset(center.dx, center.dy + 12), width: 34, height: 8),
+      const Radius.circular(3),
+    );
+    canvas.drawRRect(block, Paint()..color = primaryColor.withAlpha(35));
+    canvas.drawRRect(block, stroke);
+
+    // Gavel head
+    final gavel = RRect.fromRectAndRadius(
+      Rect.fromCenter(center: Offset(center.dx - 4, center.dy - 2), width: 18, height: 10),
+      const Radius.circular(3),
+    );
+    canvas.drawRRect(gavel, stroke);
+
+    // Gavel handle
+    canvas.drawLine(Offset(center.dx - 4, center.dy - 7), Offset(center.dx + 16, center.dy - 18), stroke);
+
+    // Impact burst lines
+    canvas.drawLine(Offset(center.dx - 10, center.dy + 6), Offset(center.dx - 14, center.dy + 2), stroke);
+    canvas.drawLine(Offset(center.dx + 2, center.dy + 6), Offset(center.dx + 6, center.dy + 2), stroke);
+  }
+
+  /// 🔗 Cohesion Fixer: Chain link interlocking disjointed text blocks
+  void _drawCohesionFixerArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    // Left chain ring
+    final leftRing = RRect.fromRectAndRadius(
+      Rect.fromCenter(center: Offset(center.dx - 10, center.dy), width: 22, height: 14),
+      const Radius.circular(7),
+    );
+    canvas.drawRRect(leftRing, stroke);
+
+    // Right chain ring
+    final rightRing = RRect.fromRectAndRadius(
+      Rect.fromCenter(center: Offset(center.dx + 10, center.dy), width: 22, height: 14),
+      const Radius.circular(7),
+    );
+    canvas.drawRRect(rightRing, stroke);
+
+    // Central interlocking tie dot
+    canvas.drawCircle(center, 3, Paint()..color = primaryColor);
+  }
+
+  /// 🌿 Real English Log: Field notebook with magnifying lens on wild leaf
+  void _drawRealEnglishLogArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    // Field book
+    final book = RRect.fromRectAndRadius(
+      Rect.fromCenter(center: Offset(center.dx - 6, center.dy), width: 28, height: 34),
+      const Radius.circular(4),
+    );
+    canvas.drawRRect(book, Paint()..color = primaryColor.withAlpha(20));
+    canvas.drawRRect(book, stroke);
+
+    // Spine
+    canvas.drawLine(Offset(center.dx - 14, center.dy - 17), Offset(center.dx - 14, center.dy + 17), stroke);
+
+    // Magnifying lens on bottom right
+    canvas.drawCircle(Offset(center.dx + 12, center.dy + 4), 9, stroke);
+    canvas.drawLine(Offset(center.dx + 18, center.dy + 11), Offset(center.dx + 24, center.dy + 18), stroke);
   }
 
   @override

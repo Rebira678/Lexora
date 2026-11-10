@@ -37,6 +37,14 @@ import '../../games/phrasal_verb_dungeon/phrasal_verb_dungeon_screen.dart';
 import '../../games/idiom_escape/idiom_escape_screen.dart';
 import '../../writing/mini_email_boss_screen.dart';
 import '../../custom_decks/custom_deck_screen.dart';
+import '../../games/nuance_duel/nuance_duel_screen.dart';
+import '../../writing/register_shifter_screen.dart';
+import '../../writing/paraphrase_blitz_screen.dart';
+import '../../games/collocation_forge/collocation_forge_screen.dart';
+import '../../listening/lecture_notes_screen.dart';
+import '../../speaking/debate_mode_screen.dart';
+import '../../writing/cohesion_fixer_screen.dart';
+import '../../wild_items/real_english_log_screen.dart';
 import 'widgets/game_art_painters.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
@@ -1107,6 +1115,154 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         description: 'Badges and trophies for mastery milestones',
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(builder: (_) => const AchievementsScreen()),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 28),
+
+                  // Phase 4: C1 Precision & Semantic Nuance
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          'Phase 4: C1 Semantic Precision',
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            fontWeight: FontWeight.w700,
+                            letterSpacing: -0.2,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Text(
+                        'C1/C2 Nuance',
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: theme.colorScheme.onSurfaceVariant,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+
+                  GridView.count(
+                    crossAxisCount: 2,
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    mainAxisSpacing: 14,
+                    crossAxisSpacing: 14,
+                    childAspectRatio: 0.82,
+                    children: [
+                      _IllustratedGameCard(
+                        type: GameArtType.nuanceDuel,
+                        category: 'SEMANTIC DUEL',
+                        title: 'Nuance Duel',
+                        description: 'Choose the exact near-synonym with the right connotation',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const NuanceDuelScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.collocationForge,
+                        category: 'SPEED FORGE',
+                        title: 'Collocation Forge',
+                        description: 'Rapid-fire AWL collocations under time pressure',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const CollocationForgeScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.realEnglishLog,
+                        category: 'WILD CAPTURE',
+                        title: 'Real English Log',
+                        description: 'Capture real-world vocabulary & AWL/NAWL content packs',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const RealEnglishLogScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.registerShifter,
+                        category: 'SOCIOLINGUISTICS',
+                        title: 'Register Shifter',
+                        description: 'Transform casual discourse into executive & academic styles',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const RegisterShifterScreen()),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 28),
+
+                  // Phase 4: C1 Rhetoric, Synthesis & Debating
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          'Phase 4: C1 Rhetoric & Synthesis',
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            fontWeight: FontWeight.w700,
+                            letterSpacing: -0.2,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Text(
+                        'Academic Debate',
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: theme.colorScheme.onSurfaceVariant,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+
+                  GridView.count(
+                    crossAxisCount: 2,
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    mainAxisSpacing: 14,
+                    crossAxisSpacing: 14,
+                    childAspectRatio: 0.82,
+                    children: [
+                      _IllustratedGameCard(
+                        type: GameArtType.paraphraseBlitz,
+                        category: 'SYNTACTIC AGILITY',
+                        title: 'Paraphrase Blitz',
+                        description: 'Express one thesis in 3 advanced grammatical forms',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const ParaphraseBlitzScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.cohesionFixer,
+                        category: 'DISCOURSE FLOW',
+                        title: 'Cohesion Fixer',
+                        description: 'Repair choppy academic paragraphs with discourse ties',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const CohesionFixerScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.lectureNotes,
+                        category: 'AUTHENTIC SPEED',
+                        title: 'Lecture Notes',
+                        description: 'Academic lecture listening, Cornell notes & synthesis',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const LectureNotesScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.debateMode,
+                        category: '90S ARGUMENTATION',
+                        title: 'Debate Mode',
+                        description: 'Defend or oppose parliamentary motions against the clock',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const DebateModeScreen()),
                         ),
                       ),
                     ],

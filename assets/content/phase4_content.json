@@ -1,0 +1,279 @@
+{
+  "nuance_duel": [
+    {
+      "id": 1,
+      "context": "The CEO remained ______ during the hostile takeover attempt, refusing to compromise on the board's ethical charter despite intense media scrutiny.",
+      "wordA": "obstinate",
+      "wordB": "resolute",
+      "correct": "resolute",
+      "nuanceExplanation": "'Resolute' conveys admirable, purposeful determination grounded in principle. 'Obstinate' carries a negative, stubborn connotation implying unreasonable refusal to listen to logic.",
+      "cefr": "C1",
+      "collocation": "resolute defense / remain resolute"
+    },
+    {
+      "id": 2,
+      "context": "The research team was known for its ______ documentation of archaeological anomalies, cataloging every shard with micro-millimeter fidelity.",
+      "wordA": "meticulous",
+      "wordB": "fastidious",
+      "correct": "meticulous",
+      "nuanceExplanation": "'Meticulous' denotes positive thoroughness and rigorous scientific precision. 'Fastidious' often connotes excessive fussiness or being difficult to please due to obsessive delicacy.",
+      "cefr": "C1",
+      "collocation": "meticulous research / meticulous attention to detail"
+    },
+    {
+      "id": 3,
+      "context": "The diplomat served as a ______ arbiter between the two warring factions, possessing no financial or territorial stake in the outcome.",
+      "wordA": "disinterested",
+      "wordB": "uninterested",
+      "correct": "disinterested",
+      "nuanceExplanation": "'Disinterested' means impartial and unbiased with no personal stake. 'Uninterested' simply means indifferent, bored, or paying no attention.",
+      "cefr": "C1",
+      "collocation": "disinterested observer / disinterested mediator"
+    },
+    {
+      "id": 4,
+      "context": "The startup's financial strategy was remarkably ______; they managed operating cash flow prudently without jeopardizing employee compensation.",
+      "wordA": "frugal",
+      "wordB": "miserly",
+      "correct": "frugal",
+      "nuanceExplanation": "'Frugal' signifies wise, economical resource management. 'Miserly' implies pathological greed and unwillingness to spend even necessary funds.",
+      "cefr": "C1",
+      "collocation": "frugal lifestyle / frugal expenditure"
+    },
+    {
+      "id": 5,
+      "context": "The lead scientist felt ______ regarding the commercialization of genetic patents, torn between medical promise and ethical peril.",
+      "wordA": "ambivalent",
+      "wordB": "ambiguous",
+      "correct": "ambivalent",
+      "nuanceExplanation": "'Ambivalent' describes mixed, contradictory personal emotions or attitudes. 'Ambiguous' describes a statement or situation with multiple potential meanings or unclear semantics.",
+      "cefr": "C1",
+      "collocation": "feel ambivalent about / ambivalent attitude"
+    }
+  ],
+  "register_shifter": [
+    {
+      "id": 1,
+      "casualPrompt": "Hey, sorry I didn't get back to you sooner. We messed up the delivery date big time, but we're fixing it right now.",
+      "targetRegister": "Executive Business Formal",
+      "context": "Customer relations crisis management",
+      "requiredMarkers": [
+        "apologize for the delay",
+        "due to an oversight",
+        "expediting",
+        "assure you"
+      ],
+      "modelTransform": "Please accept our sincere apologies for the delay in our response. Due to an administrative oversight in our fulfillment logistics, the initial delivery schedule was disrupted. We are actively expediting your shipment and assure you that measures have been instituted to prevent recurrence.",
+      "teacherAnalysis": "Shifts emotional colloquialisms ('messed up big time') into nominalized institutional responsibility ('administrative oversight') and active solutions ('actively expediting')."
+    },
+    {
+      "id": 2,
+      "casualPrompt": "I don't think this project is gonna work because we don't have enough cash and everyone is super busy.",
+      "targetRegister": "Academic Board Feasibility Assessment",
+      "context": "Quarterly steering committee memorandum",
+      "requiredMarkers": [
+        "viability",
+        "resource constraints",
+        "bandwidth",
+        "recommend postponement"
+      ],
+      "modelTransform": "Preliminary assessments indicate substantial concerns regarding the project's long-term viability. In light of severe budgetary constraints and limited operational bandwidth across departmental teams, we recommend postponement until adequate fiscal resources can be secured.",
+      "teacherAnalysis": "Replaces vague personal pessimism ('don't think it's gonna work') with objective hedging ('preliminary assessments indicate substantial concerns') and Latinate nouns ('budgetary constraints', 'operational bandwidth')."
+    }
+  ],
+  "paraphrase_blitz": [
+    {
+      "id": 1,
+      "sourceIdea": "Because climate change is accelerating rapidly, governments must immediately implement stricter carbon taxation policies.",
+      "targetPatterns": [
+        "Passive with agent defocus: 'Stricter carbon taxation must be...'",
+        "Inversion / Cleft sentence: 'Only by implementing... / It is the rapid...'",
+        "Nominalized prepositional phrase: 'In light of accelerated climatic shifts...'"
+      ],
+      "modelParaphrases": [
+        "Stricter carbon taxation must be enacted immediately by global authorities in response to accelerating climatic volatility.",
+        "Only through the immediate implementation of rigorous carbon taxation can governments mitigate accelerating climate change.",
+        "In light of rapid climate acceleration, the urgent adoption of stringent carbon tariffs has become an imperative for regulatory bodies."
+      ],
+      "keyCollocations": ["stringent carbon tariffs", "regulatory imperative", "climatic volatility"]
+    },
+    {
+      "id": 2,
+      "sourceIdea": "The algorithm failed because it was trained on biased datasets from historical archives.",
+      "targetPatterns": [
+        "Attributive clause reduction: 'Stemming from biased training data...'",
+        "Conditional inversion: 'Had the training datasets not reflected historical bias...'",
+        "Ergative / Resultative formulation: 'Archival biases precipitated the algorithm's breakdown...'"
+      ],
+      "modelParaphrases": [
+        "Stemming from archival training datasets compromised by systemic bias, the algorithmic model suffered systemic failure.",
+        "Had the training corpus been purged of historical bias, the algorithmic anomalies would not have materialized.",
+        "Archival biases in the underlying training corpus precipitated the operational breakdown of the algorithm."
+      ],
+      "keyCollocations": ["training corpus", "systemic failure", "precipitated the breakdown"]
+    }
+  ],
+  "collocation_forge": [
+    {
+      "id": 1,
+      "prompt": "The committee voiced ______ reservations regarding the proposed corporate restructuring.",
+      "headword": "reservations",
+      "options": ["grave", "tall", "heavy", "wide"],
+      "correct": "grave",
+      "register": "Academic / Formal",
+      "example": "He expressed grave reservations about the ethical implications of the trial."
+    },
+    {
+      "id": 2,
+      "prompt": "The whistleblower's testimony ______ controversy across the international diplomatic corps.",
+      "headword": "controversy",
+      "options": ["sparked", "lighted", "ignited", "pushed"],
+      "correct": "sparked",
+      "register": "Journalistic / Executive",
+      "example": "The leaked dossier sparked fierce controversy among cabinet ministers."
+    },
+    {
+      "id": 3,
+      "prompt": "Unchecked speculative trading threatened to ______ havoc on sovereign bond markets.",
+      "headword": "havoc",
+      "options": ["wreak", "throw", "cast", "make"],
+      "correct": "wreak",
+      "register": "Economic Analysis",
+      "example": "Severe currency devaluation can wreak havoc on domestic savings."
+    },
+    {
+      "id": 4,
+      "prompt": "The clinical trial yielded ______ evidence of neurodegenerative remediation.",
+      "headword": "evidence",
+      "options": ["compelling", "hardworking", "gripping", "forcing"],
+      "correct": "compelling",
+      "register": "Scientific Research",
+      "example": "The laboratory uncovered compelling evidence linking the peptide to cellular repair."
+    },
+    {
+      "id": 5,
+      "prompt": "The opposition party launched a ______ campaign against proposed infrastructure levies.",
+      "headword": "campaign",
+      "options": ["concerted", "dense", "thick", "grouped"],
+      "correct": "concerted",
+      "register": "Political Discourse",
+      "example": "A concerted effort by civic organizations reversed the zoning decision."
+    }
+  ],
+  "lecture_notes": [
+    {
+      "id": 1,
+      "title": "Cognitive Architecture & Heuristic Biases",
+      "speaker": "Prof. Alistair Vance, Department of Behavioral Economics",
+      "duration": "3 min academic lecture",
+      "transcript": "Welcome, colleagues. In today's session, we interrogate the dual-process cognitive model pioneered by Kahneman and Tversky, specifically focusing on how cognitive heuristics precipitate systematic divergences from normative rationality. System 1 operates automatically, rapidly, and with negligible conscious exertion; it is an evolutionary adaptation optimized for environmental survival under acute temporal constraints. Conversely, System 2 allocates attention to effortful mental operations, encompassing complex computation, hypothetical counterfactual reasoning, and semantic syntax parsing. Crucially, cognitive bias is not a random defect; rather, it is the predictable artifact of System 1 heuristics masquerading as deliberative conclusions. Consider the availability heuristic: agents estimate probabilistic frequency not via empirical statistical tables, but via the cognitive ease with which salient exemplars are retrieved from episodic memory. Consequently, dramatic yet statistically improbable risks—such as aviation catastrophes or catastrophic market crashes—dominate policy debates, while endemic, slow-moving externalities receive deficient fiscal allocation.",
+      "cornellQuestions": [
+        {
+          "question": "What primary evolutionary advantage does System 1 provide?",
+          "options": [
+            "Deliberate algebraic calculation under calm conditions",
+            "Rapid automated decision-making under acute temporal constraints",
+            "Exhaustive statistical analysis of episodic memory",
+            "Suppression of heuristic shortcuts in social interactions"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "question": "How does the availability heuristic bias empirical risk assessment?",
+          "options": [
+            "By forcing System 2 to override all emotional intuition",
+            "By substituting episodic recall ease for true statistical probability",
+            "By causing agents to ignore recent high-profile disasters",
+            "By eliminating the distinction between normative and descriptive models"
+          ],
+          "correctIndex": 1
+        }
+      ],
+      "synthesisPrompt": "Synthesize the core distinction between System 1 and System 2 cognitive processing, explaining how the availability heuristic distorts public policy allocations."
+    }
+  ],
+  "debate_mode": [
+    {
+      "id": 1,
+      "motion": "This House Would Grant Autonomous Artificial Intelligence Systems Limited Legal Personhood.",
+      "background": "As autonomous AI agents execute high-frequency financial contracts, author creative intellectual property, and deploy algorithmic corporate governance, traditional strict liability frameworks struggle to assign moral and financial culpability.",
+      "scaffoldPointsFor": [
+        "Creates a ring-fenced liability pool with mandatory indemnity insurance",
+        "Allows direct corporate accountability without piercing corporate veils",
+        "Provides clear fiduciary standing for autonomous decision algorithms"
+      ],
+      "scaffoldPointsAgainst": [
+        "Diffuses human moral accountability for algorithmic malfeasance",
+        "Enables rogue developers to shield themselves behind synthetic entities",
+        "Confounds legal personhood with subjective moral agency"
+      ],
+      "targetVocabulary": ["fiduciary duty", "strict liability", "indemnity insurance", "moral agency", "culpability"]
+    },
+    {
+      "id": 2,
+      "motion": "This House Believes Perpetual Economic Growth Is Fundamentally Incompatible With Ecological Equilibrium.",
+      "background": "Debates surrounding green growth versus post-growth de-growth paradigms center on whether resource decoupling can outpace biophysical thermodynamic boundaries.",
+      "scaffoldPointsFor": [
+        "Thermodynamic entropy dictates that material throughput cannot expand infinitely",
+        "Jevons Paradox demonstrates efficiency gains stimulate aggregate consumption",
+        "Planetary boundaries for biodiversity and carbon cycles are already breached"
+      ],
+      "scaffoldPointsAgainst": [
+        "Dematerialization and clean energy transitions allow economic value decoupling",
+        "Technological innovation yields non-linear efficiency multipliers",
+        "Economic contraction historically halts funding for environmental remediation"
+      ],
+      "targetVocabulary": ["thermodynamic boundaries", "Jevons Paradox", "material throughput", "dematerialization", "ecological equilibrium"]
+    }
+  ],
+  "cohesion_fixer": [
+    {
+      "id": 1,
+      "faultyText": "Urban congestion pricing has reduced inner-city vehicular emissions by 24%. It has stimulated cycling infrastructure investments. Many low-income commuters face regressive financial burdens. Adequate public transit subsidies have not been universally implemented.",
+      "repairedText": "Urban congestion pricing has reduced inner-city vehicular emissions by 24% while simultaneously stimulating cycling infrastructure investments. Nonetheless, many low-income commuters face regressive financial burdens insofar as adequate public transit subsidies have not been universally implemented.",
+      "missingConnectors": [
+        {"gapIndex": 1, "connector": "while simultaneously", "role": "parallel reinforcement"},
+        {"gapIndex": 2, "connector": "Nonetheless", "role": "concessive contrast"},
+        {"gapIndex": 3, "connector": "insofar as", "role": "causal condition"}
+      ],
+      "explanation": "'While simultaneously' merges parallel positive developments. 'Nonetheless' signals an essential sociodemographic counterpoint. 'Insofar as' clarifies the specific policy failure giving rise to the burden."
+    },
+    {
+      "id": 2,
+      "faultyText": "The clinical trial demonstrated high therapeutic efficacy. Several participants exhibited elevated hepatic enzyme levels. Researchers suspended dosage escalations. They initiated a comprehensive toxicological review.",
+      "repairedText": "Although the clinical trial demonstrated high therapeutic efficacy, several participants exhibited elevated hepatic enzyme levels. Consequently, researchers suspended dosage escalations, subsequently initiating a comprehensive toxicological review.",
+      "missingConnectors": [
+        {"gapIndex": 1, "connector": "Although", "role": "concessive subordinate"},
+        {"gapIndex": 2, "connector": "Consequently", "role": "causal transition"},
+        {"gapIndex": 3, "connector": "subsequently", "role": "chronological succession"}
+      ],
+      "explanation": "'Although' subordinates the initial positive result to the safety anomaly. 'Consequently' links anomaly to protocol halt, and 'subsequently' establishes temporal research order."
+    }
+  ],
+  "c1_content_packs": [
+    {
+      "packId": "awl_sublist_1",
+      "title": "Academic Word List (AWL) Core Essentials",
+      "description": "Foundational C1 academic lemmas across humanities, sciences, and law.",
+      "words": [
+        {"lemma": "paradigm", "pos": "noun", "cefr": "C1", "definition": "A typical example, pattern, or model of something.", "example": "The discovery ushered in a paradigm shift in molecular physics."},
+        {"lemma": "inherent", "pos": "adjective", "cefr": "C1", "definition": "Existing in something as a permanent, essential, or characteristic attribute.", "example": "There are inherent risks in high-frequency trading."},
+        {"lemma": "substantiate", "pos": "verb", "cefr": "C1", "definition": "Provide evidence to support or prove the truth of an assertion.", "example": "They failed to substantiate their accusations with empirical data."},
+        {"lemma": "disparity", "pos": "noun", "cefr": "C1", "definition": "A great difference, imbalance, or inequality.", "example": "Economic policy must address the glaring disparity between urban and rural wages."},
+        {"lemma": "empirical", "pos": "adjective", "cefr": "C1", "definition": "Based on, concerned with, or verifiable by observation or experience rather than theory.", "example": "The conclusion relies on extensive empirical observation."}
+      ]
+    },
+    {
+      "packId": "nawl_executive",
+      "title": "New Academic Word List (NAWL) Executive & Rhetoric",
+      "description": "High-frequency research and executive policy terminology.",
+      "words": [
+        {"lemma": "catalyze", "pos": "verb", "cefr": "C1", "definition": "Cause or accelerate a process, reaction, or systemic change.", "example": "The policy change catalyzed investment across regional renewable grids."},
+        {"lemma": "equivocal", "pos": "adjective", "cefr": "C1", "definition": "Open to more than one interpretation; ambiguous or deliberately misleading.", "example": "The spokesperson gave an equivocal response regarding future layoffs."},
+        {"lemma": "tangential", "pos": "adjective", "cefr": "C1", "definition": "Hardly touching on a matter; peripheral or merely superficially relevant.", "example": "The witness introduced tangential matters that derailed the hearing."},
+        {"lemma": "culmination", "pos": "noun", "cefr": "C1", "definition": "The highest or climactic point of something, especially attained after a long duration.", "example": "The treaty represents the culmination of a decade of intense diplomacy."},
+        {"lemma": "dichotomy", "pos": "noun", "cefr": "C1", "definition": "A division or contrast between two things that are represented as being opposed or entirely different.", "example": "The debate created a false dichotomy between economic vitality and public health."}
+      ]
+    }
+  ]
+}
