@@ -50,6 +50,10 @@ import '../../games/style_analyzer/style_analyzer_screen.dart';
 import '../../reading/c2_long_reader_screen.dart';
 import '../../writing/linguistic_evaluator_screen.dart';
 import '../../games/gap_finder/gap_finder_screen.dart';
+import '../../games/reference_hunter/reference_hunter_screen.dart';
+import '../../games/summarize_ten_words/summarize_ten_words_screen.dart';
+import '../../games/sentence_race/sentence_race_screen.dart';
+import '../../games/define_it_yourself/define_it_yourself_screen.dart';
 import 'widgets/daily_quest_board_widget.dart';
 import 'widgets/game_art_painters.dart';
 
@@ -746,6 +750,33 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                           MaterialPageRoute(builder: (_) => const ReadingScreen()),
                         ),
                       ),
+                      _IllustratedGameCard(
+                        type: GameArtType.referenceHunter,
+                        category: 'TRACKING',
+                        title: 'Reference Hunter',
+                        description: 'Untangle this/which/they antecedent links',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const ReferenceHunterScreen(level: 4)),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.summarizeTenWords,
+                        category: 'SYNTHESIS',
+                        title: 'Summarize ≤ 10',
+                        description: 'Distill 35-word sentences into core essence',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const SummarizeTenWordsScreen(level: 4)),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.sentenceRace,
+                        category: 'SPEED COMP',
+                        title: 'Sentence Race',
+                        description: 'Karaoke speech sync & 10s blitz comprehension',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const SentenceRaceScreen(level: 4)),
+                        ),
+                      ),
                     ],
                   ),
                   const SizedBox(height: 28),
@@ -818,6 +849,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         description: 'Targeted drill on missed sentences & wild items',
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(builder: (_) => const MistakesScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.defineItYourself,
+                        category: 'ACTIVE RECALL',
+                        title: 'Define It Yourself',
+                        description: 'Explain in English then compare dictionary',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const DefineItYourselfScreen(targetCefr: 'C1')),
                         ),
                       ),
                     ],

@@ -48,6 +48,10 @@ enum GameArtType {
   c2LongReader,
   linguisticEvaluator,
   gapFinder,
+  referenceHunter,
+  summarizeTenWords,
+  sentenceRace,
+  defineItYourself,
 }
 
 class GameArtWidget extends StatelessWidget {
@@ -254,6 +258,18 @@ class _GameArtPainter extends CustomPainter {
         break;
       case GameArtType.gapFinder:
         _drawGapFinderArt(canvas, size, center);
+        break;
+      case GameArtType.referenceHunter:
+        _drawReferenceHunterArt(canvas, size, center);
+        break;
+      case GameArtType.summarizeTenWords:
+        _drawSummarizeTenWordsArt(canvas, size, center);
+        break;
+      case GameArtType.sentenceRace:
+        _drawSentenceRaceArt(canvas, size, center);
+        break;
+      case GameArtType.defineItYourself:
+        _drawDefineItYourselfArt(canvas, size, center);
         break;
     }
   }
@@ -1494,6 +1510,159 @@ class _GameArtPainter extends CustomPainter {
     // Blip pulse target
     canvas.drawCircle(Offset(center.dx + 8, center.dy - 8), 4, Paint()..color = const Color(0xFFEF4444));
     canvas.drawCircle(Offset(center.dx + 8, center.dy - 8), 7, Paint()..color = const Color(0xFFEF4444).withValues(alpha: 0.3));
+  }
+
+  /// 🎯 Reference Hunter: Reticle crosshair locking onto an antecedent chain link
+  void _drawReferenceHunterArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor.withValues(alpha: 0.3)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.5;
+    canvas.drawCircle(center, 18, stroke);
+
+    // Reticle brackets
+    final bracketPaint = Paint()
+      ..color = const Color(0xFF38BDF8)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.2
+      ..strokeCap = StrokeCap.round;
+
+    final r = 20.0;
+    // Top-left
+    canvas.drawLine(Offset(center.dx - r, center.dy - r + 8), Offset(center.dx - r, center.dy - r), bracketPaint);
+    canvas.drawLine(Offset(center.dx - r, center.dy - r), Offset(center.dx - r + 8, center.dy - r), bracketPaint);
+    // Bottom-right
+    canvas.drawLine(Offset(center.dx + r, center.dy + r - 8), Offset(center.dx + r, center.dy + r), bracketPaint);
+    canvas.drawLine(Offset(center.dx + r, center.dy + r), Offset(center.dx + r - 8, center.dy + r), bracketPaint);
+
+    // Central connector chain arrow
+    final arrowPaint = Paint()
+      ..color = const Color(0xFFF59E0B)
+      ..strokeWidth = 2.4
+      ..style = PaintingStyle.stroke
+      ..strokeCap = StrokeCap.round;
+    canvas.drawLine(Offset(center.dx - 12, center.dy + 8), Offset(center.dx + 8, center.dy - 8), arrowPaint);
+    // Arrow head pointing to target
+    canvas.drawLine(Offset(center.dx + 8, center.dy - 8), Offset(center.dx + 2, center.dy - 8), arrowPaint);
+    canvas.drawLine(Offset(center.dx + 8, center.dy - 8), Offset(center.dx + 8, center.dy - 2), arrowPaint);
+    // Target pulse point
+    canvas.drawCircle(Offset(center.dx + 8, center.dy - 8), 3, Paint()..color = const Color(0xFF10B981));
+  }
+
+  /// 📝 Summarize in 10 Words: Compression funnel distilling a long text block into a core gem
+  void _drawSummarizeTenWordsArt(Canvas canvas, Size size, Offset center) {
+    // Upper wide text bars
+    final barPaint = Paint()..color = primaryColor.withValues(alpha: 0.35);
+    canvas.drawRRect(
+      RRect.fromRectAndRadius(Rect.fromLTWH(center.dx - 22, center.dy - 20, 44, 4), const Radius.circular(2)),
+      barPaint,
+    );
+    canvas.drawRRect(
+      RRect.fromRectAndRadius(Rect.fromLTWH(center.dx - 18, center.dy - 12, 36, 4), const Radius.circular(2)),
+      barPaint,
+    );
+    canvas.drawRRect(
+      RRect.fromRectAndRadius(Rect.fromLTWH(center.dx - 14, center.dy - 4, 28, 4), const Radius.circular(2)),
+      barPaint,
+    );
+
+    // Downward condensing arrow
+    final arrow = Paint()
+      ..color = const Color(0xFF38BDF8)
+      ..strokeWidth = 2.0
+      ..strokeCap = StrokeCap.round;
+    canvas.drawLine(Offset(center.dx, center.dy - 2), Offset(center.dx, center.dy + 8), arrow);
+
+    // 10-word core diamond gem
+    final gem = Path()
+      ..moveTo(center.dx, center.dy + 10)
+      ..lineTo(center.dx + 10, center.dy + 17)
+      ..lineTo(center.dx, center.dy + 24)
+      ..lineTo(center.dx - 10, center.dy + 17)
+      ..close();
+    canvas.drawPath(gem, Paint()..color = const Color(0xFFF59E0B));
+    canvas.drawPath(
+      gem,
+      Paint()
+        ..color = Colors.white
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1.2,
+    );
+  }
+
+  /// ⚡ Sentence Race: Speed dial / speedometer with tachometer needle and motion streaks
+  void _drawSentenceRaceArt(Canvas canvas, Size size, Offset center) {
+    final arcPaint = Paint()
+      ..color = primaryColor.withValues(alpha: 0.25)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 4.0
+      ..strokeCap = StrokeCap.round;
+
+    final rect = Rect.fromCircle(center: Offset(center.dx, center.dy + 4), radius: 18);
+    canvas.drawArc(rect, pi * 0.8, pi * 1.4, false, arcPaint);
+
+    final activeArc = Paint()
+      ..color = const Color(0xFFF59E0B)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 4.0
+      ..strokeCap = StrokeCap.round;
+    canvas.drawArc(rect, pi * 0.8, pi * 0.9, false, activeArc);
+
+    // Speedometer needle
+    final needle = Paint()
+      ..color = const Color(0xFFEF4444)
+      ..strokeWidth = 2.5
+      ..strokeCap = StrokeCap.round;
+    canvas.drawLine(Offset(center.dx, center.dy + 4), Offset(center.dx + 11, center.dy - 8), needle);
+    canvas.drawCircle(Offset(center.dx, center.dy + 4), 3.5, Paint()..color = Colors.white);
+
+    // Lightning speed bolt
+    final bolt = Path()
+      ..moveTo(center.dx - 16, center.dy - 12)
+      ..lineTo(center.dx - 11, center.dy - 12)
+      ..lineTo(center.dx - 14, center.dy - 4)
+      ..lineTo(center.dx - 8, center.dy - 4)
+      ..lineTo(center.dx - 15, center.dy + 8)
+      ..lineTo(center.dx - 12, center.dy)
+      ..close();
+    canvas.drawPath(bolt, Paint()..color = const Color(0xFF38BDF8));
+  }
+
+  /// 🧠 Define It Yourself: Card-flip perspective with glowing active recall quill
+  void _drawDefineItYourselfArt(Canvas canvas, Size size, Offset center) {
+    // Angled back card (shadowed)
+    final backCard = Path()
+      ..moveTo(center.dx - 18, center.dy - 14)
+      ..lineTo(center.dx + 12, center.dy - 20)
+      ..lineTo(center.dx + 20, center.dy + 12)
+      ..lineTo(center.dx - 10, center.dy + 18)
+      ..close();
+    canvas.drawPath(backCard, Paint()..color = primaryColor.withValues(alpha: 0.25));
+
+    // Foreground 3D tilted card
+    final frontCard = Path()
+      ..moveTo(center.dx - 14, center.dy - 16)
+      ..lineTo(center.dx + 16, center.dy - 16)
+      ..lineTo(center.dx + 16, center.dy + 16)
+      ..lineTo(center.dx - 14, center.dy + 16)
+      ..close();
+    canvas.drawPath(frontCard, Paint()..color = const Color(0xFF1E293B));
+    canvas.drawPath(
+      frontCard,
+      Paint()
+        ..color = const Color(0xFF10B981)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 2.0,
+    );
+
+    // Active recall quill / pen in gold
+    final pen = Path()
+      ..moveTo(center.dx - 6, center.dy + 6)
+      ..lineTo(center.dx + 10, center.dy - 10)
+      ..lineTo(center.dx + 12, center.dy - 8)
+      ..lineTo(center.dx - 4, center.dy + 8)
+      ..close();
+    canvas.drawPath(pen, Paint()..color = const Color(0xFFF59E0B));
   }
 
   @override

@@ -35,9 +35,9 @@ void main() {
     final srsCards = await db.select(db.srsCards).get();
     expect(srsCards.length, 200);
 
-    // Verify sentences table
+    // Verify sentences table (expanded to meet Section 23 >= 100 benchmark)
     final sentences = await db.select(db.sentenceStructures).get();
-    expect(sentences.length, 60);
+    expect(sentences.length, greaterThanOrEqualTo(100));
 
     // Verify paragraphs table
     final paragraphs = await db.select(db.paragraphs).get();

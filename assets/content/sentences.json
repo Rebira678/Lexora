@@ -6,7 +6,12 @@
     "word_count": 7,
     "subject_span": "0-1",
     "verb_span": "2",
-    "chunks_json": ["The manager", "approved", "the new budget", "yesterday."],
+    "chunks_json": [
+      "The manager",
+      "approved",
+      "the new budget",
+      "yesterday."
+    ],
     "layers_json": [],
     "connectors_json": [],
     "simple_meaning": "The manager said yes to the new budget.",
@@ -19,7 +24,12 @@
     "word_count": 9,
     "subject_span": "0-1",
     "verb_span": "2",
-    "chunks_json": ["My sister", "takes the bus", "to work", "every morning."],
+    "chunks_json": [
+      "My sister",
+      "takes the bus",
+      "to work",
+      "every morning."
+    ],
     "layers_json": [],
     "connectors_json": [],
     "simple_meaning": "My sister goes to work by bus each morning.",
@@ -32,7 +42,12 @@
     "word_count": 9,
     "subject_span": "0-1",
     "verb_span": "2",
-    "chunks_json": ["The children", "played football", "in the park", "after lunch."],
+    "chunks_json": [
+      "The children",
+      "played football",
+      "in the park",
+      "after lunch."
+    ],
     "layers_json": [],
     "connectors_json": [],
     "simple_meaning": "The kids played football in the park when lunch was over.",
@@ -45,7 +60,12 @@
     "word_count": 8,
     "subject_span": "0-1",
     "verb_span": "2",
-    "chunks_json": ["Our teacher", "explained", "the grammar rule", "very clearly."],
+    "chunks_json": [
+      "Our teacher",
+      "explained",
+      "the grammar rule",
+      "very clearly."
+    ],
     "layers_json": [],
     "connectors_json": [],
     "simple_meaning": "The teacher made the grammar rule easy to understand.",
@@ -58,7 +78,12 @@
     "word_count": 8,
     "subject_span": "0-1",
     "verb_span": "2",
-    "chunks_json": ["The restaurant", "serves", "delicious Italian food", "every evening."],
+    "chunks_json": [
+      "The restaurant",
+      "serves",
+      "delicious Italian food",
+      "every evening."
+    ],
     "layers_json": [],
     "connectors_json": [],
     "simple_meaning": "You can eat good Italian food at this restaurant each evening.",
@@ -71,7 +96,12 @@
     "word_count": 9,
     "subject_span": "0",
     "verb_span": "1",
-    "chunks_json": ["She", "bought", "a new laptop", "for her online classes."],
+    "chunks_json": [
+      "She",
+      "bought",
+      "a new laptop",
+      "for her online classes."
+    ],
     "layers_json": [],
     "connectors_json": [],
     "simple_meaning": "She got a new laptop to use for her classes on the internet.",
@@ -84,7 +114,12 @@
     "word_count": 9,
     "subject_span": "0-1",
     "verb_span": "4",
-    "chunks_json": ["The flight", "to London", "departs", "at eight o'clock tomorrow."],
+    "chunks_json": [
+      "The flight",
+      "to London",
+      "departs",
+      "at eight o'clock tomorrow."
+    ],
     "layers_json": [],
     "connectors_json": [],
     "simple_meaning": "The plane to London leaves at 8:00 tomorrow.",
@@ -97,7 +132,12 @@
     "word_count": 8,
     "subject_span": "0-1",
     "verb_span": "2",
-    "chunks_json": ["My neighbour", "grows", "beautiful flowers", "in her small garden."],
+    "chunks_json": [
+      "My neighbour",
+      "grows",
+      "beautiful flowers",
+      "in her small garden."
+    ],
     "layers_json": [],
     "connectors_json": [],
     "simple_meaning": "The woman next door has lovely flowers in her garden.",
@@ -110,7 +150,12 @@
     "word_count": 8,
     "subject_span": "0-1",
     "verb_span": "2",
-    "chunks_json": ["The doctor", "recommended", "regular exercise", "and a healthy diet."],
+    "chunks_json": [
+      "The doctor",
+      "recommended",
+      "regular exercise",
+      "and a healthy diet."
+    ],
     "layers_json": [],
     "connectors_json": [],
     "simple_meaning": "The doctor said you should exercise and eat healthy food.",
@@ -123,7 +168,12 @@
     "word_count": 8,
     "subject_span": "0",
     "verb_span": "1",
-    "chunks_json": ["We", "finished", "the project", "before the Friday deadline."],
+    "chunks_json": [
+      "We",
+      "finished",
+      "the project",
+      "before the Friday deadline."
+    ],
     "layers_json": [],
     "connectors_json": [],
     "simple_meaning": "We completed the project in time.",
@@ -136,9 +186,16 @@
     "word_count": 14,
     "subject_span": "0",
     "verb_span": "1",
-    "chunks_json": ["She wanted to go", "to the beach,", "but the weather", "was too cold."],
+    "chunks_json": [
+      "She wanted to go",
+      "to the beach,",
+      "but the weather",
+      "was too cold."
+    ],
     "layers_json": [],
-    "connectors_json": ["but"],
+    "connectors_json": [
+      "but"
+    ],
     "simple_meaning": "She wanted to visit the beach, but it was too cold outside.",
     "audio_path": ""
   },
@@ -149,9 +206,16 @@
     "word_count": 13,
     "subject_span": "0",
     "verb_span": "1",
-    "chunks_json": ["He studied hard", "for the exam,", "and he passed", "with a high score."],
+    "chunks_json": [
+      "He studied hard",
+      "for the exam,",
+      "and he passed",
+      "with a high score."
+    ],
     "layers_json": [],
-    "connectors_json": ["and"],
+    "connectors_json": [
+      "and"
+    ],
     "simple_meaning": "He studied a lot for the test and got a good result.",
     "audio_path": ""
   },
@@ -162,9 +226,16 @@
     "word_count": 13,
     "subject_span": "0-1",
     "verb_span": "2-3",
-    "chunks_json": ["The train was delayed", "by thirty minutes,", "so we arrived late", "to the meeting."],
+    "chunks_json": [
+      "The train was delayed",
+      "by thirty minutes,",
+      "so we arrived late",
+      "to the meeting."
+    ],
     "layers_json": [],
-    "connectors_json": ["so"],
+    "connectors_json": [
+      "so"
+    ],
     "simple_meaning": "The train was late, so we got to the meeting late too.",
     "audio_path": ""
   },
@@ -175,9 +246,16 @@
     "word_count": 13,
     "subject_span": "0",
     "verb_span": "1",
-    "chunks_json": ["I enjoy cooking", "Italian food,", "but I rarely have time", "to do it."],
+    "chunks_json": [
+      "I enjoy cooking",
+      "Italian food,",
+      "but I rarely have time",
+      "to do it."
+    ],
     "layers_json": [],
-    "connectors_json": ["but"],
+    "connectors_json": [
+      "but"
+    ],
     "simple_meaning": "I like making Italian food, but I am usually too busy.",
     "audio_path": ""
   },
@@ -188,9 +266,16 @@
     "word_count": 12,
     "subject_span": "0-1",
     "verb_span": "2-3",
-    "chunks_json": ["The museum was closed", "on Monday,", "so they visited", "the art gallery instead."],
+    "chunks_json": [
+      "The museum was closed",
+      "on Monday,",
+      "so they visited",
+      "the art gallery instead."
+    ],
     "layers_json": [],
-    "connectors_json": ["so"],
+    "connectors_json": [
+      "so"
+    ],
     "simple_meaning": "The museum was not open on Monday, so they went to an art gallery.",
     "audio_path": ""
   },
@@ -201,9 +286,16 @@
     "word_count": 12,
     "subject_span": "0",
     "verb_span": "1",
-    "chunks_json": ["She finished her homework", "early,", "and then she went out", "with her friends."],
+    "chunks_json": [
+      "She finished her homework",
+      "early,",
+      "and then she went out",
+      "with her friends."
+    ],
     "layers_json": [],
-    "connectors_json": ["and then"],
+    "connectors_json": [
+      "and then"
+    ],
     "simple_meaning": "She did her homework quickly and then spent time with friends.",
     "audio_path": ""
   },
@@ -214,9 +306,16 @@
     "word_count": 12,
     "subject_span": "0-1",
     "verb_span": "2",
-    "chunks_json": ["The café serves", "great coffee,", "but the prices are", "quite high for students."],
+    "chunks_json": [
+      "The café serves",
+      "great coffee,",
+      "but the prices are",
+      "quite high for students."
+    ],
     "layers_json": [],
-    "connectors_json": ["but"],
+    "connectors_json": [
+      "but"
+    ],
     "simple_meaning": "The café has good coffee, but it costs a lot for students.",
     "audio_path": ""
   },
@@ -227,9 +326,16 @@
     "word_count": 13,
     "subject_span": "0",
     "verb_span": "1",
-    "chunks_json": ["He wanted to become", "a pilot,", "so he enrolled", "in a flight school."],
+    "chunks_json": [
+      "He wanted to become",
+      "a pilot,",
+      "so he enrolled",
+      "in a flight school."
+    ],
     "layers_json": [],
-    "connectors_json": ["so"],
+    "connectors_json": [
+      "so"
+    ],
     "simple_meaning": "He wanted to fly planes, so he started studying at a flight school.",
     "audio_path": ""
   },
@@ -240,9 +346,16 @@
     "word_count": 13,
     "subject_span": "0",
     "verb_span": "1",
-    "chunks_json": ["We ordered pizza", "for dinner,", "and my brother brought", "some drinks from the shop."],
+    "chunks_json": [
+      "We ordered pizza",
+      "for dinner,",
+      "and my brother brought",
+      "some drinks from the shop."
+    ],
     "layers_json": [],
-    "connectors_json": ["and"],
+    "connectors_json": [
+      "and"
+    ],
     "simple_meaning": "We got pizza and my brother bought drinks.",
     "audio_path": ""
   },
@@ -253,9 +366,16 @@
     "word_count": 14,
     "subject_span": "0-1",
     "verb_span": "2",
-    "chunks_json": ["The weather was beautiful,", "so they decided", "to have a picnic", "by the river."],
+    "chunks_json": [
+      "The weather was beautiful,",
+      "so they decided",
+      "to have a picnic",
+      "by the river."
+    ],
     "layers_json": [],
-    "connectors_json": ["so"],
+    "connectors_json": [
+      "so"
+    ],
     "simple_meaning": "It was a lovely day, so they ate outside near the river.",
     "audio_path": ""
   },
@@ -266,9 +386,21 @@
     "word_count": 14,
     "subject_span": "0-1",
     "verb_span": "6",
-    "chunks_json": ["The woman", "who lives next door", "works as a nurse", "at the city hospital."],
-    "layers_json": [{"type": "relative", "span": "2-5"}],
-    "connectors_json": ["who"],
+    "chunks_json": [
+      "The woman",
+      "who lives next door",
+      "works as a nurse",
+      "at the city hospital."
+    ],
+    "layers_json": [
+      {
+        "type": "relative",
+        "span": "2-5"
+      }
+    ],
+    "connectors_json": [
+      "who"
+    ],
     "simple_meaning": "My neighbour is a nurse. She works at the city hospital.",
     "audio_path": ""
   },
@@ -279,9 +411,21 @@
     "word_count": 13,
     "subject_span": "0-1",
     "verb_span": "7-8",
-    "chunks_json": ["The book", "that I borrowed from the library", "was really interesting", "and well written."],
-    "layers_json": [{"type": "relative", "span": "2-6"}],
-    "connectors_json": ["that"],
+    "chunks_json": [
+      "The book",
+      "that I borrowed from the library",
+      "was really interesting",
+      "and well written."
+    ],
+    "layers_json": [
+      {
+        "type": "relative",
+        "span": "2-6"
+      }
+    ],
+    "connectors_json": [
+      "that"
+    ],
     "simple_meaning": "I got a book from the library. It was very interesting.",
     "audio_path": ""
   },
@@ -292,9 +436,21 @@
     "word_count": 13,
     "subject_span": "0-1",
     "verb_span": "6-7",
-    "chunks_json": ["The café", "which opened last month", "has already become popular", "with young people."],
-    "layers_json": [{"type": "relative", "span": "2-4"}],
-    "connectors_json": ["which"],
+    "chunks_json": [
+      "The café",
+      "which opened last month",
+      "has already become popular",
+      "with young people."
+    ],
+    "layers_json": [
+      {
+        "type": "relative",
+        "span": "2-4"
+      }
+    ],
+    "connectors_json": [
+      "which"
+    ],
     "simple_meaning": "A new café opened last month. Many young people like it now.",
     "audio_path": ""
   },
@@ -305,9 +461,21 @@
     "word_count": 13,
     "subject_span": "0-1",
     "verb_span": "7",
-    "chunks_json": ["The students", "who completed the extra assignments", "received higher marks", "in the final exam."],
-    "layers_json": [{"type": "relative", "span": "2-6"}],
-    "connectors_json": ["who"],
+    "chunks_json": [
+      "The students",
+      "who completed the extra assignments",
+      "received higher marks",
+      "in the final exam."
+    ],
+    "layers_json": [
+      {
+        "type": "relative",
+        "span": "2-6"
+      }
+    ],
+    "connectors_json": [
+      "who"
+    ],
     "simple_meaning": "Students who did extra work got better marks on the final test.",
     "audio_path": ""
   },
@@ -318,9 +486,21 @@
     "word_count": 14,
     "subject_span": "0-1",
     "verb_span": "7",
-    "chunks_json": ["The company", "that developed the new app", "is based in Berlin", "and employs fifty people."],
-    "layers_json": [{"type": "relative", "span": "2-5"}],
-    "connectors_json": ["that"],
+    "chunks_json": [
+      "The company",
+      "that developed the new app",
+      "is based in Berlin",
+      "and employs fifty people."
+    ],
+    "layers_json": [
+      {
+        "type": "relative",
+        "span": "2-5"
+      }
+    ],
+    "connectors_json": [
+      "that"
+    ],
     "simple_meaning": "A company in Berlin made the new app. It has fifty workers.",
     "audio_path": ""
   },
@@ -331,9 +511,21 @@
     "word_count": 15,
     "subject_span": "0-1",
     "verb_span": "9",
-    "chunks_json": ["The hotel", "which we stayed at", "during our holiday", "had a beautiful pool and garden."],
-    "layers_json": [{"type": "relative", "span": "2-5"}],
-    "connectors_json": ["which"],
+    "chunks_json": [
+      "The hotel",
+      "which we stayed at",
+      "during our holiday",
+      "had a beautiful pool and garden."
+    ],
+    "layers_json": [
+      {
+        "type": "relative",
+        "span": "2-5"
+      }
+    ],
+    "connectors_json": [
+      "which"
+    ],
     "simple_meaning": "We stayed at a hotel on holiday. It had a nice pool and garden.",
     "audio_path": ""
   },
@@ -344,9 +536,21 @@
     "word_count": 13,
     "subject_span": "0-1",
     "verb_span": "9-10",
-    "chunks_json": ["The teacher", "who helped me prepare", "for the exam", "was very patient and encouraging."],
-    "layers_json": [{"type": "relative", "span": "2-7"}],
-    "connectors_json": ["who"],
+    "chunks_json": [
+      "The teacher",
+      "who helped me prepare",
+      "for the exam",
+      "was very patient and encouraging."
+    ],
+    "layers_json": [
+      {
+        "type": "relative",
+        "span": "2-7"
+      }
+    ],
+    "connectors_json": [
+      "who"
+    ],
     "simple_meaning": "A teacher helped me study for the exam. She was kind and patient.",
     "audio_path": ""
   },
@@ -357,9 +561,21 @@
     "word_count": 13,
     "subject_span": "0-1",
     "verb_span": "7",
-    "chunks_json": ["The park", "that they built near the river", "attracts hundreds of visitors", "every weekend."],
-    "layers_json": [{"type": "relative", "span": "2-6"}],
-    "connectors_json": ["that"],
+    "chunks_json": [
+      "The park",
+      "that they built near the river",
+      "attracts hundreds of visitors",
+      "every weekend."
+    ],
+    "layers_json": [
+      {
+        "type": "relative",
+        "span": "2-6"
+      }
+    ],
+    "connectors_json": [
+      "that"
+    ],
     "simple_meaning": "There is a new park near the river. Many people visit it on weekends.",
     "audio_path": ""
   },
@@ -370,9 +586,22 @@
     "word_count": 16,
     "subject_span": "0-1",
     "verb_span": "5",
-    "chunks_json": ["The film", "which won the award", "tells the story", "of a family", "living in rural Japan."],
-    "layers_json": [{"type": "relative", "span": "2-4"}],
-    "connectors_json": ["which"],
+    "chunks_json": [
+      "The film",
+      "which won the award",
+      "tells the story",
+      "of a family",
+      "living in rural Japan."
+    ],
+    "layers_json": [
+      {
+        "type": "relative",
+        "span": "2-4"
+      }
+    ],
+    "connectors_json": [
+      "which"
+    ],
     "simple_meaning": "A film won a prize. It is about a family in the Japanese countryside.",
     "audio_path": ""
   },
@@ -383,9 +612,21 @@
     "word_count": 14,
     "subject_span": "0-1",
     "verb_span": "5",
-    "chunks_json": ["The doctor", "who treated my grandmother", "is one of the best specialists", "in the country."],
-    "layers_json": [{"type": "relative", "span": "2-4"}],
-    "connectors_json": ["who"],
+    "chunks_json": [
+      "The doctor",
+      "who treated my grandmother",
+      "is one of the best specialists",
+      "in the country."
+    ],
+    "layers_json": [
+      {
+        "type": "relative",
+        "span": "2-4"
+      }
+    ],
+    "connectors_json": [
+      "who"
+    ],
     "simple_meaning": "A doctor helped my grandmother. He is a very good specialist.",
     "audio_path": ""
   },
@@ -396,9 +637,21 @@
     "word_count": 14,
     "subject_span": "6-7",
     "verb_span": "8",
-    "chunks_json": ["Although the restaurant was expensive,", "the quality of the food", "made it worth", "every penny."],
-    "layers_json": [{"type": "concession", "span": "0-4"}],
-    "connectors_json": ["Although"],
+    "chunks_json": [
+      "Although the restaurant was expensive,",
+      "the quality of the food",
+      "made it worth",
+      "every penny."
+    ],
+    "layers_json": [
+      {
+        "type": "concession",
+        "span": "0-4"
+      }
+    ],
+    "connectors_json": [
+      "Although"
+    ],
     "simple_meaning": "The restaurant cost a lot, but the food was so good that it was worth the price.",
     "audio_path": ""
   },
@@ -409,9 +662,21 @@
     "word_count": 15,
     "subject_span": "8-9",
     "verb_span": "10",
-    "chunks_json": ["Because the roads", "were covered in ice,", "the school decided", "to cancel classes for the day."],
-    "layers_json": [{"type": "reason", "span": "0-6"}],
-    "connectors_json": ["Because"],
+    "chunks_json": [
+      "Because the roads",
+      "were covered in ice,",
+      "the school decided",
+      "to cancel classes for the day."
+    ],
+    "layers_json": [
+      {
+        "type": "reason",
+        "span": "0-6"
+      }
+    ],
+    "connectors_json": [
+      "Because"
+    ],
     "simple_meaning": "The roads were icy, so the school cancelled classes that day.",
     "audio_path": ""
   },
@@ -422,9 +687,21 @@
     "word_count": 12,
     "subject_span": "5-6",
     "verb_span": "7-8",
-    "chunks_json": ["Since she started", "exercising regularly,", "her energy levels", "have improved significantly at work."],
-    "layers_json": [{"type": "reason", "span": "0-3"}],
-    "connectors_json": ["Since"],
+    "chunks_json": [
+      "Since she started",
+      "exercising regularly,",
+      "her energy levels",
+      "have improved significantly at work."
+    ],
+    "layers_json": [
+      {
+        "type": "reason",
+        "span": "0-3"
+      }
+    ],
+    "connectors_json": [
+      "Since"
+    ],
     "simple_meaning": "She began exercising often, and now she has much more energy at work.",
     "audio_path": ""
   },
@@ -435,9 +712,27 @@
     "word_count": 14,
     "subject_span": "7-8",
     "verb_span": "9",
-    "chunks_json": ["Although he had", "no previous experience,", "the company offered him", "the position", "because of his enthusiasm."],
-    "layers_json": [{"type": "concession", "span": "0-4"}, {"type": "reason", "span": "11-13"}],
-    "connectors_json": ["Although", "because of"],
+    "chunks_json": [
+      "Although he had",
+      "no previous experience,",
+      "the company offered him",
+      "the position",
+      "because of his enthusiasm."
+    ],
+    "layers_json": [
+      {
+        "type": "concession",
+        "span": "0-4"
+      },
+      {
+        "type": "reason",
+        "span": "11-13"
+      }
+    ],
+    "connectors_json": [
+      "Although",
+      "because of"
+    ],
     "simple_meaning": "He had no experience, but the company still gave him the job because he was very keen.",
     "audio_path": ""
   },
@@ -448,9 +743,21 @@
     "word_count": 14,
     "subject_span": "8-9",
     "verb_span": "10",
-    "chunks_json": ["Because public transport", "is unreliable in this area,", "most residents", "choose to drive their own cars."],
-    "layers_json": [{"type": "reason", "span": "0-6"}],
-    "connectors_json": ["Because"],
+    "chunks_json": [
+      "Because public transport",
+      "is unreliable in this area,",
+      "most residents",
+      "choose to drive their own cars."
+    ],
+    "layers_json": [
+      {
+        "type": "reason",
+        "span": "0-6"
+      }
+    ],
+    "connectors_json": [
+      "Because"
+    ],
     "simple_meaning": "Buses and trains are not reliable here, so most people drive.",
     "audio_path": ""
   },
@@ -461,9 +768,21 @@
     "word_count": 16,
     "subject_span": "9",
     "verb_span": "10",
-    "chunks_json": ["Although the film received", "poor reviews from critics,", "it was a huge success", "at the box office."],
-    "layers_json": [{"type": "concession", "span": "0-6"}],
-    "connectors_json": ["Although"],
+    "chunks_json": [
+      "Although the film received",
+      "poor reviews from critics,",
+      "it was a huge success",
+      "at the box office."
+    ],
+    "layers_json": [
+      {
+        "type": "concession",
+        "span": "0-6"
+      }
+    ],
+    "connectors_json": [
+      "Although"
+    ],
     "simple_meaning": "Critics did not like the film, but many people went to see it and it made a lot of money.",
     "audio_path": ""
   },
@@ -474,9 +793,21 @@
     "word_count": 12,
     "subject_span": "7-8",
     "verb_span": "9-10",
-    "chunks_json": ["Since the new manager", "took over the department,", "employee satisfaction", "has increased noticeably."],
-    "layers_json": [{"type": "reason", "span": "0-5"}],
-    "connectors_json": ["Since"],
+    "chunks_json": [
+      "Since the new manager",
+      "took over the department,",
+      "employee satisfaction",
+      "has increased noticeably."
+    ],
+    "layers_json": [
+      {
+        "type": "reason",
+        "span": "0-5"
+      }
+    ],
+    "connectors_json": [
+      "Since"
+    ],
     "simple_meaning": "The new manager started, and workers are now happier with their jobs.",
     "audio_path": ""
   },
@@ -487,9 +818,22 @@
     "word_count": 15,
     "subject_span": "9-10",
     "verb_span": "11",
-    "chunks_json": ["Although the price of the tickets", "was reasonable,", "very few people", "attended the event", "last Saturday."],
-    "layers_json": [{"type": "concession", "span": "0-6"}],
-    "connectors_json": ["Although"],
+    "chunks_json": [
+      "Although the price of the tickets",
+      "was reasonable,",
+      "very few people",
+      "attended the event",
+      "last Saturday."
+    ],
+    "layers_json": [
+      {
+        "type": "concession",
+        "span": "0-6"
+      }
+    ],
+    "connectors_json": [
+      "Although"
+    ],
     "simple_meaning": "The tickets were not expensive, but not many people came to the event.",
     "audio_path": ""
   },
@@ -500,9 +844,22 @@
     "word_count": 14,
     "subject_span": "8-9",
     "verb_span": "12",
-    "chunks_json": ["Because the company", "invested heavily in training,", "the quality of customer service", "improved dramatically", "within months."],
-    "layers_json": [{"type": "reason", "span": "0-5"}],
-    "connectors_json": ["Because"],
+    "chunks_json": [
+      "Because the company",
+      "invested heavily in training,",
+      "the quality of customer service",
+      "improved dramatically",
+      "within months."
+    ],
+    "layers_json": [
+      {
+        "type": "reason",
+        "span": "0-5"
+      }
+    ],
+    "connectors_json": [
+      "Because"
+    ],
     "simple_meaning": "The company spent a lot on training, and customer service got much better quickly.",
     "audio_path": ""
   },
@@ -513,9 +870,22 @@
     "word_count": 14,
     "subject_span": "7-8",
     "verb_span": "10",
-    "chunks_json": ["Although many people", "prefer online shopping,", "some customers still enjoy", "the experience of visiting", "physical stores."],
-    "layers_json": [{"type": "concession", "span": "0-4"}],
-    "connectors_json": ["Although"],
+    "chunks_json": [
+      "Although many people",
+      "prefer online shopping,",
+      "some customers still enjoy",
+      "the experience of visiting",
+      "physical stores."
+    ],
+    "layers_json": [
+      {
+        "type": "concession",
+        "span": "0-4"
+      }
+    ],
+    "connectors_json": [
+      "Although"
+    ],
     "simple_meaning": "Many people like buying online, but some still like going to real shops.",
     "audio_path": ""
   },
@@ -526,9 +896,28 @@
     "word_count": 25,
     "subject_span": "0-2",
     "verb_span": "13",
-    "chunks_json": ["The research team,", "who had been working on the project", "for three years,", "published their findings", "in a leading journal,", "although some experts questioned the methodology."],
-    "layers_json": [{"type": "relative", "span": "3-10"}, {"type": "concession", "span": "18-24"}],
-    "connectors_json": ["who", "although"],
+    "chunks_json": [
+      "The research team,",
+      "who had been working on the project",
+      "for three years,",
+      "published their findings",
+      "in a leading journal,",
+      "although some experts questioned the methodology."
+    ],
+    "layers_json": [
+      {
+        "type": "relative",
+        "span": "3-10"
+      },
+      {
+        "type": "concession",
+        "span": "18-24"
+      }
+    ],
+    "connectors_json": [
+      "who",
+      "although"
+    ],
     "simple_meaning": "The team worked on a project for three years and published the results, but some experts did not agree with how they did the research.",
     "audio_path": ""
   },
@@ -539,9 +928,32 @@
     "word_count": 22,
     "subject_span": "5-6",
     "verb_span": "7",
-    "chunks_json": ["Struggling to meet the deadline,", "the designer submitted", "a proposal", "that, while creative,", "failed to address", "the client's main concerns about budget."],
-    "layers_json": [{"type": "participle", "span": "0-4"}, {"type": "relative", "span": "9-21"}, {"type": "concession", "span": "11-12"}],
-    "connectors_json": ["while", "that"],
+    "chunks_json": [
+      "Struggling to meet the deadline,",
+      "the designer submitted",
+      "a proposal",
+      "that, while creative,",
+      "failed to address",
+      "the client's main concerns about budget."
+    ],
+    "layers_json": [
+      {
+        "type": "participle",
+        "span": "0-4"
+      },
+      {
+        "type": "relative",
+        "span": "9-21"
+      },
+      {
+        "type": "concession",
+        "span": "11-12"
+      }
+    ],
+    "connectors_json": [
+      "while",
+      "that"
+    ],
     "simple_meaning": "The designer was in a hurry and sent a creative idea, but it did not deal with the client's budget worries.",
     "audio_path": ""
   },
@@ -552,9 +964,28 @@
     "word_count": 19,
     "subject_span": "0-1",
     "verb_span": "9-11",
-    "chunks_json": ["The hospital,", "which was built in the 1960s,", "is being renovated", "because the facilities", "no longer meet", "current safety standards."],
-    "layers_json": [{"type": "relative", "span": "2-7"}, {"type": "reason", "span": "12-18"}],
-    "connectors_json": ["which", "because"],
+    "chunks_json": [
+      "The hospital,",
+      "which was built in the 1960s,",
+      "is being renovated",
+      "because the facilities",
+      "no longer meet",
+      "current safety standards."
+    ],
+    "layers_json": [
+      {
+        "type": "relative",
+        "span": "2-7"
+      },
+      {
+        "type": "reason",
+        "span": "12-18"
+      }
+    ],
+    "connectors_json": [
+      "which",
+      "because"
+    ],
     "simple_meaning": "They are fixing up an old hospital from the 1960s because it is not safe enough now.",
     "audio_path": ""
   },
@@ -565,9 +996,27 @@
     "word_count": 23,
     "subject_span": "7",
     "verb_span": "8",
-    "chunks_json": ["Having completed her degree", "in environmental science,", "she secured a position", "at a research institute", "that focuses on climate change", "in developing countries."],
-    "layers_json": [{"type": "participle", "span": "0-5"}, {"type": "relative", "span": "13-21"}],
-    "connectors_json": ["that"],
+    "chunks_json": [
+      "Having completed her degree",
+      "in environmental science,",
+      "she secured a position",
+      "at a research institute",
+      "that focuses on climate change",
+      "in developing countries."
+    ],
+    "layers_json": [
+      {
+        "type": "participle",
+        "span": "0-5"
+      },
+      {
+        "type": "relative",
+        "span": "13-21"
+      }
+    ],
+    "connectors_json": [
+      "that"
+    ],
     "simple_meaning": "She finished her science degree and got a job at a place that studies climate change in poorer countries.",
     "audio_path": ""
   },
@@ -578,9 +1027,27 @@
     "word_count": 18,
     "subject_span": "10-11",
     "verb_span": "16",
-    "chunks_json": ["Although the evidence suggested", "that the accused was innocent,", "the jury,", "influenced by media coverage,", "reached a guilty verdict."],
-    "layers_json": [{"type": "concession", "span": "0-8"}, {"type": "participle", "span": "12-14"}],
-    "connectors_json": ["Although", "that"],
+    "chunks_json": [
+      "Although the evidence suggested",
+      "that the accused was innocent,",
+      "the jury,",
+      "influenced by media coverage,",
+      "reached a guilty verdict."
+    ],
+    "layers_json": [
+      {
+        "type": "concession",
+        "span": "0-8"
+      },
+      {
+        "type": "participle",
+        "span": "12-14"
+      }
+    ],
+    "connectors_json": [
+      "Although",
+      "that"
+    ],
     "simple_meaning": "The evidence showed the person was probably not guilty, but the jury said guilty because the news affected their thinking.",
     "audio_path": ""
   },
@@ -591,9 +1058,27 @@
     "word_count": 24,
     "subject_span": "0-1",
     "verb_span": "9",
-    "chunks_json": ["The volunteers,", "motivated by a desire", "to help their community,", "organised a fundraising event", "that raised over ten thousand euros", "for the local children's hospital."],
-    "layers_json": [{"type": "participle", "span": "2-7"}, {"type": "relative", "span": "12-18"}],
-    "connectors_json": ["that"],
+    "chunks_json": [
+      "The volunteers,",
+      "motivated by a desire",
+      "to help their community,",
+      "organised a fundraising event",
+      "that raised over ten thousand euros",
+      "for the local children's hospital."
+    ],
+    "layers_json": [
+      {
+        "type": "participle",
+        "span": "2-7"
+      },
+      {
+        "type": "relative",
+        "span": "12-18"
+      }
+    ],
+    "connectors_json": [
+      "that"
+    ],
     "simple_meaning": "Volunteers wanted to help, so they held an event and collected more than ten thousand euros for a children's hospital.",
     "audio_path": ""
   },
@@ -604,9 +1089,30 @@
     "word_count": 26,
     "subject_span": "0-1",
     "verb_span": "11",
-    "chunks_json": ["The artist,", "whose work has been exhibited", "in galleries across Europe,", "revealed that she draws inspiration", "from nature,", "which she considers to be", "the greatest teacher."],
-    "layers_json": [{"type": "relative", "span": "2-8"}, {"type": "relative", "span": "18-25"}],
-    "connectors_json": ["whose", "that", "which"],
+    "chunks_json": [
+      "The artist,",
+      "whose work has been exhibited",
+      "in galleries across Europe,",
+      "revealed that she draws inspiration",
+      "from nature,",
+      "which she considers to be",
+      "the greatest teacher."
+    ],
+    "layers_json": [
+      {
+        "type": "relative",
+        "span": "2-8"
+      },
+      {
+        "type": "relative",
+        "span": "18-25"
+      }
+    ],
+    "connectors_json": [
+      "whose",
+      "that",
+      "which"
+    ],
     "simple_meaning": "A famous artist said she gets her ideas from nature, which she thinks is the best teacher.",
     "audio_path": ""
   },
@@ -617,9 +1123,34 @@
     "word_count": 29,
     "subject_span": "11-12",
     "verb_span": "13",
-    "chunks_json": ["Despite being advised", "by several colleagues", "to postpone the launch,", "the CEO decided to proceed,", "believing that the product,", "which had undergone extensive testing,", "was ready for the market."],
-    "layers_json": [{"type": "concession", "span": "0-8"}, {"type": "participle", "span": "15-28"}, {"type": "relative", "span": "20-24"}],
-    "connectors_json": ["Despite", "that", "which"],
+    "chunks_json": [
+      "Despite being advised",
+      "by several colleagues",
+      "to postpone the launch,",
+      "the CEO decided to proceed,",
+      "believing that the product,",
+      "which had undergone extensive testing,",
+      "was ready for the market."
+    ],
+    "layers_json": [
+      {
+        "type": "concession",
+        "span": "0-8"
+      },
+      {
+        "type": "participle",
+        "span": "15-28"
+      },
+      {
+        "type": "relative",
+        "span": "20-24"
+      }
+    ],
+    "connectors_json": [
+      "Despite",
+      "that",
+      "which"
+    ],
     "simple_meaning": "Colleagues told the CEO to delay the product launch, but the CEO went ahead because the product had been tested a lot.",
     "audio_path": ""
   },
@@ -630,9 +1161,28 @@
     "word_count": 28,
     "subject_span": "6-7",
     "verb_span": "8",
-    "chunks_json": ["Concerned about", "the declining enrolment figures,", "the university introduced", "several new programmes", "aimed at attracting international students,", "who now make up", "nearly a quarter of the student body."],
-    "layers_json": [{"type": "participle", "span": "0-4"}, {"type": "relative", "span": "17-27"}],
-    "connectors_json": ["who"],
+    "chunks_json": [
+      "Concerned about",
+      "the declining enrolment figures,",
+      "the university introduced",
+      "several new programmes",
+      "aimed at attracting international students,",
+      "who now make up",
+      "nearly a quarter of the student body."
+    ],
+    "layers_json": [
+      {
+        "type": "participle",
+        "span": "0-4"
+      },
+      {
+        "type": "relative",
+        "span": "17-27"
+      }
+    ],
+    "connectors_json": [
+      "who"
+    ],
     "simple_meaning": "Fewer students were signing up, so the university created new courses for international students. These students are now about 25% of all students.",
     "audio_path": ""
   },
@@ -643,9 +1193,33 @@
     "word_count": 29,
     "subject_span": "10-11",
     "verb_span": "12",
-    "chunks_json": ["Recognised as one of the leading innovators", "in the field,", "Dr Patel developed a technique", "that, while initially controversial,", "has since been adopted", "by hospitals worldwide", "as a standard procedure."],
-    "layers_json": [{"type": "participle", "span": "0-8"}, {"type": "relative", "span": "15-28"}, {"type": "concession", "span": "17-18"}],
-    "connectors_json": ["that", "while"],
+    "chunks_json": [
+      "Recognised as one of the leading innovators",
+      "in the field,",
+      "Dr Patel developed a technique",
+      "that, while initially controversial,",
+      "has since been adopted",
+      "by hospitals worldwide",
+      "as a standard procedure."
+    ],
+    "layers_json": [
+      {
+        "type": "participle",
+        "span": "0-8"
+      },
+      {
+        "type": "relative",
+        "span": "15-28"
+      },
+      {
+        "type": "concession",
+        "span": "17-18"
+      }
+    ],
+    "connectors_json": [
+      "that",
+      "while"
+    ],
     "simple_meaning": "Dr Patel is a top expert. She created a medical method that was argued about at first but is now used in hospitals everywhere.",
     "audio_path": ""
   },
@@ -656,9 +1230,30 @@
     "word_count": 33,
     "subject_span": "0-1",
     "verb_span": "17-18",
-    "chunks_json": ["The implementation", "of the new data protection regulations,", "which had been debated in parliament", "for over two years,", "is expected to have", "a significant impact", "on how companies collect and process", "personal information."],
-    "layers_json": [{"type": "relative", "span": "8-15"}, {"type": "nominal_clause", "span": "23-30"}],
-    "connectors_json": ["which", "how"],
+    "chunks_json": [
+      "The implementation",
+      "of the new data protection regulations,",
+      "which had been debated in parliament",
+      "for over two years,",
+      "is expected to have",
+      "a significant impact",
+      "on how companies collect and process",
+      "personal information."
+    ],
+    "layers_json": [
+      {
+        "type": "relative",
+        "span": "8-15"
+      },
+      {
+        "type": "nominal_clause",
+        "span": "23-30"
+      }
+    ],
+    "connectors_json": [
+      "which",
+      "how"
+    ],
     "simple_meaning": "New rules about protecting people's data were discussed for two years. They will change the way companies use personal information.",
     "audio_path": ""
   },
@@ -669,9 +1264,30 @@
     "word_count": 34,
     "subject_span": "0",
     "verb_span": "1-3",
-    "chunks_json": ["It has been widely argued", "that the failure of governments", "to invest adequately", "in renewable energy infrastructure", "over the past decade", "has contributed significantly", "to the current climate crisis", "that now threatens global food security."],
-    "layers_json": [{"type": "nominal_clause", "span": "4-33"}, {"type": "relative", "span": "27-33"}],
-    "connectors_json": ["that", "that"],
+    "chunks_json": [
+      "It has been widely argued",
+      "that the failure of governments",
+      "to invest adequately",
+      "in renewable energy infrastructure",
+      "over the past decade",
+      "has contributed significantly",
+      "to the current climate crisis",
+      "that now threatens global food security."
+    ],
+    "layers_json": [
+      {
+        "type": "nominal_clause",
+        "span": "4-33"
+      },
+      {
+        "type": "relative",
+        "span": "27-33"
+      }
+    ],
+    "connectors_json": [
+      "that",
+      "that"
+    ],
     "simple_meaning": "Many people say that governments did not spend enough on clean energy in the last ten years, and this has made the climate crisis worse.",
     "audio_path": ""
   },
@@ -682,9 +1298,35 @@
     "word_count": 36,
     "subject_span": "10-11",
     "verb_span": "20-21",
-    "chunks_json": ["Notwithstanding the considerable financial investment", "made by the corporation,", "the outcomes of the pilot programme,", "which was designed", "to reduce workplace inequality,", "fell short of the ambitious targets", "that had been set", "by the board of directors."],
-    "layers_json": [{"type": "concession", "span": "0-7"}, {"type": "relative", "span": "14-18"}, {"type": "relative", "span": "25-35"}],
-    "connectors_json": ["Notwithstanding", "which", "that"],
+    "chunks_json": [
+      "Notwithstanding the considerable financial investment",
+      "made by the corporation,",
+      "the outcomes of the pilot programme,",
+      "which was designed",
+      "to reduce workplace inequality,",
+      "fell short of the ambitious targets",
+      "that had been set",
+      "by the board of directors."
+    ],
+    "layers_json": [
+      {
+        "type": "concession",
+        "span": "0-7"
+      },
+      {
+        "type": "relative",
+        "span": "14-18"
+      },
+      {
+        "type": "relative",
+        "span": "25-35"
+      }
+    ],
+    "connectors_json": [
+      "Notwithstanding",
+      "which",
+      "that"
+    ],
     "simple_meaning": "The company spent a lot of money on a programme to make the workplace more equal, but the results were not as good as the leaders had hoped.",
     "audio_path": ""
   },
@@ -695,9 +1337,34 @@
     "word_count": 36,
     "subject_span": "0-1",
     "verb_span": "14",
-    "chunks_json": ["The report,", "commissioned by the Ministry of Education", "and compiled by a team of independent researchers,", "concluded that standardised testing,", "while useful for measuring", "certain academic skills,", "does not adequately assess", "critical thinking or creativity in students."],
-    "layers_json": [{"type": "participle", "span": "2-12"}, {"type": "nominal_clause", "span": "15-35"}, {"type": "concession", "span": "19-23"}],
-    "connectors_json": ["that", "while"],
+    "chunks_json": [
+      "The report,",
+      "commissioned by the Ministry of Education",
+      "and compiled by a team of independent researchers,",
+      "concluded that standardised testing,",
+      "while useful for measuring",
+      "certain academic skills,",
+      "does not adequately assess",
+      "critical thinking or creativity in students."
+    ],
+    "layers_json": [
+      {
+        "type": "participle",
+        "span": "2-12"
+      },
+      {
+        "type": "nominal_clause",
+        "span": "15-35"
+      },
+      {
+        "type": "concession",
+        "span": "19-23"
+      }
+    ],
+    "connectors_json": [
+      "that",
+      "while"
+    ],
     "simple_meaning": "Researchers wrote a report for the education ministry. They said that standard tests can measure some skills but cannot measure how well students think creatively.",
     "audio_path": ""
   },
@@ -708,9 +1375,29 @@
     "word_count": 36,
     "subject_span": "11",
     "verb_span": "12-14",
-    "chunks_json": ["Given the unprecedented rate", "at which artificial intelligence is advancing,", "policymakers must urgently consider", "the ethical implications", "of autonomous decision-making systems", "that are increasingly being deployed", "in areas such as healthcare, criminal justice, and financial services."],
-    "layers_json": [{"type": "participle", "span": "0-9"}, {"type": "relative", "span": "21-35"}],
-    "connectors_json": ["at which", "that"],
+    "chunks_json": [
+      "Given the unprecedented rate",
+      "at which artificial intelligence is advancing,",
+      "policymakers must urgently consider",
+      "the ethical implications",
+      "of autonomous decision-making systems",
+      "that are increasingly being deployed",
+      "in areas such as healthcare, criminal justice, and financial services."
+    ],
+    "layers_json": [
+      {
+        "type": "participle",
+        "span": "0-9"
+      },
+      {
+        "type": "relative",
+        "span": "21-35"
+      }
+    ],
+    "connectors_json": [
+      "at which",
+      "that"
+    ],
     "simple_meaning": "AI is developing very fast. Leaders need to think carefully about the moral questions around machines that make decisions in medicine, law, and banking.",
     "audio_path": ""
   },
@@ -721,9 +1408,31 @@
     "word_count": 37,
     "subject_span": "0-1",
     "verb_span": "26-27",
-    "chunks_json": ["The acquisition", "of the struggling pharmaceutical company", "by the multinational corporation,", "which was finalised after months of negotiations", "that involved regulatory bodies", "in several countries,", "is expected to reshape", "the competitive landscape", "of the global healthcare industry."],
-    "layers_json": [{"type": "relative", "span": "9-21"}, {"type": "relative", "span": "17-21"}],
-    "connectors_json": ["which", "that"],
+    "chunks_json": [
+      "The acquisition",
+      "of the struggling pharmaceutical company",
+      "by the multinational corporation,",
+      "which was finalised after months of negotiations",
+      "that involved regulatory bodies",
+      "in several countries,",
+      "is expected to reshape",
+      "the competitive landscape",
+      "of the global healthcare industry."
+    ],
+    "layers_json": [
+      {
+        "type": "relative",
+        "span": "9-21"
+      },
+      {
+        "type": "relative",
+        "span": "17-21"
+      }
+    ],
+    "connectors_json": [
+      "which",
+      "that"
+    ],
     "simple_meaning": "A big international company bought a smaller drug company after long talks with regulators in many countries. This will change the healthcare industry.",
     "audio_path": ""
   },
@@ -734,9 +1443,36 @@
     "word_count": 36,
     "subject_span": "14",
     "verb_span": "15",
-    "chunks_json": ["While the introduction of tuition fees", "was intended to improve", "the financial sustainability", "of higher education institutions,", "critics contend", "that it has disproportionately affected", "students from disadvantaged backgrounds,", "thereby undermining the principle", "of equal access to education."],
-    "layers_json": [{"type": "concession", "span": "0-12"}, {"type": "nominal_clause", "span": "16-35"}, {"type": "participle", "span": "28-35"}],
-    "connectors_json": ["While", "that", "thereby"],
+    "chunks_json": [
+      "While the introduction of tuition fees",
+      "was intended to improve",
+      "the financial sustainability",
+      "of higher education institutions,",
+      "critics contend",
+      "that it has disproportionately affected",
+      "students from disadvantaged backgrounds,",
+      "thereby undermining the principle",
+      "of equal access to education."
+    ],
+    "layers_json": [
+      {
+        "type": "concession",
+        "span": "0-12"
+      },
+      {
+        "type": "nominal_clause",
+        "span": "16-35"
+      },
+      {
+        "type": "participle",
+        "span": "28-35"
+      }
+    ],
+    "connectors_json": [
+      "While",
+      "that",
+      "thereby"
+    ],
     "simple_meaning": "Tuition fees were supposed to help universities financially, but critics say they make it harder for poorer students to get an education.",
     "audio_path": ""
   },
@@ -747,9 +1483,39 @@
     "word_count": 40,
     "subject_span": "0-2",
     "verb_span": "17",
-    "chunks_json": ["The longitudinal study,", "which tracked the dietary habits", "of over ten thousand participants", "across a twenty-year period,", "found that individuals", "who consumed a Mediterranean diet", "were significantly less likely", "to develop cardiovascular disease", "than those who followed", "a typical Western diet."],
-    "layers_json": [{"type": "relative", "span": "3-13"}, {"type": "nominal_clause", "span": "18-39"}, {"type": "relative", "span": "20-24"}],
-    "connectors_json": ["which", "that", "who", "than", "who"],
+    "chunks_json": [
+      "The longitudinal study,",
+      "which tracked the dietary habits",
+      "of over ten thousand participants",
+      "across a twenty-year period,",
+      "found that individuals",
+      "who consumed a Mediterranean diet",
+      "were significantly less likely",
+      "to develop cardiovascular disease",
+      "than those who followed",
+      "a typical Western diet."
+    ],
+    "layers_json": [
+      {
+        "type": "relative",
+        "span": "3-13"
+      },
+      {
+        "type": "nominal_clause",
+        "span": "18-39"
+      },
+      {
+        "type": "relative",
+        "span": "20-24"
+      }
+    ],
+    "connectors_json": [
+      "which",
+      "that",
+      "who",
+      "than",
+      "who"
+    ],
     "simple_meaning": "A big study followed more than ten thousand people for twenty years. It found that eating Mediterranean food lowered the risk of heart disease compared to a Western diet.",
     "audio_path": ""
   },
@@ -760,9 +1526,31 @@
     "word_count": 38,
     "subject_span": "4-5",
     "verb_span": "25-27",
-    "chunks_json": ["Although the proposed legislation,", "which aims to regulate", "the use of facial recognition technology", "by law enforcement agencies,", "has received broad public support,", "its passage through parliament", "has been delayed", "by concerns over potential conflicts", "with existing privacy laws."],
-    "layers_json": [{"type": "concession", "span": "0-18"}, {"type": "relative", "span": "5-14"}],
-    "connectors_json": ["Although", "which"],
+    "chunks_json": [
+      "Although the proposed legislation,",
+      "which aims to regulate",
+      "the use of facial recognition technology",
+      "by law enforcement agencies,",
+      "has received broad public support,",
+      "its passage through parliament",
+      "has been delayed",
+      "by concerns over potential conflicts",
+      "with existing privacy laws."
+    ],
+    "layers_json": [
+      {
+        "type": "concession",
+        "span": "0-18"
+      },
+      {
+        "type": "relative",
+        "span": "5-14"
+      }
+    ],
+    "connectors_json": [
+      "Although",
+      "which"
+    ],
     "simple_meaning": "A new law about facial recognition has public support, but parliament is slow to pass it because it might conflict with privacy laws.",
     "audio_path": ""
   },
@@ -773,10 +1561,1078 @@
     "word_count": 36,
     "subject_span": "0-1",
     "verb_span": "12",
-    "chunks_json": ["The establishment of a dedicated task force,", "comprising representatives", "from government, industry, and academia,", "reflects a growing recognition", "that the challenges posed by cybersecurity threats", "cannot be adequately addressed", "by any single institution", "acting in isolation."],
-    "layers_json": [{"type": "participle", "span": "7-11"}, {"type": "nominal_clause", "span": "16-35"}, {"type": "participle", "span": "32-34"}],
-    "connectors_json": ["that"],
+    "chunks_json": [
+      "The establishment of a dedicated task force,",
+      "comprising representatives",
+      "from government, industry, and academia,",
+      "reflects a growing recognition",
+      "that the challenges posed by cybersecurity threats",
+      "cannot be adequately addressed",
+      "by any single institution",
+      "acting in isolation."
+    ],
+    "layers_json": [
+      {
+        "type": "participle",
+        "span": "7-11"
+      },
+      {
+        "type": "nominal_clause",
+        "span": "16-35"
+      },
+      {
+        "type": "participle",
+        "span": "32-34"
+      }
+    ],
+    "connectors_json": [
+      "that"
+    ],
     "simple_meaning": "A special team with people from government, business, and universities was created because cybersecurity problems are too big for one organisation to solve alone.",
+    "audio_path": ""
+  },
+  {
+    "id": 61,
+    "sentence": "The epidemiologist who isolated the viral pathogen received international accolades for her breakthrough research.",
+    "level": 3,
+    "word_count": 14,
+    "subject_span": "0-1",
+    "verb_span": "7",
+    "chunks_json": [
+      "The epidemiologist",
+      "who isolated the viral pathogen",
+      "received",
+      "international accolades",
+      "for her breakthrough research."
+    ],
+    "layers_json": [
+      {
+        "type": "relative_clause",
+        "span": "2-6"
+      }
+    ],
+    "connectors_json": [],
+    "simple_meaning": "The scientist who found the virus won global honors.",
+    "audio_path": ""
+  },
+  {
+    "id": 62,
+    "sentence": "The software engineer who designed the fault-tolerant distributed ledger delivered a keynote presentation in Zurich.",
+    "level": 3,
+    "word_count": 15,
+    "subject_span": "0-2",
+    "verb_span": "10",
+    "chunks_json": [
+      "The software engineer",
+      "who designed the fault-tolerant distributed ledger",
+      "delivered",
+      "a keynote presentation",
+      "in Zurich."
+    ],
+    "layers_json": [
+      {
+        "type": "relative_clause",
+        "span": "3-9"
+      }
+    ],
+    "connectors_json": [],
+    "simple_meaning": "The engineer who built the secure database spoke at a conference in Zurich.",
+    "audio_path": ""
+  },
+  {
+    "id": 63,
+    "sentence": "The diplomat who negotiated the maritime boundary treaty was praised by delegates from both sovereign nations.",
+    "level": 3,
+    "word_count": 16,
+    "subject_span": "0-1",
+    "verb_span": "8-9",
+    "chunks_json": [
+      "The diplomat",
+      "who negotiated the maritime boundary treaty",
+      "was praised",
+      "by delegates",
+      "from both sovereign nations."
+    ],
+    "layers_json": [
+      {
+        "type": "relative_clause",
+        "span": "2-7"
+      }
+    ],
+    "connectors_json": [],
+    "simple_meaning": "The diplomat who settled the ocean border agreement earned respect from both countries.",
+    "audio_path": ""
+  },
+  {
+    "id": 64,
+    "sentence": "The architect who drafted the zero-emission residential complex incorporated passive geothermal cooling into the foundation.",
+    "level": 3,
+    "word_count": 15,
+    "subject_span": "0-1",
+    "verb_span": "8",
+    "chunks_json": [
+      "The architect",
+      "who drafted the zero-emission residential complex",
+      "incorporated",
+      "passive geothermal cooling",
+      "into the foundation."
+    ],
+    "layers_json": [
+      {
+        "type": "relative_clause",
+        "span": "2-7"
+      }
+    ],
+    "connectors_json": [],
+    "simple_meaning": "The architect of the green housing project added natural underground cooling.",
+    "audio_path": ""
+  },
+  {
+    "id": 65,
+    "sentence": "Although supply chain disruptions escalated manufacturing expenses, the executive board refused to compromise component quality.",
+    "level": 4,
+    "word_count": 15,
+    "subject_span": "8-10",
+    "verb_span": "11",
+    "chunks_json": [
+      "Although supply chain disruptions",
+      "escalated manufacturing expenses,",
+      "the executive board",
+      "refused to compromise",
+      "component quality."
+    ],
+    "layers_json": [
+      {
+        "type": "concession_clause",
+        "span": "0-5"
+      }
+    ],
+    "connectors_json": [
+      "Although"
+    ],
+    "simple_meaning": "Factory costs rose, but the leaders kept using high-grade parts.",
+    "audio_path": ""
+  },
+  {
+    "id": 66,
+    "sentence": "Because monetary inflation eroded household purchasing power, consumer sentiment fell to unprecedented historical lows.",
+    "level": 4,
+    "word_count": 14,
+    "subject_span": "8-9",
+    "verb_span": "10",
+    "chunks_json": [
+      "Because monetary inflation",
+      "eroded household purchasing power,",
+      "consumer sentiment",
+      "fell",
+      "to unprecedented historical lows."
+    ],
+    "layers_json": [
+      {
+        "type": "causal_clause",
+        "span": "0-6"
+      }
+    ],
+    "connectors_json": [
+      "Because"
+    ],
+    "simple_meaning": "People had less money to spend, so confidence dropped to record lows.",
+    "audio_path": ""
+  },
+  {
+    "id": 67,
+    "sentence": "While municipal authorities expanded cycling infrastructure, vehicular emissions continued to rise across outlying suburban corridors.",
+    "level": 4,
+    "word_count": 15,
+    "subject_span": "6-7",
+    "verb_span": "8",
+    "chunks_json": [
+      "While municipal authorities",
+      "expanded cycling infrastructure,",
+      "vehicular emissions",
+      "continued to rise",
+      "across outlying suburban corridors."
+    ],
+    "layers_json": [
+      {
+        "type": "contrast_clause",
+        "span": "0-5"
+      }
+    ],
+    "connectors_json": [
+      "While"
+    ],
+    "simple_meaning": "Even with more bike paths, car pollution kept growing outside the city.",
+    "audio_path": ""
+  },
+  {
+    "id": 68,
+    "sentence": "Unless sovereign governments enforce stringent carbon tariffs, global industrial decarbonization targets will remain unobtainable.",
+    "level": 4,
+    "word_count": 14,
+    "subject_span": "6-9",
+    "verb_span": "10-11",
+    "chunks_json": [
+      "Unless sovereign governments",
+      "enforce stringent carbon tariffs,",
+      "global industrial decarbonization targets",
+      "will remain",
+      "unobtainable."
+    ],
+    "layers_json": [
+      {
+        "type": "conditional_clause",
+        "span": "0-5"
+      }
+    ],
+    "connectors_json": [
+      "Unless"
+    ],
+    "simple_meaning": "Without strict taxes on carbon, the world will fail to meet climate goals.",
+    "audio_path": ""
+  },
+  {
+    "id": 69,
+    "sentence": "The lead forensic investigator, having scrutinized the corrupted database registers, concluded that the anomaly was deliberate.",
+    "level": 5,
+    "word_count": 16,
+    "subject_span": "0-3",
+    "verb_span": "10",
+    "chunks_json": [
+      "The lead forensic investigator,",
+      "having scrutinized the corrupted database registers,",
+      "concluded",
+      "that the anomaly was deliberate."
+    ],
+    "layers_json": [
+      {
+        "type": "participial_clause",
+        "span": "4-9"
+      },
+      {
+        "type": "content_clause",
+        "span": "11-15"
+      }
+    ],
+    "connectors_json": [
+      "that"
+    ],
+    "simple_meaning": "After examining the damaged files, the detective determined the hack was intentional.",
+    "audio_path": ""
+  },
+  {
+    "id": 70,
+    "sentence": "The medical panel, which convened following unexpected clinical irregularities, recommended immediate suspension of the trial, although corporate stakeholders objected.",
+    "level": 5,
+    "word_count": 18,
+    "subject_span": "0-2",
+    "verb_span": "8",
+    "chunks_json": [
+      "The medical panel,",
+      "which convened following unexpected clinical irregularities,",
+      "recommended",
+      "immediate suspension of the trial,",
+      "although corporate stakeholders objected."
+    ],
+    "layers_json": [
+      {
+        "type": "relative_clause",
+        "span": "3-7"
+      },
+      {
+        "type": "concession_clause",
+        "span": "14-17"
+      }
+    ],
+    "connectors_json": [
+      "which",
+      "although"
+    ],
+    "simple_meaning": "The doctors met about strange test results and halted the study despite company pushback.",
+    "audio_path": ""
+  },
+  {
+    "id": 71,
+    "sentence": "Having concluded three months of ethnographic field observations, the anthropologist published her preliminary monograph, which challenged prevailing colonial historiography.",
+    "level": 5,
+    "word_count": 18,
+    "subject_span": "8-9",
+    "verb_span": "10",
+    "chunks_json": [
+      "Having concluded three months of ethnographic field observations,",
+      "the anthropologist",
+      "published",
+      "her preliminary monograph,",
+      "which challenged prevailing colonial historiography."
+    ],
+    "layers_json": [
+      {
+        "type": "participial_clause",
+        "span": "0-7"
+      },
+      {
+        "type": "relative_clause",
+        "span": "14-17"
+      }
+    ],
+    "connectors_json": [
+      "which"
+    ],
+    "simple_meaning": "After months of field study, the scholar released a book questioning old historical theories.",
+    "audio_path": ""
+  },
+  {
+    "id": 72,
+    "sentence": "Confronted by acute liquidity shortages in secondary debt auctions, central bankers initiated quantitative easing interventions, thereby preventing systemic financial contagion.",
+    "level": 5,
+    "word_count": 18,
+    "subject_span": "9-10",
+    "verb_span": "11",
+    "chunks_json": [
+      "Confronted by acute liquidity shortages in secondary debt auctions,",
+      "central bankers",
+      "initiated",
+      "quantitative easing interventions,",
+      "thereby preventing systemic financial contagion."
+    ],
+    "layers_json": [
+      {
+        "type": "participial_clause",
+        "span": "0-8"
+      },
+      {
+        "type": "result_clause",
+        "span": "15-18"
+      }
+    ],
+    "connectors_json": [
+      "thereby"
+    ],
+    "simple_meaning": "Facing a cash crunch in bond markets, central banks injected funds to stop a panic.",
+    "audio_path": ""
+  },
+  {
+    "id": 73,
+    "sentence": "The proliferation of unverified algorithmic recommendations, which deliberately exploit human cognitive vulnerabilities, exacerbates social polarization to an unprecedented degree.",
+    "level": 6,
+    "word_count": 18,
+    "subject_span": "0-4",
+    "verb_span": "12",
+    "chunks_json": [
+      "The proliferation of unverified algorithmic recommendations,",
+      "which deliberately exploit human cognitive vulnerabilities,",
+      "exacerbates",
+      "social polarization",
+      "to an unprecedented degree."
+    ],
+    "layers_json": [
+      {
+        "type": "relative_clause",
+        "span": "5-11"
+      },
+      {
+        "type": "prepositional_manner",
+        "span": "15-18"
+      }
+    ],
+    "connectors_json": [
+      "which"
+    ],
+    "simple_meaning": "Automated feeds that prey on human psychology intensify societal division like never before.",
+    "audio_path": ""
+  },
+  {
+    "id": 74,
+    "sentence": "Notwithstanding the preliminary efficacy demonstrated in pre-clinical rodent cohorts, regulatory authorities withheld therapeutic certification until long-term human pharmacokinetic trials could verify metabolic safety.",
+    "level": 6,
+    "word_count": 22,
+    "subject_span": "8-9",
+    "verb_span": "10",
+    "chunks_json": [
+      "Notwithstanding the preliminary efficacy demonstrated in pre-clinical rodent cohorts,",
+      "regulatory authorities",
+      "withheld",
+      "therapeutic certification",
+      "until long-term human pharmacokinetic trials could verify metabolic safety."
+    ],
+    "layers_json": [
+      {
+        "type": "prepositional_concession",
+        "span": "0-7"
+      },
+      {
+        "type": "temporal_condition",
+        "span": "13-21"
+      }
+    ],
+    "connectors_json": [
+      "Notwithstanding",
+      "until"
+    ],
+    "simple_meaning": "Despite good early tests in mice, regulators delayed approval until human trials proved it safe.",
+    "audio_path": ""
+  },
+  {
+    "id": 75,
+    "sentence": "In light of widespread macroeconomic volatility precipitated by geopolitical embargoes, sovereign wealth funds reallocated capital reserves from speculative ventures into inflation-hedged commodities.",
+    "level": 6,
+    "word_count": 21,
+    "subject_span": "10-12",
+    "verb_span": "13",
+    "chunks_json": [
+      "In light of widespread macroeconomic volatility precipitated by geopolitical embargoes,",
+      "sovereign wealth funds",
+      "reallocated",
+      "capital reserves",
+      "from speculative ventures into inflation-hedged commodities."
+    ],
+    "layers_json": [
+      {
+        "type": "complex_prepositional_cause",
+        "span": "0-9"
+      },
+      {
+        "type": "prepositional_direction",
+        "span": "16-21"
+      }
+    ],
+    "connectors_json": [
+      "In light of"
+    ],
+    "simple_meaning": "Because trade bans caused market swings, state funds moved money into safer physical assets.",
+    "audio_path": ""
+  },
+  {
+    "id": 76,
+    "sentence": "By delegating administrative documentation to deep-learning models, clinicians can dedicate greater cognitive bandwidth to diagnostic consultations, although empirical evaluations must ensure algorithmic accountability.",
+    "level": 6,
+    "word_count": 22,
+    "subject_span": "7-7",
+    "verb_span": "8-9",
+    "chunks_json": [
+      "By delegating administrative documentation to deep-learning models,",
+      "clinicians",
+      "can dedicate",
+      "greater cognitive bandwidth",
+      "to diagnostic consultations,",
+      "although empirical evaluations must ensure algorithmic accountability."
+    ],
+    "layers_json": [
+      {
+        "type": "gerund_means",
+        "span": "0-6"
+      },
+      {
+        "type": "concession_clause",
+        "span": "15-21"
+      }
+    ],
+    "connectors_json": [
+      "although"
+    ],
+    "simple_meaning": "AI clinical notes give doctors more time with patients, but systems must remain strictly audited.",
+    "audio_path": ""
+  },
+  {
+    "id": 77,
+    "sentence": "The historian who uncovered the diplomatic correspondence reinterpreted the origins of the Cold War.",
+    "level": 3,
+    "word_count": 14,
+    "subject_span": "0-1",
+    "verb_span": "6",
+    "chunks_json": [
+      "The historian",
+      "who uncovered the diplomatic correspondence",
+      "reinterpreted",
+      "the origins of the Cold War."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "The scholar who found the old letters viewed the Cold War differently.",
+    "audio_path": ""
+  },
+  {
+    "id": 78,
+    "sentence": "The oceanographer who mapped the subduction zone detected anomalous seismic tremors along the fault line.",
+    "level": 3,
+    "word_count": 15,
+    "subject_span": "0-1",
+    "verb_span": "7",
+    "chunks_json": [
+      "The oceanographer",
+      "who mapped the subduction zone",
+      "detected",
+      "anomalous seismic tremors",
+      "along the fault line."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "The scientist who charted the ocean trench found strange earthquake tremors.",
+    "audio_path": ""
+  },
+  {
+    "id": 79,
+    "sentence": "The geneticist who synthesized the modified enzyme published her findings in a leading scientific journal.",
+    "level": 3,
+    "word_count": 15,
+    "subject_span": "0-1",
+    "verb_span": "7",
+    "chunks_json": [
+      "The geneticist",
+      "who synthesized the modified enzyme",
+      "published",
+      "her findings",
+      "in a leading scientific journal."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "The scientist who created the artificial enzyme shared her work in a top journal.",
+    "audio_path": ""
+  },
+  {
+    "id": 80,
+    "sentence": "The judge who presided over the antitrust trial ordered the monopolistic corporation to divest its assets.",
+    "level": 3,
+    "word_count": 16,
+    "subject_span": "0-1",
+    "verb_span": "8",
+    "chunks_json": [
+      "The judge",
+      "who presided over the antitrust trial",
+      "ordered",
+      "the monopolistic corporation",
+      "to divest its assets."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "The judge in the monopoly case forced the big company to sell parts of its business.",
+    "audio_path": ""
+  },
+  {
+    "id": 81,
+    "sentence": "Because renewable energy costs plummeted rapidly, municipal utilities phased out fossil-fueled generators.",
+    "level": 4,
+    "word_count": 12,
+    "subject_span": "6-7",
+    "verb_span": "8",
+    "chunks_json": [
+      "Because renewable energy costs plummeted rapidly,",
+      "municipal utilities",
+      "phased out",
+      "fossil-fueled generators."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "As solar and wind got cheaper, power companies closed old coal and gas plants.",
+    "audio_path": ""
+  },
+  {
+    "id": 82,
+    "sentence": "Although the prototype demonstrated superior computational speed, thermal throttling constrained prolonged operation.",
+    "level": 4,
+    "word_count": 12,
+    "subject_span": "6-7",
+    "verb_span": "8",
+    "chunks_json": [
+      "Although the prototype demonstrated superior computational speed,",
+      "thermal throttling",
+      "constrained",
+      "prolonged operation."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "The computer ran fast, but overheating limited how long it could run.",
+    "audio_path": ""
+  },
+  {
+    "id": 83,
+    "sentence": "While the executive committee endorsed the restructuring proposal, rank-and-file employees expressed profound skepticism.",
+    "level": 4,
+    "word_count": 13,
+    "subject_span": "6-7",
+    "verb_span": "8",
+    "chunks_json": [
+      "While the executive committee endorsed the restructuring proposal,",
+      "rank-and-file employees",
+      "expressed",
+      "profound skepticism."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "Managers backed the reorganization, but staff strongly doubted its success.",
+    "audio_path": ""
+  },
+  {
+    "id": 84,
+    "sentence": "Provided that sovereign lenders restructure existing debt obligations, the developing nation can avert insolvency.",
+    "level": 4,
+    "word_count": 14,
+    "subject_span": "6-7",
+    "verb_span": "8-9",
+    "chunks_json": [
+      "Provided that sovereign lenders restructure existing debt obligations,",
+      "the developing nation",
+      "can avert",
+      "insolvency."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "If foreign banks ease payment terms, the country can avoid going bankrupt.",
+    "audio_path": ""
+  },
+  {
+    "id": 85,
+    "sentence": "The committee, which had deliberated the ethical ramifications for weeks, rejected the patent application, though investors appealed.",
+    "level": 5,
+    "word_count": 17,
+    "subject_span": "0-1",
+    "verb_span": "10",
+    "chunks_json": [
+      "The committee,",
+      "which had deliberated the ethical ramifications for weeks,",
+      "rejected",
+      "the patent application,",
+      "though investors appealed."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "After weeks of debate, the panel denied the patent despite appeals from financiers.",
+    "audio_path": ""
+  },
+  {
+    "id": 86,
+    "sentence": "Having completed extensive metallurgical stress testing, engineers certified the suspension bridge for commercial freight transit.",
+    "level": 5,
+    "word_count": 15,
+    "subject_span": "6-6",
+    "verb_span": "7",
+    "chunks_json": [
+      "Having completed extensive metallurgical stress testing,",
+      "engineers",
+      "certified",
+      "the suspension bridge",
+      "for commercial freight transit."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "After testing the steel under load, engineers approved the bridge for heavy trucks.",
+    "audio_path": ""
+  },
+  {
+    "id": 87,
+    "sentence": "Confronted by persistent algorithmic anomalies during live trading, financial supervisors suspended automated market making protocols.",
+    "level": 5,
+    "word_count": 15,
+    "subject_span": "7-8",
+    "verb_span": "9",
+    "chunks_json": [
+      "Confronted by persistent algorithmic anomalies during live trading,",
+      "financial supervisors",
+      "suspended",
+      "automated market making protocols."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "When trading bots behaved strangely, regulators halted automated order systems.",
+    "audio_path": ""
+  },
+  {
+    "id": 88,
+    "sentence": "The archaeological team, having excavated the subterranean kiln, reconstructed ancient ceramic manufacturing methods.",
+    "level": 5,
+    "word_count": 13,
+    "subject_span": "0-2",
+    "verb_span": "8",
+    "chunks_json": [
+      "The archaeological team,",
+      "having excavated the subterranean kiln,",
+      "reconstructed",
+      "ancient ceramic manufacturing methods."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "After digging up the old furnace, archaeologists worked out how ancient pots were made.",
+    "audio_path": ""
+  },
+  {
+    "id": 89,
+    "sentence": "In spite of aggressive monetary tightening by western central banks, sovereign inflation metrics remained stubbornly elevated across consumer staples.",
+    "level": 6,
+    "word_count": 19,
+    "subject_span": "10-12",
+    "verb_span": "13",
+    "chunks_json": [
+      "In spite of aggressive monetary tightening by western central banks,",
+      "sovereign inflation metrics",
+      "remained",
+      "stubbornly elevated",
+      "across consumer staples."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "Even with higher interest rates, prices on everyday goods stayed stubbornly high.",
+    "audio_path": ""
+  },
+  {
+    "id": 90,
+    "sentence": "By integrating quantum computing architectures with cryptographic hash protocols, cybersecurity specialists seek to neutralize catastrophic decryption attacks.",
+    "level": 6,
+    "word_count": 17,
+    "subject_span": "8-9",
+    "verb_span": "10",
+    "chunks_json": [
+      "By integrating quantum computing architectures with cryptographic hash protocols,",
+      "cybersecurity specialists",
+      "seek to neutralize",
+      "catastrophic decryption attacks."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "By pairing quantum hardware with new security math, experts aim to block future breaches.",
+    "audio_path": ""
+  },
+  {
+    "id": 91,
+    "sentence": "Whereas classical economic models presuppose perfectly rational utility maximization, contemporary behavioral psychology demonstrates pervasive heuristic biases.",
+    "level": 6,
+    "word_count": 16,
+    "subject_span": "7-9",
+    "verb_span": "10",
+    "chunks_json": [
+      "Whereas classical economic models presuppose perfectly rational utility maximization,",
+      "contemporary behavioral psychology",
+      "demonstrates",
+      "pervasive heuristic biases."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "Old models assumed people act logically, but modern psychology proves we rely on mental shortcuts.",
+    "audio_path": ""
+  },
+  {
+    "id": 92,
+    "sentence": "Inasmuch as rapid planetary warming destabilizes polar jet streams, temperate agricultural regions face increasingly erratic frost patterns.",
+    "level": 6,
+    "word_count": 17,
+    "subject_span": "8-10",
+    "verb_span": "11",
+    "chunks_json": [
+      "Inasmuch as rapid planetary warming destabilizes polar jet streams,",
+      "temperate agricultural regions",
+      "face",
+      "increasingly erratic frost patterns."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "Because climate change shifts wind patterns, farming zones suffer unpredictable freezing weather.",
+    "audio_path": ""
+  },
+  {
+    "id": 93,
+    "sentence": "The architect who designed the geothermal heating network won the sustainable building medal.",
+    "level": 3,
+    "word_count": 13,
+    "subject_span": "0-1",
+    "verb_span": "8",
+    "chunks_json": [
+      "The architect",
+      "who designed the geothermal heating network",
+      "won",
+      "the sustainable building medal."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "The architect who created the green heating system won an award.",
+    "audio_path": ""
+  },
+  {
+    "id": 94,
+    "sentence": "The historian who uncovered the lost correspondence shed new light on the ceasefire negotiations.",
+    "level": 3,
+    "word_count": 14,
+    "subject_span": "0-1",
+    "verb_span": "7",
+    "chunks_json": [
+      "The historian",
+      "who uncovered the lost correspondence",
+      "shed new light",
+      "on the ceasefire negotiations."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "The historian found old letters that clarified peace talks.",
+    "audio_path": ""
+  },
+  {
+    "id": 95,
+    "sentence": "Despite facing insurmountable logistical hurdles during the winter storm, the relief convoy delivered emergency medical supplies to the isolated village.",
+    "level": 4,
+    "word_count": 20,
+    "subject_span": "10-12",
+    "verb_span": "13",
+    "chunks_json": [
+      "Despite facing insurmountable logistical hurdles during the winter storm,",
+      "the relief convoy",
+      "delivered",
+      "emergency medical supplies",
+      "to the isolated village."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "Even though the winter storm caused huge travel problems, the aid trucks brought medicine to the village.",
+    "audio_path": ""
+  },
+  {
+    "id": 96,
+    "sentence": "Having thoroughly evaluated all risk assessments presented by the audit committee, the board voted unanimously to halt the acquisition.",
+    "level": 4,
+    "word_count": 19,
+    "subject_span": "11-12",
+    "verb_span": "13",
+    "chunks_json": [
+      "Having thoroughly evaluated all risk assessments presented by the audit committee,",
+      "the board",
+      "voted unanimously",
+      "to halt the acquisition."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "After checking the risk reports, the board agreed to stop the purchase.",
+    "audio_path": ""
+  },
+  {
+    "id": 97,
+    "sentence": "Although consumer confidence declined slightly in the third quarter, manufacturing output expanded faster than analysts anticipated.",
+    "level": 4,
+    "word_count": 16,
+    "subject_span": "8-9",
+    "verb_span": "10",
+    "chunks_json": [
+      "Although consumer confidence declined slightly in the third quarter,",
+      "manufacturing output",
+      "expanded faster",
+      "than analysts anticipated."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "Even though shoppers were cautious, factory production grew more than expected.",
+    "audio_path": ""
+  },
+  {
+    "id": 98,
+    "sentence": "The hypothesis, which had been vigorously dismissed by orthodoxy for decades, was finally vindicated by empirical measurements from orbital telescopes.",
+    "level": 5,
+    "word_count": 20,
+    "subject_span": "0-1",
+    "verb_span": "10-11",
+    "chunks_json": [
+      "The hypothesis,",
+      "which had been vigorously dismissed by orthodoxy for decades,",
+      "was finally vindicated",
+      "by empirical measurements",
+      "from orbital telescopes."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "The theory that traditional experts rejected for years was proven true by space telescope data.",
+    "audio_path": ""
+  },
+  {
+    "id": 99,
+    "sentence": "Beneath the intricate facade of diplomatic pleasantries, profound ideological disagreements threatened to derail the multilateral trade agreement.",
+    "level": 5,
+    "word_count": 17,
+    "subject_span": "8-9",
+    "verb_span": "10",
+    "chunks_json": [
+      "Beneath the intricate facade of diplomatic pleasantries,",
+      "profound ideological disagreements",
+      "threatened",
+      "to derail the multilateral trade agreement."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "Underneath polite diplomatic words, deep ideological arguments almost destroyed the trade deal.",
+    "audio_path": ""
+  },
+  {
+    "id": 100,
+    "sentence": "The constitutional court, having deliberated in closed chambers for three consecutive weeks, struck down the surveillance statute as an intolerable infringement upon privacy.",
+    "level": 5,
+    "word_count": 23,
+    "subject_span": "0-2",
+    "verb_span": "12-13",
+    "chunks_json": [
+      "The constitutional court,",
+      "having deliberated in closed chambers for three consecutive weeks,",
+      "struck down",
+      "the surveillance statute",
+      "as an intolerable infringement upon privacy."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "The supreme court reviewed the case for three weeks and canceled the spying law to protect privacy.",
+    "audio_path": ""
+  },
+  {
+    "id": 101,
+    "sentence": "Had the central bank not intervened with emergency liquidity auctions, several regional commercial lenders would inevitably have defaulted.",
+    "level": 5,
+    "word_count": 18,
+    "subject_span": "9-12",
+    "verb_span": "13-15",
+    "chunks_json": [
+      "Had the central bank not intervened with emergency liquidity auctions,",
+      "several regional commercial lenders",
+      "would inevitably have defaulted."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "If the central bank had not provided cash, regional banks would have failed.",
+    "audio_path": ""
+  },
+  {
+    "id": 102,
+    "sentence": "Notwithstanding the superficial consensus proclaimed in the joint communique, irreconcilable geopolitical rivalries ensure that genuine disarmament remains a remote aspiration.",
+    "level": 6,
+    "word_count": 20,
+    "subject_span": "7-9",
+    "verb_span": "10",
+    "chunks_json": [
+      "Notwithstanding the superficial consensus proclaimed in the joint communique,",
+      "irreconcilable geopolitical rivalries",
+      "ensure",
+      "that genuine disarmament remains a remote aspiration."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "Despite the polite public statement, deep country rivalries mean real disarmament is very unlikely.",
+    "audio_path": ""
+  },
+  {
+    "id": 103,
+    "sentence": "To the extent that algorithmic decision-making models internalize historical human biases, automated lending systems will perpetuate systemic socioeconomic inequality.",
+    "level": 6,
+    "word_count": 19,
+    "subject_span": "8-10",
+    "verb_span": "11",
+    "chunks_json": [
+      "To the extent that algorithmic decision-making models internalize historical human biases,",
+      "automated lending systems",
+      "will perpetuate",
+      "systemic socioeconomic inequality."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "If algorithms learn past human biases, automated loan systems will continue unfair financial treatment.",
+    "audio_path": ""
+  },
+  {
+    "id": 104,
+    "sentence": "Insofar as quantum computing promises exponential accelerations in cryptographic factorization, existing digital security infrastructures must undergo comprehensive overhaul.",
+    "level": 6,
+    "word_count": 18,
+    "subject_span": "9-12",
+    "verb_span": "13-14",
+    "chunks_json": [
+      "Insofar as quantum computing promises exponential accelerations in cryptographic factorization,",
+      "existing digital security infrastructures",
+      "must undergo",
+      "comprehensive overhaul."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "Because quantum computers will break encryption easily, current computer security must be completely rebuilt.",
+    "audio_path": ""
+  },
+  {
+    "id": 105,
+    "sentence": "Lest inadvertent diplomatic blunders precipitate irreversible escalation, both nuclear powers maintain direct, redundant telecommunication hotlines.",
+    "level": 6,
+    "word_count": 15,
+    "subject_span": "6-8",
+    "verb_span": "9",
+    "chunks_json": [
+      "Lest inadvertent diplomatic blunders precipitate irreversible escalation,",
+      "both nuclear powers",
+      "maintain",
+      "direct, redundant telecommunication hotlines."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "To prevent accidental mistakes from starting a war, both nations keep direct phone lines open.",
+    "audio_path": ""
+  },
+  {
+    "id": 106,
+    "sentence": "Far from being a mere decorative flourish, the ornate calligraphy throughout the mausoleum embodies sophisticated cosmological treatises.",
+    "level": 6,
+    "word_count": 17,
+    "subject_span": "9-11",
+    "verb_span": "12",
+    "chunks_json": [
+      "Far from being a mere decorative flourish,",
+      "the ornate calligraphy throughout the mausoleum",
+      "embodies",
+      "sophisticated cosmological treatises."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "Rather than just decoration, the writing in the tomb represents deep ideas about the universe.",
+    "audio_path": ""
+  },
+  {
+    "id": 107,
+    "sentence": "Were the international community to neglect the plight of displaced climate refugees, subsequent cross-border tensions would inevitably strain global stability.",
+    "level": 6,
+    "word_count": 20,
+    "subject_span": "10-12",
+    "verb_span": "13-15",
+    "chunks_json": [
+      "Were the international community to neglect the plight of displaced climate refugees,",
+      "subsequent cross-border tensions",
+      "would inevitably strain",
+      "global stability."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "If countries ignore climate refugees, border tensions will harm world peace.",
+    "audio_path": ""
+  },
+  {
+    "id": 108,
+    "sentence": "Much as the printing press democratized theological scholarship in the Renaissance, open-source artificial intelligence is decentralizing scientific discovery.",
+    "level": 6,
+    "word_count": 18,
+    "subject_span": "10-13",
+    "verb_span": "14",
+    "chunks_json": [
+      "Much as the printing press democratized theological scholarship in the Renaissance,",
+      "open-source artificial intelligence",
+      "is decentralizing",
+      "scientific discovery."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "Just like the printing press spread religious knowledge, open-source AI is spreading scientific tools.",
+    "audio_path": ""
+  },
+  {
+    "id": 109,
+    "sentence": "So pervasive has become the reliance on satellite navigation systems that even localized geomagnetic disturbances can disorient entire commercial maritime fleets.",
+    "level": 6,
+    "word_count": 21,
+    "subject_span": "3-7",
+    "verb_span": "8",
+    "chunks_json": [
+      "So pervasive has become the reliance on satellite navigation systems",
+      "that even localized geomagnetic disturbances",
+      "can disorient",
+      "entire commercial maritime fleets."
+    ],
+    "layers_json": [],
+    "connectors_json": [],
+    "simple_meaning": "Because ships rely so heavily on GPS, solar storms can easily confuse entire shipping fleets.",
     "audio_path": ""
   }
 ]
