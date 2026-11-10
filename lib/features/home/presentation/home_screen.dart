@@ -1504,13 +1504,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             label: 'Arena',
           ),
           NavigationDestination(
-            icon: Icon(Icons.bookmark_outline_rounded, size: 22),
-            selectedIcon: Icon(Icons.bookmark_rounded, size: 22),
-            label: 'My Words',
+            icon: Icon(Icons.menu_book_outlined, size: 22),
+            selectedIcon: Icon(Icons.menu_book_rounded, size: 22),
+            label: 'Lexicon',
           ),
           NavigationDestination(
-            icon: Icon(Icons.insights_rounded, size: 22),
-            label: 'Stats',
+            icon: Icon(Icons.person_outline_rounded, size: 22),
+            selectedIcon: Icon(Icons.person_rounded, size: 22),
+            label: 'Profile',
           ),
           NavigationDestination(
             icon: Icon(Icons.tune_rounded, size: 22),
