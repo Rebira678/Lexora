@@ -9,27 +9,36 @@ import '../../core/services/phase3_content_service.dart';
 import '../games/widgets/what_you_learned_screen.dart';
 
 class MockQuestion {
+  final int id;
   final String section;
   final String prompt;
   final List<String> options;
   final String answer;
   final String skill;
+  final String cefr;
+  final String explanation;
 
   const MockQuestion({
+    required this.id,
     required this.section,
     required this.prompt,
     required this.options,
     required this.answer,
     required this.skill,
+    this.cefr = 'C1',
+    this.explanation = '',
   });
 
   factory MockQuestion.fromJson(Map<String, dynamic> json) {
     return MockQuestion(
-      section: json['section'] as String,
-      prompt: json['prompt'] as String,
-      options: (json['options'] as List).map((o) => o.toString()).toList(),
-      answer: json['answer'] as String,
-      skill: json['skill'] as String,
+      id: json['id'] as int? ?? 0,
+      section: json['section'] as String? ?? 'General',
+      prompt: json['prompt'] as String? ?? '',
+      options: (json['options'] as List? ?? []).map((o) => o.toString()).toList(),
+      answer: json['answer'] as String? ?? '',
+      skill: json['skill'] as String? ?? 'vocab',
+      cefr: json['cefr'] as String? ?? 'C1',
+      explanation: json['explanation'] as String? ?? '',
     );
   }
 }
@@ -108,8 +117,8 @@ class _MockTestScreenState extends ConsumerState<MockTestScreen> {
       ref.read(audioServiceProvider).playSfx(SfxType.correct);
       _learnedItems.add(
         LearnedItem(
-          term: '${current.section} Benchmark',
-          definition: 'Mastered question.',
+          term: '${current.section} (${current.cefr})',
+          definition: current.explanation.isNotEmpty ? current.explanation : 'Mastered question.',
           example: current.prompt,
           wasMistake: false,
         ),
@@ -118,8 +127,8 @@ class _MockTestScreenState extends ConsumerState<MockTestScreen> {
       ref.read(audioServiceProvider).playSfx(SfxType.wrong);
       _learnedItems.add(
         LearnedItem(
-          term: '${current.section} Discrepancy',
-          definition: 'Correct: ${current.answer}',
+          term: '${current.section} (${current.cefr})',
+          definition: 'Correct: ${current.answer}. ${current.explanation}',
           example: current.prompt,
           wasMistake: true,
         ),
@@ -146,9 +155,13 @@ class _MockTestScreenState extends ConsumerState<MockTestScreen> {
     final overallAccuracy = _totalCorrect / total;
 
     String estimatedCefr;
-    if (overallAccuracy >= 0.85) {
+    if (overallAccuracy >= 0.90) {
+      estimatedCefr = 'C2 (Mastery)';
+    } else if (overallAccuracy >= 0.80) {
       estimatedCefr = 'C1 (Advanced)';
-    } else if (overallAccuracy >= 0.60) {
+    } else if (overallAccuracy >= 0.65) {
+      estimatedCefr = 'B2+ (Vantage)';
+    } else if (overallAccuracy >= 0.50) {
       estimatedCefr = 'B2 (Upper-Intermediate)';
     } else {
       estimatedCefr = 'B1 (Intermediate)';
@@ -324,6 +337,46 @@ class _MockTestScreenState extends ConsumerState<MockTestScreen> {
                   },
                 ),
               ),
+              const SizedBox(height: 10),
+
+              if (_hasChecked && current.explanation.isNotEmpty) ...[
+                Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: _isCorrect
+                        ? const Color(0xFF10B981).withAlpha(20)
+                        : const Color(0xFFEF4444).withAlpha(20),
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(
+                      color: _isCorrect
+                          ? const Color(0xFF10B981)
+                          : const Color(0xFFEF4444),
+                    ),
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Icon(
+                        _isCorrect ? Icons.check_circle_rounded : Icons.info_outline_rounded,
+                        color: _isCorrect ? const Color(0xFF10B981) : const Color(0xFFEF4444),
+                        size: 18,
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Text(
+                          current.explanation,
+                          style: TextStyle(
+                            color: theme.colorScheme.onSurface,
+                            fontSize: 12,
+                            height: 1.4,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 10),
+              ],
 
               // Action Button
               if (!_hasChecked)

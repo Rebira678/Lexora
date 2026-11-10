@@ -224,10 +224,76 @@
       "answer": "flash",
       "damage": 110,
       "explanation": "'Flash' has /æ/, whereas 'flesh' is /ɛ/, 'flush' is /ʌ/, and 'flock' is /ɒ/."
+    },
+    {
+      "id": 6,
+      "bossName": "Idiomatic Hydra",
+      "type": "idiom",
+      "prompt": "Decapitate the Hydra by completing the C1 idiom: 'The whistleblower refused to ______ the beans until federal protections were codified.'",
+      "sentence": "Fill in the correct verbal particle for disclosure:",
+      "options": ["spill", "pour", "drop", "scatter"],
+      "answer": "spill",
+      "damage": 120,
+      "explanation": "'Spill the beans' is the established idiom meaning to disclose confidential information prematurely."
+    },
+    {
+      "id": 7,
+      "bossName": "Register Gorgon",
+      "type": "register",
+      "prompt": "Paralyze the Gorgon by choosing the sentence with flawless executive diplomatic tone:",
+      "sentence": "Which statement appropriately handles a missed deadline in a corporate audit?",
+      "options": [
+        "Due to unforeseen logistical constraints, we respectfully request a brief postponement.",
+        "We totally missed the date because our guys were swamped with work.",
+        "We are sorry big time and hope you don't get mad at us.",
+        "The deadline was bogus anyway, so we decided to finish it later."
+      ],
+      "answer": "Due to unforeseen logistical constraints, we respectfully request a brief postponement.",
+      "damage": 125,
+      "explanation": "Diplomatic C1 register uses nominalization ('unforeseen logistical constraints') and polite modality ('respectfully request')."
+    },
+    {
+      "id": 8,
+      "bossName": "Paraphrase Chimera",
+      "type": "paraphrase",
+      "prompt": "Synthesize the Chimera's weakness by identifying the accurate negative inversion:",
+      "sentence": "Original: 'The committee rarely observed such widespread institutional resistance.'",
+      "options": [
+        "Rarely did the committee observe such widespread institutional resistance.",
+        "Rarely the committee observed such widespread institutional resistance.",
+        "Rarely did observe the committee such widespread institutional resistance.",
+        "The committee did observe rarely such resistance."
+      ],
+      "answer": "Rarely did the committee observe such widespread institutional resistance.",
+      "damage": 130,
+      "explanation": "Fronting negative adverb 'Rarely' triggers auxiliary-subject inversion: 'did the committee observe'."
+    },
+    {
+      "id": 9,
+      "bossName": "Cohesion Kraken",
+      "type": "cohesion",
+      "prompt": "Sever the Kraken's tentacle by choosing the cohesive connector that marks causal deduction:",
+      "sentence": "Renewable generation surpassed baseline projections; ______, fossil fuel reserves were conserved.",
+      "options": ["consequently", "conversely", "notwithstanding", "nevertheless"],
+      "answer": "consequently",
+      "damage": 135,
+      "explanation": "'Consequently' indicates that the second clause is a direct logical result of the first."
+    },
+    {
+      "id": 10,
+      "bossName": "The C1 Arch-Daemon",
+      "type": "c1_capstone",
+      "prompt": "Banish the Arch-Daemon with the ultimate C1 collocation: 'The discovery gave ______ to revolutionary oncology therapies.'",
+      "sentence": "Complete the fixed academic expression denoting origin/emergence:",
+      "options": ["rise", "birth", "push", "flow"],
+      "answer": "rise",
+      "damage": 150,
+      "explanation": "'Give rise to' is the standard C1 academic idiom for causing or precipitating a phenomenon."
     }
   ],
   "mock_test": [
     {
+      "id": 1,
       "section": "Reading & Inference",
       "prompt": "Read the excerpt: 'While early economists posited that market actors behave with unyielding rationality, behavioral economics has revealed that cognitive heuristics consistently skew financial decisions.'\n\nWhat is the primary assertion of the text?",
       "options": [
@@ -237,11 +303,74 @@
         "Heuristics guarantee optimal investment outcomes."
       ],
       "answer": "Cognitive shortcuts predictably diverge from traditional models of pure economic rationality.",
-      "skill": "reading"
+      "skill": "reading",
+      "cefr": "B2+",
+      "explanation": "The text states that cognitive heuristics (mental shortcuts) systematically 'skew' decisions away from traditional economic models of rationality."
     },
     {
+      "id": 2,
+      "section": "Reading & Critical Discourse",
+      "prompt": "Read the passage: 'Proponents of strong linguistic relativity maintain that language determines cognition, yet cross-cultural neuroimaging suggests that conceptual categories frequently precede lexicalization.'\n\nWhat does the passage imply about the relationship between thought and language?",
+      "options": [
+        "Pre-verbal conceptual categorization exists independently of language constraints.",
+        "Language completely dictates human cognitive boundaries.",
+        "Neuroimaging is incapable of measuring conceptual categories.",
+        "Linguistic relativity has been universally vindicated."
+      ],
+      "answer": "Pre-verbal conceptual categorization exists independently of language constraints.",
+      "skill": "reading",
+      "cefr": "C1",
+      "explanation": "The contrast signaled by 'yet' demonstrates that conceptual thought often occurs prior to or without explicit verbal labels ('precedes lexicalization')."
+    },
+    {
+      "id": 3,
+      "section": "Reading & Argument Structure",
+      "prompt": "Consider the sentence: 'The author concedes that autonomous transit reduces greenhouse emissions, yet cautions that urban sprawl may intensify if commuting friction is neutralized.'\n\nWhat rhetorical function does 'concedes' perform?",
+      "options": [
+        "Acknowledging a valid counter-argument before introducing a qualification.",
+        "Dismissing the environmental benefits as completely fabricated.",
+        "Proposing that urban commuting be abolished altogether.",
+        "Proving that autonomous vehicles have no societal drawbacks."
+      ],
+      "answer": "Acknowledging a valid counter-argument before introducing a qualification.",
+      "skill": "reading",
+      "cefr": "C1",
+      "explanation": "In academic rhetoric, 'conceding' acknowledges an opponent's valid point before asserting a critical caveat ('yet cautions...')."
+    },
+    {
+      "id": 4,
+      "section": "Reading & Tone Analysis",
+      "prompt": "Read the critique: 'To label the committee's ambiguous declaration a breakthrough is at best premature, and at worst disingenuous.'\n\nWhat is the author's tone toward the declaration?",
+      "options": [
+        "Deeply skeptical and critically dismissive.",
+        "Cautiously celebratory and enthusiastic.",
+        "Indifferent and purely descriptive.",
+        "Unconditionally supportive."
+      ],
+      "answer": "Deeply skeptical and critically dismissive.",
+      "skill": "reading",
+      "cefr": "C1",
+      "explanation": "Phrases like 'at best premature, and at worst disingenuous' convey severe skepticism and critique of the committee's claim."
+    },
+    {
+      "id": 5,
+      "section": "Reading & Deduction",
+      "prompt": "Read the finding: 'The replication crisis has underscored that statistical significance cannot be conflated with scientific truth, particularly in studies with underpowered cohorts.'\n\nWhat is the author's methodological deduction?",
+      "options": [
+        "Small sample sizes often generate statistically significant yet unreplicable artifacts.",
+        "Statistical tests are completely useless in empirical science.",
+        "Larger cohorts always produce false positive results.",
+        "Replication is unnecessary if the p-value is below 0.05."
+      ],
+      "answer": "Small sample sizes often generate statistically significant yet unreplicable artifacts.",
+      "skill": "reading",
+      "cefr": "C1+",
+      "explanation": "'Underpowered cohorts' (small sample sizes) lead to unreplicable results that masquerade as statistically significant."
+    },
+    {
+      "id": 6,
       "section": "Syntax & Structure",
-      "prompt": "Select the sentence with impeccable C1 parallelism and subordination:",
+      "prompt": "Select the sentence with impeccable C1 parallelism and inversion:",
       "options": [
         "Not only did the policy reduce fiscal waste, but it also incentivized sustainable industrial practices.",
         "Not only the policy reduced waste, but also incentivizing industry.",
@@ -249,11 +378,74 @@
         "Reducing waste not only was done by the policy, but also industry was incentivized."
       ],
       "answer": "Not only did the policy reduce fiscal waste, but it also incentivized sustainable industrial practices.",
-      "skill": "writing"
+      "skill": "writing",
+      "cefr": "B2+",
+      "explanation": "Negative adverbial 'Not only did the policy reduce...' correctly requires auxiliary inversion ('did the policy reduce') and parallel coordination ('but it also...')."
     },
     {
+      "id": 7,
+      "section": "Syntax & Conditional Inversion",
+      "prompt": "Select the grammatically accurate inverted conditional for an unreal past situation:",
+      "options": [
+        "Had the regulatory committee intervened earlier, the insolvency could have been averted.",
+        "If the committee had intervened earlier, so the insolvency could be averted.",
+        "Did the committee intervene earlier, the insolvency would avert.",
+        "Having the committee intervened earlier, insolvency was averted."
+      ],
+      "answer": "Had the regulatory committee intervened earlier, the insolvency could have been averted.",
+      "skill": "writing",
+      "cefr": "C1",
+      "explanation": "'Had + subject + past participle' is the canonical C1 inverted third conditional, replacing 'If the committee had intervened'."
+    },
+    {
+      "id": 8,
+      "section": "Syntax & Cleft Structures",
+      "prompt": "Which sentence correctly employs a cleft construction to emphasize the decisive factor?",
+      "options": [
+        "It was precisely their reluctance to pivot that precipitated the firm's downfall.",
+        "What precipitated the firm's downfall was it their reluctance.",
+        "The thing that precipitated was because they were reluctant to pivot.",
+        "It being their reluctance to pivot that downfall happened."
+      ],
+      "answer": "It was precisely their reluctance to pivot that precipitated the firm's downfall.",
+      "skill": "writing",
+      "cefr": "C1",
+      "explanation": "'It was [focus] that [clause]' is the standard it-cleft structure used for rhetorical emphasis in academic writing."
+    },
+    {
+      "id": 9,
+      "section": "Syntax & Subjunctive Mood",
+      "prompt": "Identify the sentence that correctly adheres to formal mandative subjunctive conventions:",
+      "options": [
+        "The ethics panel recommended that the laboratory suspend all unauthorized trials immediately.",
+        "The ethics panel recommended that the laboratory suspends all unauthorized trials immediately.",
+        "The ethics panel recommended the laboratory must to suspend all trials.",
+        "The ethics panel recommended that the laboratory would suspend all trials."
+      ],
+      "answer": "The ethics panel recommended that the laboratory suspend all unauthorized trials immediately.",
+      "skill": "writing",
+      "cefr": "C1",
+      "explanation": "Verbs of demand/recommendation require the base form (bare infinitive) in the that-clause: 'that the laboratory suspend' (not 'suspends')."
+    },
+    {
+      "id": 10,
+      "section": "Syntax & Participial Modifiers",
+      "prompt": "Which sentence avoids a dangling or misplaced modifier?",
+      "options": [
+        "Having scrutinized the ledger, the auditor discovered several anomalous discrepancies.",
+        "Having scrutinized the ledger, several anomalous discrepancies were discovered by the auditor.",
+        "Scrutinizing the ledger, discrepancies were obvious to everyone.",
+        "Upon scrutiny of the ledger, the discrepancies revealed themselves to the auditor."
+      ],
+      "answer": "Having scrutinized the ledger, the auditor discovered several anomalous discrepancies.",
+      "skill": "writing",
+      "cefr": "C1",
+      "explanation": "The agent performing the scrutiny ('the auditor') must directly follow the introductory participial phrase."
+    },
+    {
+      "id": 11,
       "section": "Acoustic & Listening Precision",
-      "prompt": "In connected speech, what does the phonetic reduction /wʊdəv/ correspond to in orthography?",
+      "prompt": "In connected speech, what does the phonetic reduction /wʊdəv/ correspond to in standard orthography?",
       "options": [
         "would have",
         "would of",
@@ -261,11 +453,74 @@
         "word of"
       ],
       "answer": "would have",
-      "skill": "listening"
+      "skill": "listening",
+      "cefr": "B2",
+      "explanation": "Modal 'would' combined with auxiliary 'have' reduces to /wʊdəv/, often mistakenly transcribed as 'would of'."
     },
     {
-      "section": "Lexical Sophistication",
-      "prompt": "Choose the most accurate synonym for 'ephemeral' in an academic context:",
+      "id": 12,
+      "section": "Acoustic & Phonological Assimilation",
+      "prompt": "In rapid natural discourse, the phrase 'ten pairs' is frequently realized as /tem peəz/. What phonological process causes this shift?",
+      "options": [
+        "Regressive bilabial assimilation of the alveolar nasal /n/ before /p/.",
+        "Total vowel reduction to schwa.",
+        "Progressive palatalization.",
+        "Glottal stop insertion."
+      ],
+      "answer": "Regressive bilabial assimilation of the alveolar nasal /n/ before /p/.",
+      "skill": "listening",
+      "cefr": "C1",
+      "explanation": "The alveolar nasal /n/ anticipates the bilabial place of articulation of /p/, transforming into the bilabial nasal /m/."
+    },
+    {
+      "id": 13,
+      "section": "Acoustic & Intonational Nuance",
+      "prompt": "A speaker utters 'You finished the report already?' with a high rise-fall contour on 'already'. What does this prosodic pattern primarily indicate?",
+      "options": [
+        "Surprise or disbelief regarding the unexpected speed of completion.",
+        "A neutral, matter-of-fact routine inquiry.",
+        "Anger at late delivery.",
+        "A polite command to begin working immediately."
+      ],
+      "answer": "Surprise or disbelief regarding the unexpected speed of completion.",
+      "skill": "listening",
+      "cefr": "C1",
+      "explanation": "Marked rise-fall pitch accents on temporal adverbs typically signal speaker disbelief or pleasant astonishment."
+    },
+    {
+      "id": 14,
+      "section": "Acoustic & Elision Detection",
+      "prompt": "In natural native pronunciation of 'last night', the final /t/ of 'last' is frequently omitted. What is this phenomenon called?",
+      "options": [
+        "Alveolar stop elision in consonant clusters.",
+        "Affrication.",
+        "Diphthongization.",
+        "Liquid vocalization."
+      ],
+      "answer": "Alveolar stop elision in consonant clusters.",
+      "skill": "listening",
+      "cefr": "C1",
+      "explanation": "When an alveolar plosive (/t/ or /d/) occurs between consonants across word boundaries, it routinely undergoes elision."
+    },
+    {
+      "id": 15,
+      "section": "Acoustic & Weak Forms",
+      "prompt": "Which underlined function word in 'What are you waiting for?' is pronounced with a strong vowel rather than a reduced schwa?",
+      "options": [
+        "for (at the end of the clause)",
+        "are (modal auxiliary)",
+        "you (subject pronoun)",
+        "All function words are always reduced equally."
+      ],
+      "answer": "for (at the end of the clause)",
+      "skill": "listening",
+      "cefr": "C1",
+      "explanation": "Prepositions stranding at the end of a clause (clause-final position) receive citation/strong form pronunciation (/fɔːr/ rather than /fər/)."
+    },
+    {
+      "id": 16,
+      "section": "Lexical Precision & Synonyms",
+      "prompt": "Choose the most accurate academic synonym for 'ephemeral':",
       "options": [
         "transitory",
         "eternal",
@@ -273,7 +528,69 @@
         "substantive"
       ],
       "answer": "transitory",
-      "skill": "vocab"
+      "skill": "vocab",
+      "cefr": "B2+",
+      "explanation": "'Ephemeral' and 'transitory' both signify lasting for a very brief, fleeting duration."
+    },
+    {
+      "id": 17,
+      "section": "Lexical Collocations",
+      "prompt": "Select the natural C1 academic verb to complete the phrase: 'The investigative report ______ aspersions on the board's integrity.'",
+      "options": [
+        "cast",
+        "threw",
+        "dropped",
+        "placed"
+      ],
+      "answer": "cast",
+      "skill": "vocab",
+      "cefr": "C1",
+      "explanation": "The established high-register idiom is 'cast aspersions on', meaning to criticize or disparage someone's reputation."
+    },
+    {
+      "id": 18,
+      "section": "Lexical Register Clashes",
+      "prompt": "Identify the sentence free from register clash or inappropriate informal idioms in an academic thesis:",
+      "options": [
+        "The empirical findings corroborate the initial hypothesis regarding market volatility.",
+        "The empirical findings totally back up what we figured out about volatile markets.",
+        "The results are pretty neat because they prove our hunch.",
+        "We checked out the numbers and they make total sense."
+      ],
+      "answer": "The empirical findings corroborate the initial hypothesis regarding market volatility.",
+      "skill": "vocab",
+      "cefr": "C1",
+      "explanation": "'Corroborate', 'empirical findings', and 'initial hypothesis' maintain strict formal academic register without colloquial intrusion."
+    },
+    {
+      "id": 19,
+      "section": "Lexical Polysemy & Phrasal Precision",
+      "prompt": "In the sentence 'Renewable resources account for 42% of domestic energy generation', what does 'account for' mean?",
+      "options": [
+        "Comprise or constitute a specific proportion.",
+        "Apologize for an environmental misdemeanor.",
+        "Audit monetary finances.",
+        "Demand compensation."
+      ],
+      "answer": "Comprise or constitute a specific proportion.",
+      "skill": "vocab",
+      "cefr": "B2+",
+      "explanation": "In statistical and economic contexts, 'account for' denotes making up or constituting a proportion of a whole."
+    },
+    {
+      "id": 20,
+      "section": "Discourse Markers & Logic",
+      "prompt": "Select the cohesive discourse marker that denotes 'to the extent that' in formal prose:",
+      "options": [
+        "insofar as",
+        "nonetheless",
+        "conversely",
+        "furthermore"
+      ],
+      "answer": "insofar as",
+      "skill": "vocab",
+      "cefr": "C1",
+      "explanation": "'Insofar as' defines the degree, scope, or boundary condition under which a statement holds true."
     }
   ],
   "role_play": [
