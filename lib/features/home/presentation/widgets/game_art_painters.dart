@@ -30,6 +30,12 @@ enum GameArtType {
   bossBattle,
   mockTest,
   achievements,
+  rolePlay,
+  storyBranch,
+  phrasalDungeon,
+  idiomEscape,
+  emailBoss,
+  customDecks,
 }
 
 class GameArtWidget extends StatelessWidget {
@@ -182,6 +188,24 @@ class _GameArtPainter extends CustomPainter {
         break;
       case GameArtType.achievements:
         _drawAchievementsArt(canvas, size, center);
+        break;
+      case GameArtType.rolePlay:
+        _drawRolePlayArt(canvas, size, center);
+        break;
+      case GameArtType.storyBranch:
+        _drawStoryBranchArt(canvas, size, center);
+        break;
+      case GameArtType.phrasalDungeon:
+        _drawPhrasalDungeonArt(canvas, size, center);
+        break;
+      case GameArtType.idiomEscape:
+        _drawIdiomEscapeArt(canvas, size, center);
+        break;
+      case GameArtType.emailBoss:
+        _drawEmailBossArt(canvas, size, center);
+        break;
+      case GameArtType.customDecks:
+        _drawCustomDecksArt(canvas, size, center);
         break;
     }
   }
@@ -935,6 +959,165 @@ class _GameArtPainter extends CustomPainter {
 
     // Star in center
     canvas.drawCircle(center, 4.0, Paint()..color = primaryColor..style = PaintingStyle.fill);
+  }
+
+  /// 🎭 Role-Play Dialogues: Two interlinked conversational speech balloons
+  void _drawRolePlayArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    // Left bubble
+    final bubbleLeft = RRect.fromRectAndRadius(
+      Rect.fromCenter(center: Offset(center.dx - 14, center.dy - 6), width: 32, height: 22),
+      const Radius.circular(8),
+    );
+    canvas.drawRRect(bubbleLeft, Paint()..color = primaryColor.withAlpha(25));
+    canvas.drawRRect(bubbleLeft, stroke);
+
+    // Right bubble
+    final bubbleRight = RRect.fromRectAndRadius(
+      Rect.fromCenter(center: Offset(center.dx + 14, center.dy + 8), width: 34, height: 22),
+      const Radius.circular(8),
+    );
+    canvas.drawRRect(bubbleRight, Paint()..color = primaryColor.withAlpha(40));
+    canvas.drawRRect(bubbleRight, stroke);
+
+    // Sound lines
+    canvas.drawLine(Offset(center.dx - 22, center.dy - 6), Offset(center.dx - 6, center.dy - 6), stroke);
+    canvas.drawLine(Offset(center.dx + 4, center.dy + 8), Offset(center.dx + 24, center.dy + 8), stroke);
+  }
+
+  /// 🌲 Story Branch: Branching narrative decision tree
+  void _drawStoryBranchArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    // Root node
+    canvas.drawCircle(Offset(center.dx, center.dy - 16), 5, stroke);
+    canvas.drawCircle(Offset(center.dx, center.dy - 16), 3, Paint()..color = primaryColor);
+
+    // Branch lines
+    canvas.drawLine(Offset(center.dx, center.dy - 11), Offset(center.dx - 18, center.dy + 6), stroke);
+    canvas.drawLine(Offset(center.dx, center.dy - 11), Offset(center.dx + 18, center.dy + 6), stroke);
+
+    // Left & Right choice nodes
+    canvas.drawCircle(Offset(center.dx - 18, center.dy + 10), 4.5, stroke);
+    canvas.drawCircle(Offset(center.dx + 18, center.dy + 10), 4.5, stroke);
+
+    // Sub branch
+    canvas.drawLine(Offset(center.dx + 18, center.dy + 14), Offset(center.dx + 28, center.dy + 22), stroke);
+    canvas.drawCircle(Offset(center.dx + 28, center.dy + 24), 3, Paint()..color = primaryColor);
+  }
+
+  /// 🏰 Phrasal Verb Dungeon: Dungeon portcullis & magical keys
+  void _drawPhrasalDungeonArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    // Portcullis arch
+    final arch = Path()
+      ..moveTo(center.dx - 20, center.dy + 20)
+      ..lineTo(center.dx - 20, center.dy - 6)
+      ..arcToPoint(Offset(center.dx + 20, center.dy - 6), radius: const Radius.circular(20))
+      ..lineTo(center.dx + 20, center.dy + 20);
+    canvas.drawPath(arch, stroke);
+
+    // Vertical bars
+    canvas.drawLine(Offset(center.dx - 10, center.dy - 3), Offset(center.dx - 10, center.dy + 20), stroke);
+    canvas.drawLine(Offset(center.dx, center.dy - 6), Offset(center.dx, center.dy + 20), stroke);
+    canvas.drawLine(Offset(center.dx + 10, center.dy - 3), Offset(center.dx + 10, center.dy + 20), stroke);
+
+    // Horizontal crossbar
+    canvas.drawLine(Offset(center.dx - 20, center.dy + 8), Offset(center.dx + 20, center.dy + 8), stroke);
+  }
+
+  /// 🗝️ Idiom Escape Room: Etymological key and locked vault portal
+  void _drawIdiomEscapeArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    // Vault circle
+    canvas.drawCircle(Offset(center.dx - 8, center.dy), 16, stroke);
+    canvas.drawCircle(Offset(center.dx - 8, center.dy), 10, Paint()..color = primaryColor.withAlpha(30));
+
+    // Dial marks
+    for (int i = 0; i < 6; i++) {
+      final angle = i * pi / 3;
+      final p1 = Offset(center.dx - 8 + cos(angle) * 12, center.dy + sin(angle) * 12);
+      final p2 = Offset(center.dx - 8 + cos(angle) * 16, center.dy + sin(angle) * 16);
+      canvas.drawLine(p1, p2, stroke);
+    }
+
+    // Key on the right
+    final keyHead = Offset(center.dx + 18, center.dy - 8);
+    canvas.drawCircle(keyHead, 4, stroke);
+    canvas.drawLine(Offset(center.dx + 18, center.dy - 4), Offset(center.dx + 18, center.dy + 14), stroke);
+    canvas.drawLine(Offset(center.dx + 18, center.dy + 6), Offset(center.dx + 22, center.dy + 6), stroke);
+    canvas.drawLine(Offset(center.dx + 18, center.dy + 12), Offset(center.dx + 23, center.dy + 12), stroke);
+  }
+
+  /// ✉️ Mini Email Boss: Diplomatic wax seal & envelope
+  void _drawEmailBossArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    // Envelope body
+    final env = RRect.fromRectAndRadius(
+      Rect.fromCenter(center: center, width: 44, height: 30),
+      const Radius.circular(6),
+    );
+    canvas.drawRRect(env, Paint()..color = primaryColor.withAlpha(25));
+    canvas.drawRRect(env, stroke);
+
+    // Flap
+    final flap = Path()
+      ..moveTo(center.dx - 22, center.dy - 15)
+      ..lineTo(center.dx, center.dy + 2)
+      ..lineTo(center.dx + 22, center.dy - 15);
+    canvas.drawPath(flap, stroke);
+
+    // Wax seal
+    canvas.drawCircle(Offset(center.dx, center.dy + 2), 6, Paint()..color = primaryColor);
+    canvas.drawCircle(Offset(center.dx, center.dy + 2), 6, stroke);
+  }
+
+  /// 🃏 Custom Decks: Staggered flashcard stack with plus sign
+  void _drawCustomDecksArt(Canvas canvas, Size size, Offset center) {
+    final stroke = Paint()
+      ..color = primaryColor
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.0;
+
+    // Back card
+    final backCard = RRect.fromRectAndRadius(
+      Rect.fromCenter(center: Offset(center.dx + 4, center.dy - 4), width: 34, height: 44),
+      const Radius.circular(6),
+    );
+    canvas.drawRRect(backCard, Paint()..color = primaryColor.withAlpha(20));
+    canvas.drawRRect(backCard, stroke);
+
+    // Front card
+    final frontCard = RRect.fromRectAndRadius(
+      Rect.fromCenter(center: Offset(center.dx - 4, center.dy + 4), width: 34, height: 44),
+      const Radius.circular(6),
+    );
+    canvas.drawRRect(frontCard, Paint()..color = const Color(0xFF161B26));
+    canvas.drawRRect(frontCard, stroke);
+
+    // Card lines & badge
+    canvas.drawLine(Offset(center.dx - 14, center.dy - 4), Offset(center.dx + 6, center.dy - 4), stroke);
+    canvas.drawLine(Offset(center.dx - 14, center.dy + 2), Offset(center.dx + 2, center.dy + 2), stroke);
+    canvas.drawCircle(Offset(center.dx - 2, center.dy + 14), 4, Paint()..color = primaryColor);
   }
 
   @override

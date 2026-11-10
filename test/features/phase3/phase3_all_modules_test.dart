@@ -1,4 +1,6 @@
 import 'dart:ffi';
+import 'dart:io';
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -17,6 +19,13 @@ import 'package:english_arena/features/boss_battle/boss_battle_screen.dart';
 import 'package:english_arena/features/mock_test/mock_test_screen.dart';
 import 'package:english_arena/features/achievements/presentation/achievements_screen.dart';
 import 'package:english_arena/features/settings/presentation/backup_restore_screen.dart';
+import 'package:english_arena/features/speaking/role_play_screen.dart';
+import 'package:english_arena/features/reading/story_branch_screen.dart';
+import 'package:english_arena/features/games/phrasal_verb_dungeon/phrasal_verb_dungeon_screen.dart';
+import 'package:english_arena/features/games/idiom_escape/idiom_escape_screen.dart';
+import 'package:english_arena/features/writing/mini_email_boss_screen.dart';
+import 'package:english_arena/features/custom_decks/custom_deck_screen.dart';
+import 'package:english_arena/features/stats/presentation/monthly_checkpoint_screen.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -24,7 +33,8 @@ void main() {
 
   setUpAll(() async {
     open.overrideFor(OperatingSystem.linux, () => DynamicLibrary.open('/lib/x86_64-linux-gnu/libsqlite3.so.0'));
-    await Phase3ContentService.instance.loadContent();
+    final raw = File('assets/content/phase3_content.json').readAsStringSync();
+    Phase3ContentService.instance.prime(json.decode(raw) as Map<String, dynamic>);
   });
 
   setUp(() async {
@@ -186,6 +196,114 @@ void main() {
     expect(find.text('Backup & Restore'), findsOneWidget);
     expect(find.text('Export Offline Backup'), findsOneWidget);
     expect(find.text('Restore from Backup'), findsOneWidget);
+    await tester.pumpWidget(const SizedBox());
+  });
+
+  testWidgets('RolePlayScreen renders pragmatic dialogue turns and choices', (tester) async {
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [databaseProvider.overrideWithValue(db)],
+        child: const MaterialApp(home: RolePlayScreen()),
+      ),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 300));
+
+    expect(find.textContaining('Role-Play:'), findsOneWidget);
+    expect(find.text('Deliver Spoken Response'), findsOneWidget);
+    await tester.pumpWidget(const SizedBox());
+  });
+
+  testWidgets('StoryBranchScreen renders narrative episode and choices', (tester) async {
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [databaseProvider.overrideWithValue(db)],
+        child: const MaterialApp(home: StoryBranchScreen()),
+      ),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 300));
+
+    expect(find.textContaining('Cipher of Oakhaven'), findsOneWidget);
+    expect(find.text('SCENE'), findsOneWidget);
+    await tester.pumpWidget(const SizedBox());
+  });
+
+  testWidgets('PhrasalVerbDungeonScreen renders guardian encounter and particles', (tester) async {
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [databaseProvider.overrideWithValue(db)],
+        child: const MaterialApp(home: PhrasalVerbDungeonScreen()),
+      ),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 300));
+
+    expect(find.textContaining('Phrasal Dungeon'), findsOneWidget);
+    expect(find.text('Dispel Guardian'), findsOneWidget);
+    await tester.pumpWidget(const SizedBox());
+  });
+
+  testWidgets('IdiomEscapeScreen renders chamber clue and idiom options', (tester) async {
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [databaseProvider.overrideWithValue(db)],
+        child: const MaterialApp(home: IdiomEscapeScreen()),
+      ),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 300));
+
+    expect(find.text('CHAMBER CIPHER CLUE'), findsOneWidget);
+    expect(find.text('Unlock Chamber Door'), findsOneWidget);
+    await tester.pumpWidget(const SizedBox());
+  });
+
+  testWidgets('MiniEmailBossScreen renders required C1 formulas and editor', (tester) async {
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [databaseProvider.overrideWithValue(db)],
+        child: const MaterialApp(home: MiniEmailBossScreen()),
+      ),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 300));
+
+    expect(find.text('Mini Email Boss'), findsOneWidget);
+    expect(find.text('C1 DIPLOMATIC REGISTER'), findsOneWidget);
+    expect(find.text('Submit to Boss Review'), findsOneWidget);
+    await tester.pumpWidget(const SizedBox());
+  });
+
+  testWidgets('CustomDeckScreen renders tabs and cards', (tester) async {
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [databaseProvider.overrideWithValue(db)],
+        child: const MaterialApp(home: CustomDeckScreen()),
+      ),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 300));
+
+    expect(find.text('Custom Decks & CSV Importer'), findsOneWidget);
+    expect(find.text('Add Single'), findsOneWidget);
+    expect(find.text('CSV Import'), findsOneWidget);
+    await tester.pumpWidget(const SizedBox());
+  });
+
+  testWidgets('MonthlyCheckpointScreen renders diagnostic audit and CEFR indicators', (tester) async {
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [databaseProvider.overrideWithValue(db)],
+        child: const MaterialApp(home: MonthlyCheckpointScreen()),
+      ),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 300));
+
+    expect(find.text('Monthly Checkpoint Diagnostic'), findsOneWidget);
+    expect(find.text('Executive Competency Audit'), findsOneWidget);
+    expect(find.text('Senior Pedagogical Feedback'), findsOneWidget);
     await tester.pumpWidget(const SizedBox());
   });
 }

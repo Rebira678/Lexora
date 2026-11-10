@@ -275,5 +275,244 @@
       "answer": "transitory",
       "skill": "vocab"
     }
+  ],
+  "role_play": [
+    {
+      "id": 1,
+      "title": "Senior Technical Job Interview",
+      "category": "Career & Professional",
+      "context": "You are interviewing for a Lead Developer role. The hiring manager is probing how you handle architectural debt and unexpected downtime.",
+      "turns": [
+        {
+          "speakerA": "Interviewer",
+          "textA": "Thank you for joining us today. Could you walk me through an incident where a critical system failed under your watch, and how you communicated that to non-technical stakeholders?",
+          "promptB": "Explain the incident diplomatically, emphasizing immediate containment, transparent updates, and root-cause analysis.",
+          "optionsB": [
+            "We had a major database deadlock during peak traffic. I immediately initiated our failover protocol, sent hourly status briefs detailing recovery timelines without jargon, and subsequently conducted a post-mortem to prevent recurrence.",
+            "The servers crashed because the junior dev pushed broken code. I told the business team not to panic and we fixed the bug after staying up late.",
+            "It was a complete disaster and the website went down. I didn't want the marketing team to worry so I waited until everything was back up before telling anyone."
+          ],
+          "correctIndex": 0,
+          "teacherFeedback": "Option 1 demonstrates senior executive presence: taking accountability, using academic vocabulary ('failover protocol', 'post-mortem', 'recurrence'), and respecting stakeholder needs."
+        },
+        {
+          "speakerA": "Interviewer",
+          "textA": "That demonstrates sound judgment. Now, suppose marketing demands a feature release in two weeks, but engineering estimates it requires four weeks to ensure compliance and security. How do you resolve this impasse?",
+          "promptB": "Propose a collaborative compromise using objective metrics and scoped deliverables.",
+          "optionsB": [
+            "I would schedule an alignment session to unpack the business drivers, propose releasing a secure Minimum Viable Feature within two weeks, and schedule the remaining secondary capabilities for the subsequent sprint.",
+            "I would flatly refuse their deadline because security always trumps marketing, and tell them engineering rules the roadmap.",
+            "We would work overtime and cut a few unit tests to make sure marketing gets what they asked for on time."
+          ],
+          "correctIndex": 0,
+          "teacherFeedback": "Option 1 exemplifies C1 negotiation pragmatics: 'unpack business drivers', 'scoped deliverables', and phased iteration without compromising integrity."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Airport Customs & Missing Luggage",
+      "category": "Practical Travel & Bureaucracy",
+      "context": "Your international flight landed, but your checked baggage containing vital research documents failed to arrive at the carousel.",
+      "turns": [
+        {
+          "speakerA": "Baggage Officer",
+          "textA": "Good evening, sir. How can I assist you today? All bags from flight 412 have already cleared the ramp.",
+          "promptB": "Report the missing luggage calmly and provide the claim receipt number.",
+          "optionsB": [
+            "Good evening. Regrettably, my checked baggage did not appear on Carousel 4. Here is my claim tag and flight itinerary; could we file an irregular property report?",
+            "Where is my suitcase? It has all my important stuff and your airline has ruined my entire trip!",
+            "I waited for a long time and nothing came out. Maybe somebody took it by accident?"
+          ],
+          "correctIndex": 0,
+          "teacherFeedback": "'Regrettably', 'claim tag', and 'irregular property report' reflect authentic formal procedural English."
+        }
+      ]
+    }
+  ],
+  "story_branch": [
+    {
+      "id": 1,
+      "title": "The Cipher of Oakhaven",
+      "genre": "Techno-Thriller Mystery",
+      "initialNodeId": "intro",
+      "nodes": {
+        "intro": {
+          "id": "intro",
+          "text": "The automated observatory at Mount Oakhaven had gone dark without telemetry warnings. As the lead systems investigator, you step across the frostbitten threshold. The primary terminal hums erratically, displaying an ambiguous prompt across the terminal:\n\n'CRITICAL ANOMALY: Core database locked due to cryptographic deviation.'",
+          "vocabHighlights": ["telemetry", "threshold", "erratically", "cryptographic"],
+          "choices": [
+            {
+              "text": "Analyze the corrupted memory registers on the physical console.",
+              "nextNodeId": "hardware_path",
+              "requiresComprehension": "Which word indicates that the terminal was behaving in an unpredictable manner?",
+              "comprehensionOptions": ["erratically", "frostbitten", "cryptographic"],
+              "comprehensionAnswer": "erratically"
+            },
+            {
+              "text": "Inspect the handwritten laboratory logbook beside the defunct backup generator.",
+              "nextNodeId": "logbook_path",
+              "requiresComprehension": "What does 'telemetry' refer to in this operational context?",
+              "comprehensionOptions": ["Remote automated data transmission", "Handwritten personal letters", "Visual telescope lenses"],
+              "comprehensionAnswer": "Remote automated data transmission"
+            }
+          ]
+        },
+        "hardware_path": {
+          "id": "hardware_path",
+          "text": "You attach your diagnostic tablet directly to the motherboard bus. A cascade of hex code reveals that the data corruption was not spontaneous; it was deliberate, disguised under an innocuous diagnostic routine.",
+          "vocabHighlights": ["cascade", "spontaneous", "innocuous"],
+          "choices": [
+            {
+              "text": "Execute a sandbox quarantine on the suspicious diagnostic thread.",
+              "nextNodeId": "conclusion_victory",
+              "requiresComprehension": "What does 'innocuous' mean in this sentence?",
+              "comprehensionOptions": ["Harmless in appearance", "Extremely destructive", "Highly confidential"],
+              "comprehensionAnswer": "Harmless in appearance"
+            }
+          ]
+        },
+        "logbook_path": {
+          "id": "logbook_path",
+          "text": "The logbook's final entry, dated midnight, is signed by Dr. Vance: 'The anomaly is self-propagating. Do not restore the primary gateway until the secondary redundancy matrix has been verified.'",
+          "vocabHighlights": ["self-propagating", "redundancy", "gateway"],
+          "choices": [
+            {
+              "text": "Heed Dr. Vance's warning and reroute telemetry through the secondary matrix.",
+              "nextNodeId": "conclusion_victory",
+              "requiresComprehension": "What does 'self-propagating' imply?",
+              "comprehensionOptions": ["Multiplying or spreading on its own", "Completely frozen in time", "Deleted permanently"],
+              "comprehensionAnswer": "Multiplying or spreading on its own"
+            }
+          ]
+        },
+        "conclusion_victory": {
+          "id": "conclusion_victory",
+          "text": "The diagnostic matrix illuminates green. The telemetry stream stabilizes, and the observatory telescopes realign with the northern sky. By deciphering the technical and contextual nuances, you have averted a catastrophic data loss.",
+          "vocabHighlights": ["stabilizes", "deciphering", "averted"],
+          "choices": []
+        }
+      }
+    }
+  ],
+  "phrasal_dungeon": [
+    {
+      "id": 1,
+      "verb": "account for",
+      "meaning": "To explain the cause of something, or to form a specific proportion of a total.",
+      "carrier": "Hydropower and solar arrays now ______ over thirty percent of domestic energy generation.",
+      "options": ["account for", "carry out", "rule out", "call off"],
+      "correct": "account for",
+      "bossDefeated": "Hydra of Ambiguity",
+      "teacherTip": "Remember that 'account for' takes a direct nominal object representing percentage, reason, or discrepancy."
+    },
+    {
+      "id": 2,
+      "verb": "carry out",
+      "meaning": "To execute, conduct, or complete an instruction, experiment, or procedure.",
+      "carrier": "The laboratory will ______ clinical trials on the experimental vaccine next month.",
+      "options": ["carry out", "stem from", "hinge upon", "phase out"],
+      "correct": "carry out",
+      "bossDefeated": "Golem of Inaction",
+      "teacherTip": "'Carry out' collocates strongly with 'investigation', 'experiment', 'survey', and 'orders'."
+    },
+    {
+      "id": 3,
+      "verb": "rule out",
+      "meaning": "To exclude someone or something from consideration as a possibility.",
+      "carrier": "Medical examiners were able to completely ______ foul play after toxicology reports returned negative.",
+      "options": ["rule out", "look into", "boil down to", "bring about"],
+      "correct": "rule out",
+      "bossDefeated": "Specter of Doubt",
+      "teacherTip": "Used extensively in academic literature when eliminating competing hypotheses."
+    },
+    {
+      "id": 4,
+      "verb": "bring about",
+      "meaning": "To cause something substantial or transformative to happen.",
+      "carrier": "The industrial revolution did ______ profound changes in human demographics and urban density.",
+      "options": ["bring about", "call off", "stem from", "account for"],
+      "correct": "bring about",
+      "bossDefeated": "Dragon of Stagnation",
+      "teacherTip": "'Bring about' is preferred over 'cause' in formal historical and sociological discourse."
+    },
+    {
+      "id": 5,
+      "verb": "phase out",
+      "meaning": "To gradually discontinue the use or production of something over a period of time.",
+      "carrier": "The European Union agreed to systematically ______ single-use plastics by the end of the decade.",
+      "options": ["phase out", "rule out", "bring about", "hinge upon"],
+      "correct": "phase out",
+      "bossDefeated": "Leviathan of Waste",
+      "teacherTip": "Antonym of 'phase in'. Essential for policy, environmental, and business English."
+    }
+  ],
+  "idiom_escape": [
+    {
+      "id": 1,
+      "chamberName": "The Archive of Toil",
+      "clue": "To work late into the night, particularly on demanding academic research or high-stakes business endeavors.",
+      "puzzleSentence": "With the funding deadline looming tomorrow morning, the entire laboratory team had to ______.",
+      "idiomOptions": ["burn the midnight oil", "bite the bullet", "cut corners", "throw in the towel"],
+      "correct": "burn the midnight oil",
+      "originNote": "Refers to burning oil in lamps before the advent of electricity to study or work past midnight."
+    },
+    {
+      "id": 2,
+      "chamberName": "The Chamber of Resolve",
+      "clue": "To accept a grim, difficult situation with courage and fortitude rather than running away from it.",
+      "puzzleSentence": "Knowing the company was facing insolvency, the CEO decided to ______ and announce the restructuring.",
+      "idiomOptions": ["bite the bullet", "jump on the bandwagon", "see eye to eye", "let the cat out of the bag"],
+      "correct": "bite the bullet",
+      "originNote": "Historical practice of having wounded soldiers bite a lead bullet to cope with battlefield surgery pain."
+    },
+    {
+      "id": 3,
+      "chamberName": "The Hall of Integrity",
+      "clue": "To do something haphazardly or omit essential steps in order to save time or financial expense.",
+      "puzzleSentence": "The bridge collapsed because the contractors decided to ______ on structural rebar quality.",
+      "idiomOptions": ["cut corners", "burn bridges", "break the ice", "call it a day"],
+      "correct": "cut corners",
+      "originNote": "Originates from driving or hunting, where cutting across corners saved distance at the cost of safety."
+    },
+    {
+      "id": 4,
+      "chamberName": "The Vault of Consensus",
+      "clue": "To be in full agreement on a policy or issue; to share the same perspective without discord.",
+      "puzzleSentence": "Although they debate fiercely, both political factions ______ regarding national cybersecurity defense.",
+      "idiomOptions": ["see eye to eye", "play devil's advocate", "spill the beans", "bark up the wrong tree"],
+      "correct": "see eye to eye",
+      "originNote": "Biblical origin from Isaiah 52:8, describing watchmen seeing together clearly."
+    }
+  ],
+  "email_boss": [
+    {
+      "id": 1,
+      "scenario": "Requesting a Formal Deadline Extension",
+      "recipient": "Professor Harrison / Senior Project Director",
+      "instructions": "Draft a formal email requesting a 3-day extension on the research paper. You must maintain C1 diplomatic register and include all required key phrases.",
+      "requiredPhrases": [
+        "due to unforeseen circumstances",
+        "would be grateful if",
+        "revised submission date",
+        "sincerely apologize for"
+      ],
+      "modelEmail": "Dear Professor Harrison,\n\nI hope this email finds you well. Regrettably, due to unforeseen circumstances involving laboratory hardware failure, I have experienced a disruption in data processing. I would be grateful if you could grant a brief extension, with a revised submission date of Friday, November 14th. I sincerely apologize for any inconvenience this adjustment may cause to your grading schedule.\n\nThank you for your understanding and guidance.\n\nSincerely,\nAlex Mercer",
+      "minWords": 45
+    },
+    {
+      "id": 2,
+      "scenario": "Resolving a Contractual Billing Discrepancy",
+      "recipient": "Vendor Accounts Department",
+      "instructions": "Address an unexpected 20% surcharge on your quarterly software invoice diplomatically without aggressive or colloquial tone.",
+      "requiredPhrases": [
+        "bring to your immediate attention",
+        "discrepancy between",
+        "rectify this issue",
+        "look forward to your prompt response"
+      ],
+      "modelEmail": "Dear Accounts Department,\n\nI am writing to bring to your immediate attention an unexpected charge on invoice #9042. There appears to be a noticeable discrepancy between our agreed contract rate and the invoiced total. Could you please review and rectify this issue at your earliest convenience? I look forward to your prompt response and revised documentation.\n\nBest regards,\nJordan Lee",
+      "minWords": 45
+    }
   ]
 }

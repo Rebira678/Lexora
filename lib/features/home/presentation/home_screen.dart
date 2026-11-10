@@ -31,6 +31,12 @@ import '../../speaking/shadow_boxing_screen.dart';
 import '../../boss_battle/boss_battle_screen.dart';
 import '../../mock_test/mock_test_screen.dart';
 import '../../achievements/presentation/achievements_screen.dart';
+import '../../speaking/role_play_screen.dart';
+import '../../reading/story_branch_screen.dart';
+import '../../games/phrasal_verb_dungeon/phrasal_verb_dungeon_screen.dart';
+import '../../games/idiom_escape/idiom_escape_screen.dart';
+import '../../writing/mini_email_boss_screen.dart';
+import '../../custom_decks/custom_deck_screen.dart';
 import 'widgets/game_art_painters.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
@@ -920,6 +926,71 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         ),
                       ),
                       _IllustratedGameCard(
+                        type: GameArtType.rolePlay,
+                        category: 'PRAGMATICS',
+                        title: 'Role-Play Dialogues',
+                        description: 'Contextual exchanges in real-world scenarios',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const RolePlayScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.storyBranch,
+                        category: 'IMMERSION',
+                        title: 'Story Branch',
+                        description: 'Branching narrative fiction with choices',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const StoryBranchScreen()),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 28),
+
+                  // Phase 3: Writing & Professional Lexis
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          'Phase 3: Writing & Professional Lexis',
+                          style: theme.textTheme.titleMedium?.copyWith(
+                            fontWeight: FontWeight.w700,
+                            letterSpacing: -0.2,
+                          ),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Text(
+                        'Formal Register',
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: theme.colorScheme.onSurfaceVariant,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+
+                  GridView.count(
+                    crossAxisCount: 2,
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    mainAxisSpacing: 14,
+                    crossAxisSpacing: 14,
+                    childAspectRatio: 0.82,
+                    children: [
+                      _IllustratedGameCard(
+                        type: GameArtType.emailBoss,
+                        category: 'DIPLOMATIC EMAIL',
+                        title: 'Mini Email Boss',
+                        description: 'Professional correspondence with required C1 collocations',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const MiniEmailBossScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
                         type: GameArtType.wordForge,
                         category: 'SYNTACTIC FORGE',
                         title: 'Word Forge',
@@ -935,6 +1006,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         description: 'Observation, contrast, and resolution portfolio',
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(builder: (_) => const DailyJournalScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.customDecks,
+                        category: 'CUSTOM SRS',
+                        title: 'Custom Decks & CSV',
+                        description: 'Create and import your own vocabulary lists',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const CustomDeckScreen()),
                         ),
                       ),
                     ],
@@ -975,6 +1055,24 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     crossAxisSpacing: 14,
                     childAspectRatio: 0.82,
                     children: [
+                      _IllustratedGameCard(
+                        type: GameArtType.phrasalDungeon,
+                        category: 'PHRASAL VERBS',
+                        title: 'Phrasal Dungeon',
+                        description: 'Dungeon guardian battles with C1 particles',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const PhrasalVerbDungeonScreen()),
+                        ),
+                      ),
+                      _IllustratedGameCard(
+                        type: GameArtType.idiomEscape,
+                        category: 'ETYMOLOGY',
+                        title: 'Idiom Escape Room',
+                        description: 'Solve chambers through idiomatic origin clues',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => const IdiomEscapeScreen()),
+                        ),
+                      ),
                       _IllustratedGameCard(
                         type: GameArtType.collocationMatch,
                         category: 'ACADEMIC LEXIS',
