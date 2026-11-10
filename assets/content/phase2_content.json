@@ -7,7 +7,12 @@
       "sentenceAfter": "traffic congestion in major metropolitan areas continued to worsen.",
       "correct": "however",
       "category": "Contrast",
-      "options": ["however", "therefore", "furthermore", "similarly"],
+      "options": [
+        "however",
+        "therefore",
+        "furthermore",
+        "similarly"
+      ],
       "explanation": "'However' signals a contrast between substantial investment and ongoing congestion."
     },
     {
@@ -17,7 +22,12 @@
       "sentenceAfter": "their published conclusions were questioned by independent peer reviewers.",
       "correct": "consequently",
       "category": "Cause & Effect",
-      "options": ["consequently", "meanwhile", "on the contrary", "in spite of"],
+      "options": [
+        "consequently",
+        "meanwhile",
+        "on the contrary",
+        "in spite of"
+      ],
       "explanation": "'Consequently' introduces the logical outcome or result of omitting key variables."
     },
     {
@@ -27,7 +37,12 @@
       "sentenceAfter": "they significantly reduce ambient urban air pollution when charged with renewable energy.",
       "correct": "furthermore",
       "category": "Addition",
-      "options": ["furthermore", "nevertheless", "instead", "otherwise"],
+      "options": [
+        "furthermore",
+        "nevertheless",
+        "instead",
+        "otherwise"
+      ],
       "explanation": "'Furthermore' adds an additional reinforcing benefit to zero tailpipe emissions."
     },
     {
@@ -37,7 +52,12 @@
       "sentenceAfter": "modern automated facilities depend on real-time robotics and machine vision.",
       "correct": "whereas",
       "category": "Comparison",
-      "options": ["whereas", "therefore", "consequently", "besides"],
+      "options": [
+        "whereas",
+        "therefore",
+        "consequently",
+        "besides"
+      ],
       "explanation": "'Whereas' indicates direct comparison between two contrasting systems or facts."
     },
     {
@@ -47,7 +67,12 @@
       "sentenceAfter": "it demonstrated a remarkable capacity to inhibit cell replication without toxic side effects.",
       "correct": "nevertheless",
       "category": "Concession",
-      "options": ["nevertheless", "hence", "likewise", "accordingly"],
+      "options": [
+        "nevertheless",
+        "hence",
+        "likewise",
+        "accordingly"
+      ],
       "explanation": "'Nevertheless' concedes the failure while presenting an unexpected positive breakthrough."
     },
     {
@@ -57,8 +82,73 @@
       "sentenceAfter": "small, agile startups often discover disruptive breakthroughs much faster.",
       "correct": "in contrast",
       "category": "Contrast",
-      "options": ["in contrast", "as a result", "for instance", "similarly"],
+      "options": [
+        "in contrast",
+        "as a result",
+        "for instance",
+        "similarly"
+      ],
       "explanation": "'In contrast' explicitly counterposes multinational resources against startup agility."
+    },
+    {
+      "id": 7,
+      "level": 3,
+      "sentenceBefore": "The clinical trial yielded promising neurological biomarkers;",
+      "sentenceAfter": "patient sample sizes were deemed insufficient for immediate regulatory licensing.",
+      "correct": "nonetheless",
+      "category": "Concessive Contrast",
+      "options": [
+        "nonetheless",
+        "therefore",
+        "similarly",
+        "in addition"
+      ],
+      "explanation": "'Nonetheless' introduces an unexpected or limiting fact that contrasts with the positive biomarkers."
+    },
+    {
+      "id": 8,
+      "level": 3,
+      "sentenceBefore": "Municipal authorities allocated thirty million euros to cycling corridors;",
+      "sentenceAfter": "vehicular congestion dropped sixteen percent across the metropolitan core.",
+      "correct": "consequently",
+      "category": "Cause & Effect",
+      "options": [
+        "consequently",
+        "conversely",
+        "meanwhile",
+        "on the other hand"
+      ],
+      "explanation": "'Consequently' shows the causal civic outcome of the infrastructure investment."
+    },
+    {
+      "id": 9,
+      "level": 4,
+      "sentenceBefore": "Algorithmic decision agents eliminate human fatigue in mortgage screening;",
+      "sentenceAfter": "they frequently perpetuate historical socioeconomic disparities present in training corpora.",
+      "correct": "however",
+      "category": "Contrast",
+      "options": [
+        "however",
+        "furthermore",
+        "hence",
+        "likewise"
+      ],
+      "explanation": "'However' contrasts operational efficiency with discriminatory statistical artifacts."
+    },
+    {
+      "id": 10,
+      "level": 4,
+      "sentenceBefore": "The central bank unexpectedly raised interest rates by seventy-five basis points;",
+      "sentenceAfter": "short-term borrowing costs for small enterprises surged abruptly.",
+      "correct": "as a result",
+      "category": "Cause & Effect",
+      "options": [
+        "as a result",
+        "whereas",
+        "in contrast",
+        "nevertheless"
+      ],
+      "explanation": "'As a result' directly demonstrates the macroeconomic consequence on borrowing costs."
     }
   ],
   "layer_builder": [
@@ -136,6 +226,56 @@
           "instruction": "Add a participial clause showing the ongoing consequence."
         }
       ]
+    },
+    {
+      "id": 4,
+      "level": 3,
+      "kernel": "The committee passed the resolution.",
+      "layers": [
+        {
+          "type": "Adverbial Time Clause",
+          "fragment": "After debating contentious ethical amendments for eight hours,",
+          "targetSentence": "After debating contentious ethical amendments for eight hours, the committee passed the resolution.",
+          "instruction": "Add an opening adverbial time clause."
+        },
+        {
+          "type": "Relative Clause",
+          "fragment": "which mandates carbon disclosure for multinational corporations,",
+          "targetSentence": "After debating contentious ethical amendments for eight hours, the committee passed the resolution, which mandates carbon disclosure for multinational corporations,",
+          "instruction": "Add a non-restrictive relative clause describing the resolution."
+        },
+        {
+          "type": "Manner & Majority",
+          "fragment": "by an overwhelming bipartisan majority.",
+          "targetSentence": "After debating contentious ethical amendments for eight hours, the committee passed the resolution, which mandates carbon disclosure for multinational corporations, by an overwhelming bipartisan majority.",
+          "instruction": "Add an adverbial prepositional phrase of manner at the end."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "level": 4,
+      "kernel": "Astronomers detected radio pulses.",
+      "layers": [
+        {
+          "type": "Prepositional Location",
+          "fragment": "From a dense globular cluster twelve thousand light-years away,",
+          "targetSentence": "From a dense globular cluster twelve thousand light-years away, astronomers detected radio pulses.",
+          "instruction": "Add a prepositional phrase of location at the beginning."
+        },
+        {
+          "type": "Relative Description",
+          "fragment": "that exhibited unprecedented mathematical periodicity,",
+          "targetSentence": "From a dense globular cluster twelve thousand light-years away, astronomers detected radio pulses that exhibited unprecedented mathematical periodicity,",
+          "instruction": "Add a defining relative clause characterizing the radio pulses."
+        },
+        {
+          "type": "Concessive Participle",
+          "fragment": "baffling astrophysicists across three continents.",
+          "targetSentence": "From a dense globular cluster twelve thousand light-years away, astronomers detected radio pulses that exhibited unprecedented mathematical periodicity, baffling astrophysicists across three continents.",
+          "instruction": "Add a participial clause of result at the conclusion."
+        }
+      ]
     }
   ],
   "context_detective": [
@@ -143,7 +283,12 @@
       "id": 1,
       "targetWord": "pragmatic",
       "sentence": "Rather than clinging to idealistic political theories that had repeatedly failed in practice, the governor adopted a pragmatic approach to fiscal reform.",
-      "options": ["Practical and realistic", "Stubborn and unyielding", "Theoretical and abstract", "Reckless and impulsive"],
+      "options": [
+        "Practical and realistic",
+        "Stubborn and unyielding",
+        "Theoretical and abstract",
+        "Reckless and impulsive"
+      ],
       "answer": "Practical and realistic",
       "clueType": "Contrast Clue",
       "explanation": "The contrast indicator 'Rather than clinging to idealistic... theories' directly clues that 'pragmatic' means grounded in real-world practicality."
@@ -152,7 +297,12 @@
       "id": 2,
       "targetWord": "ambiguous",
       "sentence": "Because the legal contract contained ambiguous phrasing regarding termination deadlines, both parties interpreted their contractual obligations differently.",
-      "options": ["Vague or open to multiple interpretations", "Completely binding and clear", "Unlawful and invalid", "Strictly confidential"],
+      "options": [
+        "Vague or open to multiple interpretations",
+        "Completely binding and clear",
+        "Unlawful and invalid",
+        "Strictly confidential"
+      ],
       "answer": "Vague or open to multiple interpretations",
       "clueType": "Cause & Effect Clue",
       "explanation": "'Because... both parties interpreted it differently' indicates the language was not clear, pointing directly to 'ambiguous'."
@@ -161,7 +311,12 @@
       "id": 3,
       "targetWord": "ubiquitous",
       "sentence": "In modern urban society, smartphones have become ubiquitous; you will find commuters using them on subways, diners in restaurants, and students in lecture halls.",
-      "options": ["Present everywhere simultaneously", "Extremely expensive", "Rare and coveted", "Obsolete and outdated"],
+      "options": [
+        "Present everywhere simultaneously",
+        "Extremely expensive",
+        "Rare and coveted",
+        "Obsolete and outdated"
+      ],
       "answer": "Present everywhere simultaneously",
       "clueType": "Example Clue",
       "explanation": "The examples listed (subways, restaurants, lecture halls) reveal that smartphones are found everywhere."
@@ -170,7 +325,12 @@
       "id": 4,
       "targetWord": "resilient",
       "sentence": "Despite experiencing devastating consecutive quarterly losses, the resilient company restructured its debt and bounced back stronger the following year.",
-      "options": ["Able to recover quickly from hardship", "Reluctant to change", "Financially bankrupt", "Overly cautious"],
+      "options": [
+        "Able to recover quickly from hardship",
+        "Reluctant to change",
+        "Financially bankrupt",
+        "Overly cautious"
+      ],
       "answer": "Able to recover quickly from hardship",
       "clueType": "Contrast & Concession Clue",
       "explanation": "'Despite... losses, it bounced back stronger' establishes that 'resilient' signifies toughness and bounce-back ability."
@@ -179,10 +339,57 @@
       "id": 5,
       "targetWord": "meticulous",
       "sentence": "The forensic pathologist conducted a meticulous examination of the evidence, painstakingly documenting every microscopic scratch on the glass.",
-      "options": ["Showing great attention to detail", "Hurried and careless", "Bored and unmotivated", "Aggressive and combative"],
+      "options": [
+        "Showing great attention to detail",
+        "Hurried and careless",
+        "Bored and unmotivated",
+        "Aggressive and combative"
+      ],
       "answer": "Showing great attention to detail",
       "clueType": "Restatement Clue",
       "explanation": "'Painstakingly documenting every microscopic scratch' restates the extreme care of 'meticulous'."
+    },
+    {
+      "id": 6,
+      "targetWord": "ubiquitous",
+      "sentence": "With the explosion of smartphones and cellular towers, internet connectivity has become virtually ______ in everyday urban life.",
+      "options": [
+        "ubiquitous",
+        "ephemeral",
+        "scarce",
+        "obsolete"
+      ],
+      "answer": "ubiquitous",
+      "clueType": "Contrast / Elaboration",
+      "explanation": "'Everyday urban life' and 'explosion of smartphones' indicate universal presence everywhere."
+    },
+    {
+      "id": 7,
+      "targetWord": "ephemeral",
+      "sentence": "Unlike stone monuments that endure for millennia, digital trends are notoriously ______, vanishing within days.",
+      "options": [
+        "ephemeral",
+        "perpetual",
+        "resilient",
+        "immutable"
+      ],
+      "answer": "ephemeral",
+      "clueType": "Antonym / Contrast",
+      "explanation": "'Unlike stone monuments that endure' directly contrasts with 'vanishing within days', defining 'ephemeral' (short-lived)."
+    },
+    {
+      "id": 8,
+      "targetWord": "lucrative",
+      "sentence": "Transitioning into offshore renewable engineering proved exceptionally ______, yielding record profits for the holding company.",
+      "options": [
+        "lucrative",
+        "bankrupt",
+        "deleterious",
+        "frugal"
+      ],
+      "answer": "lucrative",
+      "clueType": "Cause / Result",
+      "explanation": "'Yielding record profits' is the direct contextual definition of 'lucrative' (highly profitable)."
     }
   ],
   "prefix_suffix_lab": [
@@ -193,8 +400,18 @@
       "target": "unpredictable",
       "prefix": "un-",
       "suffix": "-able",
-      "availablePrefixes": ["un-", "in-", "dis-", "re-"],
-      "availableSuffixes": ["-able", "-ment", "-tion", "-ive"],
+      "availablePrefixes": [
+        "un-",
+        "in-",
+        "dis-",
+        "re-"
+      ],
+      "availableSuffixes": [
+        "-able",
+        "-ment",
+        "-tion",
+        "-ive"
+      ],
       "explanation": "Root: PREDICT (verb) + un- (negative prefix) + -able (adjective suffix) = 'unpredictable' (cannot be forecasted)."
     },
     {
@@ -204,8 +421,18 @@
       "target": "reliability",
       "prefix": "",
       "suffix": "-ability",
-      "availablePrefixes": ["none", "un-", "dis-", "mis-"],
-      "availableSuffixes": ["-ability", "-ment", "-ous", "-ful"],
+      "availablePrefixes": [
+        "none",
+        "un-",
+        "dis-",
+        "mis-"
+      ],
+      "availableSuffixes": [
+        "-ability",
+        "-ment",
+        "-ous",
+        "-ful"
+      ],
       "explanation": "Root: RELY (verb) + -ability (noun suffix indicating capacity or quality) = 'reliability'."
     },
     {
@@ -215,8 +442,18 @@
       "target": "unsustainable",
       "prefix": "un-",
       "suffix": "-able",
-      "availablePrefixes": ["un-", "in-", "non-", "pre-"],
-      "availableSuffixes": ["-able", "-ment", "-ness", "-ity"],
+      "availablePrefixes": [
+        "un-",
+        "in-",
+        "non-",
+        "pre-"
+      ],
+      "availableSuffixes": [
+        "-able",
+        "-ment",
+        "-ness",
+        "-ity"
+      ],
       "explanation": "Root: SUSTAIN (verb) + un- (negative) + -able (adjective) = 'unsustainable' (cannot be maintained)."
     },
     {
@@ -226,9 +463,61 @@
       "target": "inaccuracy",
       "prefix": "in-",
       "suffix": "-y",
-      "availablePrefixes": ["in-", "un-", "dis-", "anti-"],
-      "availableSuffixes": ["-y", "-ment", "-tion", "-ful"],
+      "availablePrefixes": [
+        "in-",
+        "un-",
+        "dis-",
+        "anti-"
+      ],
+      "availableSuffixes": [
+        "-y",
+        "-ment",
+        "-tion",
+        "-ful"
+      ],
       "explanation": "Root: ACCURATE (adjective) + in- (negative prefix) + -y (noun suffix) = 'inaccuracy' (a mistake or error)."
+    },
+    {
+      "id": 5,
+      "root": "tract",
+      "sentence": "Extraneous noises in the study hall will ______ students from their reading comprehension.",
+      "target": "distract",
+      "prefix": "dis-",
+      "suffix": "",
+      "availablePrefixes": [
+        "dis-",
+        "re-",
+        "un-",
+        "sub-"
+      ],
+      "availableSuffixes": [
+        "-ion",
+        "-able",
+        "-ment",
+        "-ness"
+      ],
+      "explanation": "Root 'tract' (to pull/draw) + prefix 'dis-' (away) = 'distract' (to draw attention away)."
+    },
+    {
+      "id": 6,
+      "root": "cogn",
+      "sentence": "Facial ______ software has altered biometric surveillance paradigms.",
+      "target": "recognition",
+      "prefix": "re-",
+      "suffix": "-ition",
+      "availablePrefixes": [
+        "re-",
+        "pre-",
+        "anti-",
+        "un-"
+      ],
+      "availableSuffixes": [
+        "-ition",
+        "-able",
+        "-ment",
+        "-ful"
+      ],
+      "explanation": "Root 'cogn' (to know) + 're-' (again) + '-ition' (noun suffix) = 'recognition'."
     }
   ],
   "sound_sniper": [
@@ -276,6 +565,24 @@
       "ipaDistractor": "/fʊl/",
       "phonemeContrast": "Tense rounded /uː/ vs Lax near-back /ʊ/",
       "explanation": "'Fool' rounds the lips firmly for /uː/; 'full' keeps lips relaxed for /ʊ/."
+    },
+    {
+      "id": 6,
+      "target": "seat",
+      "ipaTarget": "/siːt/",
+      "distractor": "sit",
+      "ipaDistractor": "/sɪt/",
+      "phonemeContrast": "/iː/ vs /ɪ/",
+      "explanation": "'Seat' contains the tense long vowel /iː/, whereas 'sit' uses the lax short vowel /ɪ/."
+    },
+    {
+      "id": 7,
+      "target": "reach",
+      "ipaTarget": "/riːtʃ/",
+      "distractor": "rich",
+      "ipaDistractor": "/rɪtʃ/",
+      "phonemeContrast": "/iː/ vs /ɪ/",
+      "explanation": "'Reach' has the long vowel /iː/ (to extend towards), while 'rich' has the short vowel /ɪ/ (wealthy)."
     }
   ],
   "error_hunter": [
@@ -314,6 +621,24 @@
       "errorIndex": 4,
       "category": "Prepositional Verb",
       "explanation": "The verb 'congratulate' collogates with 'on', not 'for': 'congratulated someone ON doing something'."
+    },
+    {
+      "id": 5,
+      "sentence": "Neither the lead researcher nor his laboratory assistants was aware of the contamination.",
+      "errorWord": "was",
+      "correction": "were",
+      "errorIndex": 8,
+      "category": "Subject-Verb Proximity Agreement",
+      "explanation": "With 'neither... nor...', the verb agrees with the closer subject ('assistants' is plural, so 'were' is required)."
+    },
+    {
+      "id": 6,
+      "sentence": "The economic data clearly demonstrates that inflation have peaked.",
+      "errorWord": "have",
+      "correction": "has",
+      "errorIndex": 6,
+      "category": "Subject-Verb Agreement",
+      "explanation": "Singular subject 'inflation' requires singular auxiliary verb 'has', not 'have'."
     }
   ]
 }

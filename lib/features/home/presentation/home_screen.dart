@@ -45,6 +45,8 @@ import '../../listening/lecture_notes_screen.dart';
 import '../../speaking/debate_mode_screen.dart';
 import '../../writing/cohesion_fixer_screen.dart';
 import '../../wild_items/real_english_log_screen.dart';
+import '../../word_notebook/word_notebook_screen.dart';
+import 'widgets/daily_quest_board_widget.dart';
 import 'widgets/game_art_painters.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
@@ -338,6 +340,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         ),
         actions: [
           IconButton(
+            icon: const Icon(Icons.menu_book_rounded, size: 20),
+            tooltip: 'Word Notebook (Pokédex)',
+            onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute(builder: (_) => const WordNotebookScreen()),
+            ),
+          ),
+          IconButton(
             icon: const Icon(Icons.schedule_rounded, size: 20),
             tooltip: 'Daily Reminder',
             onPressed: () => _showReminderSettingsDialog(context),
@@ -464,6 +473,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     ),
                   ),
                   const SizedBox(height: 12),
+
+                  // Daily Quest Board (Spec 7.5)
+                  const DailyQuestBoardWidget(),
+                  const SizedBox(height: 8),
 
                   // Implementation Intention Anchor (Minimalist Quote Card)
                   InkWell(

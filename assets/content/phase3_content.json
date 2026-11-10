@@ -4,7 +4,12 @@
       "id": 1,
       "base": "draw a",
       "correct": "conclusion",
-      "options": ["conclusion", "decision", "judgement", "thought"],
+      "options": [
+        "conclusion",
+        "decision",
+        "judgement",
+        "thought"
+      ],
       "type": "verb_noun",
       "carrier": "Based on the empirical evidence presented, researchers were able to draw a definitive ______.",
       "explanation": "'Draw a conclusion' is a fixed academic collocation meaning to deduce a result after considering the evidence."
@@ -13,7 +18,12 @@
       "id": 2,
       "base": "pose a",
       "correct": "threat",
-      "options": ["threat", "danger", "harm", "damage"],
+      "options": [
+        "threat",
+        "danger",
+        "harm",
+        "damage"
+      ],
       "type": "verb_noun",
       "carrier": "Unregulated artificial intelligence models may pose a serious ______ to data privacy.",
       "explanation": "'Pose a threat/risk' is standard academic collocation; 'make danger' or 'give harm' are typical non-native errors."
@@ -22,7 +32,12 @@
       "id": 3,
       "base": "exert",
       "correct": "influence",
-      "options": ["influence", "powerness", "impactment", "persuasion"],
+      "options": [
+        "influence",
+        "powerness",
+        "impactment",
+        "persuasion"
+      ],
       "type": "verb_noun",
       "carrier": "Socioeconomic conditions exert a profound ______ on educational attainment.",
       "explanation": "'Exert influence/pressure' describes applying force or having an active effect on an outcome."
@@ -31,7 +46,12 @@
       "id": 4,
       "base": "account",
       "correct": "for",
-      "options": ["for", "about", "to", "with"],
+      "options": [
+        "for",
+        "about",
+        "to",
+        "with"
+      ],
       "type": "phrasal_verb",
       "carrier": "Technological advancements account ______ nearly forty percent of productivity gains.",
       "explanation": "'Account for' means to explain the cause of something or to form a particular proportion of something."
@@ -40,7 +60,12 @@
       "id": 5,
       "base": "stem",
       "correct": "from",
-      "options": ["from", "of", "out", "by"],
+      "options": [
+        "from",
+        "of",
+        "out",
+        "by"
+      ],
       "type": "phrasal_verb",
       "carrier": "Many contemporary environmental challenges stem ______ decades of unchecked industrial growth.",
       "explanation": "'Stem from' means to originate or develop as a result of something."
@@ -49,7 +74,12 @@
       "id": 6,
       "base": "hinge",
       "correct": "upon",
-      "options": ["upon", "at", "against", "into"],
+      "options": [
+        "upon",
+        "at",
+        "against",
+        "into"
+      ],
       "type": "phrasal_verb",
       "carrier": "The success of the proposed healthcare reform will hinge ______ bipartisan legislative support.",
       "explanation": "'Hinge on/upon' means to depend entirely on a particular factor or contingency."
@@ -58,7 +88,12 @@
       "id": 7,
       "base": "conduct an",
       "correct": "investigation",
-      "options": ["investigation", "inspectionment", "examination", "inquiry"],
+      "options": [
+        "investigation",
+        "inspectionment",
+        "examination",
+        "inquiry"
+      ],
       "type": "verb_noun",
       "carrier": "The supervisory board decided to conduct an exhaustive ______ into financial discrepancies.",
       "explanation": "'Conduct an investigation/experiment/survey' is the canonical academic phrase for carrying out research."
@@ -67,10 +102,71 @@
       "id": 8,
       "base": "exercise",
       "correct": "caution",
-      "options": ["caution", "carefulness", "warning", "attention"],
+      "options": [
+        "caution",
+        "carefulness",
+        "warning",
+        "attention"
+      ],
       "type": "verb_noun",
       "carrier": "Economists advise policymakers to exercise extreme ______ before implementing tariff hikes.",
       "explanation": "'Exercise caution/restraint' is a formal collocation meaning to be careful or judicious."
+    },
+    {
+      "id": 9,
+      "base": "bridge the",
+      "correct": "gap",
+      "options": [
+        "gap",
+        "hole",
+        "ditch",
+        "rift"
+      ],
+      "type": "verb_noun",
+      "carrier": "Public subsidies are designed to bridge the socioeconomic ______ between privileged and marginalized students.",
+      "explanation": "'Bridge the gap' describes actively overcoming disparities or reconciling systemic inequities."
+    },
+    {
+      "id": 10,
+      "base": "pave the",
+      "correct": "way",
+      "options": [
+        "way",
+        "road",
+        "street",
+        "pathway"
+      ],
+      "type": "verb_noun",
+      "carrier": "Breakthroughs in CRISPR gene editing have paved the ______ for targeted non-invasive therapies.",
+      "explanation": "'Pave the way for' denotes establishing favorable conditions to facilitate future breakthroughs."
+    },
+    {
+      "id": 11,
+      "base": "take into",
+      "correct": "account",
+      "options": [
+        "account",
+        "mind",
+        "head",
+        "consideration"
+      ],
+      "type": "verb_noun",
+      "carrier": "Urban planners must take demographic migration trends into ______ when constructing civic transport systems.",
+      "explanation": "'Take into account' means to consider or factor in variables before making a strategic determination."
+    },
+    {
+      "id": 12,
+      "base": "cast",
+      "correct": "doubt",
+      "options": [
+        "doubt",
+        "hesitation",
+        "mistrust",
+        "suspicion"
+      ],
+      "type": "verb_noun",
+      "carrier": "Flaws in the experimental control group cast serious ______ on the validity of the published findings.",
+      "explanation": "'Cast doubt on' means to cause an idea, hypothesis, or finding to appear questionable or unreliable."
     }
   ],
   "talker_prompts": [
@@ -85,7 +181,12 @@
         "Conversely, emergent industries will require...",
         "Ultimately, the net outcome hinges upon..."
       ],
-      "targetKeywords": ["displace", "emergent", "unprecedented", "mitigate"],
+      "targetKeywords": [
+        "displace",
+        "emergent",
+        "unprecedented",
+        "mitigate"
+      ],
       "minWords": 80
     },
     {
@@ -99,7 +200,12 @@
         "Furthermore, empirical studies indicate...",
         "In light of these considerations..."
       ],
-      "targetKeywords": ["infrastructure", "sustainable", "incentivize", "drastic"],
+      "targetKeywords": [
+        "infrastructure",
+        "sustainable",
+        "incentivize",
+        "drastic"
+      ],
       "minWords": 80
     },
     {
@@ -113,38 +219,198 @@
         "Nevertheless, the erosion of informal collaboration...",
         "Therefore, hybrid frameworks appear to offer..."
       ],
-      "targetKeywords": ["cohesion", "spontaneous", "compromise", "dynamic"],
+      "targetKeywords": [
+        "cohesion",
+        "spontaneous",
+        "compromise",
+        "dynamic"
+      ],
+      "minWords": 80
+    },
+    {
+      "id": 4,
+      "topic": "Ethical Consumerism",
+      "category": "Economics & Ethics",
+      "prompt": "Speak for 60 seconds on whether individual consumer choices can effectively halt climate degradation or if systemic regulation is indispensable. Articulate both perspectives before concluding.",
+      "scaffolds": [
+        "In recent discourse surrounding sustainability...",
+        "Proponents of consumer activism maintain that...",
+        "On the other hand, empirical realities demonstrate...",
+        "Ultimately, meaningful transformation necessitates..."
+      ],
+      "targetKeywords": [
+        "systemic",
+        "degradation",
+        "indispensable",
+        "accountability"
+      ],
+      "minWords": 80
+    },
+    {
+      "id": 5,
+      "topic": "Public Health Communication",
+      "category": "Healthcare & Governance",
+      "prompt": "Speak for 60 seconds analyzing why public health authorities struggled with messaging during global crises. Propose two concrete rhetorical strategies to restore public trust.",
+      "scaffolds": [
+        "Public health communication often falters when...",
+        "A prime contributor to skepticism is...",
+        "To restore institutional credibility, officials should...",
+        "By prioritizing transparent humility..."
+      ],
+      "targetKeywords": [
+        "skepticism",
+        "institutional",
+        "transparency",
+        "nuanced"
+      ],
+      "minWords": 80
+    },
+    {
+      "id": 6,
+      "topic": "The Future of Higher Education",
+      "category": "Academia & Technology",
+      "prompt": "Speak for 60 seconds on whether traditional four-year university degrees are becoming economically obsolete in an era of rapid AI-assisted micro-credentials.",
+      "scaffolds": [
+        "The traditional university paradigm is confronting...",
+        "While critics point to soaring tuition debts...",
+        "Conversely, academic institutions cultivate...",
+        "In conclusion, higher education must pivot toward..."
+      ],
+      "targetKeywords": [
+        "paradigm",
+        "obsolete",
+        "pedagogical",
+        "credential"
+      ],
+      "minWords": 80
+    },
+    {
+      "id": 7,
+      "topic": "Space Exploration vs Social Welfare",
+      "category": "Public Policy & Science",
+      "prompt": "Speak for 60 seconds debating whether sovereign states should invest billions in lunar and Mars missions while domestic healthcare and poverty remain underfunded.",
+      "scaffolds": [
+        "The debate over space exploration funding frequently pits...",
+        "From an immediate humanitarian standpoint...",
+        "However, technological spin-offs from aerospace research...",
+        "A balanced fiscal approach would mandate..."
+      ],
+      "targetKeywords": [
+        "expenditure",
+        "humanitarian",
+        "catalyze",
+        "allocation"
+      ],
+      "minWords": 80
+    },
+    {
+      "id": 8,
+      "topic": "The Psychology of Social Media Algorithms",
+      "category": "Technology & Mind",
+      "prompt": "Speak for 60 seconds on how algorithmic feed optimization exploits human cognitive vulnerabilities, such as negativity bias and outrage addiction.",
+      "scaffolds": [
+        "Digital platforms are explicitly engineered to maximize...",
+        "By weaponizing evolutionary heuristics like...",
+        "The downstream psychological consequences include...",
+        "Combating this cognitive capture requires..."
+      ],
+      "targetKeywords": [
+        "heuristic",
+        "vulnerability",
+        "polarization",
+        "deliberate"
+      ],
       "minWords": 80
     }
   ],
   "word_forge": [
     {
       "id": 1,
-      "targetWords": ["mitigate", "unprecedented", "pragmatic"],
+      "targetWords": [
+        "mitigate",
+        "unprecedented",
+        "pragmatic"
+      ],
       "theme": "Crisis Management & Environmental Policy",
       "modelAnswer": "To mitigate the unprecedented effects of climate change, policymakers must adopt pragmatic economic frameworks rather than purely ideological stances.",
       "pedagogyNote": "Notice how 'mitigate' functions as an infinitive of purpose, 'unprecedented' modifies 'effects', and 'pragmatic' qualifies the proposed solution."
     },
     {
       "id": 2,
-      "targetWords": ["substantiate", "plausible", "discrepancy"],
+      "targetWords": [
+        "substantiate",
+        "plausible",
+        "discrepancy"
+      ],
       "theme": "Scientific Research & Evidence",
       "modelAnswer": "Although the researcher proposed a plausible hypothesis, she was unable to substantiate her claims due to an unresolved discrepancy in the laboratory data.",
       "pedagogyNote": "Observe the contrast clause introduced by 'Although', contrasting 'plausible' with the failure to 'substantiate' caused by the 'discrepancy'."
     },
     {
       "id": 3,
-      "targetWords": ["inherent", "deteriorate", "inevitable"],
+      "targetWords": [
+        "inherent",
+        "deteriorate",
+        "inevitable"
+      ],
       "theme": "Urban Infrastructure & Engineering",
       "modelAnswer": "Without periodic maintenance, the inherent structural flaws in aging bridges will inevitably cause them to deteriorate over time.",
       "pedagogyNote": "'Inherent' correctly precedes the noun 'flaws', while 'inevitably' acts as an adverb modifying the causative verb 'cause'."
     },
     {
       "id": 4,
-      "targetWords": ["advocate", "comprehensive", "feasible"],
+      "targetWords": [
+        "advocate",
+        "comprehensive",
+        "feasible"
+      ],
       "theme": "Educational Reform & Access",
       "modelAnswer": "Distinguished educators advocate for a comprehensive curriculum overhaul that remains economically feasible for underfunded public schools.",
       "pedagogyNote": "'Advocate for' selects a noun phrase qualified by 'comprehensive', balanced by an adjective clause 'that remains feasible'."
+    },
+    {
+      "id": 5,
+      "targetWords": [
+        "paradigm",
+        "disparity",
+        "substantiate"
+      ],
+      "theme": "Socioeconomic Inequality & Research",
+      "modelAnswer": "To substantiate the thesis that automation exacerbates income disparity, economists formulated an empirical research paradigm.",
+      "pedagogyNote": "'Substantiate' functions as an infinitive of purpose, 'disparity' serves as the direct object, and 'paradigm' anchors the methodological framework."
+    },
+    {
+      "id": 6,
+      "targetWords": [
+        "catalyze",
+        "tangential",
+        "dichotomy"
+      ],
+      "theme": "Rhetoric, Law & Public Policy",
+      "modelAnswer": "Rather than getting sidetracked by tangential debates, the committee sought to catalyze reform by dismantling the false dichotomy between growth and conservation.",
+      "pedagogyNote": "'Tangential' modifies 'debates', 'catalyze' is the target verb, and 'dichotomy' captures the conceptual tension."
+    },
+    {
+      "id": 7,
+      "targetWords": [
+        "ambivalent",
+        "meticulous",
+        "resolute"
+      ],
+      "theme": "Crisis Leadership & Strategy",
+      "modelAnswer": "While board members felt ambivalent about the merger, the CEO remained resolute after completing meticulous due diligence.",
+      "pedagogyNote": "Contrasts the board's emotional state ('ambivalent') with the executive's stance ('resolute'), justified by thorough rigor ('meticulous')."
+    },
+    {
+      "id": 8,
+      "targetWords": [
+        "frugal",
+        "disinterested",
+        "culmination"
+      ],
+      "theme": "Governance & Institutional Trust",
+      "modelAnswer": "The historic treaty represented the culmination of years of work by a disinterested special envoy known for her frugal administration.",
+      "pedagogyNote": "'Culmination' signifies the crowning achievement, 'disinterested' affirms impartial neutrality, and 'frugal' highlights fiscal discipline."
     }
   ],
   "journal_prompts": [
@@ -176,7 +442,12 @@
       "type": "connector",
       "prompt": "Choose the precise connector to bridge these academic propositions:",
       "sentence": "The initial trials produced inconclusive metrics. ______, secondary telemetry verified the fundamental hypothesis.",
-      "options": ["Nevertheless", "Consequently", "Namely", "Similarly"],
+      "options": [
+        "Nevertheless",
+        "Consequently",
+        "Namely",
+        "Similarly"
+      ],
       "answer": "Nevertheless",
       "damage": 100,
       "explanation": "'Nevertheless' provides the concession required when initial findings are inconclusive but later confirmed."
@@ -187,7 +458,12 @@
       "type": "morphology",
       "prompt": "Synthesize the correct adverbial derivation from root 'PRECEDENT':",
       "sentence": "The rapid expansion of telecommunications occurred ______ fast during the late nineties.",
-      "options": ["unprecedentedly", "precedently", "imprecedented", "precedence"],
+      "options": [
+        "unprecedentedly",
+        "precedently",
+        "imprecedented",
+        "precedence"
+      ],
       "answer": "unprecedentedly",
       "damage": 120,
       "explanation": "'Un- + precedent + -ed + -ly' creates the negative adverb meaning in a manner never before seen."
@@ -198,7 +474,12 @@
       "type": "collocation",
       "prompt": "Complete the academic collocation:",
       "sentence": "Strict adherence to safety guidelines will ______ a vital role in preventing workplace accidents.",
-      "options": ["play", "do", "make", "lead"],
+      "options": [
+        "play",
+        "do",
+        "make",
+        "lead"
+      ],
       "answer": "play",
       "damage": 90,
       "explanation": "'Play a role' is the canonical collocation; *do a role* or *make a role* are erroneous."
@@ -209,7 +490,12 @@
       "type": "error_hunt",
       "prompt": "Identify the flawed segment in the sentence:",
       "sentence": "Neither the lead investigator nor his research assistants was prepared for the audit.",
-      "options": ["neither", "investigator", "was", "prepared"],
+      "options": [
+        "neither",
+        "investigator",
+        "was",
+        "prepared"
+      ],
       "answer": "was",
       "damage": 130,
       "explanation": "With 'neither... nor', the verb agrees with the closer subject ('assistants', plural), so it must be 'were'."
@@ -220,7 +506,12 @@
       "type": "sound_sniper",
       "prompt": "Phonemic discrimination: Target sound /æ/ as in 'flash':",
       "sentence": "Which word contains the lax front vowel /æ/?",
-      "options": ["flash", "flesh", "flush", "flock"],
+      "options": [
+        "flash",
+        "flesh",
+        "flush",
+        "flock"
+      ],
       "answer": "flash",
       "damage": 110,
       "explanation": "'Flash' has /æ/, whereas 'flesh' is /ɛ/, 'flush' is /ʌ/, and 'flock' is /ɒ/."
@@ -231,7 +522,12 @@
       "type": "idiom",
       "prompt": "Decapitate the Hydra by completing the C1 idiom: 'The whistleblower refused to ______ the beans until federal protections were codified.'",
       "sentence": "Fill in the correct verbal particle for disclosure:",
-      "options": ["spill", "pour", "drop", "scatter"],
+      "options": [
+        "spill",
+        "pour",
+        "drop",
+        "scatter"
+      ],
       "answer": "spill",
       "damage": 120,
       "explanation": "'Spill the beans' is the established idiom meaning to disclose confidential information prematurely."
@@ -274,7 +570,12 @@
       "type": "cohesion",
       "prompt": "Sever the Kraken's tentacle by choosing the cohesive connector that marks causal deduction:",
       "sentence": "Renewable generation surpassed baseline projections; ______, fossil fuel reserves were conserved.",
-      "options": ["consequently", "conversely", "notwithstanding", "nevertheless"],
+      "options": [
+        "consequently",
+        "conversely",
+        "notwithstanding",
+        "nevertheless"
+      ],
       "answer": "consequently",
       "damage": 135,
       "explanation": "'Consequently' indicates that the second clause is a direct logical result of the first."
@@ -285,7 +586,12 @@
       "type": "c1_capstone",
       "prompt": "Banish the Arch-Daemon with the ultimate C1 collocation: 'The discovery gave ______ to revolutionary oncology therapies.'",
       "sentence": "Complete the fixed academic expression denoting origin/emergence:",
-      "options": ["rise", "birth", "push", "flow"],
+      "options": [
+        "rise",
+        "birth",
+        "push",
+        "flow"
+      ],
       "answer": "rise",
       "damage": 150,
       "explanation": "'Give rise to' is the standard C1 academic idiom for causing or precipitating a phenomenon."
@@ -643,6 +949,146 @@
           ],
           "correctIndex": 0,
           "teacherFeedback": "'Regrettably', 'claim tag', and 'irregular property report' reflect authentic formal procedural English."
+        },
+        {
+          "speakerA": "Baggage Officer",
+          "textA": "I see. Our system shows the bag was misrouted during the Frankfurt transfer. It will arrive on the morning flight at 09:30. Would you prefer terminal pickup or courier delivery?",
+          "promptB": "Request courier delivery to your hotel address and ask for an official reference number.",
+          "optionsB": [
+            "Courier delivery to my hotel would be ideal, as I have a conference keynote tomorrow at noon. May I also request the tracking reference number for my insurance records?",
+            "Just send it to whatever hotel I am staying at, and call me whenever the driver gets there.",
+            "I will come back here tomorrow morning and wait at the gate myself."
+          ],
+          "correctIndex": 0,
+          "teacherFeedback": "Option 1 clearly states the constraints ('conference keynote'), specifies delivery, and requests formal verification ('tracking reference number')."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Medical Consultation & Diagnostic Clarity",
+      "category": "Health & Professional Consultation",
+      "context": "You are consulting a physician regarding persistent fatigue, brain fog, and muscle aches that have lasted for eight weeks.",
+      "turns": [
+        {
+          "speakerA": "Dr. Thorne",
+          "textA": "Good morning. I've reviewed your preliminary vitals, which look normal. Tell me in your own words what symptoms have been bothering you most.",
+          "promptB": "Describe the chronicity and impact of your symptoms precisely without hyperbole.",
+          "optionsB": [
+            "Over the past eight weeks, I have experienced uncharacteristic lethargy and cognitive fog that do not alleviate with rest. It has noticeably impaired my concentration during working hours.",
+            "I feel totally exhausted every second of the day and I cannot think at all. It must be something really terrible.",
+            "I've just been feeling a little bit tired lately, maybe because I had some work stress."
+          ],
+          "correctIndex": 0,
+          "teacherFeedback": "'Uncharacteristic lethargy', 'cognitive fog', and 'not alleviate with rest' communicate clinical precision that helps the doctor pinpoint differential diagnoses."
+        },
+        {
+          "speakerA": "Dr. Thorne",
+          "textA": "I understand. Given the duration, routine fatigue might not explain it. What would you like to explore next in terms of laboratory work?",
+          "promptB": "Diplomatically inquire about a comprehensive metabolic panel and thyroid screening.",
+          "optionsB": [
+            "Would you recommend ordering a comprehensive metabolic panel alongside thyroid and ferritin markers to rule out endocrine or nutritional deficiencies?",
+            "I read on the internet that I need 20 different tests right now, so please give me all of them.",
+            "I don't know, you're the doctor so do whatever test is cheapest."
+          ],
+          "correctIndex": 0,
+          "teacherFeedback": "'Comprehensive metabolic panel', 'thyroid and ferritin markers', and 'rule out deficiencies' reflect collaborative, informed patient agency."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Executive Dining & Severe Allergy Protocol",
+      "category": "Hospitality & Social Etiquette",
+      "context": "You are hosting international clients at a Michelin-starred restaurant. One client suffers from severe celiac disease, requiring zero cross-contamination.",
+      "turns": [
+        {
+          "speakerA": "Maître D'",
+          "textA": "Good evening, Mr. Sterling. Welcome to L'Orangerie. We are delighted to host your party of six. May I present the seasonal tasting menu?",
+          "promptB": "Acknowledge the welcome and politely disclose the celiac dietary restriction.",
+          "optionsB": [
+            "Good evening. Thank you for accommodating us. Before we proceed, one of our esteemed guests has severe celiac disease. Could you kindly confirm whether your kitchen can guarantee a sterile gluten-free preparation?",
+            "Wait, nobody can eat anything until you tell us if there is flour in the kitchen.",
+            "Hey, one guy is allergic to wheat, so don't give him bread, okay?"
+          ],
+          "correctIndex": 0,
+          "teacherFeedback": "'Severe celiac disease', 'sterile gluten-free preparation', and 'kindly confirm' provide the exact courteous gravity required in fine dining hospitality."
+        },
+        {
+          "speakerA": "Maître D'",
+          "textA": "Certainly, sir. Our chef personally sanitizes a dedicated preparation station and prepares custom reductions for gluten sensitivities. Would you prefer a bespoke multi-course pairing for them?",
+          "promptB": "Express gratitude and confirm the bespoke pairing with enthusiasm.",
+          "optionsB": [
+            "That level of care is exceptional and greatly appreciated. Please proceed with the bespoke tasting pairing. We trust the chef's culinary discretion.",
+            "Yeah, sure, whatever the chef cooks is fine as long as they don't get sick.",
+            "No, just give them a bowl of plain steamed rice so we don't risk anything."
+          ],
+          "correctIndex": 0,
+          "teacherFeedback": "'Exceptional and greatly appreciated', 'bespoke tasting pairing', and 'culinary discretion' match high-register hospitality discourse."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Master's Thesis Advisory Defense",
+      "category": "Academic & Research",
+      "context": "You are meeting your graduate research advisor to justify your mixed-methods research design for your dissertation on algorithmic bias in hiring.",
+      "turns": [
+        {
+          "speakerA": "Prof. Aris",
+          "textA": "Alex, I looked over your updated proposal. You are proposing both semi-structured interviews with HR executives and a quantitative regression on resume screening data. Isn't this scope overly ambitious for an 8-month window?",
+          "promptB": "Defend the dual methodology by emphasizing methodological triangulation while acknowledging timeline safeguards.",
+          "optionsB": [
+            "I appreciate that concern, Professor. However, quantitative metrics alone will reveal discrepancies without illuminating the contextual heuristics hiring managers employ. By capping the qualitative sample at twelve executives, the study achieves methodological triangulation while remaining strictly feasible within eight months.",
+            "No, I can easily do both because I will work on weekends and work twice as hard as other students.",
+            "Maybe you're right. I will just throw away the interviews and only look at numbers."
+          ],
+          "correctIndex": 0,
+          "teacherFeedback": "Utilizes academic argumentation terms: 'methodological triangulation', 'contextual heuristics', and 'capping the sample', demonstrating rigorous scholarly maturity."
+        },
+        {
+          "speakerA": "Prof. Aris",
+          "textA": "A fair defense. Now, what ethical safeguards will you put in place when processing proprietary resume datasets from corporate partners?",
+          "promptB": "Articulate anonymization and IRB compliance protocols.",
+          "optionsB": [
+            "All datasets will be subjected to irreversible pseudonymization prior to analysis, stored in an air-gapped encrypted vault, and handled in strict adherence to our university IRB protocol.",
+            "I will delete people's names from the Excel files and keep the password safe on my laptop.",
+            "The companies told me they trust me, so ethics shouldn't be a problem."
+          ],
+          "correctIndex": 0,
+          "teacherFeedback": "'Irreversible pseudonymization', 'air-gapped encrypted vault', and 'strict adherence to IRB protocol' represent authentic research governance."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Executive Compensation & Equity Negotiation",
+      "category": "Corporate Negotiation",
+      "context": "You have received a formal offer for VP of Product. The base salary is slightly below your target, but the equity package holds immense potential.",
+      "turns": [
+        {
+          "speakerA": "Head of Talent",
+          "textA": "We are thrilled to extend this offer of $190,000 base and 15,000 stock options. We believe this represents a competitive package for the current tech landscape.",
+          "promptB": "Express enthusiastic appreciation while anchoring a counter-proposal based on market benchmarks.",
+          "optionsB": [
+            "Thank you so much for the offer. I am genuinely energized by the team's mission. Based on recent tier-one market benchmarks and my track record scaling revenue 300%, I was targeting a base closer to $210,000, or alternatively, an accelerated equity vesting schedule.",
+            "That base salary is way too low for someone with my experience. You need to give me more money or I'm taking another offer.",
+            "Okay, I accept the offer immediately without asking for anything."
+          ],
+          "correctIndex": 0,
+          "teacherFeedback": "Frames enthusiasm first ('genuinely energized'), anchors on objective data ('tier-one market benchmarks'), and provides flexibility ('accelerated vesting schedule')."
+        },
+        {
+          "speakerA": "Head of Talent",
+          "textA": "Our compensation bands have strict limits on base salary due to parity across our executive tier, but we have substantial flexibility regarding equity and milestone bonuses. How would that sit with you?",
+          "promptB": "Embrace the equity alignment and propose performance-contingent milestone bonuses.",
+          "optionsB": [
+            "That makes complete sense from an equity parity perspective. If we maintain the base at $195,000, could we increase the option grant to 22,000 units and tie a $25,000 signing bonus to Q3 revenue milestones?",
+            "If you won't budge on base pay, then give me double the options right now with no questions asked.",
+            "Fine, I will just take whatever base you offered initially."
+          ],
+          "correctIndex": 0,
+          "teacherFeedback": "Acknowledges institutional constraints gracefully ('equity parity perspective') and aligns incentives through performance milestones."
         }
       ]
     }
@@ -657,20 +1103,33 @@
         "intro": {
           "id": "intro",
           "text": "The automated observatory at Mount Oakhaven had gone dark without telemetry warnings. As the lead systems investigator, you step across the frostbitten threshold. The primary terminal hums erratically, displaying an ambiguous prompt across the terminal:\n\n'CRITICAL ANOMALY: Core database locked due to cryptographic deviation.'",
-          "vocabHighlights": ["telemetry", "threshold", "erratically", "cryptographic"],
+          "vocabHighlights": [
+            "telemetry",
+            "threshold",
+            "erratically",
+            "cryptographic"
+          ],
           "choices": [
             {
               "text": "Analyze the corrupted memory registers on the physical console.",
               "nextNodeId": "hardware_path",
               "requiresComprehension": "Which word indicates that the terminal was behaving in an unpredictable manner?",
-              "comprehensionOptions": ["erratically", "frostbitten", "cryptographic"],
+              "comprehensionOptions": [
+                "erratically",
+                "frostbitten",
+                "cryptographic"
+              ],
               "comprehensionAnswer": "erratically"
             },
             {
               "text": "Inspect the handwritten laboratory logbook beside the defunct backup generator.",
               "nextNodeId": "logbook_path",
               "requiresComprehension": "What does 'telemetry' refer to in this operational context?",
-              "comprehensionOptions": ["Remote automated data transmission", "Handwritten personal letters", "Visual telescope lenses"],
+              "comprehensionOptions": [
+                "Remote automated data transmission",
+                "Handwritten personal letters",
+                "Visual telescope lenses"
+              ],
               "comprehensionAnswer": "Remote automated data transmission"
             }
           ]
@@ -678,13 +1137,21 @@
         "hardware_path": {
           "id": "hardware_path",
           "text": "You attach your diagnostic tablet directly to the motherboard bus. A cascade of hex code reveals that the data corruption was not spontaneous; it was deliberate, disguised under an innocuous diagnostic routine.",
-          "vocabHighlights": ["cascade", "spontaneous", "innocuous"],
+          "vocabHighlights": [
+            "cascade",
+            "spontaneous",
+            "innocuous"
+          ],
           "choices": [
             {
               "text": "Execute a sandbox quarantine on the suspicious diagnostic thread.",
               "nextNodeId": "conclusion_victory",
               "requiresComprehension": "What does 'innocuous' mean in this sentence?",
-              "comprehensionOptions": ["Harmless in appearance", "Extremely destructive", "Highly confidential"],
+              "comprehensionOptions": [
+                "Harmless in appearance",
+                "Extremely destructive",
+                "Highly confidential"
+              ],
               "comprehensionAnswer": "Harmless in appearance"
             }
           ]
@@ -692,13 +1159,21 @@
         "logbook_path": {
           "id": "logbook_path",
           "text": "The logbook's final entry, dated midnight, is signed by Dr. Vance: 'The anomaly is self-propagating. Do not restore the primary gateway until the secondary redundancy matrix has been verified.'",
-          "vocabHighlights": ["self-propagating", "redundancy", "gateway"],
+          "vocabHighlights": [
+            "self-propagating",
+            "redundancy",
+            "gateway"
+          ],
           "choices": [
             {
               "text": "Heed Dr. Vance's warning and reroute telemetry through the secondary matrix.",
               "nextNodeId": "conclusion_victory",
               "requiresComprehension": "What does 'self-propagating' imply?",
-              "comprehensionOptions": ["Multiplying or spreading on its own", "Completely frozen in time", "Deleted permanently"],
+              "comprehensionOptions": [
+                "Multiplying or spreading on its own",
+                "Completely frozen in time",
+                "Deleted permanently"
+              ],
               "comprehensionAnswer": "Multiplying or spreading on its own"
             }
           ]
@@ -706,7 +1181,204 @@
         "conclusion_victory": {
           "id": "conclusion_victory",
           "text": "The diagnostic matrix illuminates green. The telemetry stream stabilizes, and the observatory telescopes realign with the northern sky. By deciphering the technical and contextual nuances, you have averted a catastrophic data loss.",
-          "vocabHighlights": ["stabilizes", "deciphering", "averted"],
+          "vocabHighlights": [
+            "stabilizes",
+            "deciphering",
+            "averted"
+          ],
+          "choices": []
+        }
+      }
+    },
+    {
+      "id": 2,
+      "title": "The Enigma of Kepler Station",
+      "genre": "Hard Science Fiction & Survival",
+      "initialNodeId": "station_intro",
+      "nodes": {
+        "station_intro": {
+          "id": "station_intro",
+          "text": "Deep space station Kepler-9 drifts in silent orbit around Neptune. As the arriving triage specialist, you board the pressurized airlock to find the environmental scrubber systems fluctuating dangerously. The central console reports:\n\n'WARNING: Atmospheric scrubbers operating at 34% capacity. Carbon dioxide levels escalating.'",
+          "vocabHighlights": [
+            "pressurized",
+            "scrubber",
+            "fluctuating",
+            "escalating"
+          ],
+          "choices": [
+            {
+              "text": "Initiate an emergency cryogenic purge of the primary scrubber coils.",
+              "nextNodeId": "purge_path",
+              "requiresComprehension": "Which word indicates that the scrubber capacity is rising and falling unpredictably?",
+              "comprehensionOptions": [
+                "fluctuating",
+                "pressurized",
+                "escalating"
+              ],
+              "comprehensionAnswer": "fluctuating"
+            },
+            {
+              "text": "Inspect the biological algae bio-reactors in Hydroponics Bay 3.",
+              "nextNodeId": "algae_path",
+              "requiresComprehension": "What is the primary operational function of an atmospheric 'scrubber'?",
+              "comprehensionOptions": [
+                "Filtering contaminants and removing toxic gases",
+                "Propelling the station into orbit",
+                "Transmitting radio frequencies"
+              ],
+              "comprehensionAnswer": "Filtering contaminants and removing toxic gases"
+            }
+          ]
+        },
+        "purge_path": {
+          "id": "purge_path",
+          "text": "The cryogenic coolant valve snaps open with a deafening hiss. Liquid nitrogen floods the chamber, freezing the particulate contaminants instantly. However, the sudden thermal shock risks structural fracture in the titanium manifold.",
+          "vocabHighlights": [
+            "particulate",
+            "contaminants",
+            "manifold",
+            "thermal"
+          ],
+          "choices": [
+            {
+              "text": "Regulate manifold pressure using automated bypass dampeners.",
+              "nextNodeId": "station_victory",
+              "requiresComprehension": "What does 'particulate' mean in this context?",
+              "comprehensionOptions": [
+                "Tiny separate particles of solid matter",
+                "Massive metallic boulders",
+                "Electromagnetic radiation"
+              ],
+              "comprehensionAnswer": "Tiny separate particles of solid matter"
+            }
+          ]
+        },
+        "algae_path": {
+          "id": "algae_path",
+          "text": "In Hydroponics Bay 3, the photosynthetic algae cultures are flourishing, but a clogged nutrient conduit is starving the secondary bioreactors of nitrogen catalyst.",
+          "vocabHighlights": [
+            "photosynthetic",
+            "conduit",
+            "catalyst"
+          ],
+          "choices": [
+            {
+              "text": "Clear the obstructed conduit and recalibrate the biochemical nutrient feed.",
+              "nextNodeId": "station_victory",
+              "requiresComprehension": "What does a 'conduit' refer to in fluid engineering?",
+              "comprehensionOptions": [
+                "A channel, pipe, or tube for conveying fluids",
+                "A computer display monitor",
+                "An electrical battery switch"
+              ],
+              "comprehensionAnswer": "A channel, pipe, or tube for conveying fluids"
+            }
+          ]
+        },
+        "station_victory": {
+          "id": "station_victory",
+          "text": "Oxygen saturation climbs back to 21.2%. The station atmosphere hums in equilibrium, and the life support displays turn a calm azure blue. Through analytical problem solving and scientific precision, Kepler Station is saved.",
+          "vocabHighlights": [
+            "saturation",
+            "equilibrium",
+            "azure"
+          ],
+          "choices": []
+        }
+      }
+    },
+    {
+      "id": 3,
+      "title": "The Alchemist of Prague",
+      "genre": "Historical Mystery & Scholarly Intrigue",
+      "initialNodeId": "prague_intro",
+      "nodes": {
+        "prague_intro": {
+          "id": "prague_intro",
+          "text": "Prague, 1598. In the labyrinthine alleys beneath Prague Castle, you discover the abandoned workshop of Master Sendivogius. On his workbench lies a vellum manuscript written in a bizarre cipher, with an urgent margin note:\n\n'The Imperial Inquisitors seek the philosopher's tincture. If my treatise falls into their grasp, centuries of natural philosophy will be extinguished.'",
+          "vocabHighlights": [
+            "labyrinthine",
+            "vellum",
+            "cipher",
+            "treatise"
+          ],
+          "choices": [
+            {
+              "text": "Use the alchemical mirror cipher key hidden inside the hollow brass astrolabe.",
+              "nextNodeId": "mirror_cipher",
+              "requiresComprehension": "Which word indicates that the manuscript is a formal systematic written discourse?",
+              "comprehensionOptions": [
+                "treatise",
+                "cipher",
+                "vellum"
+              ],
+              "comprehensionAnswer": "treatise"
+            },
+            {
+              "text": "Smuggle the vellum codex through the subterranean water aqueducts beneath the Vltava River.",
+              "nextNodeId": "aqueduct_escape",
+              "requiresComprehension": "What does 'labyrinthine' describe about the alleys?",
+              "comprehensionOptions": [
+                "Intricate, winding, and maze-like",
+                "Straight and wide",
+                "Brightly illuminated"
+              ],
+              "comprehensionAnswer": "Intricate, winding, and maze-like"
+            }
+          ]
+        },
+        "mirror_cipher": {
+          "id": "mirror_cipher",
+          "text": "Reflecting the text reveals that the formula is not magical transmutation, but early distillation chemistry: the isolation of nitric acid and pure phosphorus.",
+          "vocabHighlights": [
+            "transmutation",
+            "distillation",
+            "isolation"
+          ],
+          "choices": [
+            {
+              "text": "Record the true chemical formulation and conceal the parchment in the university library.",
+              "nextNodeId": "prague_victory",
+              "requiresComprehension": "What does 'transmutation' mean in alchemical history?",
+              "comprehensionOptions": [
+                "Changing one element or substance into another",
+                "Translating words into Latin",
+                "Burning books in public"
+              ],
+              "comprehensionAnswer": "Changing one element or substance into another"
+            }
+          ]
+        },
+        "aqueduct_escape": {
+          "id": "aqueduct_escape",
+          "text": "You navigate the subterranean waterways under torchlight. Reaching the old river gate, you hand the sealed codex to a trusted scholar of the Royal Society.",
+          "vocabHighlights": [
+            "subterranean",
+            "codex",
+            "sealed"
+          ],
+          "choices": [
+            {
+              "text": "Deliver the secret archive safely into the hands of enlightened scholars.",
+              "nextNodeId": "prague_victory",
+              "requiresComprehension": "What is an ancient handwritten manuscript in book format called?",
+              "comprehensionOptions": [
+                "codex",
+                "subterranean",
+                "aqueduct"
+              ],
+              "comprehensionAnswer": "codex"
+            }
+          ]
+        },
+        "prague_victory": {
+          "id": "prague_victory",
+          "text": "The scientific truth survives intact. Years later, Robert Boyle and Isaac Newton will build upon these very empirical observations, laying the groundwork for modern chemistry.",
+          "vocabHighlights": [
+            "empirical",
+            "groundwork",
+            "intact"
+          ],
           "choices": []
         }
       }
@@ -718,7 +1390,12 @@
       "verb": "account for",
       "meaning": "To explain the cause of something, or to form a specific proportion of a total.",
       "carrier": "Hydropower and solar arrays now ______ over thirty percent of domestic energy generation.",
-      "options": ["account for", "carry out", "rule out", "call off"],
+      "options": [
+        "account for",
+        "carry out",
+        "rule out",
+        "call off"
+      ],
       "correct": "account for",
       "bossDefeated": "Hydra of Ambiguity",
       "teacherTip": "Remember that 'account for' takes a direct nominal object representing percentage, reason, or discrepancy."
@@ -728,7 +1405,12 @@
       "verb": "carry out",
       "meaning": "To execute, conduct, or complete an instruction, experiment, or procedure.",
       "carrier": "The laboratory will ______ clinical trials on the experimental vaccine next month.",
-      "options": ["carry out", "stem from", "hinge upon", "phase out"],
+      "options": [
+        "carry out",
+        "stem from",
+        "hinge upon",
+        "phase out"
+      ],
       "correct": "carry out",
       "bossDefeated": "Golem of Inaction",
       "teacherTip": "'Carry out' collocates strongly with 'investigation', 'experiment', 'survey', and 'orders'."
@@ -738,7 +1420,12 @@
       "verb": "rule out",
       "meaning": "To exclude someone or something from consideration as a possibility.",
       "carrier": "Medical examiners were able to completely ______ foul play after toxicology reports returned negative.",
-      "options": ["rule out", "look into", "boil down to", "bring about"],
+      "options": [
+        "rule out",
+        "look into",
+        "boil down to",
+        "bring about"
+      ],
       "correct": "rule out",
       "bossDefeated": "Specter of Doubt",
       "teacherTip": "Used extensively in academic literature when eliminating competing hypotheses."
@@ -748,7 +1435,12 @@
       "verb": "bring about",
       "meaning": "To cause something substantial or transformative to happen.",
       "carrier": "The industrial revolution did ______ profound changes in human demographics and urban density.",
-      "options": ["bring about", "call off", "stem from", "account for"],
+      "options": [
+        "bring about",
+        "call off",
+        "stem from",
+        "account for"
+      ],
       "correct": "bring about",
       "bossDefeated": "Dragon of Stagnation",
       "teacherTip": "'Bring about' is preferred over 'cause' in formal historical and sociological discourse."
@@ -758,10 +1450,90 @@
       "verb": "phase out",
       "meaning": "To gradually discontinue the use or production of something over a period of time.",
       "carrier": "The European Union agreed to systematically ______ single-use plastics by the end of the decade.",
-      "options": ["phase out", "rule out", "bring about", "hinge upon"],
+      "options": [
+        "phase out",
+        "rule out",
+        "bring about",
+        "hinge upon"
+      ],
       "correct": "phase out",
       "bossDefeated": "Leviathan of Waste",
       "teacherTip": "Antonym of 'phase in'. Essential for policy, environmental, and business English."
+    },
+    {
+      "id": 6,
+      "verb": "boil down to",
+      "meaning": "To be the primary, essential, or fundamental element of a complex problem.",
+      "carrier": "Ultimately, the macroeconomic impasse seems to ______ consumer confidence and interest rates.",
+      "options": [
+        "boil down to",
+        "brush up on",
+        "turn into",
+        "settle down with"
+      ],
+      "correct": "boil down to",
+      "bossDefeated": "Chimera of Complexity",
+      "teacherTip": "Metaphor from culinary reduction: simmering a sauce until only the core essence remains."
+    },
+    {
+      "id": 7,
+      "verb": "hinge upon",
+      "meaning": "To depend decisively or entirely on something as the turning point.",
+      "carrier": "The success of the peace negotiations will ______ both parties agreeing to mutual troop withdrawals.",
+      "options": [
+        "hinge upon",
+        "look into",
+        "run out of",
+        "get across"
+      ],
+      "correct": "hinge upon",
+      "bossDefeated": "Gargoyle of Uncertainty",
+      "teacherTip": "Like a physical door turning on its hinge: the outcome pivots on this single critical condition."
+    },
+    {
+      "id": 8,
+      "verb": "iron out",
+      "meaning": "To resolve minor discrepancies, difficulties, or disagreements through discussion.",
+      "carrier": "Legal counsels met overnight to ______ the remaining patent licensing conditions.",
+      "options": [
+        "iron out",
+        "cut down on",
+        "wear off",
+        "give away"
+      ],
+      "correct": "iron out",
+      "bossDefeated": "Titan of Friction",
+      "teacherTip": "Metaphor of smoothing wrinkles from fabric: removing frictions before formal contract signing."
+    },
+    {
+      "id": 9,
+      "verb": "weed out",
+      "meaning": "To systematically remove or eliminate undesirable, fraudulent, or unfit elements.",
+      "carrier": "The rigorous admissions examination is designed to ______ candidates lacking foundational calculus proficiency.",
+      "options": [
+        "weed out",
+        "drop out of",
+        "fall back on",
+        "take up with"
+      ],
+      "correct": "weed out",
+      "bossDefeated": "Banshee of Inefficiency",
+      "teacherTip": "Botanical metaphor: removing invasive weeds so valuable crops flourish."
+    },
+    {
+      "id": 10,
+      "verb": "brush up on",
+      "meaning": "To review, refresh, or improve your knowledge of something previously learned.",
+      "carrier": "Before attending the international trade summit in Paris, the diplomat took time to ______ French commercial law.",
+      "options": [
+        "brush up on",
+        "look forward to",
+        "stand up for",
+        "catch on to"
+      ],
+      "correct": "brush up on",
+      "bossDefeated": "Arch-Demon of Forgetfulness",
+      "teacherTip": "Crucial idiom for lifelong learning: dusting off and refreshing existing competencies."
     }
   ],
   "idiom_escape": [
@@ -770,7 +1542,12 @@
       "chamberName": "The Archive of Toil",
       "clue": "To work late into the night, particularly on demanding academic research or high-stakes business endeavors.",
       "puzzleSentence": "With the funding deadline looming tomorrow morning, the entire laboratory team had to ______.",
-      "idiomOptions": ["burn the midnight oil", "bite the bullet", "cut corners", "throw in the towel"],
+      "idiomOptions": [
+        "burn the midnight oil",
+        "bite the bullet",
+        "cut corners",
+        "throw in the towel"
+      ],
       "correct": "burn the midnight oil",
       "originNote": "Refers to burning oil in lamps before the advent of electricity to study or work past midnight."
     },
@@ -779,7 +1556,12 @@
       "chamberName": "The Chamber of Resolve",
       "clue": "To accept a grim, difficult situation with courage and fortitude rather than running away from it.",
       "puzzleSentence": "Knowing the company was facing insolvency, the CEO decided to ______ and announce the restructuring.",
-      "idiomOptions": ["bite the bullet", "jump on the bandwagon", "see eye to eye", "let the cat out of the bag"],
+      "idiomOptions": [
+        "bite the bullet",
+        "jump on the bandwagon",
+        "see eye to eye",
+        "let the cat out of the bag"
+      ],
       "correct": "bite the bullet",
       "originNote": "Historical practice of having wounded soldiers bite a lead bullet to cope with battlefield surgery pain."
     },
@@ -788,7 +1570,12 @@
       "chamberName": "The Hall of Integrity",
       "clue": "To do something haphazardly or omit essential steps in order to save time or financial expense.",
       "puzzleSentence": "The bridge collapsed because the contractors decided to ______ on structural rebar quality.",
-      "idiomOptions": ["cut corners", "burn bridges", "break the ice", "call it a day"],
+      "idiomOptions": [
+        "cut corners",
+        "burn bridges",
+        "break the ice",
+        "call it a day"
+      ],
       "correct": "cut corners",
       "originNote": "Originates from driving or hunting, where cutting across corners saved distance at the cost of safety."
     },
@@ -797,9 +1584,70 @@
       "chamberName": "The Vault of Consensus",
       "clue": "To be in full agreement on a policy or issue; to share the same perspective without discord.",
       "puzzleSentence": "Although they debate fiercely, both political factions ______ regarding national cybersecurity defense.",
-      "idiomOptions": ["see eye to eye", "play devil's advocate", "spill the beans", "bark up the wrong tree"],
+      "idiomOptions": [
+        "see eye to eye",
+        "play devil's advocate",
+        "spill the beans",
+        "bark up the wrong tree"
+      ],
       "correct": "see eye to eye",
       "originNote": "Biblical origin from Isaiah 52:8, describing watchmen seeing together clearly."
+    },
+    {
+      "id": 5,
+      "chamberName": "The Crucible of Caution",
+      "clue": "To be in a precarious, risky situation where a single misstep could result in disaster.",
+      "puzzleSentence": "By publishing unverified allegations against the regulatory agency, the editor was ______.",
+      "idiomOptions": [
+        "skating on thin ice",
+        "spilling the beans",
+        "barking up the wrong tree",
+        "hitting the nail on the head"
+      ],
+      "correct": "skating on thin ice",
+      "originNote": "Originates from the literal danger of winter ice skating over deep frozen lakes with thin crusts."
+    },
+    {
+      "id": 6,
+      "chamberName": "The Tower of Revelation",
+      "clue": "To divulge confidential or secret information prematurely or inadvertently.",
+      "puzzleSentence": "The surprise acquisition deal fell through when an anonymous insider decided to ______ to reporters.",
+      "idiomOptions": [
+        "spill the beans",
+        "bite the bullet",
+        "cut corners",
+        "burn the candle at both ends"
+      ],
+      "correct": "spill the beans",
+      "originNote": "Ancient Greek voting practice where voters dropped white or black beans into an urn; spilling it revealed votes prematurely."
+    },
+    {
+      "id": 7,
+      "chamberName": "The Labyrinth of Debate",
+      "clue": "To argue against an idea not because you disagree with it, but to test its intellectual validity.",
+      "puzzleSentence": "During the strategy meeting, Mark chose to ______ to stress-test our quarterly launch plan.",
+      "idiomOptions": [
+        "play devil's advocate",
+        "call it a day",
+        "throw in the towel",
+        "see eye to eye"
+      ],
+      "correct": "play devil's advocate",
+      "originNote": "From Catholic canonization (Advocatus Diaboli), an official appointed to uncover flaws in proposed sainthoods."
+    },
+    {
+      "id": 8,
+      "chamberName": "The Temple of Precision",
+      "clue": "To describe an exact truth, situation, or causal factor with flawless accuracy.",
+      "puzzleSentence": "Her critique of our supply chain bottlenecks truly ______; management immediately adopted her proposal.",
+      "idiomOptions": [
+        "hit the nail on the head",
+        "missed the forest for the trees",
+        "skated on thin ice",
+        "burned bridges"
+      ],
+      "correct": "hit the nail on the head",
+      "originNote": "Carpentry idiom: striking a nail directly on its flat head delivers maximum force cleanly without bending it."
     }
   ],
   "email_boss": [
@@ -829,6 +1677,62 @@
         "look forward to your prompt response"
       ],
       "modelEmail": "Dear Accounts Department,\n\nI am writing to bring to your immediate attention an unexpected charge on invoice #9042. There appears to be a noticeable discrepancy between our agreed contract rate and the invoiced total. Could you please review and rectify this issue at your earliest convenience? I look forward to your prompt response and revised documentation.\n\nBest regards,\nJordan Lee",
+      "minWords": 45
+    },
+    {
+      "id": 3,
+      "scenario": "Crisis PR Advisory & Product Recall Notice",
+      "recipient": "Executive Leadership & Board of Directors",
+      "instructions": "Draft a high-urgency advisory regarding a batch contamination in consumer health supplements. Advise voluntary recall and press transparency.",
+      "requiredPhrases": [
+        "urge leadership to initiate",
+        "proactive voluntary recall",
+        "transparency is essential",
+        "mitigate reputational fallout"
+      ],
+      "modelEmail": "Dear Board Members,\n\nIn light of internal quality assurance findings regarding batch #409, I strongly urge leadership to initiate an immediate proactive voluntary recall. Maintaining transparency is essential to protect consumer well-being and preserve brand integrity. Executing this decisive response will mitigate reputational fallout and demonstrate our commitment to ethical accountability.\n\nRespectfully submitted,\nClaire Dupont, Chief Communications Officer",
+      "minWords": 45
+    },
+    {
+      "id": 4,
+      "scenario": "Academic Research Grant Reconsideration",
+      "recipient": "National Science Foundation Review Panel",
+      "instructions": "Politely request reconsideration of a rejected research proposal by addressing the panel's methodological critique with new preliminary data.",
+      "requiredPhrases": [
+        "express appreciation for the rigorous review",
+        "address the committee's concern regarding",
+        "preliminary pilot findings",
+        "respectfully request reconsideration"
+      ],
+      "modelEmail": "Dear Members of the Review Panel,\n\nI wish to express appreciation for the rigorous review of grant proposal #8812. In this brief correspondence, I would like to address the committee's concern regarding statistical sample size. We have recently concluded preliminary pilot findings that validate our statistical power assumptions. On this basis, I respectfully request reconsideration for funding under the upcoming spring cycle.\n\nSincerely,\nDr. Marcus Vance",
+      "minWords": 45
+    },
+    {
+      "id": 5,
+      "scenario": "Managing Client Scope Creep Diplomatically",
+      "recipient": "Enterprise Client Program Manager",
+      "instructions": "Politely inform a client that additional feature requests fall outside the signed Statement of Work (SOW) and require a change order.",
+      "requiredPhrases": [
+        "pleased to accommodate your vision",
+        "falls outside the parameters of our current SOW",
+        "formal change order",
+        "ensure project milestones remain on schedule"
+      ],
+      "modelEmail": "Dear Mr. Davies,\n\nWe are always pleased to accommodate your vision and explore innovative features for the platform. However, the requested analytics dashboard falls outside the parameters of our current SOW. To incorporate these specifications while ensuring project milestones remain on schedule, we would be happy to draft a formal change order outlining the revised timeline and budget.\n\nKind regards,\nElena Rostova",
+      "minWords": 45
+    },
+    {
+      "id": 6,
+      "scenario": "Executive Offer Counter-Proposal",
+      "recipient": "Vice President of People & Culture",
+      "instructions": "Counter an executive offer by anchoring base salary on verified market compensation data and proposing milestone equity acceleration.",
+      "requiredPhrases": [
+        "honored by the offer to join",
+        "market compensation data indicates",
+        "propose an adjustment",
+        "reiterate my excitement"
+      ],
+      "modelEmail": "Dear Ms. Thornton,\n\nI am deeply honored by the offer to join Apex Technologies as Vice President of Engineering. Having reviewed the term sheet, recent market compensation data indicates that senior executive roles in our sector command higher base compensation. I would like to propose an adjustment to $215,000 base salary, paired with accelerated equity vesting milestones. I reiterate my excitement to lead the engineering organization to new heights.\n\nWarm regards,\nDavid Chen",
       "minWords": 45
     }
   ]

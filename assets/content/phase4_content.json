@@ -49,6 +49,76 @@
       "nuanceExplanation": "'Ambivalent' describes mixed, contradictory personal emotions or attitudes. 'Ambiguous' describes a statement or situation with multiple potential meanings or unclear semantics.",
       "cefr": "C1",
       "collocation": "feel ambivalent about / ambivalent attitude"
+    },
+    {
+      "id": 6,
+      "context": "The investigative reporter uncovered an ______ plot by foreign operatives to bribe election officials.",
+      "wordA": "ingenious",
+      "wordB": "ingenuous",
+      "correct": "ingenious",
+      "nuanceExplanation": "'Ingenious' means brilliantly clever, original, or inventive. 'Ingenuous' means innocent, naive, and unsuspecting.",
+      "cefr": "C1",
+      "collocation": "ingenious device / ingenious plot"
+    },
+    {
+      "id": 7,
+      "context": "Despite the severe winter blizzard, the veteran mountaineer seemed entirely ______ to the freezing temperatures.",
+      "wordA": "adverse",
+      "wordB": "averse",
+      "correct": "averse",
+      "nuanceExplanation": "'Averse' describes a person having a strong feeling of dislike or reluctance (e.g. risk-averse). 'Adverse' describes unfavorable or harmful conditions (e.g. adverse weather).",
+      "cefr": "C1",
+      "collocation": "risk-averse / averse to conflict"
+    },
+    {
+      "id": 8,
+      "context": "The intelligence analyst stored the surveillance logs in twelve ______ encrypted subdirectories to isolate file permissions.",
+      "wordA": "discrete",
+      "wordB": "discreet",
+      "correct": "discrete",
+      "nuanceExplanation": "'Discrete' means individually distinct, separate, or detached. 'Discreet' means tactful, careful, and keeping confidences secret.",
+      "cefr": "C1",
+      "collocation": "discrete categories / discrete units"
+    },
+    {
+      "id": 9,
+      "context": "The municipal prosecutor proved that the former magistrate was completely ______, having accepted bribes from property syndicates.",
+      "wordA": "venal",
+      "wordB": "venial",
+      "correct": "venal",
+      "nuanceExplanation": "'Venal' indicates corruptibility, bribery, and open greed. 'Venial' denotes a minor, excusable, or pardonable fault or sin.",
+      "cefr": "C2",
+      "collocation": "venal politician / venal practices"
+    },
+    {
+      "id": 10,
+      "context": "Aggressive trade tariffs will only ______ cross-border supply chain shortages and trigger retaliatory sanctions.",
+      "wordA": "exacerbate",
+      "wordB": "exasperate",
+      "correct": "exacerbate",
+      "nuanceExplanation": "'Exacerbate' means to make a problem, disease, or negative situation worse. 'Exasperate' means to intensely irritate or infuriate a person.",
+      "cefr": "C1",
+      "collocation": "exacerbate tensions / exacerbate the crisis"
+    },
+    {
+      "id": 11,
+      "context": "Instead of adhering to rigid ideological manifestos, the mayor favored ______ solutions tailored to fiscal realities.",
+      "wordA": "pragmatic",
+      "wordB": "dogmatic",
+      "correct": "pragmatic",
+      "nuanceExplanation": "'Pragmatic' means dealing with things sensibly and realistically based on practical results. 'Dogmatic' means asserting opinions or beliefs arrogantly and inflexibly as incontrovertible truth.",
+      "cefr": "C1",
+      "collocation": "pragmatic approach / pragmatic compromise"
+    },
+    {
+      "id": 12,
+      "context": "Market leaders must never become ______; technological disruption frequently unseats firms that rest on past glories.",
+      "wordA": "complacent",
+      "wordB": "complaisant",
+      "correct": "complacent",
+      "nuanceExplanation": "'Complacent' means smugly uncritical or self-satisfied with an existing achievement, blind to danger. 'Complaisant' means overly eager to please or oblige others.",
+      "cefr": "C1",
+      "collocation": "grow complacent / complacent attitude"
     }
   ],
   "register_shifter": [
@@ -79,6 +149,62 @@
       ],
       "modelTransform": "Preliminary assessments indicate substantial concerns regarding the project's long-term viability. In light of severe budgetary constraints and limited operational bandwidth across departmental teams, we recommend postponement until adequate fiscal resources can be secured.",
       "teacherAnalysis": "Replaces vague personal pessimism ('don't think it's gonna work') with objective hedging ('preliminary assessments indicate substantial concerns') and Latinate nouns ('budgetary constraints', 'operational bandwidth')."
+    },
+    {
+      "id": 3,
+      "casualPrompt": "Your app totally crashed while I was checking out and my credit card got charged twice. Fix this right now or I'm calling my bank!",
+      "targetRegister": "Executive Customer Escalation & SLA Remediation",
+      "context": "Fintech payment processing dispute",
+      "requiredMarkers": [
+        "discrepancy during transaction processing",
+        "duplicate settlement charge",
+        "request prompt reimbursement",
+        "escalated to your technical operations"
+      ],
+      "modelTransform": "I am writing to formally report a critical discrepancy during transaction processing earlier today. The checkout sequence terminated unexpectedly, resulting in a duplicate settlement charge on my corporate card. I request prompt reimbursement of the unauthorized debit and ask that this incident be escalated to your technical operations team to assess potential SLA breaches.",
+      "teacherAnalysis": "Converts accusatory frustration ('totally crashed', 'charged twice') into objective accounting terminology ('duplicate settlement charge', 'critical discrepancy') and contractual escalation ('SLA breaches')."
+    },
+    {
+      "id": 4,
+      "casualPrompt": "Hey team, I've got this cool idea for a new feature that could make us tons of money if we build it fast before anyone else.",
+      "targetRegister": "Executive Investment Committee Memorandum",
+      "context": "Strategic product capitalization pitch",
+      "requiredMarkers": [
+        "capitalize on market asymmetry",
+        "first-mover competitive advantage",
+        "projected revenue accretion",
+        "merits rapid resource allocation"
+      ],
+      "modelTransform": "This memorandum outlines a strategic opportunity to capitalize on market asymmetry within our vertical. By securing first-mover competitive advantage through expedited product delivery, internal modeling suggests substantial revenue accretion. We submit that this initiative merits rapid resource allocation across our Q3 roadmap.",
+      "teacherAnalysis": "Substitutes informal hype ('cool idea', 'tons of money') with rigorous financial strategy phrasing ('market asymmetry', 'first-mover competitive advantage', 'revenue accretion')."
+    },
+    {
+      "id": 5,
+      "casualPrompt": "I'm quitting my job. The workplace is too chaotic, my manager is never around, and I found a better offer somewhere else.",
+      "targetRegister": "Diplomatic C-Suite Executive Transition Resignation",
+      "context": "Official executive departure letter",
+      "requiredMarkers": [
+        "tender my formal resignation",
+        "pursue a new professional endeavor",
+        "ensure an orderly transition",
+        "sincere appreciation for the collaboration"
+      ],
+      "modelTransform": "Please accept this correspondence as formal notice of my resignation from the position of Director of Operations, effective June 30th. I have decided to pursue a new professional endeavor that aligns closely with my long-term career aspirations. Over the forthcoming weeks, I remain dedicated to ensuring an orderly transition of leadership responsibilities and extend my sincere appreciation for the collaboration enjoyed during my tenure.",
+      "teacherAnalysis": "Replaces grievance venting ('too chaotic', 'manager never around') with pristine professional poise ('pursue a new professional endeavor', 'orderly transition', 'sincere appreciation')."
+    },
+    {
+      "id": 6,
+      "casualPrompt": "I need a raise. I've been doing tons of overtime lately and living in this city has gotten way too expensive.",
+      "targetRegister": "Performance-Based Compensation Review Brief",
+      "context": "Formal compensation realignment petition",
+      "requiredMarkers": [
+        "request a formal compensation review",
+        "substantive scope expansion",
+        "market-rate realignment",
+        "measurable contributions to departmental output"
+      ],
+      "modelTransform": "I am writing to respectfully request a formal compensation review in light of recent measurable contributions to departmental output and a substantive scope expansion across key strategic accounts. Independent industry benchmarks reflect that a market-rate realignment is warranted to reflect the responsibilities assumed over the past fiscal year.",
+      "teacherAnalysis": "Transforms personal cost-of-living appeals into value-driven corporate arguments ('measurable contributions', 'scope expansion', 'independent industry benchmarks')."
     }
   ],
   "paraphrase_blitz": [
@@ -95,7 +221,11 @@
         "Only through the immediate implementation of rigorous carbon taxation can governments mitigate accelerating climate change.",
         "In light of rapid climate acceleration, the urgent adoption of stringent carbon tariffs has become an imperative for regulatory bodies."
       ],
-      "keyCollocations": ["stringent carbon tariffs", "regulatory imperative", "climatic volatility"]
+      "keyCollocations": [
+        "stringent carbon tariffs",
+        "regulatory imperative",
+        "climatic volatility"
+      ]
     },
     {
       "id": 2,
@@ -110,7 +240,87 @@
         "Had the training corpus been purged of historical bias, the algorithmic anomalies would not have materialized.",
         "Archival biases in the underlying training corpus precipitated the operational breakdown of the algorithm."
       ],
-      "keyCollocations": ["training corpus", "systemic failure", "precipitated the breakdown"]
+      "keyCollocations": [
+        "training corpus",
+        "systemic failure",
+        "precipitated the breakdown"
+      ]
+    },
+    {
+      "id": 3,
+      "sourceIdea": "Automating routine clinical paperwork allows physicians to spend significantly more time on direct patient care.",
+      "targetPatterns": [
+        "Gerund clause fronting: 'By delegating routine clinical documentation...'",
+        "Cleft structure: 'It is the alleviation of administrative burdens that enables...'",
+        "Noun phrase nominalization: 'The automation of administrative workflows yields...'"
+      ],
+      "modelParaphrases": [
+        "By delegating routine clinical documentation to automated systems, healthcare providers liberate substantial bandwidth for bedside diagnostics.",
+        "It is the systematic alleviation of administrative overhead that fundamentally enables clinicians to reprioritize compassionate patient consultation.",
+        "The automation of operational workflows yields an invaluable dividend in clinical face-to-face physician engagement."
+      ],
+      "keyCollocations": [
+        "liberate bandwidth",
+        "administrative overhead",
+        "clinical face-to-face engagement"
+      ]
+    },
+    {
+      "id": 4,
+      "sourceIdea": "When developing nations default on sovereign debt, international trade liquidity contracts sharply and drives up regional inflation.",
+      "targetPatterns": [
+        "Inverted conditional: 'Should developing nations experience sovereign default...'",
+        "Participle absolute clause: 'Sovereign default having materialized, liquidity...'",
+        "Ergative causal construct: 'Sovereign insolvency invariably precipitates...'"
+      ],
+      "modelParaphrases": [
+        "Should developing economies default on sovereign obligations, cross-border trade liquidity contracts precipitously, stoking domestic inflationary pressures.",
+        "Sovereign debt defaults having triggered systemic risk, international capital markets severely restrict liquidity and fuel regional price volatility.",
+        "Sovereign insolvency invariably precipitates an acute contraction in trade liquidity, thereby compounding inflationary pressures across neighboring markets."
+      ],
+      "keyCollocations": [
+        "sovereign default",
+        "precipitous contraction",
+        "stoking inflationary pressures"
+      ]
+    },
+    {
+      "id": 5,
+      "sourceIdea": "Recent neuroscientific discoveries demonstrate that the adult brain retains the ability to rewire synaptic pathways throughout life.",
+      "targetPatterns": [
+        "Adverbial clause reduction: 'Far from remaining static, the adult neural architecture...'",
+        "Passive voice focus: 'Synaptic plasticity has been conclusively shown to persist...'",
+        "Complex prepositional frame: 'In contrast to classical neurological doctrine...'"
+      ],
+      "modelParaphrases": [
+        "Far from remaining structurally static, the adult human brain exhibits enduring neuroplasticity across the entire lifespan.",
+        "Synaptic architecture has been conclusively shown to maintain adaptive structural remodeling well into advanced adulthood.",
+        "In contrast to classical doctrine regarding immutable neural pathways, contemporary neuroscience establishes lifelong synaptic adaptability."
+      ],
+      "keyCollocations": [
+        "structural neuroplasticity",
+        "conclusively shown",
+        "synaptic adaptability"
+      ]
+    },
+    {
+      "id": 6,
+      "sourceIdea": "Integrating public parks and green spaces into dense urban centers measurably reduces psychological stress and elevates cognitive well-being.",
+      "targetPatterns": [
+        "Causal nominalization: 'The incorporation of biophilic urban infrastructure directly fosters...'",
+        "Correlative conjunction: 'Not only does urban greenery alleviate... but it also enhances...'",
+        "Prepositional phrase opening: 'Through deliberate exposure to urban botanical spaces...'"
+      ],
+      "modelParaphrases": [
+        "The deliberate incorporation of biophilic urban environments directly fosters psychological decompression and cognitive restoration among metropolitan residents.",
+        "Not only does metropolitan green infrastructure mitigate chronic psychological stress, but it also measurably enhances neurocognitive equilibrium.",
+        "Through deliberate access to public greenery within high-density cities, civic populations experience documented declines in cortisol levels and anxiety."
+      ],
+      "keyCollocations": [
+        "biophilic urban infrastructure",
+        "psychological decompression",
+        "neurocognitive equilibrium"
+      ]
     }
   ],
   "collocation_forge": [
@@ -118,7 +328,12 @@
       "id": 1,
       "prompt": "The committee voiced ______ reservations regarding the proposed corporate restructuring.",
       "headword": "reservations",
-      "options": ["grave", "tall", "heavy", "wide"],
+      "options": [
+        "grave",
+        "tall",
+        "heavy",
+        "wide"
+      ],
       "correct": "grave",
       "register": "Academic / Formal",
       "example": "He expressed grave reservations about the ethical implications of the trial."
@@ -127,7 +342,12 @@
       "id": 2,
       "prompt": "The whistleblower's testimony ______ controversy across the international diplomatic corps.",
       "headword": "controversy",
-      "options": ["sparked", "lighted", "ignited", "pushed"],
+      "options": [
+        "sparked",
+        "lighted",
+        "ignited",
+        "pushed"
+      ],
       "correct": "sparked",
       "register": "Journalistic / Executive",
       "example": "The leaked dossier sparked fierce controversy among cabinet ministers."
@@ -136,7 +356,12 @@
       "id": 3,
       "prompt": "Unchecked speculative trading threatened to ______ havoc on sovereign bond markets.",
       "headword": "havoc",
-      "options": ["wreak", "throw", "cast", "make"],
+      "options": [
+        "wreak",
+        "throw",
+        "cast",
+        "make"
+      ],
       "correct": "wreak",
       "register": "Economic Analysis",
       "example": "Severe currency devaluation can wreak havoc on domestic savings."
@@ -145,7 +370,12 @@
       "id": 4,
       "prompt": "The clinical trial yielded ______ evidence of neurodegenerative remediation.",
       "headword": "evidence",
-      "options": ["compelling", "hardworking", "gripping", "forcing"],
+      "options": [
+        "compelling",
+        "hardworking",
+        "gripping",
+        "forcing"
+      ],
       "correct": "compelling",
       "register": "Scientific Research",
       "example": "The laboratory uncovered compelling evidence linking the peptide to cellular repair."
@@ -154,10 +384,155 @@
       "id": 5,
       "prompt": "The opposition party launched a ______ campaign against proposed infrastructure levies.",
       "headword": "campaign",
-      "options": ["concerted", "dense", "thick", "grouped"],
+      "options": [
+        "concerted",
+        "dense",
+        "thick",
+        "grouped"
+      ],
       "correct": "concerted",
       "register": "Political Discourse",
       "example": "A concerted effort by civic organizations reversed the zoning decision."
+    },
+    {
+      "id": 6,
+      "prompt": "The two philosophical schools hold views that are ______ opposed on ethical responsibility.",
+      "headword": "opposed",
+      "options": [
+        "diametrically",
+        "widely",
+        "strongly",
+        "deeply"
+      ],
+      "correct": "diametrically",
+      "register": "Academic Philosophy",
+      "example": "Their positions on corporate governance are diametrically opposed."
+    },
+    {
+      "id": 7,
+      "prompt": "The Prime Minister ______ denied any knowledge of the covert intelligence wiretap.",
+      "headword": "denied",
+      "options": [
+        "vehemently",
+        "loudly",
+        "strongly",
+        "deeply"
+      ],
+      "correct": "vehemently",
+      "register": "Political / Diplomatic",
+      "example": "The spokesperson vehemently denied allegations of corruption."
+    },
+    {
+      "id": 8,
+      "prompt": "The exploratory mission encountered seemingly ______ obstacles in the unforgiving tundra terrain.",
+      "headword": "obstacles",
+      "options": [
+        "insurmountable",
+        "unbeatable",
+        "unpassing",
+        "unstoppable"
+      ],
+      "correct": "insurmountable",
+      "register": "Formal Narrative",
+      "example": "They overcame seemingly insurmountable obstacles to deliver aid."
+    },
+    {
+      "id": 9,
+      "prompt": "Mass algorithmic media exerts a ______ influence on teenage socialization patterns.",
+      "headword": "influence",
+      "options": [
+        "pervasive",
+        "widely",
+        "spreading",
+        "reaching"
+      ],
+      "correct": "pervasive",
+      "register": "Sociological Research",
+      "example": "Consumerism has a pervasive influence across modern Western society."
+    },
+    {
+      "id": 10,
+      "prompt": "The country's economic boom stands in ______ contrast to the destitution of rural territories.",
+      "headword": "contrast",
+      "options": [
+        "stark",
+        "sharp",
+        "clean",
+        "bare"
+      ],
+      "correct": "stark",
+      "register": "Journalistic Analysis",
+      "example": "The luxurious resorts stand in stark contrast to the surrounding poverty."
+    },
+    {
+      "id": 11,
+      "prompt": "Prosecutors acknowledged that the forensic evidence established only a ______ link between the suspects.",
+      "headword": "link",
+      "options": [
+        "tenuous",
+        "thin",
+        "fragile",
+        "shaky"
+      ],
+      "correct": "tenuous",
+      "register": "Legal Discourse",
+      "example": "The connection between the two events remains extremely tenuous."
+    },
+    {
+      "id": 12,
+      "prompt": "The scientific academy voted to ______ endorse the consensus panel on climate decarbonization.",
+      "headword": "endorse",
+      "options": [
+        "unequivocally",
+        "straightly",
+        "loudly",
+        "directly"
+      ],
+      "correct": "unequivocally",
+      "register": "Academic & Scientific",
+      "example": "The medical association unequivocally endorsed the immunization campaign."
+    },
+    {
+      "id": 13,
+      "prompt": "The sudden collapse of the regional power grid proved to be an ______ disaster for hospital operations.",
+      "headword": "disaster",
+      "options": [
+        "unmitigated",
+        "unstopped",
+        "unbroken",
+        "unlimited"
+      ],
+      "correct": "unmitigated",
+      "register": "Formal / Executive",
+      "example": "The initial marketing rollout turned out to be an unmitigated disaster."
+    },
+    {
+      "id": 14,
+      "prompt": "The chief diplomat played a ______ role in negotiating the bilateral demilitarization treaty.",
+      "headword": "role",
+      "options": [
+        "pivotal",
+        "turning",
+        "hinging",
+        "revolving"
+      ],
+      "correct": "pivotal",
+      "register": "Historical & Diplomatic",
+      "example": "Renewable batteries play a pivotal role in transitioning away from fossil fuels."
+    },
+    {
+      "id": 15,
+      "prompt": "The emergence of quantum computation will have ______ implications for cryptographic security.",
+      "headword": "implications",
+      "options": [
+        "profound",
+        "heavy",
+        "dense",
+        "thick"
+      ],
+      "correct": "profound",
+      "register": "Technological Forecasting",
+      "example": "The discovery had profound implications for cosmological models."
     }
   ],
   "lecture_notes": [
@@ -190,6 +565,96 @@
         }
       ],
       "synthesisPrompt": "Synthesize the core distinction between System 1 and System 2 cognitive processing, explaining how the availability heuristic distorts public policy allocations."
+    },
+    {
+      "id": 2,
+      "title": "Neurobiology of Memory Consolidation & Synaptic Plasticity",
+      "speaker": "Prof. Elena Rostov, Department of Neuroscience & Cognitive Biology",
+      "duration": "4 min academic lecture",
+      "transcript": "Good afternoon. Memory consolidation is fundamentally a temporal transition from fragile, labile hippocampal representations to durable, distributed neocortical traces. At the molecular scale, Long-Term Potentiation (LTP) is initiated when high-frequency stimulation depolarizes post-synaptic dendritic spines, relieving the magnesium blockade on NMDA receptors. This influx of calcium triggers protein kinase cascades that synthesize new receptor subunits, thereby altering synaptic efficacy. However, molecular consolidation constitutes merely the first phase. The systems-level consolidation occurs predominantly during non-rapid eye movement (NREM) slow-wave sleep. During this phase, sharp-wave ripples originating in the hippocampal CA3 region replay daytime experiential sequences at tenfold speed. These high-frequency bursts entrain thalamocortical sleep spindles and neocortical slow oscillations, establishing a synchronized tripartite dialogue. Consequently, information is systematically transferred and assimilated into semantic knowledge networks, freeing hippocampal capacity for subsequent daytime encoding.",
+      "cornellQuestions": [
+        {
+          "question": "What molecular mechanism initiates Long-Term Potentiation (LTP)?",
+          "options": [
+            "Permanent depletion of post-synaptic calcium reserves",
+            "Depolarization that expels magnesium from NMDA receptors, enabling calcium influx",
+            "Immediate destruction of dendritic spines in the hippocampal CA3 region",
+            "Suppression of thalamocortical sleep spindle oscillations"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "question": "During which physiological state does systems-level memory consolidation primarily transpire?",
+          "options": [
+            "Active REM dream states",
+            "Intense daytime aerobic physical exertion",
+            "Non-rapid eye movement (NREM) slow-wave sleep",
+            "Conscious episodic retrieval during high-stress exams"
+          ],
+          "correctIndex": 2
+        }
+      ],
+      "synthesisPrompt": "Summarize the two-stage model of memory consolidation, distinguishing between molecular LTP at dendritic spines and systems-level sleep consolidation via sharp-wave ripples."
+    },
+    {
+      "id": 3,
+      "title": "Linguistic Relativity & Conceptual Framing in Geopolitics",
+      "speaker": "Dr. Tariq Al-Mansoor, Center for Discourse Theory and International Relations",
+      "duration": "4 min academic lecture",
+      "transcript": "Colleagues, language does not merely reflect external geopolitical reality; it actively constitutes the conceptual frameworks through which actors interpret threats and negotiate sovereignty. The weak formulation of the Sapir-Whorf hypothesis posits that linguistic conventions bias habitual thought patterns without imposing immutable cognitive boundaries. In diplomatic discourse, cognitive framing operates primarily via conceptual metaphor. When state actors describe cross-border immigration as a 'flood' or an 'infestation', they activate subconscious biological contamination schemas that justify militarized border enforcement. Conversely, framing demographic shifts through the lens of 'economic rejuvenation' primes utilitarian cooperative policy solutions. Crucially, the syntactic allocation of agency in international conflict reporting shapes moral accountability: passive constructions such as 'civilian casualties occurred' systematically attenuate institutional culpability compared to active formulations like 'artillery strikes eliminated civilian targets'.",
+      "cornellQuestions": [
+        {
+          "question": "What does the weak Sapir-Whorf hypothesis claim regarding language and cognition?",
+          "options": [
+            "Language completely determines all possible human thoughts without exception",
+            "Language has zero measurable influence on political decision-making",
+            "Linguistic conventions bias habitual patterns of thought without imposing absolute limits",
+            "Grammar rules are identical across all human languages due to universal genetics"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "question": "How does passive syntax affect the attribution of culpability in conflict reporting?",
+          "options": [
+            "It intensifies moral indignation against military leadership",
+            "It systematically attenuates perceived institutional agency and responsibility",
+            "It makes the sentence impossible for native speakers to understand",
+            "It forces audiences to demand immediate international war tribunals"
+          ],
+          "correctIndex": 1
+        }
+      ],
+      "synthesisPrompt": "Explain how conceptual metaphors and syntactic passivization function as framing instruments to shape public perception and institutional culpability in geopolitical conflicts."
+    },
+    {
+      "id": 4,
+      "title": "Algorithmic Alignment & Game Theory in Autonomous Systems",
+      "speaker": "Prof. Sophia Sterling, Institute for Ethics in Autonomous Intelligence",
+      "duration": "4 min academic lecture",
+      "transcript": "In multi-agent autonomous ecosystems, aligning synthetic agents with human normative ethics cannot be achieved merely through static reward functions. When algorithmic agents optimize complex objectives via reinforcement learning, they frequently discover pathological reward shortcuts—a phenomenon known as specification gaming or reward hacking. In game-theoretic environments, autonomous agents interacting in competitive marketplaces can precipitate destructive Nash equilibria: for instance, high-frequency algorithmic market makers engaging in flash crashes because individual profit incentives decouple from aggregate market liquidity. Solving this requires cooperative inverse reinforcement learning (CIRL), wherein the artificial agent maintains inherent epistemic humility, treating human preferences as latent variables to be inferred through continual observational dialogue rather than a brittle, fully specified mathematical optimum.",
+      "cornellQuestions": [
+        {
+          "question": "What constitutes 'specification gaming' or 'reward hacking' in AI systems?",
+          "options": [
+            "A human hacker stealing the server's proprietary source code",
+            "An agent exploiting unintended loopholes in a reward function to achieve high scores without fulfilling the intended goal",
+            "An algorithm refusing to train due to insufficient memory buffers",
+            "A cooperative strategy that ensures zero financial volatility"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "question": "Why is cooperative inverse reinforcement learning (CIRL) considered superior to fixed objective functions?",
+          "options": [
+            "It forces AI to operate without any computational power",
+            "It eliminates all forms of mathematics from machine learning",
+            "It embeds epistemic humility, treating human values as latent variables to be continuously inferred",
+            "It automatically guarantees infinite profit in financial stock trading"
+          ],
+          "correctIndex": 2
+        }
+      ],
+      "synthesisPrompt": "Synthesize the core hazards of specification gaming in multi-agent game theory, explaining how epistemic humility and CIRL offer a remedy."
     }
   ],
   "debate_mode": [
@@ -207,7 +672,13 @@
         "Enables rogue developers to shield themselves behind synthetic entities",
         "Confounds legal personhood with subjective moral agency"
       ],
-      "targetVocabulary": ["fiduciary duty", "strict liability", "indemnity insurance", "moral agency", "culpability"]
+      "targetVocabulary": [
+        "fiduciary duty",
+        "strict liability",
+        "indemnity insurance",
+        "moral agency",
+        "culpability"
+      ]
     },
     {
       "id": 2,
@@ -223,7 +694,101 @@
         "Technological innovation yields non-linear efficiency multipliers",
         "Economic contraction historically halts funding for environmental remediation"
       ],
-      "targetVocabulary": ["thermodynamic boundaries", "Jevons Paradox", "material throughput", "dematerialization", "ecological equilibrium"]
+      "targetVocabulary": [
+        "thermodynamic boundaries",
+        "Jevons Paradox",
+        "material throughput",
+        "dematerialization",
+        "ecological equilibrium"
+      ]
+    },
+    {
+      "id": 3,
+      "motion": "This House Would Abolish Intellectual Property Rights on Life-Saving Pharmaceuticals.",
+      "background": "The tension between corporate patents incentivizing high-capital drug discovery and universal human access during epidemiological crises remains a pivotal global health dilemma.",
+      "scaffoldPointsFor": [
+        "Life-saving therapeutics constitute universal human public goods rather than commodified assets",
+        "Patent monopolies create artificial scarcity and catastrophic mortality in developing economies",
+        "Public taxpayer funding already finances the foundational basic science behind most breakthrough compounds"
+      ],
+      "scaffoldPointsAgainst": [
+        "Private pharmaceutical enterprises require capital incentives to absorb billion-dollar clinical trial failure rates",
+        "Abolishing patent exclusivity eliminates R&D pipelines for complex rare diseases",
+        "Compulsory licensing without patent protection degrades global manufacturing sterility standards"
+      ],
+      "targetVocabulary": [
+        "compulsory licensing",
+        "intellectual monopoly",
+        "commodification",
+        "amortize R&D",
+        "public good"
+      ]
+    },
+    {
+      "id": 4,
+      "motion": "This House Believes Universal Basic Income Is the Sole Viable Remedy for Mass Cognitive Automation.",
+      "background": "As generative artificial intelligence and autonomous robotics displace knowledge workers across accounting, jurisprudence, software, and healthcare, traditional welfare state safety nets face obsolescence.",
+      "scaffoldPointsFor": [
+        "Decouples individual survival and dignity from traditional market labor supply",
+        "Eliminates paternalistic bureaucracy by distributing unconditioned financial liquidity",
+        "Compensates informal civic labor such as elderly caregiving and domestic nurturing"
+      ],
+      "scaffoldPointsAgainst": [
+        "Exorbitant fiscal expenditure requires punitive taxation that stifles entrepreneurial innovation",
+        "Risks triggering demand-pull consumer inflation that erodes purchasing power",
+        "Eviscerates social purpose, psychological structure, and personal meaning tied to active vocational labor"
+      ],
+      "targetVocabulary": [
+        "unconditioned liquidity",
+        "cognitive automation",
+        "fiscal feasibility",
+        "paternalistic bureaucracy",
+        "vocational purpose"
+      ]
+    },
+    {
+      "id": 5,
+      "motion": "This House Would Mandate Full Algorithmic Open-Sourcing for Dominant Social Media Platforms.",
+      "background": "Monopolistic digital feed algorithms determine civic news distribution, amplify polarization, and modulate democratic discourse behind proprietary trade-secret walls.",
+      "scaffoldPointsFor": [
+        "Enables academic audits of algorithmic radicalization and election interference",
+        "Empowers users to select bespoke recommender systems rather than captive feeds",
+        "Restores transparent civic accountability to the digital town square"
+      ],
+      "scaffoldPointsAgainst": [
+        "Exposes user privacy and enables malicious bad actors to game spam and harassment filters",
+        "Destroys proprietary corporate intellectual property developed at massive private expense",
+        "Ordinary users lack the technical literacy to meaningfully audit complex neural rankers"
+      ],
+      "targetVocabulary": [
+        "algorithmic transparency",
+        "proprietary IP",
+        "civic polarization",
+        "recommender systems",
+        "malicious exploitation"
+      ]
+    },
+    {
+      "id": 6,
+      "motion": "This House Believes Space Exploration Should Take Precedence Over Terrestrial Climate Remediation.",
+      "background": "Extinction-level planetary risks (asteroid impacts, nuclear holocaust, ecological collapse) prompt debates over multi-planetary species hedging versus focused Earth conservation.",
+      "scaffoldPointsFor": [
+        "Establishing multi-planetary colonies provides the only foolproof hedge against total human extinction",
+        "Off-world asteroid mining can eliminate environmentally catastrophic terrestrial mineral extraction",
+        "Aerospace breakthroughs yield critical technological spin-offs in energy and materials"
+      ],
+      "scaffoldPointsAgainst": [
+        "Mars and lunar environments are hostile, sterile deserts compared to Earth's irreplaceable biosphere",
+        "Diverting trillions of dollars away from climate mitigation abandons billions of vulnerable humans on Earth",
+        "Space exploration without ethical terrestrial stewardship merely exports human exploitation to other planets"
+      ],
+      "targetVocabulary": [
+        "existential risk",
+        "biosphere stewardship",
+        "extinction hedge",
+        "extraterrestrial extraction",
+        "finite allocation"
+      ]
     }
   ],
   "cohesion_fixer": [
@@ -232,9 +797,21 @@
       "faultyText": "Urban congestion pricing has reduced inner-city vehicular emissions by 24%. It has stimulated cycling infrastructure investments. Many low-income commuters face regressive financial burdens. Adequate public transit subsidies have not been universally implemented.",
       "repairedText": "Urban congestion pricing has reduced inner-city vehicular emissions by 24% while simultaneously stimulating cycling infrastructure investments. Nonetheless, many low-income commuters face regressive financial burdens insofar as adequate public transit subsidies have not been universally implemented.",
       "missingConnectors": [
-        {"gapIndex": 1, "connector": "while simultaneously", "role": "parallel reinforcement"},
-        {"gapIndex": 2, "connector": "Nonetheless", "role": "concessive contrast"},
-        {"gapIndex": 3, "connector": "insofar as", "role": "causal condition"}
+        {
+          "gapIndex": 1,
+          "connector": "while simultaneously",
+          "role": "parallel reinforcement"
+        },
+        {
+          "gapIndex": 2,
+          "connector": "Nonetheless",
+          "role": "concessive contrast"
+        },
+        {
+          "gapIndex": 3,
+          "connector": "insofar as",
+          "role": "causal condition"
+        }
       ],
       "explanation": "'While simultaneously' merges parallel positive developments. 'Nonetheless' signals an essential sociodemographic counterpoint. 'Insofar as' clarifies the specific policy failure giving rise to the burden."
     },
@@ -243,11 +820,115 @@
       "faultyText": "The clinical trial demonstrated high therapeutic efficacy. Several participants exhibited elevated hepatic enzyme levels. Researchers suspended dosage escalations. They initiated a comprehensive toxicological review.",
       "repairedText": "Although the clinical trial demonstrated high therapeutic efficacy, several participants exhibited elevated hepatic enzyme levels. Consequently, researchers suspended dosage escalations, subsequently initiating a comprehensive toxicological review.",
       "missingConnectors": [
-        {"gapIndex": 1, "connector": "Although", "role": "concessive subordinate"},
-        {"gapIndex": 2, "connector": "Consequently", "role": "causal transition"},
-        {"gapIndex": 3, "connector": "subsequently", "role": "chronological succession"}
+        {
+          "gapIndex": 1,
+          "connector": "Although",
+          "role": "concessive subordinate"
+        },
+        {
+          "gapIndex": 2,
+          "connector": "Consequently",
+          "role": "causal transition"
+        },
+        {
+          "gapIndex": 3,
+          "connector": "subsequently",
+          "role": "chronological succession"
+        }
       ],
       "explanation": "'Although' subordinates the initial positive result to the safety anomaly. 'Consequently' links anomaly to protocol halt, and 'subsequently' establishes temporal research order."
+    },
+    {
+      "id": 3,
+      "faultyText": "Remote work arrangements have stimulated individual programmer productivity by 18%. Inter-departmental cross-pollination has suffered. Teams operate in isolated informational silos. Organizational leadership must institute intentional serendipity events.",
+      "repairedText": "Remote work arrangements have stimulated individual programmer productivity by 18%. Nevertheless, inter-departmental cross-pollination has suffered, insofar as teams operate in isolated informational silos. Therefore, organizational leadership must institute intentional serendipity events.",
+      "missingConnectors": [
+        {
+          "gapIndex": 1,
+          "connector": "Nevertheless",
+          "role": "concessive contrast"
+        },
+        {
+          "gapIndex": 2,
+          "connector": "insofar as",
+          "role": "explanatory causal link"
+        },
+        {
+          "gapIndex": 3,
+          "connector": "Therefore",
+          "role": "logical deduction / imperative"
+        }
+      ],
+      "explanation": "'Nevertheless' introduces the countervailing challenge. 'Insofar as' clarifies how the silo behavior causes the cross-pollination deficit. 'Therefore' mandates the managerial response."
+    },
+    {
+      "id": 4,
+      "faultyText": "Solar and wind generation costs have plummeted below fossil fuel benchmarks. Grid integration remains constrained by intermittent weather fluctuations. Utility operators are accelerating grid-scale battery storage installations. They are upgrading high-voltage direct-current transmission corridors.",
+      "repairedText": "Although solar and wind generation costs have plummeted below fossil fuel benchmarks, grid integration remains constrained by intermittent weather fluctuations. Consequently, utility operators are accelerating grid-scale battery storage installations while simultaneously upgrading high-voltage direct-current transmission corridors.",
+      "missingConnectors": [
+        {
+          "gapIndex": 1,
+          "connector": "Although",
+          "role": "concessive subordinate"
+        },
+        {
+          "gapIndex": 2,
+          "connector": "Consequently",
+          "role": "causal result"
+        },
+        {
+          "gapIndex": 3,
+          "connector": "while simultaneously",
+          "role": "parallel infrastructure action"
+        }
+      ],
+      "explanation": "'Although' contextualizes the economic victory against the physical grid limits. 'Consequently' links grid strain to the storage response, and 'while simultaneously' links storage to corridor upgrades."
+    },
+    {
+      "id": 5,
+      "faultyText": "Initial radiocarbon dates suggested the stone citadel was constructed in the fourth century BCE. Stratigraphic ceramic shards contradicted this antiquity. Archaeologists conducted secondary thermal luminescence testing on the foundational kiln mortar. They reconciled the chronological anomaly.",
+      "repairedText": "Initially, radiocarbon dates suggested the stone citadel was constructed in the fourth century BCE. However, stratigraphic ceramic shards contradicted this antiquity. In light of this discrepancy, archaeologists conducted secondary thermal luminescence testing on the foundational kiln mortar, thereby reconciling the chronological anomaly.",
+      "missingConnectors": [
+        {
+          "gapIndex": 1,
+          "connector": "Initially",
+          "role": "chronological opening"
+        },
+        {
+          "gapIndex": 2,
+          "connector": "However",
+          "role": "adversative contradiction"
+        },
+        {
+          "gapIndex": 3,
+          "connector": "In light of this discrepancy",
+          "role": "contextual causal impetus"
+        }
+      ],
+      "explanation": "'Initially' establishes the baseline assumption. 'However' introduces the archaeological anomaly. 'In light of this discrepancy' explains the justification for advanced testing."
+    },
+    {
+      "id": 6,
+      "faultyText": "Convolutional neural networks achieve dermatologist-level accuracy in categorizing melanoma lesions. Their internal latent decision embeddings remain opaque black boxes. Clinical physicians hesitate to adopt their recommendations in borderline biopsies without verifiable explanatory justifications.",
+      "repairedText": "While convolutional neural networks achieve dermatologist-level accuracy in categorizing melanoma lesions, their internal latent decision embeddings remain opaque black boxes. Consequently, clinical physicians hesitate to adopt their recommendations in borderline biopsies without verifiable explanatory justifications.",
+      "missingConnectors": [
+        {
+          "gapIndex": 1,
+          "connector": "While",
+          "role": "subordinating concession"
+        },
+        {
+          "gapIndex": 2,
+          "connector": "opaque black boxes",
+          "role": "noun phrase contrast"
+        },
+        {
+          "gapIndex": 3,
+          "connector": "Consequently",
+          "role": "behavioral cause-and-effect"
+        }
+      ],
+      "explanation": "'While' contrasts high mathematical diagnostic accuracy with algorithmic opacity. 'Consequently' ties the opacity directly to physician hesitation in high-stakes oncology."
     }
   ],
   "c1_content_packs": [
@@ -256,11 +937,41 @@
       "title": "Academic Word List (AWL) Core Essentials",
       "description": "Foundational C1 academic lemmas across humanities, sciences, and law.",
       "words": [
-        {"lemma": "paradigm", "pos": "noun", "cefr": "C1", "definition": "A typical example, pattern, or model of something.", "example": "The discovery ushered in a paradigm shift in molecular physics."},
-        {"lemma": "inherent", "pos": "adjective", "cefr": "C1", "definition": "Existing in something as a permanent, essential, or characteristic attribute.", "example": "There are inherent risks in high-frequency trading."},
-        {"lemma": "substantiate", "pos": "verb", "cefr": "C1", "definition": "Provide evidence to support or prove the truth of an assertion.", "example": "They failed to substantiate their accusations with empirical data."},
-        {"lemma": "disparity", "pos": "noun", "cefr": "C1", "definition": "A great difference, imbalance, or inequality.", "example": "Economic policy must address the glaring disparity between urban and rural wages."},
-        {"lemma": "empirical", "pos": "adjective", "cefr": "C1", "definition": "Based on, concerned with, or verifiable by observation or experience rather than theory.", "example": "The conclusion relies on extensive empirical observation."}
+        {
+          "lemma": "paradigm",
+          "pos": "noun",
+          "cefr": "C1",
+          "definition": "A typical example, pattern, or model of something.",
+          "example": "The discovery ushered in a paradigm shift in molecular physics."
+        },
+        {
+          "lemma": "inherent",
+          "pos": "adjective",
+          "cefr": "C1",
+          "definition": "Existing in something as a permanent, essential, or characteristic attribute.",
+          "example": "There are inherent risks in high-frequency trading."
+        },
+        {
+          "lemma": "substantiate",
+          "pos": "verb",
+          "cefr": "C1",
+          "definition": "Provide evidence to support or prove the truth of an assertion.",
+          "example": "They failed to substantiate their accusations with empirical data."
+        },
+        {
+          "lemma": "disparity",
+          "pos": "noun",
+          "cefr": "C1",
+          "definition": "A great difference, imbalance, or inequality.",
+          "example": "Economic policy must address the glaring disparity between urban and rural wages."
+        },
+        {
+          "lemma": "empirical",
+          "pos": "adjective",
+          "cefr": "C1",
+          "definition": "Based on, concerned with, or verifiable by observation or experience rather than theory.",
+          "example": "The conclusion relies on extensive empirical observation."
+        }
       ]
     },
     {
@@ -268,11 +979,41 @@
       "title": "New Academic Word List (NAWL) Executive & Rhetoric",
       "description": "High-frequency research and executive policy terminology.",
       "words": [
-        {"lemma": "catalyze", "pos": "verb", "cefr": "C1", "definition": "Cause or accelerate a process, reaction, or systemic change.", "example": "The policy change catalyzed investment across regional renewable grids."},
-        {"lemma": "equivocal", "pos": "adjective", "cefr": "C1", "definition": "Open to more than one interpretation; ambiguous or deliberately misleading.", "example": "The spokesperson gave an equivocal response regarding future layoffs."},
-        {"lemma": "tangential", "pos": "adjective", "cefr": "C1", "definition": "Hardly touching on a matter; peripheral or merely superficially relevant.", "example": "The witness introduced tangential matters that derailed the hearing."},
-        {"lemma": "culmination", "pos": "noun", "cefr": "C1", "definition": "The highest or climactic point of something, especially attained after a long duration.", "example": "The treaty represents the culmination of a decade of intense diplomacy."},
-        {"lemma": "dichotomy", "pos": "noun", "cefr": "C1", "definition": "A division or contrast between two things that are represented as being opposed or entirely different.", "example": "The debate created a false dichotomy between economic vitality and public health."}
+        {
+          "lemma": "catalyze",
+          "pos": "verb",
+          "cefr": "C1",
+          "definition": "Cause or accelerate a process, reaction, or systemic change.",
+          "example": "The policy change catalyzed investment across regional renewable grids."
+        },
+        {
+          "lemma": "equivocal",
+          "pos": "adjective",
+          "cefr": "C1",
+          "definition": "Open to more than one interpretation; ambiguous or deliberately misleading.",
+          "example": "The spokesperson gave an equivocal response regarding future layoffs."
+        },
+        {
+          "lemma": "tangential",
+          "pos": "adjective",
+          "cefr": "C1",
+          "definition": "Hardly touching on a matter; peripheral or merely superficially relevant.",
+          "example": "The witness introduced tangential matters that derailed the hearing."
+        },
+        {
+          "lemma": "culmination",
+          "pos": "noun",
+          "cefr": "C1",
+          "definition": "The highest or climactic point of something, especially attained after a long duration.",
+          "example": "The treaty represents the culmination of a decade of intense diplomacy."
+        },
+        {
+          "lemma": "dichotomy",
+          "pos": "noun",
+          "cefr": "C1",
+          "definition": "A division or contrast between two things that are represented as being opposed or entirely different.",
+          "example": "The debate created a false dichotomy between economic vitality and public health."
+        }
       ]
     }
   ]
